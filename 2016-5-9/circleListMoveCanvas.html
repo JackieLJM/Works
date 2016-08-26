@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
+    <!--    <link rel="stylesheet" href="/css/position.css">-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+    <!--   canvas API的调用-->
+    <canvas id="canvas1" width="1000px" height="700px">
+    </canvas>
+
+    <form action="" id="form">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+    </form>
+
+    <!--   绘制循环列表-->
+    <div id="draggable">
+        <div>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+        </div>
+    </div>
+    <div>
+        <button onclick="addButtonGroup();" id="button">
+            +
+        </button>
+    </div>
+
+    <script src="/Bootstrap/jquery-2.1.4.js"></script>
+    <script src="/Bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script>
+        //    canvas API的调用（代嵌入canvasWithMouseDragDrop.html中的代码）
+        window.onload = function () {
+            var canvas = document.getElementById("canvas1"),
+                context = canvas.getContext("2d"),
+                image = new Image();
+            image.src = "../img/01.jpg";
+            image.onload = function () {
+                context.drawImage(image, 0, 0);
+            }
+                //    初始化样式
+            $("div").addClass("btn-group btn-group-sm");
+            $("button").addClass("btn btn-default");
+        }
+
+        //    绘制循环列表
+        var k = 1;
+
+        function addButtonGroup() {
+
+            var buttonGroup = document.getElementsByTagName("div")[k].getElementsByTagName("button"),
+                buttonContent = [],
+                buttonSet = [],
+                div = document.createElement("div"),
+                draggable = document.getElementById("draggable");
+
+            for (var i = 0; i < 5; i++) {
+                buttonContent[i] = parseInt(buttonGroup[i].textContent) + 5;
+                buttonSet[i] = document.createElement("button");
+                buttonSet[i].textContent = buttonContent[i];
+            }
+
+            for (var j = 0; j < 5; j++) {
+                div.appendChild(buttonSet[j]);
+            }
+
+            draggable.appendChild(div);
+            k = k + 1;
+            //    每次点击初始化样式
+            $("div").addClass("btn-group btn-group-sm");
+            $("button").addClass("btn btn-default");
+        }
+
+        //    使列表可拖动
+        //    方案1:使用jQueryUI      $(".draggable").draggable();
+        //    方案2:使用canvas函数
+        //    方案3:使用canvas加mouse事件实现（使用该方案）
+    </script>
+
+</body>
+
+</html>

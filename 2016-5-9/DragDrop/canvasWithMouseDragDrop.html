@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Canvas Drag and Drop Test</title>
+</head>
+
+<body>
+    <section>
+
+        <div>
+            <canvas id="canvas" width="400" height="300">
+                This text is displayed if your browser does not support HTML5 Canvas.
+            </canvas>
+        </div>
+
+        <script type="text/javascript">
+            var canvas;
+            var ctx;
+            var x = 75;
+            var y = 75;
+            var WIDTH = 400;
+            var HEIGHT = 300;
+            var dragok = false;
+
+            //4
+            function rect(x, y, w, h) {
+                ctx.beginPath();
+                ctx.rect(x, y, w, h);
+                ctx.closePath();
+                ctx.fill();
+            }
+            //3
+            function clear() {
+                ctx.clearRect(0, 0, WIDTH, HEIGHT);
+            }
+            //1
+            function init() {
+                canvas = document.getElementById("canvas");
+                ctx = canvas.getContext("2d");
+                return setInterval(draw, 10);
+            }
+            //2
+            function draw() {
+                clear();
+                ctx.fillStyle = "#FAF7F8";
+                rect(0, 0, WIDTH, HEIGHT);
+                //                var image = new image();
+                //                image.src = "../img/01.jpg";
+                //                image.onload = function () {
+                //                    ctx.drawImage(image, 0, 0);
+                //                }
+                ctx.fillStyle = "#444444";
+                rect(x - 15, y - 15, 30, 30);
+            }
+            //二
+            function myMove(e) {
+                if (dragok) {
+                    x = e.pageX - canvas.offsetLeft;
+                    y = e.pageY - canvas.offsetTop;
+                }
+            }
+            //一
+            function myDown(e) {
+                if (e.pageX < x + 15 + canvas.offsetLeft && e.pageX > x - 15 +
+                    canvas.offsetLeft && e.pageY < y + 15 + canvas.offsetTop &&
+                    e.pageY > y - 15 + canvas.offsetTop) {
+                    x = e.pageX - canvas.offsetLeft;
+                    y = e.pageY - canvas.offsetTop;
+                    dragok = true;
+                    canvas.onmousemove = myMove;
+                }
+            }
+            //二
+            function myUp() {
+                dragok = false;
+                canvas.onmousemove = null;
+            }
+
+            init();
+            canvas.onmousedown = myDown;
+            canvas.onmouseup = myUp;
+        </script>
+
+    </section>
+</body>
+
+</html>
