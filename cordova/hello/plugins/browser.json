@@ -24,6 +24,9 @@
         },
         "cordova-plugin-contacts": {
             "PACKAGE_NAME": "com.cordova.hello"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.cordova.hello"
         }
     },
     "dependent_plugins": {

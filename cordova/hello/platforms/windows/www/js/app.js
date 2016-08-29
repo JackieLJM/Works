@@ -12,7 +12,6 @@
     service.initialize().done(function() {
         console.log("Service initialized");
 
-
         router.addRoute('', function() {
             slider.slidePage(new HomeView(service).render().$el);
         });

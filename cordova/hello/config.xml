@@ -34,4 +34,5 @@
     <engine name="windows" spec="~4.4.2" />
     <plugin name="cordova-plugin-geolocation" spec="~2.2.0" />
     <plugin name="cordova-plugin-contacts" spec="~2.1.0" />
+    <plugin name="cordova-plugin-device" spec="~1.1.2" />
 </widget>
