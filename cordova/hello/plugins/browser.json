@@ -27,6 +27,9 @@
         },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.cordova.hello"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.cordova.hello"
         }
     },
     "dependent_plugins": {

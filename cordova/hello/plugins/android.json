@@ -7,10 +7,16 @@
         "files": {}
     },
     "installed_plugins": {
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.cordova.hello"
+        },
         "cordova-plugin-contacts": {
             "PACKAGE_NAME": "com.cordova.hello"
         },
         "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.cordova.hello"
+        },
+        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.cordova.hello"
         },
         "cordova-plugin-dialogs": {
@@ -23,9 +29,6 @@
             "PACKAGE_NAME": "com.cordova.hello"
         },
         "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.cordova.hello"
-        },
-        "cordova-plugin-device": {
             "PACKAGE_NAME": "com.cordova.hello"
         }
     },
