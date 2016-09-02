@@ -1,1 +1,0 @@
-C:\Users\Jackie\Desktop\Works\cordova\hello\platforms\windows\CordovaApp.Phone.jsproj;neutral
