@@ -1,0 +1,18 @@
+{
+  "name": "webapp",
+  "description": "",
+  "main": "Gruntfile.js",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.5"
+  }
+}
