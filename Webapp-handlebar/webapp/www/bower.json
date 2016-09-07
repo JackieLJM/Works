@@ -3,7 +3,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/JackieLJM/Works",
   "private": true,
   "ignore": [
     "**/.*",
@@ -13,6 +13,12 @@
     "tests"
   ],
   "dependencies": {
-    "handlebars": "^4.0.5"
-  }
+    "handlebars": "^4.0.5",
+    "PageSlider": "*",
+    "fastclick": "^1.0.6",
+    "jQuery": "^3.1.0"
+  },
+  "authors": [
+    "Jackie Liu <ljmlionshy@live.com>"
+  ]
 }
