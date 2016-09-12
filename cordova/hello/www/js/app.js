@@ -16,7 +16,7 @@
             slider.slidePage(new HomeView(service).render().$el);
         });
 
-        router.addRoute('employees/:id', function(id) {
+        router.add('selector/elements/html')Route('employees/:id', function(id) {
             service.findById(parseInt(id)).done(function(employee) {
                 slider.slidePage(new EmployeeView(employee).render().$el);
             });
