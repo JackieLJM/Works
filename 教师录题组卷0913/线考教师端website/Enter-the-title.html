@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>录题</title>
+		<link type="text/css" rel="stylesheet" href="css/common.css">
+		<link type="text/css" rel="stylesheet" href="css/css.css">
+		<script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+	</head>
+	<!--<script>   菜单active变色js
+			window.onload = function()
+			{
+				var oNav = document.getElementById('title_nav');
+				var oLi = oNav.getElementsByTagName('a');
+				
+				for (var i=0;i<oLi.length;i++)
+				{
+					oLi[i].onclick = function()
+					{
+						for (var i=0;i<oLi.length;i++) {
+							oLi[i].className='';
+						}
+						this.className='active';
+					};
+				};
+			};
+	</script>-->
+	<body>
+		<header id="header">
+			<div class="top_box">
+				<a class="logo" href="index.html"><img src="images/logo.png"></a>
+				<ul class="top_nav">
+					<li><a href="#">退出登录</a></li><li><span>|</span></li>
+					<li><img src="images/topicon1.png"><a href="#">姓名</a></li><li><span>|</span></li>
+					<li><a href="#">我要组卷</a></li><li><span>|</span></li>
+					<li><a href="#">我要录题</a></li>
+				</ul>
+			</div>
+		</header>
+		<!--header End-->
+		<div id="container">
+			<nav id="title_nav">
+				<ul>
+					<li><a href="#" class="active">录题</a></li>
+					<li><a href="#">我录入的题目</a></li>
+					<li><a href="#">题库</a></li>
+				</ul>
+			</nav><!--nav End-->
+			<section id="set_div">
+				<p>题目基本信息</p>
+			</section>
+		</div>
+		<!--container End-->
+		<footer id="footer">
+			<p>版权所有 Copyright© 北京五岳鑫信息技术股份有限公司</p>
+		</footer>
+	</body>
+</html>
