@@ -25,3 +25,6 @@ body,html{ height:100%; font-family:"微软雅黑","Times New Roman", Times, ser
 #container{ width: 998px; background-color: #fff; border: 1px solid #dbdfe0; margin: 20px auto; overflow: hidden; }
 /*footer*/
 #footer{ width: 1000px; height: 60px; line-height: 60px; text-align: center; margin: 30px auto 0 auto;}
+/*按钮组*/
+input{border-radius: 2px;}
+input[value]{color:  #ffffff;}
