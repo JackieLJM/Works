@@ -16,30 +16,58 @@
 #title_nav ul li .active{ background-color: #3FB0F2;}
 
 /*组卷 Nav*/
-nav ul li{display: inline-block;}
-.dotActive{
-    background-color:  #3fb0f2;
-}
-nav ul:nth-child(1) li a{color: #3fb0f2;}
-nav ul:nth-child(2) a{
+#nav_div ul li{display: inline-block;}
+.dotActive{background-color: #3fb0f2;}
+#nav_div ul:nth-child(1) li a{color: #3fb0f2;}
+#nav_div ul:nth-child(2) li a{
     border-radius: 50%;
     border-style: solid;
     border-width: 2px;
     border-color: #3fb0f2;
-    background-color: #ffffff;
     width: 10px;
     height: 10px;
 }
 
-
-/*组卷 Section*/
+/*组卷3 Nav下面*/
 #set_div{width: 958px; margin: 0 auto; background-color: #F2FBFF; border: 1px solid #DEF4FF; padding: 20px; overflow: hidden;}
+.cardActive{background-color: #83ccf7; color: #fff;}
+all_font{color: #119beb}
 #set_div ul li{display: inline-block;margin-left: 20px;}
-#set_div ul li a{color: #119beb;padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;}
+#set_div ul li a{padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;}
 #set_div ul li a:active{background-color: #83ccf7; color: #fff;}
-#set_div ul li a:visited{}
 #set_div ul div{display: inline;margin: 20px;}
 #set_div ul div li{display: inline-block;margin: 5px;}
-#set_div ul div li a{color: #376987;padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;}
+#set_div ul div li a{padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;}
 #set_div ul div li a:hover{background-color: #83ccf7;color: #fff;}
-.cardActive{background-color: #83ccf7; color: #fff;}
+
+/*组卷 Content*/
+#content {
+    width: 1000px;
+    margin: 20px auto;
+}
+/*组卷3 Content Left*/
+#container_left {
+    border: 1px solid #e4e6e6;
+    background-color: #ffffff;
+    width: 227px;
+    margin: auto; 
+    float: left;
+}
+#container_left_content{
+    width: 194px;
+}
+#container_left_table{
+    box-shadow: 0px 1px 1px;
+}
+/*组卷3 Content Right*/
+#container_right{
+    border: 1px solid #e4e6e6;
+    background-color: #ffffff;
+    width: 758px;
+    height: 600px;
+    margin: auto;
+    float: right;
+}
+#container_right_section{
+    margin: 0 auto; background-color: #F2FBFF; border: 1px solid #DEF4FF; padding: 20px; overflow: hidden;
+}
