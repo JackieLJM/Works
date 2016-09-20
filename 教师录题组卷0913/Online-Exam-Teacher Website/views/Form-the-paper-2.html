@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>录题</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/css.css">
+    <script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <div class="top_box">
+            <a class="logo" href="../index.html"><img src="../images/logo.png"></a>
+            <ul class="top_nav">
+                <li><a href="#">退出登录</a></li>
+                <li><span>|</span></li>
+                <li><img src="../images/topicon1.png"><a href="#">姓名</a></li>
+                <li><span>|</span></li>
+                <li><a href="#">我要组卷</a></li>
+                <li><span>|</span></li>
+                <li><a href="#">我要录题</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header End-->
+    <div id="container">
+        <nav id="nav_div">
+            <div align="center">
+                <ul>
+                    <li><a href="../Form-the-paper-1.html#填写基本信息">填写基本信息</a></li>
+                    <li><a>选题</a></li>
+                    <li><a href="Form-the-paper-3.html#预览">预览</a></li>
+                    <li><a class="cursor">发布成功</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="../Form-the-paper-1.html#填写基本信息"></a>
+                    </li>
+                    <li>
+                        <p class="progress"></p>
+                    </li>
+                    <li>
+                        <a class="dotActive"></a>
+                    </li>
+                    <li>
+                        <p class="progress"></p>
+                    </li>
+                    <li>
+                        <a href="Form-the-paper-3.html#预览"></a>
+                    </li>
+                    <li>
+                        <p class="progress"></p>
+                    </li>
+                    <li>
+                        <a class="cursor"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--nav End-->
+        <section id="set_div">
+            <ul>
+                <li>年级</li>
+                <li><a class="cardActive all" href="#">全部</a></li>
+                <div>
+                    <li><a href="#">初一</a></li>
+                    <li><a href="#">初二</a></li>
+                    <li><a href="#">初三</a></li>
+                    <li><a href="#">高一</a></li>
+                    <li><a href="#">高二</a></li>
+                    <li><a href="#">高三</a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>学科</li>
+                <li><a class="cardActive all" href="#">全部</a></li>
+                <div>
+                    <li><a href="#">语文</a></li>
+                    <li><a href="#">数学</a></li>
+                    <li><a href="#">英语</a></li>
+                    <li><a href="#">物理</a></li>
+                    <li><a href="#">化学</a></li>
+                    <li><a href="#">政治</a></li>
+                    <li><a href="#">历史</a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>教材</li>
+                <li><a class="cardActive all" href="#">全部</a></li>
+                <div>
+                    <li><a href="#">七年级北师大版上</a></li>
+                    <li><a href="#">七年级新人教版上</a></li>
+                    <li><a href="#">七年级北师大版下</a></li>
+                    <li><a href="#">七年级新人教版上</a></li>
+                    <li><a href="#">七年级冀教版上</a></li>
+                    <li><a href="#">七年级冀教版下</a></li>
+                </div>
+            </ul>
+        </section>
+    </div>
+    <!--container End-->
+    <div id="content">
+        <div id="container_left">
+            <div align="center">
+                <div id="container_left_content">
+                    <a class="yellow_button" href="Form-the-paper-3.html">下一步</a>
+                    <p class="gray" style="float:left;">已选题目（5）</p>
+                    <a style="float:right;" href="#"><u>清空选择</u></a>
+
+                    <div id="container_left_table">
+                        <table>
+                            <tr>
+                                <td>单选题</td>
+                                <td>2</td>
+                                <td>30%</td>
+                                <td>
+                                    <a href="../images/delete.png"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>填空题</td>
+                                <td>2</td>
+                                <td>30%</td>
+                                <td>
+                                    <a href="images/"></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>简答题</td>
+                                <td>1</td>
+                                <td>40%</td>
+                                <td>
+                                    <a href="images/"></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div id="container_right">
+            <section id="container_right_section">
+                <span class="deepBlue">题型：</span>
+                <input type="checkbox">单选题
+                <input type="checkbox">多选题
+                <input type="checkbox">填空题
+                <input type="checkbox">判断题
+                <input type="checkbox">简答题
+                <input type="checkbox">其他
+            </section>
+        </div>
+    </div>
+    <!--content End-->
+    <div id="button" align="center">
+        <a class="green_button" href="../Enter-the-title-1.html#填写基本信息">上一步</a>
+        <a class="green_button" href="Form-the-paper-3.html#预览">下一步</a>
+    </div>
+    <!--button End-->
+    <footer id="footer">
+        <p>版权所有 Copyright© 北京五岳鑫信息技术股份有限公司</p>
+    </footer>
+    <script>
+        //组卷3 Nav下面
+        window.onload = function () {
+            var dot = document.getElementById("nav_div").lastChild;
+            console.log(dot);
+            var card = document.getElementById("set_div");
+            dot.addEventListener("click", function (e) {
+                e.target.setAttribute("class", "dotActive")
+            })
+            card.addEventListener("click", function (e) {
+                var all = e.target.parentNode.parentNode.parentNode.children[1].lastChild;
+                if (all.hasAttribute("all"
+                        "")) {}
+                if (e.target.hasAttribute("class")) {
+                    e.target.removeAttribute("class")
+                } else if (e.target.hasAttribute("href")) {
+                    e.target.setAttribute("class", "cardActive")
+                }
+            })
+        }
+    </script>
+    <!--<script src="../lib/jquery.leanModal.min.js"></script>-->
+    <!--<script src="js/router.js"></script>-->
+    <!--<script src="js/formThePaper.js"></script>-->
+</body>
+
+</html>

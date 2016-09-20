@@ -35,15 +35,48 @@ body,html{ height:100%; font-family:"微软雅黑","Times New Roman", Times, ser
 /*按钮组*/
 input[type="submit"] {
     border-radius: 2px;
-    background-color: #faa600;
-    width: 194px;
-    height: 35px;
+    background-color: #1abc9c;
+    color: white;
+    font-size: 14px;
+    width: 116px;
+    height: 43px;
 }
-input[value] {
-    color: #ffffff;
+input[type="text"] {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e1e1e1;
+    background-color: #ffffff;
+    text-align: left;
+    width: 620px;
+    height: 43px;
+    padding-left: 15px;
 }
 input[type="checkbox"] {
     margin: 0px 0px;
+}
+.yellow_button {
+    border-radius: 2px;
+    background-color: #faa600;
+    color: white;
+    width: 194px;
+    height: 35px;
+    line-height: 35px;
+}
+.yellow_button_2{
+    border-radius: 2px;
+    background-color:  #faa600;
+    color: white;
+    width: 116px;
+    height: 43px;
+    line-height: 43px;
+}
+.green_button {
+    border-radius: 2px;
+    background-color: #1abc9c;
+    color: white;
+    width: 116px;
+    height: 43px;
+    line-height: 43px;
 }
 /*颜色组*/
 .deepBlue{
@@ -60,4 +93,31 @@ input[type="checkbox"] {
 }
 .blue{
     color: #3fb0f2;
+}
+.white{
+    color: #fff;
+}
+/*下拉菜单*/
+.dropDown {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e1e1e1;
+    background-color: #ffffff;
+    width: 300px;
+    height: 43px;
+    color: #666666;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 15px;
+    background: url('../images/downarrow.png') right center white no-repeat;
+}
+/*字体 游标 圆形*/
+.size14{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.cursor{
+    cursor:default;
 }
