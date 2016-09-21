@@ -16,30 +16,26 @@
 #title_nav ul li .active{ background-color: #3FB0F2;}
 
 /*组卷 Nav*/
-#nav_div ul li{display: inline-block;
-}
-#nav_div ul:nth-child(1) li:nth-child(1){margin:20px 80px 0px 65px;}
-#nav_div ul:nth-child(1) li:nth-child(2){margin:20px 80px 0px 60px;}
-#nav_div ul:nth-child(1) li:nth-child(3){margin:20px 75px 0px 85px;}
-#nav_div ul:nth-child(1) li:nth-child(4){margin:20px 80px 0px 80px;}
-#nav_div ul:nth-child(2) li{margin:5px 0px 25px 0px;border: 0px;padding: 0px}
-#nav_div ul:nth-child(2) li:nth-child(2){margin:0px 0px 30px 0px;border: 0px;padding: 0px;}
-#nav_div ul:nth-child(2) li:nth-child(4){margin:0px 0px 30px 0px;border: 0px;padding: 0px;}
-#nav_div ul:nth-child(2) li:nth-child(6){margin:0px 0px 30px 0px;border: 0px;padding: 0px;}
+#nav_div ul li{display: inline-block;}
+#nav_div ul:nth-child(1) li:nth-child(1){margin:20px 83px 10px 56px;}
+#nav_div ul:nth-child(1) li:nth-child(2){margin:20px 90px 10px 110px;}
+#nav_div ul:nth-child(1) li:nth-child(3){margin:20px 100px 10px 130px;}
+#nav_div ul:nth-child(1) li:nth-child(4){margin:20px 80px 10px 105px;}
+#nav_div ul:nth-child(2) li:nth-child(odd){margin:0px 5px 24px 0px;border: 0px;padding: 0px}
+#nav_div ul:nth-child(2) li:nth-child(even){margin:0px -5px 30px -10px;border: 0px;padding: 0px}
 .dotActive{background-color: #3fb0f2;}
 #nav_div ul:nth-child(1) li a{color: #3fb0f2;}
 #nav_div ul:nth-child(2) li a{
-    border-radius: 50%;
+    border-radius: 100%;
     border-style: solid;
     border-width: 2px;
     border-color: #3fb0f2;
     width: 10px;
     height: 10px;
-    margin: 0px;
 }
 .progress{
     background-color:  #3fb0f2;
-    width: 180px;
+    width: 240px;
     height: 2px;
 }
 
@@ -87,6 +83,7 @@ all_font{color: #119beb}
     margin: 0 auto; background-color: #F2FBFF; border: 1px solid #DEF4FF; padding: 20px; overflow: hidden;
 }
 /*组卷4*/
+/*
 .greenCircle{
     border-radius: 50%;
     background-color:  #44c678;
@@ -94,8 +91,9 @@ all_font{color: #119beb}
     width: 86px;
     height: 86px;
 }
+*/
 .bigText{
-    font-family: YouYuan;
+    font-family:  '幼圆';
     color:  #666666;
     font-size: 30px;
     font-weight: 400;
