@@ -61,13 +61,33 @@
         </nav>
         <!--nav End-->
         <section id="set_div">
-            <input type="checkbox">单选题
-            <input type="checkbox">填空题
+            <div style="margin-left:40px;">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">单选题</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="checkbox2">
+                <label for="checkbox2">填空题</label>
+            </div>
+
         </section>
     </div>
     <!--container End-->
     <div id="container">
-        分值：<input class="size14 text_2" type="text">
+        <div class="card">
+            <div class="card_left">
+                <p style="margin-top:10px;">1</p>
+            </div>
+            <div class="right">
+                <div class="card_right_up">
+                    <div style="float:right;margin:10px 20px;">
+                        <p>分值:&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="text_2" type="text">
+                        </p>
+                    </div>
+                </div>
+                <div class="card_right_down"></div>
+            </div>
+        </div>
     </div>
     <!--content End-->
     <div id="button" align="center">
@@ -80,7 +100,11 @@
         <p>版权所有 Copyright© 北京五岳鑫信息技术股份有限公司</p>
     </footer>
     <script>
-        $("a[value="发布"]").leanModal({ top: 100, closeButton: ".modal_close" });
+        $("a[value="
+            发布 "]").leanModal({
+            top: 100,
+            closeButton: ""
+        });
     </script>
     <script src="../lib/jquery.leanModal.min.js"></script>
     <!--<script src="js/router.js"></script>-->

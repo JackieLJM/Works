@@ -33,14 +33,16 @@ body,html{ height:100%; font-family:"Microsoft YaHei", "微软雅黑","Times New
 /*footer*/
 #footer{ height: 60px; line-height: 60px; text-align: center; margin: 30px auto 0 auto;}
 /*按钮组*/
+/*
 input[type="submit"] {
     border-radius: 2px;
     background-color: #1abc9c;
-    color: white;
     font-size: 14px;
     width: 116px;
     height: 43px;
+    color: white;
 }
+*/
 .text_1 {
     border-style: solid;
     border-width: 1px;
@@ -50,6 +52,7 @@ input[type="submit"] {
     width: 620px;
     height: 43px;
     padding-left: 15px;
+    font-family: '微软雅黑';
 }
 .text_2 {
     border-style: solid;
@@ -58,37 +61,85 @@ input[type="submit"] {
     background-color:  #ffffff;
     width: 82px;
     height: 27px;
+    font-family: '微软雅黑';
 }
-
 input[type="checkbox"] {
     width: 16px;
     height: 16px;
+    background: white;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance:none;
+    border: 1px solid #c1c0c0;
+}
+input[type="checkbox"]:checked {
+    background: url("../images/checkbox.png");
+    overflow: visible;
+}
+input[type="img"]:focus{
+    outline:none;
 }
 .yellow_button_preview {
     border-radius: 2px;
     background-color: #faa600;
-    color: white;
     width: 194px;
     height: 35px;
+    color: white;
     line-height: 35px;
+    font-size: 16px;
+    font-family: '微软雅黑';
+    text-align: center;
 }
 .yellow_button_return {
     border-radius: 2px;
     background-color:  #faa600;
-    color: white;
     width: 116px;
     height: 43px;
+    color: white;
     line-height: 43px;
+    font-size: 14px;
+    font-family: '微软雅黑';
 }
 .green_button {
     border-radius: 2px;
-    background-color: #1abc9c;
-    color: white;
+    background-color: #1abc9c; 
     width: 116px;
     height: 43px;
+    color: white;
     line-height: 43px;
+    font-size: 14px;
+    font-family: '微软雅黑';
+}
+.blue_button_up {
+    border-radius: 2px;
+    background-color:  #83ccf7;
+    width: 117px;
+    height: 33px;
+    color: white;
+    line-height: 33px;
+    font-size: 14px;
+    font-family: '微软雅黑';
+    text-align: center;
+}
+.blue_button_down {
+    border-radius: 2px;
+    background-color:  #3fb0f2;
+    width: 117px;
+    height: 33px;
+    color: white;
+    line-height: 33px;
+    font-size: 14px;
+    font-family: "微软雅黑";
+    text-align: center;
+}
+.delete{
+    background-image: url(../images/delete.png);
 }
 /*颜色组*/
+.ddBlue{
+    color: #119beb;
+}
 .deepBlue{
     color: #376987;
 }
@@ -122,7 +173,7 @@ input[type="checkbox"] {
     padding-left: 15px;
     background: url('../images/downarrow.png') right center white no-repeat;
 }
-/*字体 游标 圆形*/
+/*字体 游标 定位*/
 .size14{
     font-size: 14px;
     font-weight: 400;
@@ -130,4 +181,10 @@ input[type="checkbox"] {
 }
 .cursor{
     cursor:default;
+}
+.left{
+    float:left;
+}
+.right{
+    float:right;
 }

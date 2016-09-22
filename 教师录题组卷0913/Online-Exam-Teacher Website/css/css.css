@@ -16,16 +16,39 @@
 #title_nav ul li .active{ background-color: #3FB0F2;}
 
 /*组卷 Nav*/
-#nav_div ul li{display: inline-block;}
-#nav_div ul:nth-child(1) li:nth-child(1){margin:20px 83px 10px 56px;}
-#nav_div ul:nth-child(1) li:nth-child(2){margin:20px 90px 10px 110px;}
-#nav_div ul:nth-child(1) li:nth-child(3){margin:20px 100px 10px 130px;}
-#nav_div ul:nth-child(1) li:nth-child(4){margin:20px 80px 10px 105px;}
-#nav_div ul:nth-child(2) li:nth-child(odd){margin:0px 5px 24px 0px;border: 0px;padding: 0px}
-#nav_div ul:nth-child(2) li:nth-child(even){margin:0px -5px 30px -10px;border: 0px;padding: 0px}
-.dotActive{background-color: #3fb0f2;}
-#nav_div ul:nth-child(1) li a{color: #3fb0f2;}
-#nav_div ul:nth-child(2) li a{
+
+#nav_div ul li {
+    display: inline-block;
+}
+#nav_div ul:nth-child(1) li:nth-child(1) {
+    margin: 20px 83px 10px 56px;
+}
+#nav_div ul:nth-child(1) li:nth-child(2) {
+    margin: 20px 90px 10px 110px;
+}
+#nav_div ul:nth-child(1) li:nth-child(3) {
+    margin: 20px 100px 10px 130px;
+}
+#nav_div ul:nth-child(1) li:nth-child(4) {
+    margin: 20px 80px 10px 105px;
+}
+#nav_div ul:nth-child(2) li:nth-child(odd) {
+    margin: 0px 5px 24px 0px;
+    border: 0px;
+    padding: 0px
+}
+#nav_div ul:nth-child(2) li:nth-child(even) {
+    margin: 0px -5px 30px -10px;
+    border: 0px;
+    padding: 0px
+}
+.dotActive {
+    background-color: #3fb0f2;
+}
+#nav_div ul:nth-child(1) li a {
+    color: #3fb0f2;
+}
+#nav_div ul:nth-child(2) li a {
     border-radius: 100%;
     border-style: solid;
     border-width: 2px;
@@ -33,45 +56,103 @@
     width: 10px;
     height: 10px;
 }
-.progress{
-    background-color:  #3fb0f2;
+.progress {
+    background-color: #3fb0f2;
     width: 240px;
     height: 2px;
 }
 
 /*组卷2 Nav下面*/
-#set_div{width: 958px; margin: 0 auto; background-color: #F2FBFF; border: 1px solid #DEF4FF; padding: 20px; overflow: hidden;}
-.cardActive{background-color: #83ccf7; color: #fff;}
-all_font{color: #119beb}
-#set_div ul li{display: inline-block;margin-left: 20px;}
-#set_div ul li a{padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;}
-#set_div ul li a:active{background-color: #83ccf7; color: #fff;}
-#set_div ul div{display: inline;margin: 20px;}
-#set_div ul div li{display: inline-block;margin: 5px;}
-#set_div ul div li a{padding-left: 15px;padding-right: 15px;padding-top: 5px;padding-bottom: 5px;}
-#set_div ul div li a:hover{background-color: #83ccf7;color: #fff;}
+
+#set_div {
+    width: 958px;
+    margin: 0 auto;
+    background-color: #F2FBFF;
+    border: 1px solid #DEF4FF;
+    padding: 20px;
+    overflow: hidden;
+}
+.cardActive {
+    background-color: #83ccf7;
+    color: #fff;
+}
+all_font {
+    color: #119beb
+}
+#set_div ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+#set_div ul li a {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#set_div ul li a:active {
+    background-color: #83ccf7;
+    color: #fff;
+}
+#set_div ul div {
+    display: inline;
+    margin: 20px;
+}
+#set_div ul div li {
+    display: inline-block;
+    margin: 5px;
+}
+#set_div ul div li a {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#set_div ul div li a:hover {
+    background-color: #83ccf7;
+    color: #fff;
+}
 
 /*组卷2 Content*/
+
 #content {
     width: 1000px;
     margin: 20px auto;
+    overflow: hidden;
 }
+
 /*组卷2 Content Left*/
+
 #container_left {
     border: 1px solid #e4e6e6;
     background-color: #ffffff;
     width: 227px;
-    margin: auto; 
+    margin: auto;
     float: left;
+    padding: 20px 0px;
 }
-#container_left_content{
+#container_left_content {
     width: 194px;
+    margin: auto;
 }
-#container_left_table{
+#container_left_table {
     box-shadow: 0px 1px 1px;
+    display: inline-block;
 }
+table{
+    width: 192px;
+    border: solid #e4e6e6;
+    border-width:1px 0px 0px 1px;
+}
+td{
+    border: solid #e4e6e6;
+    border-width:0px 1px 1px 0px;
+    padding: 5px;
+    text-align: center;
+}
+
 /*组卷2 Content Right*/
-#container_right{
+
+#container_right {
     border: 1px solid #e4e6e6;
     background-color: #ffffff;
     width: 758px;
@@ -79,10 +160,51 @@ all_font{color: #119beb}
     margin: auto;
     float: right;
 }
-#container_right_section{
-    margin: 0 auto; background-color: #F2FBFF; border: 1px solid #DEF4FF; padding: 20px; overflow: hidden;
+#container_right_section {
+    margin: 0 auto;
+    background-color: #F2FBFF;
+    border: 1px solid #DEF4FF;
+    padding: 10px;
+    overflow: hidden;
 }
+
+/*组卷3 题卡*/
+
+.card {
+    width: 964px;
+    height: 200px;
+    margin: 15px auto;
+    border: 1px solid #e5e7e7;
+}
+.card_left {
+    width: 41px;
+    height: 200px;
+    float: left;
+    background-color: #f5f9fd;
+    border-right: 1px solid #e5e7e7;
+    text-align: center;
+    font-family: Arial;
+    color:  #376987;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+}
+.card_right_up {
+    width: 923px;
+    height: 100px;
+}
+.card_right_down{
+    width: 923px;
+    height: 100px;
+    border-top: 1px solid #e5e7e7;
+}
+.right{
+    position:absolute;
+    margin-left: 41px;
+}
+
 /*组卷4*/
+
 /*
 .greenCircle{
     border-radius: 50%;
@@ -92,15 +214,15 @@ all_font{color: #119beb}
     height: 86px;
 }
 */
-.bigText{
-    font-family:  '幼圆';
-    color:  #666666;
+.bigText {
+    font-family: '幼圆';
+    color: #666666;
     font-size: 30px;
     font-weight: 400;
     line-height: 24px;
 }
-.smallText{
-    color:  #666666;
+.smallText {
+    color: #666666;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
