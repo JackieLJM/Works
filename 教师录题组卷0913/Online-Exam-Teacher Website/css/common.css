@@ -143,6 +143,9 @@ input[type="img"]:focus {
 .blue{
     color: #3fb0f2;
 }
+.lightBlue{
+    color: #4db4f0;
+}
 .black{
     color: #333333;
 }

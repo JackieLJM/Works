@@ -241,3 +241,27 @@ td{
     line-height: 24px;
 }
 /*我录入的题目*/
+tabel {
+    width: 953px;
+    display: inline-block;
+    border: 1px solid #dbdfe0;
+}
+tr{
+    border: 1px solid #dbdfe0;
+}
+td {
+    border: 0px;
+}
+.head {
+    background-color: #83ccf7;
+    color: white;
+    font-size: 14px;
+    font-family: "微软雅黑"；
+    padding: 
+}
+.list{
+    background-color: white;
+    color: #8c8c8c;
+    font-size: 12px;
+    font-family: "微软雅黑"；
+}
