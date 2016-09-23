@@ -137,6 +137,7 @@ all_font {
 #container_left_table {
     box-shadow: 0px 1px 1px;
     display: inline-block;
+    margin-top: 10px;
 }
 table{
     width: 192px;
@@ -156,16 +157,28 @@ td{
     border: 1px solid #e4e6e6;
     background-color: #ffffff;
     width: 758px;
-    height: 600px;
+    height: auto;
     margin: auto;
     float: right;
 }
 #container_right_section {
     margin: 0 auto;
-    background-color: #F2FBFF;
+    background-color: #e5f5ff;
     border: 1px solid #DEF4FF;
-    padding: 10px;
+    padding: 10px 15px;
     overflow: hidden;
+}
+#container_right_content {
+    padding: 10px 15px;
+}
+#container_right_title{
+    margin-top:5px;
+}
+#container_right_card {
+    margin:10px 0px;
+}
+.container_right_card_tittle{
+    margin:10px 0px;
 }
 
 /*组卷3 题卡*/
@@ -198,8 +211,8 @@ td{
     height: 100px;
     border-top: 1px solid #e5e7e7;
 }
-.right{
-    position:absolute;
+.card_right{
+    position: absolute;
     margin-left: 41px;
 }
 
@@ -227,3 +240,4 @@ td{
     font-weight: 400;
     line-height: 24px;
 }
+/*我录入的题目*/
