@@ -40,6 +40,9 @@ input[type="submit"]{
     -moz-appearance:none;
     appearance:none;
 }
+input[type="submit"]:focus{
+    outline: none;
+}
 .text_1 {
     border-style: solid;
     border-width: 1px;
@@ -74,7 +77,10 @@ input[type="checkbox"]:checked {
     background: url("../images/checkbox.png");
     overflow: visible;
 }
-input[type="img"]:focus {
+input[type="image"]{
+    vertical-align: middle;
+}
+input[type="image"]:focus {
     outline:none;
 }
 .yellow_button_preview {
@@ -96,6 +102,16 @@ input[type="img"]:focus {
     color: white;
     line-height: 43px;
     font-size: 14px;
+    font-family: '微软雅黑';
+}
+.yellow_button_search {
+    border-radius: 2px;
+    background-color: #faa600;
+    width: 60px;
+    height: 26px;
+    color: white;
+    line-height: 24px;
+    font-size: 12px;
     font-family: '微软雅黑';
 }
 .green_button {
@@ -159,6 +175,9 @@ input[type="img"]:focus {
     color: #fff;
 }
 /*下拉菜单*/
+select{
+    vertical-align: middle;
+}
 .dropDown {
     border-style: solid;
     border-width: 1px;
@@ -187,8 +206,23 @@ input[type="img"]:focus {
     padding: 0px 15px;
     background: url('../images/downarrrow_order.png') right center no-repeat;
 }
+.dropDown_page {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: #cdd4dc;
+    background-color: #ffffff;
+    width: 43px;
+    height: 24px;
+    color: #4f4f4f;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0px 5px;
+    background: url('../images/downarrow_page.png') right center no-repeat;
+}
 .
-/*字体 游标 定位*/
+/*字体、游标、定位和其他*/
 .size14{
     font-size: 14px;
     font-weight: 400;
@@ -203,6 +237,15 @@ input[type="img"]:focus {
 .right{
     float: right;
 }
+.center{
+    margin: 0px 20px;
+}
 .inline{
     display: inline-block;
+}
+.pagination{
+    color:  #4f4f4f;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 32.416px;
 }

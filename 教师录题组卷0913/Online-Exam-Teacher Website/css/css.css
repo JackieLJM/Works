@@ -139,12 +139,12 @@ all_font {
     display: inline-block;
     margin-top: 10px;
 }
-table{
+#container_left_table table{
     width: 192px;
     border: solid #e4e6e6;
     border-width:1px 0px 0px 1px;
 }
-td{
+#container_left_table td{
     border: solid #e4e6e6;
     border-width:0px 1px 1px 0px;
     padding: 5px;
@@ -241,23 +241,34 @@ td{
     line-height: 24px;
 }
 /*我录入的题目*/
-tabel {
-    width: 953px;
-    display: inline-block;
-    border: 1px solid #dbdfe0;
+.content2 tabel {
+    border: solid #e4e6e6;
+    border-width:1px 0px 0px 1px;    
 }
-tr{
-    border: 1px solid #dbdfe0;
+.content2 th{
+    height: 43px;
+    text-align: center;
+    border: solid #e4e6e6;
+    border-width:0px 1px 1px 0px;
 }
-td {
-    border: 0px;
+.content2 td{
+    height: 69px;
+    text-align: center;
+    border: solid #e4e6e6;
+    border-width:0px 1px 1px 0px;
 }
+.content2 tr:nth-child(3){
+    background-color: #ecf0f1;
+}
+.content2 tr:nth-child(5){
+    background-color: #ecf0f1;
+}
+
 .head {
     background-color: #83ccf7;
     color: white;
     font-size: 14px;
     font-family: "微软雅黑"；
-    padding: 
 }
 .list{
     background-color: white;

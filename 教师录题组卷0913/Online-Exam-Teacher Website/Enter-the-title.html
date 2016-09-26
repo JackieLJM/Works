@@ -28,116 +28,170 @@
     <div id="container">
         <nav id="title_nav">
             <ul>
-                <li><a href="#" class="active">录题</a></li>
-                <li><a href="#">我录入的题目</a></li>
-                <li><a href="#">题库</a></li>
+                <li><a id="content1" href="#" class="active">录题</a></li>
+                <li><a id="content2" href="#">我录入的题目</a></li>
+                <li><a id="content3" href="#">题库</a></li>
             </ul>
         </nav>
         <!--nav End-->
-        <section id="set_div">
-            <p>题目基本信息</p>
-            <br>
-            <select class="dropDown size14" name="" id="">
-                <option value="">选择年级</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <select class="dropDown size14" name="" id="">
-                <option value="">选择知识点</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <select class="dropDown size14" name="" id="">
-                <option value="">选择难易程度</option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-                <option value=""></option>
-            </select>
-            <br>
-        </section>
-        <br>
-        <br>
-        <section id="set_div">
-            <p>题目</p>
-            <br>
-            <iframe src="" frameborder="0" width="800px" height="100px"></iframe>
-            <br>
-        </section>
-        <section id="set_div">
-            <p>答案</p>
-            <br>
-            <iframe src="" frameborder="0" width="800px" height="100px"></iframe>
-            <br>
-        </section>
-        
-        <!--我录入的题目-->
-        <div id="tabel">
-            <table cellspacing="0" cellpadding="0">
-                <tr class="head">
-                    <th>序号</th>
-                    <th>年级</th>
-                    <th>难易程度</th>
-                    <th>教材</th>
-                    <th>知识点</th>
-                    <th>题目信息</th>
-                    <th>操作</th>
-                </tr>
-                <tr class="list">
-                    <td>1</td>
-                    <td>初一</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a class="lightBlue" href=""><u>查看</u></a></td>
-                </tr>
-                <tr class="list">
-                    <td>2</td>
-                    <td>初一</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a class="lightBlue" href=""><u>查看</u></a></td>
-                </tr>
-                <tr class="list">
-                    <td>3</td>
-                    <td>初一</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a class="lightBlue" href=""><u>查看</u></a></td>
-                </tr>
-                <tr class="list">
-                    <td>4</td>
-                    <td>初一</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a class="lightBlue" href=""><u>查看</u></a></td>
-                </tr>
-                <tr class="list">
-                    <td>5</td>
-                    <td>初一</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td><a class="lightBlue" href=""><u>查看</u></a></td>
-                </tr>
-            </table>
-        </div>
-        
+        <ul>
+            <li class="content1">
+                <!--录题-->
+                <section id="set_div">
+                    <p>题目基本信息</p>
+                    <br>
+                    <select class="dropDown size14" name="" id="">
+                        <option value="">选择年级</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <div class="inline center">
+                        <select class="dropDown size14" name="" id="">
+                            <option value="">选择知识点</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <select class="dropDown size14" name="" id="">
+                        <option value="">选择难易程度</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <br>
+                </section>
+                <br>
+                <br>
+                <section id="set_div">
+                    <p>题目</p>
+                    <br>
+                    <iframe src="" frameborder="0" width="800px" height="100px"></iframe>
+                    <br>
+                </section>
+                <section id="set_div">
+                    <p>答案</p>
+                    <br>
+                    <iframe src="" frameborder="0" width="800px" height="100px"></iframe>
+                    <br>
+                </section>
+            </li>
+
+            <li class="content2">
+                <!--我录入的题目-->
+                <div style="margin:0px 25px 80px 20px">
+                    <div style="margin:5px 0px;" class="right">
+                        <a class="yellow_button_search" href="#">
+                            <img style="margin:5px 0px 5px 5px" class="inline" src="images/search.png">
+                            <span>查询</span>
+                        </a>
+                    </div>
+                    <div id="tabel">
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                            <tr class="head">
+                                <th width=“17.5%”>序号</th>
+                                <th width=“17.5%”>年级</th>
+                                <th width=“17.5%”>难易程度</th>
+                                <th width=“17.5%”>教材</th>
+                                <th width=“17.5%”>知识点</th>
+                                <th width=“35%”>题目信息</th>
+                                <th width=“17.5%”>操作</th>
+                            </tr>
+                            <tr class="list">
+                                <td>1</td>
+                                <td>初一</td>
+                                <td>简单</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a class="lightBlue" href=""><u>查看</u></a>
+                                    <a class="lightBlue" href=""><u>编辑</u></a>
+                                    <a class="lightBlue" href=""><u>删除</u></a>
+                                </td>
+                            </tr>
+                            <tr class="list">
+                                <td>2</td>
+                                <td>初一</td>
+                                <td>中等</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a class="lightBlue" href=""><u>查看</u></a>
+                                    <a class="lightBlue" href=""><u>编辑</u></a>
+                                    <a class="lightBlue" href=""><u>删除</u></a>
+                                </td>
+                            </tr>
+                            <tr class="list">
+                                <td>3</td>
+                                <td>初一</td>
+                                <td>困难</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a class="lightBlue" href=""><u>查看</u></a>
+                                    <a class="lightBlue" href=""><u>编辑</u></a>
+                                    <a class="lightBlue" href=""><u>删除</u></a>
+                                </td>
+                            </tr>
+                            <tr class="list">
+                                <td>4</td>
+                                <td>初一</td>
+                                <td>简单</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a class="lightBlue" href=""><u>查看</u></a>
+                                    <a class="lightBlue" href=""><u>编辑</u></a>
+                                    <a class="lightBlue" href=""><u>删除</u></a>
+                                </td>
+                            </tr>
+                            <tr class="list">
+                                <td>5</td>
+                                <td>初一</td>
+                                <td>中等</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>
+                                    <a class="lightBlue" href=""><u>查看</u></a>
+                                    <a class="lightBlue" href=""><u>编辑</u></a>
+                                    <a class="lightBlue" href=""><u>删除</u></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="margin:5px 5px;" class="right">
+                        <span style="margin:0px 2px" class="pagination">共<font color="red">&nbsp;1054&nbsp;</font>条记录，当前第<font color="red">&nbsp;1/71&nbsp;</font>页</span>
+                        <input style="margin:0px 2px" type="image" src="images/back.png">
+                        <input style="margin:0px 2px" type="image" src="images/next.png">
+                        <select style="margin:0px 2px" class="dropDown_page" name="" id="">
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                        </select>
+                        <input style="margin:0px 2px" type="image" src="images/go.png">
+                    </div>
+                </div>
+            </li>
+
+            <li class="content3">
+                <!--题库-->
+            </li>
+        </ul>
     </div>
     <!--container End-->
     <div id="button" align="center">
@@ -146,6 +200,35 @@
     <footer id="footer">
         <p>版权所有 Copyright© 北京五岳鑫信息技术股份有限公司</p>
     </footer>
+    <script>
+        $(document).ready(function () {
+            $(".content2").hide();
+            $("#content1").click(function () {
+                $("#content1").attr("class", "active");
+                $("#content2").removeAttr("class");
+                $("#content3").removeAttr("class");
+                $(".content1").show();
+                $(".content2").hide();
+                $(".content3").hide();
+            });
+            $("#content2").click(function () {
+                $("#content1").removeAttr("class");
+                $("#content2").attr("class", "active");
+                $("#content3").removeAttr("class");
+                $(".content1").hide();
+                $(".content2").show();
+                $(".content3").hide();
+            });
+            $("#content3").click(function () {
+                $("#content1").removeAttr("class");
+                $("#content2").removeAttr("class");
+                $("#content3").attr("class", "active");
+                $(".content1").hide();
+                $(".content2").hide();
+                $(".content3").show();
+            });
+        })
+    </script>
 </body>
 
 </html>
