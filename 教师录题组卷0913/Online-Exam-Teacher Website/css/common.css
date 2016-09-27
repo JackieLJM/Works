@@ -204,7 +204,7 @@ select{
     -moz-appearance: none;
     appearance: none;
     padding: 0px 15px;
-    background: url('../images/downarrrow_order.png') right center no-repeat;
+    background: url('../images/downarrrow_order.png') right no-repeat;
 }
 .dropDown_page {
     border-style: solid;

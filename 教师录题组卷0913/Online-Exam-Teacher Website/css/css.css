@@ -16,7 +16,6 @@
 #title_nav ul li .active{ background-color: #3FB0F2;}
 
 /*组卷 Nav*/
-
 #nav_div ul li {
     display: inline-block;
 }
@@ -63,9 +62,8 @@
 }
 
 /*组卷2 Nav下面*/
-
 #set_div {
-    width: 958px;
+    width: 956px;
     margin: 0 auto;
     background-color: #F2FBFF;
     border: 1px solid #DEF4FF;
@@ -113,7 +111,6 @@ all_font {
 }
 
 /*组卷2 Content*/
-
 #content {
     width: 1000px;
     margin: 20px auto;
@@ -121,7 +118,6 @@ all_font {
 }
 
 /*组卷2 Content Left*/
-
 #container_left {
     border: 1px solid #e4e6e6;
     background-color: #ffffff;
@@ -133,6 +129,9 @@ all_font {
 #container_left_content {
     width: 194px;
     margin: auto;
+}
+#container_left_content .middle{
+    margin-top:10px;
 }
 #container_left_table {
     box-shadow: 0px 1px 1px;
@@ -152,7 +151,6 @@ all_font {
 }
 
 /*组卷2 Content Right*/
-
 #container_right {
     border: 1px solid #e4e6e6;
     background-color: #ffffff;
@@ -177,12 +175,26 @@ all_font {
 #container_right_card {
     margin:10px 0px;
 }
-.container_right_card_tittle{
+/*
+#container_right_card .card_left{
+    border-right:1px solid #e4e6e6;
+    padding:0px 80px 0px 0px;
+}
+*/
+.container_right_card_title{
     margin:10px 0px;
+}
+.container_right_card_content{
+    margin:20px 0px;
+    height:70px;
+    padding:10px 0px 0px 0px;
+}
+.container_right_card_button{
+    margin:10px 0px;
+    padding:10px 50px 0px 0px;
 }
 
 /*组卷3 题卡*/
-
 .card {
     width: 964px;
     height: 200px;
@@ -217,16 +229,6 @@ all_font {
 }
 
 /*组卷4*/
-
-/*
-.greenCircle{
-    border-radius: 50%;
-    background-color:  #44c678;
-    box-shadow: 1px 2px 1px 0px rgba(0, 0, 0, 0.2);
-    width: 86px;
-    height: 86px;
-}
-*/
 .bigText {
     font-family: '幼圆';
     color: #666666;
@@ -240,23 +242,55 @@ all_font {
     font-weight: 400;
     line-height: 24px;
 }
+
+/*Enter-the-title 公共部分*/
+.content1{
+    width: 998px;
+    background-color: #fff;
+    border: 1px solid #dbdfe0;
+    margin: 20px auto;
+}
+.content2{
+    width: 998px;
+    background-color: #fff;
+    border: 1px solid #dbdfe0;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.content3{
+    width: 998px;
+    background-color: #fff;
+    border: 1px solid #dbdfe0;
+    margin: 20px auto;
+}
+
 /*我录入的题目*/
-.content2 tabel {
-    border: solid #e4e6e6;
-    border-width:1px 0px 0px 1px;    
+.content2 .search{
+    margin:5px 0px;
+}
+.content2 .search .img{
+    margin:5px 0px 5px 5px;
+}
+.content2 .position{
+    margin:20px 20px 80px 20px;
+}
+.content2 table {
+    border: 1px solid #e4e6e6;
+    border-width:1px 1px 0px 1px;    
 }
 .content2 th{
     height: 43px;
     text-align: center;
     border: solid #e4e6e6;
-    border-width:0px 1px 1px 0px;
+    border-width:0px 0px 1px 0px;
 }
 .content2 td{
     height: 69px;
     text-align: center;
     border: solid #e4e6e6;
-    border-width:0px 1px 1px 0px;
-}
+    border-width:0px 0px 1px 0px;
+    white-space: nowrap;
+    }
 .content2 tr:nth-child(3){
     background-color: #ecf0f1;
 }
@@ -264,7 +298,7 @@ all_font {
     background-color: #ecf0f1;
 }
 
-.head {
+.head{
     background-color: #83ccf7;
     color: white;
     font-size: 14px;
@@ -275,4 +309,10 @@ all_font {
     color: #8c8c8c;
     font-size: 12px;
     font-family: "微软雅黑"；
+}
+.bottom_banner{
+    margin:5px 5px;
+}
+.bottom_banner .space{
+    margin:0px 2px;
 }
