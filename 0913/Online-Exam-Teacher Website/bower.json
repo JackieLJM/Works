@@ -1,0 +1,17 @@
+{
+  "name": "Online-Exam-Teacher Website",
+  "homepage": "https://github.com/JackieLJM/Works",
+  "authors": [
+    "JackieLJM <ljmlionshy@live.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "html5shiv": "^3.7.3",
+    "cssfx": "^0.9.6",
+    "modernizr": "^3.3.1",
+    "css-polyfills": "*"
+  }
+}

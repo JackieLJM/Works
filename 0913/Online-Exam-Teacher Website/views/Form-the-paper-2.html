@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>录题</title>
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <link type="text/css" rel="stylesheet" href="../css/css.css">
+    <script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+    
+        <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+<!--        <script src="bower_components/cssfx/cssfx.min.js"></script>-->
+<!--        <script src="Dean-Edwards--IE-7-and-8-and-9-master/IE7.min.js"></script>-->
+<!--        <script src="Dean-Edwards--IE-7-and-8-and-9-master/IE8.min.js"></script>-->
+<!--        <script src="Dean-Edwards--IE-7-and-8-and-9-master/IE9.min.js"></script>-->
+    
+</head>
+
+<body>
+    <header id="header">
+        <div class="top_box">
+            <a class="logo" href="../index.html"><img src="../images/logo.png"></a>
+            <ul class="top_nav">
+                <li><a href="#">退出登录</a></li>
+                <li><span>|</span></li>
+                <li><img src="../images/topicon1.png"><a href="#">姓名</a></li>
+                <li><span>|</span></li>
+                <li><a href="#">我要组卷</a></li>
+                <li><span>|</span></li>
+                <li><a href="#">我要录题</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--header End-->
+    <div id="container">
+        <nav id="nav_div">
+            <div align="center">
+                <ul>
+                    <li><a href="../Form-the-paper-1.html#填写基本信息">填写基本信息</a></li>
+                    <li><a>选题</a></li>
+                    <li><a href="Form-the-paper-3.html#预览">预览</a></li>
+                    <li><a class="cursor">发布成功</a></li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="../Form-the-paper-1.html#填写基本信息"></a>
+                    </li>
+                    <li>
+                        <p class="progress"></p>
+                    </li>
+                    <li>
+                        <a class="dotActive"></a>
+                    </li>
+                    <li>
+                        <p class="progress"></p>
+                    </li>
+                    <li>
+                        <a href="Form-the-paper-3.html#预览"></a>
+                    </li>
+                    <li>
+                        <p class="progress"></p>
+                    </li>
+                    <li>
+                        <a class="cursor"></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--nav End-->
+        <section id="set_div">
+            <ul>
+                <li>年级</li>
+                <li><a class="cardActive all" href="#">全部</a></li>
+                <div>
+                    <li><a class="deepBlue" href="#">初一</a></li>
+                    <li><a class="deepBlue" href="#">初二</a></li>
+                    <li><a class="deepBlue" href="#">初三</a></li>
+                    <li><a class="deepBlue" href="#">高一</a></li>
+                    <li><a class="deepBlue" href="#">高二</a></li>
+                    <li><a class="deepBlue" href="#">高三</a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>学科</li>
+                <li><a class="cardActive all" href="#">全部</a></li>
+                <div>
+                    <li><a class="deepBlue " href="#">语文</a></li>
+                    <li><a class="deepBlue" href="#">数学</a></li>
+                    <li><a class="deepBlue" href="#">英语</a></li>
+                    <li><a class="deepBlue" href="#">物理</a></li>
+                    <li><a class="deepBlue" href="#">化学</a></li>
+                    <li><a class="deepBlue" href="#">政治</a></li>
+                    <li><a class="deepBlue" href="#">历史</a></li>
+                </div>
+            </ul>
+            <ul>
+                <li>教材</li>
+                <li><a class="cardActive all" href="#">全部</a></li>
+                <div>
+                    <li><a class="deepBlue" href="#">七年级北师大版上</a></li>
+                    <li><a class="deepBlue" href="#">七年级新人教版上</a></li>
+                    <li><a class="deepBlue" href="#">七年级北师大版下</a></li>
+                    <li><a class="deepBlue" href="#">七年级新人教版上</a></li>
+                    <li><a class="deepBlue" href="#">七年级冀教版上</a></li>
+                    <li><a class="deepBlue" href="#">七年级冀教版下</a></li>
+                </div>
+            </ul>
+        </section>
+    </div>
+    <!--container End-->
+    <div id="content">
+        <div id="container_left">
+            <div id="container_left_content">
+                <a class="yellow_button_preview" href="Form-the-paper-3.html">预览</a>
+                <div class="middle">
+                    <div class="left">
+                        <p class="gray">已选题目（5）</p>
+                    </div>
+                    <div class="right">
+                        <a class="ddBlue" href="#"><u>清空选择</u></a>
+                    </div>
+                </div>
+                <div id="container_left_table">
+                    <table cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>单选题</td>
+                            <td>2</td>
+                            <td>30%</td>
+                            <td>
+                                <input type="image" src="../images/delete.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>填空题</td>
+                            <td>2</td>
+                            <td>30%</td>
+                            <td>
+                                <input type="image" src="../images/delete.png">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>简答题</td>
+                            <td>1</td>
+                            <td>40%</td>
+                            <td>
+                                <input type="image" src="../images/delete.png">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="container_right">
+            <section id="container_right_section">
+                <span class="deepBlue">题型：</span> &nbsp;&nbsp;
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">单选题</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">多选题</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">填空题</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">判断题</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">简答题</label>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">其他</label>
+                <a class="ddBlue right inline" href="#"><u>展开更多选项</u></a>
+            </section>
+
+
+            <div id="container_right_content">
+                <!--题目头-->
+                <div id="container_right_title">
+                    <div class="inline">
+                        <p class="deepBlue">排序：</p>
+                    </div>
+                    &nbsp;&nbsp;
+                    <div class="inline">
+                        <select class="dropDown_order" name="" id="">
+                            <option value="">发布时间</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="gray right inline">
+                        共13654试题
+                    </div>
+                </div>
+
+                <!--题目-->
+                <div id="container_right_card">
+                    <div class="left" style="border-right:1px solid #e4e6e6;
+    padding:0px 80px 0px 0px;">
+                        <p class="deepBlue container_right_card_title">
+                            老师贡献&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="deepGray">初一级数学单选题</span>
+                        </p>
+                        <p class="deepBlue container_right_card_title">
+                            <span class="gray">分类：课后练习教材</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">年级：初一</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">章节：第八章</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">难易度：容易</span>
+                        </p>
+                        <p class="container_right_card_content">
+                            2x=3y+1
+                            <br> y-6=x+3
+                            <br> 求y？
+                            <br> A.12 B.4 C.5 D.6
+                            <!--以上是实际题目位置-->
+                        </p>
+                    </div>
+                    <div class="right container_right_card_button">
+                        <input class="blue_button_up" type="submit" value="移出训练">
+                        <br>
+                        <br>
+                        <a class="blue_button_down" href="#">查看答案</a>
+                    </div>
+                </div>
+
+                <!--题目-->
+                <div id="container_right_card">
+                    <div class="left" style="border-right:1px solid #e4e6e6;
+    padding:0px 80px 0px 0px;">
+                        <p class="deepBlue container_right_card_title">
+                            老师贡献&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="deepGray">初一级数学单选题</span>
+                        </p>
+                        <p class="deepBlue container_right_card_title">
+                            <span class="gray">分类：课后练习教材</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">年级：初一</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">章节：第八章</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">难易度：容易</span>
+                        </p>
+                        <p class="container_right_card_content">
+                            2x=3y+1
+                            <br> y-6=x+3
+                            <br> 求y？
+                            <br> A.12 B.4 C.5 D.6
+                            <!--以上是实际题目位置-->
+                        </p>
+                    </div>
+                    <div class="right container_right_card_button">
+                        <input class="blue_button_up" type="submit" value="移出训练">
+                        <br>
+                        <br>
+                        <a class="blue_button_down" href="#">查看答案</a>
+                    </div>
+                </div>
+
+                <!--题目-->
+                <div id="container_right_card">
+                    <div class="left" style="border-right:1px solid #e4e6e6;
+    padding:0px 80px 0px 0px;">
+                        <p class="deepBlue container_right_card_title">
+                            老师贡献&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="deepGray">初一级数学单选题</span>
+                        </p>
+                        <p class="deepBlue container_right_card_title">
+                            <span class="gray">分类：课后练习教材</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">年级：初一</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">章节：第八章</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">难易度：容易</span>
+                        </p>
+                        <p class="container_right_card_content">
+                            2x=3y+1
+                            <br> y-6=x+3
+                            <br> 求y？
+                            <br> A.12 B.4 C.5 D.6
+                            <!--以上是实际题目位置-->
+                        </p>
+                    </div>
+                    <div class="right container_right_card_button">
+                        <input class="blue_button_up" type="submit" value="移出训练">
+                        <br>
+                        <br>
+                        <a class="blue_button_down" href="#">查看答案</a>
+                    </div>
+                </div>
+
+                <!--题目-->
+                <div id="container_right_card">
+                    <div class="left" style="border-right:1px solid #e4e6e6;
+    padding:0px 80px 0px 0px;">
+                        <p class="deepBlue container_right_card_title">
+                            老师贡献&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="deepGray">初一级数学单选题</span>
+                        </p>
+                        <p class="deepBlue container_right_card_title">
+                            <span class="gray">分类：课后练习教材</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">年级：初一</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">章节：第八章</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">难易度：容易</span>
+                        </p>
+                        <p class="container_right_card_content">
+                            2x=3y+1
+                            <br> y-6=x+3
+                            <br> 求y？
+                            <br> A.12 B.4 C.5 D.6
+                            <!--以上是实际题目位置-->
+                        </p>
+                    </div>
+                    <div class="right container_right_card_button">
+                        <input class="blue_button_up" type="submit" value="移出训练">
+                        <br>
+                        <br>
+                        <a class="blue_button_down" href="#">查看答案</a>
+                    </div>
+                </div>
+
+                <!--题目-->
+                <div id="container_right_card">
+                    <div class="left" style="border-right:1px solid #e4e6e6;
+    padding:0px 80px 0px 0px;">
+                        <p class="deepBlue container_right_card_title">
+                            老师贡献&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="deepGray">初一级数学单选题</span>
+                        </p>
+                        <p class="deepBlue container_right_card_title">
+                            <span class="gray">分类：课后练习教材</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">年级：初一</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">章节：第八章</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class="gray">难易度：容易</span>
+                        </p>
+                        <p class="container_right_card_content">
+                            2x=3y+1
+                            <br> y-6=x+3
+                            <br> 求y？
+                            <br> A.12 B.4 C.5 D.6
+                            <!--以上是实际题目位置-->
+                        </p>
+                    </div>
+                    <div class="right container_right_card_button">
+                        <input class="blue_button_up" type="submit" value="移出训练">
+                        <br>
+                        <br>
+                        <a class="blue_button_down" href="#">查看答案</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--content End-->
+    <div align="center">
+        <div class="inline"><a class="green_button" href="../Form-the-paper-1.html">上一步</a></div>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="inline"><a class="green_button" href="Form-the-paper-3.html#预览">下一步</a></div>
+    </div>
+    <!--button End-->
+    <footer id="footer">
+        <p>版权所有 Copyright© 北京五岳鑫信息技术股份有限公司</p>
+    </footer>
+    <script>
+        //content left 位置相对效果
+        //        $("#container_left").html(pageYOffset);
+        //        setInterval("left()", 50);
+        //        var left = function () {
+        //                $("#container_left").html(pageYOffset);
+        //                var cleft = $("#container_left");
+        //                if (window.pageYOffset >= 380) {
+        ////                    cleft.style="position:fixed";
+        ////                    cleft.style.scrollTop = "1000";
+        //                } else if (window.pageYOffset < 380 && window.pageYOffset > 10) {
+        ////                    cleft.style="position:relative";
+        //                }
+        //            }
+        //组卷3 Nav下面效果
+        //        window.onload = function () {
+        //            var dot = document.getElementById("nav_div").lastChild;
+        //            console.log(dot);
+        //            var card = document.getElementById("set_div");
+        //            dot.addEventListener("click", function (e) {
+        //                e.target.setAttribute("class", "dotActive")
+        //            })
+        //            card.addEventListener("click", function (e) {
+        //                var all = e.target.parentNode.parentNode.parentNode.children[1].lastChild;
+        //                if (all.hasAttribute("all"
+        //                        "")) {}
+        //                if (e.target.hasAttribute("class")) {
+        //                    e.target.removeAttribute("class")
+        //                } else if (e.target.hasAttribute("href")) {
+        //                    e.target.setAttribute("class", "cardActive")
+        //                }
+        //            })
+        //        }
+    </script>
+    <!--<script src="../lib/jquery.leanModal.min.js"></script>-->
+    <!--<script src="js/router.js"></script>-->
+    <!--<script src="js/formThePaper.js"></script>-->
+</body>
+
+</html>

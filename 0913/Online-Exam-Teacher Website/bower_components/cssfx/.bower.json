@@ -1,0 +1,15 @@
+{
+  "name": "cssfx",
+  "homepage": "https://github.com/imsky/cssFx",
+  "version": "0.9.6",
+  "_release": "0.9.6",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.9.6",
+    "commit": "85207a58a0e9819ebe7e02d79f3a93a9b0a5c8f0"
+  },
+  "_source": "https://github.com/imsky/cssFx.git",
+  "_target": "^0.9.6",
+  "_originalSource": "cssfx",
+  "_direct": true
+}
