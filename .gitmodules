@@ -1,0 +1,3 @@
+[submodule "Workshop-cordova/workshop/www/cordova-tutorial"]
+	path = Workshop-cordova/workshop/www/cordova-tutorial
+	url = https://github.com/ccoenraets/cordova-tutorial.git
