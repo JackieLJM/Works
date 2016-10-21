@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>阅卷参数设置</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link type="text/css" rel="stylesheet" href="../css/common.css">
+    <script type="text/javascript" src="js/common.js"></script>
+    <!--<script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>-->
+    <!--开关按钮-->
+    <link rel="stylesheet" href="../css/Switch.css">
+    <!--下拉菜单-->
+    <!--    <link rel="stylesheet" href="../css/Dropdown.css">-->
+    <!--
+    <link rel="stylesheet" href="../css/cs-select.css">
+    <link rel="stylesheet" href="../css/cs-skin-border.css">
+    -->
+</head>
+
+<body>
+    <form action="" method="get">
+        <div id="content">
+            <div class="contentUnit1">
+                <div class="left">评卷阶段</div>
+                <div class="right">
+                    <section>
+                        <select class="dropdown">
+                            <option value="" selected>禁止初始化</option>
+                            <option value="">E-Mail</option>
+                            <option value="">Twitter</option>
+                            <option value="">LinkedIn</option>
+                        </select>
+                    </section>
+                </div>
+            </div>
+            <div class="contentUnit1">
+                <div class="left">误差控制类型</div>
+                <div class="right">
+                    <section>
+                        <select class="dropdown">
+                            <option value="" selected>按小题</option>
+                            <option value="">E-Mail</option>
+                            <option value="">Twitter</option>
+                            <option value="">LinkedIn</option>
+                        </select>
+                    </section>
+                </div>
+            </div>
+            <div class="contentUnit1">
+                <div class="left">允许终评自己一二评试卷</div>
+                <div class="right">
+                    <section class="model-2">
+                        <div class="checkbox">
+                            <input type="checkbox" />
+                            <label></label>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="contentUnit1">
+                <div class="left">允许压力测试</div>
+                <div class="right">
+                    <section class="model-2">
+                        <div class="checkbox">
+                            <input type="checkbox" />
+                            <label></label>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="contentUnit1">
+                <div class="left">评分结果图片显示方式</div>
+                <div class="right">
+                    <div class="radio">
+                        <input type="radio" id="Flash" name="a" checked="checked">&nbsp;&nbsp;&nbsp;Flash
+                    </div>
+                    <div class="radio">
+                        <input type="radio" id="Servlet" name="a">&nbsp;&nbsp;&nbsp;Servlet
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--
+    <script type="text/javascript" src="../js/classie.js"></script>
+    <script type="text/javascript" src="../js/selectFx.js"></script>
+    <script>
+        (function () {
+				[].slice.call(document.querySelectorAll('select.cs-select')).forEach(function (el) {
+                new SelectFx(el);
+            });
+        })();
+    </script>
+    -->
+</body>
+
+</html>
