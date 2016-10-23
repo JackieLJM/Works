@@ -62,7 +62,7 @@
 }
 
 /*组卷2 Nav下面*/
-#set_div {
+.set_div {
     width: 956px;
     margin: 0 auto;
     background-color: #F2FBFF;
@@ -77,35 +77,35 @@
 all_font {
     color: #119beb
 }
-#set_div ul li {
+.set_div ul li {
     display: inline-block;
     margin-left: 20px;
 }
-#set_div ul li a {
+.set_div ul li a {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#set_div ul li a:active {
+.set_div ul li a:active {
     background-color: #83ccf7;
     color: #fff;
 }
-#set_div ul div {
+.set_div ul div {
     display: inline;
     margin: 20px;
 }
-#set_div ul div li {
+.set_div ul div li {
     display: inline-block;
     margin: 5px;
 }
-#set_div ul div li a {
+.set_div ul div li a {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#set_div ul div li a:hover {
+.set_div ul div li a:hover {
     background-color: #83ccf7;
     color: #fff;
 }
