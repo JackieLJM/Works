@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>LIUJIAMING-PC</Machine>
+    <WindowsUser>LIUJIAMING</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>debug|anycpu</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>com.yourname.workshop</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Apache Cordova Team</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\build\windows\debug\anycpu\win8.1\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_add.png">
+      <PackagePath>www\assets\css\images\ic_action_add.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_arrow_left.png">
+      <PackagePath>www\assets\css\images\ic_action_arrow_left.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_book.png">
+      <PackagePath>www\assets\css\images\ic_action_book.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_bookmark.png">
+      <PackagePath>www\assets\css\images\ic_action_bookmark.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_dialog.png">
+      <PackagePath>www\assets\css\images\ic_action_dialog.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_download.png">
+      <PackagePath>www\assets\css\images\ic_action_download.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_goleft.png">
+      <PackagePath>www\assets\css\images\ic_action_goleft.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_location.png">
+      <PackagePath>www\assets\css\images\ic_action_location.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_mail.png">
+      <PackagePath>www\assets\css\images\ic_action_mail.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_monolog.png">
+      <PackagePath>www\assets\css\images\ic_action_monolog.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_phone_outgoing.png">
+      <PackagePath>www\assets\css\images\ic_action_phone_outgoing.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_search.png">
+      <PackagePath>www\assets\css\images\ic_action_search.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_user.png">
+      <PackagePath>www\assets\css\images\ic_action_user.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\images\ic_action_users.png">
+      <PackagePath>www\assets\css\images\ic_action_users.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\pageslider.css">
+      <PackagePath>www\assets\css\pageslider.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\css\styles.css">
+      <PackagePath>www\assets\css\styles.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\css\ratchet-theme-android.css">
+      <PackagePath>www\assets\ratchet\css\ratchet-theme-android.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\css\ratchet-theme-android.min.css">
+      <PackagePath>www\assets\ratchet\css\ratchet-theme-android.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\css\ratchet-theme-ios.css">
+      <PackagePath>www\assets\ratchet\css\ratchet-theme-ios.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\css\ratchet-theme-ios.min.css">
+      <PackagePath>www\assets\ratchet\css\ratchet-theme-ios.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\css\ratchet.css">
+      <PackagePath>www\assets\ratchet\css\ratchet.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\css\ratchet.min.css">
+      <PackagePath>www\assets\ratchet\css\ratchet.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\css\notification.css">
+      <PackagePath>www\css\notification.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\css\splashscreen.css">
+      <PackagePath>www\css\splashscreen.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Amy_Jones.jpg">
+      <PackagePath>www\assets\pics\Amy_Jones.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Amy_Jones50.jpg">
+      <PackagePath>www\assets\pics\Amy_Jones50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Eugene_Lee.jpg">
+      <PackagePath>www\assets\pics\Eugene_Lee.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Eugene_Lee50.jpg">
+      <PackagePath>www\assets\pics\Eugene_Lee50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Gary_Donovan.jpg">
+      <PackagePath>www\assets\pics\Gary_Donovan.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Gary_Donovan50.jpg">
+      <PackagePath>www\assets\pics\Gary_Donovan50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\James_King.jpg">
+      <PackagePath>www\assets\pics\James_King.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\James_King50.jpg">
+      <PackagePath>www\assets\pics\James_King50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\John_Williams.jpg">
+      <PackagePath>www\assets\pics\John_Williams.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\John_Williams50.jpg">
+      <PackagePath>www\assets\pics\John_Williams50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Julie_Taylor.jpg">
+      <PackagePath>www\assets\pics\Julie_Taylor.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Julie_Taylor50.jpg">
+      <PackagePath>www\assets\pics\Julie_Taylor50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Kathleen_Byrne.jpg">
+      <PackagePath>www\assets\pics\Kathleen_Byrne.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Kathleen_Byrne50.jpg">
+      <PackagePath>www\assets\pics\Kathleen_Byrne50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Lisa_Wong.jpg">
+      <PackagePath>www\assets\pics\Lisa_Wong.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Lisa_Wong50.jpg">
+      <PackagePath>www\assets\pics\Lisa_Wong50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Paula_Gates.jpg">
+      <PackagePath>www\assets\pics\Paula_Gates.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Paula_Gates50.jpg">
+      <PackagePath>www\assets\pics\Paula_Gates50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Paul_Jones.jpg">
+      <PackagePath>www\assets\pics\Paul_Jones.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Paul_Jones50.jpg">
+      <PackagePath>www\assets\pics\Paul_Jones50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Ray_Moore.jpg">
+      <PackagePath>www\assets\pics\Ray_Moore.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Ray_Moore50.jpg">
+      <PackagePath>www\assets\pics\Ray_Moore50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Steven_Wells.jpg">
+      <PackagePath>www\assets\pics\Steven_Wells.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\pics\Steven_Wells50.jpg">
+      <PackagePath>www\assets\pics\Steven_Wells50.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\fonts\ratchicons.eot">
+      <PackagePath>www\assets\ratchet\fonts\ratchicons.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\fonts\ratchicons.svg">
+      <PackagePath>www\assets\ratchet\fonts\ratchicons.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\fonts\ratchicons.ttf">
+      <PackagePath>www\assets\ratchet\fonts\ratchicons.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\assets\ratchet\fonts\ratchicons.woff">
+      <PackagePath>www\assets\ratchet\fonts\ratchicons.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\cordova-js-src\confighelper.js">
+      <PackagePath>www\cordova-js-src\confighelper.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\cordova-js-src\splashscreen.js">
+      <PackagePath>www\cordova-js-src\splashscreen.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\js\app.js">
+      <PackagePath>www\js\app.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\js\services\json\EmployeeService.js">
+      <PackagePath>www\js\services\json\EmployeeService.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\js\services\localstorage\EmployeeService.js">
+      <PackagePath>www\js\services\localstorage\EmployeeService.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\js\services\memory\EmployeeService.js">
+      <PackagePath>www\js\services\memory\EmployeeService.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\js\services\websql\EmployeeService.js">
+      <PackagePath>www\js\services\websql\EmployeeService.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\lib\fastclick.js">
+      <PackagePath>www\lib\fastclick.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\lib\handlebars.js">
+      <PackagePath>www\lib\handlebars.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\lib\jquery.js">
+      <PackagePath>www\lib\jquery.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\lib\pageslider.js">
+      <PackagePath>www\lib\pageslider.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\lib\router.js">
+      <PackagePath>www\lib\router.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\plugins\cordova-plugin-console\www\console-via-logger.js">
+      <PackagePath>www\plugins\cordova-plugin-console\www\console-via-logger.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\plugins\cordova-plugin-console\www\logger.js">
+      <PackagePath>www\plugins\cordova-plugin-console\www\logger.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\plugins\cordova-plugin-device\src\windows\DeviceProxy.js">
+      <PackagePath>www\plugins\cordova-plugin-device\src\windows\DeviceProxy.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\plugins\cordova-plugin-device\www\device.js">
+      <PackagePath>www\plugins\cordova-plugin-device\www\device.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\plugins\cordova-plugin-dialogs\src\windows\NotificationProxy.js">
+      <PackagePath>www\plugins\cordova-plugin-dialogs\src\windows\NotificationProxy.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\plugins\cordova-plugin-dialogs\www\notification.js">
+      <PackagePath>www\plugins\cordova-plugin-dialogs\www\notification.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\LIUJIAMING\Desktop\Works\Workshop-cordova\workshop\platforms\windows\build\windows\debug\anycpu\win8.1\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.17018</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.17018</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
