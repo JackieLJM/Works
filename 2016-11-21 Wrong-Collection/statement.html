@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>云五岳--一站式教育平台</title>
+    <link type="text/css" rel="stylesheet" href="css/bookcommon.css">
+    <link type="text/css" rel="stylesheet" href="css/book.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/bookcommon.js"></script>
+    <script type="text/javascript" src="js/mistakeList.js"></script>
+    <script type="text/javascript" src="js/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="js/statement.js"></script>
+    <!--[if lte IE 9]>
+    <style>
+        .tab .uk{   width: 47%\0;    margin-left: 2%\0;margin-top: 2%\0;float: left\0}
+    </style>
+    <![endif]-->
+    <script>
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <!--头部-->
+    <div class="logo">
+        <div class="logoimg"><img src="images/logo.png"></div>
+    </div>
+    <!--导航-->
+    <div class="wNav">
+        <div class="nav">
+            <div class="navLeft"><a href="index.html" >首页</a><a href="statement.html" class="alink">统计报表</a><a href="mistakeList.html">我的错题本</a></div>
+            <div class="navRight">
+                <img src="images/user_img2.png">
+                <span>个人中心 </span>
+                <img src="images/down.png">
+                <ul class="unav">
+                    <li><a href="#">个人资料</a></li>
+                    <li><a href="#">修改密码</a></li>
+                    <li><a href="#">安全退出</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--中间-->
+    <div class="content">
+        <!--班级菜单-->
+        <div id="count_class">
+            <div  class="chead">
+                <div class="nav_top">
+                    <img src="images/class_img1.png"><span>班级</span>
+                </div>
+            </div>
+            <!---->
+            <ul class="class_nav">
+                <li class="hover_back"><a href="#" class="hover_a">语文</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">数学数学</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">语文</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">数学</a><img src="images/sign_img6.png"></li>
+               	<li><a href="#" id="clickmore">更多</a><img src="images/down.png">
+                    <dl class="more">
+                        <dt>高一</dt>
+                        <dd><a href="#">高一考试1</a></dd>
+                        <dd><a href="#">高一考试2</a></dd>
+                        <dd><a href="#">高一考试3</a></dd>
+                        <hr>
+                        <dt>高二</dt>
+                        <dd><a href="#">高二考试1</a></dd>
+                        <dd><a href="#">高二考试2</a></dd>
+                        <dd><a href="#">高二考试3</a></dd>
+                        <hr>
+                        <dt>高三</dt>
+                        <dd><a href="#">高三考试1</a></dd>
+                        <dd><a href="#">高三考试2</a></dd>
+                        <dd><a href="#">高三考试3</a></dd>
+                    </dl>
+				</li>
+
+            </ul>
+        </div>
+        <!--试卷-->
+        <div id="count_textpaper">
+            <div  class="chead">
+                <div class="nav_top">
+                    <img src="images/textpaper_img1.png"><span>试卷</span>
+                </div>
+            </div>
+            <ul class="class_nav">
+                <li class="hover_back"><a href="#"  class="hover_a">语文</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">数学</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">语文</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">数学</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">•••</a></li>
+            </ul>
+        </div>
+        <!--考试-->
+        <div id="count_text">
+            <div  class="chead">
+                <div class="nav_top">
+                    <img src="images/text_img1.png"><span>考试</span>
+                </div>
+            </div>
+            <ul class="class_nav">
+                <li class="hover_back"><a href="#"  class="hover_a">语文</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">数学</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">语文</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">数学</a><img src="images/sign_img6.png"></li>
+                <li><a href="#">语文</a><img src="images/sign_img6.png"></li>
+            </ul>
+        </div>
+        <!--表格内容切换区-->
+        <div class="tab">
+            <div class="uk"><!--第一个表格-->
+                <div class="uk-top"><!--第一个表格top-->
+                    <div class="uk-top-left">
+                        <img src="images/sign_img1.png">
+                        <span>总成绩分布段人数分布态势</span>
+                    </div>
+                    <div class="uk-top-right">
+                        <img src="images/sign_img2.png">
+                        <img src="images/sign_img3.png">
+                        <img src="images/sign_img4.png" >
+                        <img src="images/sign_img5.png" class="cdisplay">
+
+                    </div>
+                </div>
+                <div class="counttab"><!--第二个表格内容-->
+                    <img src="images/aaaaaaa.png" class="d1">
+                </div>
+            </div>
+            <div class="uk">
+                <div class="uk-top" >
+                    <div class="uk-top-left">
+                        <img src="images/sign_img1.png">
+                        <span>总成绩分布段人数分布态势2</span>
+                    </div>
+                    <div class="uk-top-right">
+                        <img src="images/sign_img2.png">
+                        <img src="images/sign_img3.png">
+                        <img src="images/sign_img4.png">
+                        <img src="images/sign_img5.png" class="cdisplay">
+                    </div>
+                </div>
+
+                <div class="counttab"><img src="images/aaaaaaa.png" class="d2"></div>
+            </div>
+            <div class="uk">
+                <div class="uk-top" >
+                    <div class="uk-top-left">
+                        <img src="images/sign_img1.png">
+                        <span>总成绩分布段人数分布态势3</span>
+                    </div>
+                    <div class="uk-top-right">
+                        <img src="images/sign_img2.png">
+                        <img src="images/sign_img3.png">
+                        <img src="images/sign_img4.png">
+                        <img src="images/sign_img5.png" class="cdisplay">
+                    </div>
+                </div>
+                <div class="counttab"><img src="images/bbbbbb.png" class="d3"></div>
+            </div>
+            <div class="uk">
+                <div class="uk-top">
+                    <div class="uk-top-left">
+                        <img src="images/sign_img1.png">
+                        <span>总成绩分布段人数分布态势4</span>
+                    </div>
+                    <div class="uk-top-right">
+                        <img src="images/sign_img2.png">
+                        <img src="images/sign_img3.png">
+                        <img src="images/sign_img4.png">
+                        <img src="images/sign_img5.png" class="cdisplay">
+                    </div>
+                </div>
+                <div class="counttab"><img src="images/cccc.png" class="d4"></div>
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+    <!--尾部-->
+    <div class="footer">五岳鑫科技股份有限公司</div>
+    <!--隐藏-->
+    <div id="tdisplay">
+        <span class="close"><img src="images/close.png"></span>
+
+        <div class="mtitle">
+
+                    <img src="images/sign_img1.png">
+                    <span>总成绩分布段人数分布态势3</span>
+        </div>
+            <div id="sucai"><img src="images/bbbbbb.png" class="d3"></div>
+
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+    $(".more").niceScroll({
+        cursorcolor:"#13976F",
+        cursoropacitymax:1,
+        touchbehavior:false,
+        cursorwidth:"5px",
+        cursorborder:"0",
+        cursorborderradius:"5px"
+    });
+</script>
+
+        <script  type="text/javascript">
+            var screen_height=screen.height
+            document.getElementById("tdisplay").style.height=screen_height+"px";
+
+        </script>

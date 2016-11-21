@@ -1,0 +1,50 @@
+*{margin: 0;padding: 0;}
+.wrap{position: relative}
+img{border:0 none;vertical-align: top; display:block;}
+ul li{ list-style:none;}
+a{text-decoration: none; cursor:pointer; display:block; outline:none;}
+body,html{ height:100%; font-family:"微软雅黑","Times New Roman", Times, serif; font-size:14px; color:#666;}body,html{ height:100%; font-family:"微软雅黑","Times New Roman", Times, serif; font-size:14px; color:#666;}
+/*--------------头部--------------------------*/
+.logo{height: 80px;width: 1200px;margin:auto}
+.logo .logoimg{float: left;}
+/*-----------------导航-------------------------------*/
+.wNav {width: 100%;height: 50px;background-color: #1AA97B;clear:both}
+.nav{width: 1200px;margin: 0 auto;position: relative}
+.nav div:first-child{float: left;}
+.nav >div+div{float: right}
+.nav div:last-child{float: right}
+.nav .navLeft a{float: left;height: 100%;line-height: 50px;width: 100px;border-right: 2px solid #17A072;text-align: center;color: #ffffff}
+.navRight img{float: left;width:30px;height:30px;margin-top:10px }
+.navRight span{display: block;height: 50px;line-height: 50px;color: #BFB974;float: left; cursor:pointer;}
+
+.unav{width: 120px;background-color: white;border-radius: 5px;position: absolute;z-index: 2;top: 50px;display: none;border: 1px solid #E6E6E6}
+.unav li{color: #66696B;height: 40px;line-height: 40px;text-align: center}
+.unav li:hover{background-color: #F3F3F4;border-radius: 5px}
+.unav a{color: #66696B}
+
+.navLeft a {
+    display: inline-block;   position: relative;vertical-align: middle;
+
+    -moz-transform: translateZ(0);  -webkit-transform: translateZ(0); -o-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0);
+    -moz-transition-property: color;-webkit-transition-property: color; -o-transition-property: color;-ms-transition-property: color;transition-property: color;
+    -moz-transition-duration: 0.5s;  -webkit-transition-duration: 0.5s;   -o-transition-duration: 0.5s;  -ms-transition-duration: 0.5s;  transition-duration: 0.5s;
+}
+.navLeft a:hover:after{color: #050505;}
+.navLeft a:before {content: "";position: absolute;z-index: -1;top: 0;left: 0;right: 0;bottom: 0; background: rgba(19, 151, 111, 0.77);
+    -moz-transform: scaleY(0); -webkit-transform: scaleY(0); -o-transform: scaleY(0); -ms-transform: scaleY(0); transform: scaleY(0);
+    -moz-transform-origin:50% 0 ; -webkit-transform-origin:50% 0 ; -o-transform-origin:50% 0 ; -ms-transform-origin:50% 0 ; transform-origin:50% 0 ;
+    -webkit-transition: transform 0.5s ease-out ;-moz-transition: transform 0.5s ease-out ;-ms-transition: transform 0.5s ease-out ;-o-transition: transform 0.5s ease-out ;
+    transition: transform 0.5s ease-out ;
+}
+
+.navLeft a:hover:before,  .navLeft a:focus:before,  .navLeft a:active:before {
+    -moz-transform: scaleY(1); -webkit-transform: scaleY(1); -o-transform: scaleY(1); -ms-transform: scaleY(1); transform: scaleY(1);
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+.alink{background-color: #13976F;border-left: 1px solid #108057;border-right: 1px solid #108057!important;}
+.nav .navLeft a:hover{background-color: #13976F\0;border-left: 1px solid #108057\0;border-right: 1px solid #108057\0!important;}
+/*------------------内容-----------------------------*/
+.content{width: 1200px;margin: 10px auto;overflow: hidden}
+
+/*-------------------------尾部-----------------------------------*/
+.footer{text-align: center;height: 100px;line-height: 100px;position: relative}
