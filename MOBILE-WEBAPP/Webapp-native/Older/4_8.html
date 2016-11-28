@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>在线用户</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="full-screen" content="yes"> <!--全屏-->
+    <meta name="x5-fullscreen" content="true">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/content.css">
+    <script>
+        $(window).load(function(){
+            $(".hname").html("在线用户");
+            $("header img").attr("src","images/header1.png");
+        });
+    </script>
+</head>
+<body>
+<!--头部-->
+<script type="text/javascript" src="js/header.js"></script>
+
+<!--内容-->
+<div id="content" class="prelative">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="tabheader">
+        <tr>
+            <th width="25%">教师编号</th><th width="20%">姓名</th><th width="30%">客户端IP地址</th><th width="25%">操作</th>
+        </tr>
+
+            <tr>
+                <td width="25%">100110101</td>
+                <td width="20%">李武</td>
+                <td width="30%">10000</td>
+                <td width="25%" class="mred">解除绑定</td> <!--可用css -->
+
+            </tr>
+            <tr>
+                <td>100110101</td>
+                <td>李武</td>
+                <td>10000</td>
+                <td class="mred">解除绑定</td>
+            </tr>
+        </table>
+    <div id="bottomenu">
+        <button>清空所有</button>
+    </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>选择科目1</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="full-screen" content="yes"> <!--全屏-->
+    <meta name="x5-fullscreen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="email=no" name="format-detection">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/subjects.css">
+    <script type="text/javascript" src="js/subject.js"></script>
+    <script>
+        function mclick5(){
+          window.location.href="4_5.html";
+        }
+        function mclick4(){
+            window.location.href="4_4.html";
+        }
+    </script>
+</head>
+<body>
+<div id="wrap" class="prelative">
+    <div class="wrap_black ">
+        <!-- 菜单-->
+        <div id="top">
+            <div class="top_left">
+                <img src="images/logo.png">
+                <div>
+                    <span>admin</span>
+                    <small>系统管理员</small>
+                </div>
+                <span id="Smenu"><img src="images/down.png"></span>
+            </div>
+            <!-- 右边菜单-->
+            <div class="top_right">
+                <div><img src="images/topmenu.png" class="fLeft"><span>切换科目</span></div>
+            </div>
+
+        </div>
+        <!--选择科目-->
+        <div id="bottom">
+            <!-- 1-->
+            <div class="fmenu fLeft" id="one">
+               <div><a href="4-1.html"><img src="images/menu1.png"><span>阅卷参考</span></a></div>
+                <div><a href="4-2.html"><img src="images/menu2.png"><span>题目管理</span></a></div>
+                <div><img src="images/menu3.png"><span>评卷用户</span></div>
+                <div ontouchstart="mclick4()"><img src="images/menu4.png"><span>考生管理</span></div>
+                <div><a href="4_5.html"><img src="images/menu5.png"><span>阅卷初始化</span></a></div>
+
+            </div>
+            <!--2-->
+            <div class="fmenu fLeft" id="two">
+                <div><a href="4_6.html"><img src="images/menu6.png"><span>异常卷任务</span></a></div>
+                <div><a href="4_7.html"><img src="images/menu7.png"><span>待审核任务</span></a></div>
+                <div><a href="4_8.html"><img src="images/menu8.png"><span>在线用户</span></a></div>
+                <div><img src="images/menu9.png"><span>任务检测</span></div>
+                <div><img src="images/menu10.png"><span>完整性检查</span></div>
+                <div><img src="images/menu11.png"><span>误差控制器</span></div>
+            </div>
+            <!-- 3-->
+            <div class="fmenu fLeft" id="three">
+                <div><img src="images/menu12.png"><span>评卷进度</span></div>
+                <div><a href="4_12.html"><img src="images/menu13.png"><span>质量检测</span></a></div>
+
+            </div>
+            <!-- 右侧工具栏-->
+            <div class="rmenu fRight">
+               <div class="rmenu_gj">
+                   <img src="images/rmenu1.png">
+                   <img src="images/rmenu2.png">
+                   <img src="images/rmenu3.png" ontouchstart="next()" class="go">
+                   <img src="images/rmenu4.png" class="back" ontouchstart="front ()">
+               </div>
+                <div class="rmenu_fy">
+                    <i>1/3</i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

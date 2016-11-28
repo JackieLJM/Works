@@ -1,0 +1,26 @@
+{
+  "name": "PageSlider",
+  "main": [
+    "pageslider.js",
+    "css/pageslider.css"
+  ],
+  "ignore": [
+    "css/styles.css",
+    "images",
+    "lib",
+    "app.js",
+    "config.xml",
+    "index.html"
+  ],
+  "homepage": "https://github.com/andhapp/PageSlider",
+  "_release": "2b91d305e9",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "2b91d305e911aff9c1ce90850166ee5848727d95"
+  },
+  "_source": "https://github.com/andhapp/PageSlider.git",
+  "_target": "*",
+  "_originalSource": "PageSlider",
+  "_direct": true
+}
