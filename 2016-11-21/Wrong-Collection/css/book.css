@@ -142,7 +142,7 @@
 .subject1_content{overflow: hidden;display: none;
     border-top: 1px solid #e6e6e6;}
 .cLeft{width:850px;float: left;overflow: hidden}
-.cLeft >div{;clear: both;height: 60px;margin-left: 20px}
+.cLeft >div{clear: both;height: 60px;margin-left: 20px}
 .cLeft div p{width: 100px;height: 30px;color: #ffffff;line-height: 30px;float: left;clear: both; margin-top: 15px;text-align: center;
     background-image: url("../images/mbackground.png");background-repeat: no-repeat;
 }
