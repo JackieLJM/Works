@@ -1,0 +1,16 @@
+{
+  "name": "Wrong-Collection-React",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "JackieLJM",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0"
+  }
+}
