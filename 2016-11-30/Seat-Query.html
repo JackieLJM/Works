@@ -11,8 +11,17 @@
         }
 
         h1 {
-            font-size: 1.5em;
+            font-size: 2em;
             padding: 0;
+            margin-bottom: -1em;
+        }
+        h2 {
+        	font-size: 2.5em;
+        }
+        h3 {
+        	font-size: 1em;
+        	float: left;
+        	display: inline-block;
         }
 
         .center {
@@ -23,7 +32,7 @@
 
         .hint {
             color: red;
-            font-size: 0.84em;
+            font-size: 0.5em;
         }
 
         .num1 {
@@ -41,6 +50,8 @@
 
         .name {
             background-color: #F5FAFC;
+            font-size: 1.5em;
+            padding: 
         }
 
         .queryButton input {
@@ -64,7 +75,7 @@
             border-top: 1px solid #97c1d1;
             height: 3em;
             font-size: 1em;
-            padding: 0em 0.5em;
+            padding: 0em 0.1em;
         }
 
         .table_student table td {
@@ -72,22 +83,23 @@
         }
 
         .table_object table td {
+
         }
 
         .intro {
             border: 1px solid #97c1d1;
             padding: 0em 0.5em;
             background-color: white;
+            width: 100%
         }
 
     </style>
 </head>
 
 <body>
-<div id="center" class="center">
+<div class="center">
     <h1>2016年江苏省硕士研究生统一考试</h1>
     <h2>连云港考区座位查询</h2>
-    <br>
     <div>
         <div class="hint">
             <p> 提示：请考生到研究生报名网站打印准考证再进行查询</p>
@@ -100,47 +112,43 @@
             <span>考生编号：</span>
             <input type="text "/>
         </div>
-        <br>
         <div>
             <div class="queryButton"><input type="submit" value="查询"/></div>
             <p>(查询条件为考生输入报名号，考生编号)</p>
         </div>
     </div>
-    <br><br><br>
     <div>
         <div>
-            <h2>考生信息：</h2>
+            <h3>考生信息：</h3>
             <div class="table_student">
                 <table width="100%" cellspacing="0" cellpadding="0">
                     <tr>
                         <td width="20%" class="name">姓名</td>
-                        <td width="80%"></td>
+                        <td colspan="3" width="80%"></td>
                     </tr>
                     <tr>
-                        <td class="name">考场号</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="name">座位号</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="name">地址</td>
-                        <td></td>
+                        <td width="20%" class="name">考场号</td>
+                        <td width="30%"></td>
+                        <td width="20%" class="name">座位号</td>
+                        <td width="30%"></td>
                     </tr>
                     <tr>
                         <td class="name">考点</td>
-                        <td></td>
+                        <td colspan="3"></td>
+                    </tr>
+                    <tr>
+                        <td class="name">地址</td>
+                        <td colspan="3"></td>
                     </tr>
                     <tr>
                         <td class="name">报考单位</td>
-                        <td></td>
+                        <td colspan="3"></td>
                     </tr>
                 </table>
             </div>
         </div>
         <div>
-            <h2>考试科目：</h2>
+            <h3>考试科目：</h3>
             <div class="table_object">
                 <table width="100%" cellspacing="0" cellpadding="0">
                     <tr>
@@ -177,9 +185,9 @@
             </div>
         </div>
         <div>
-            <h2>招生院校对业务课考试的相关说明：</h2>
+            <h3>招生院校对业务课考试的相关说明：</h3>
             <div class="intro">
-                <p>文本</p>
+                <span>文本</span>
             </div>
         </div>
     </div>
