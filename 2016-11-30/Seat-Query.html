@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>座位查询</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <style type="text/css">
         body {
             font-size: 10px;
@@ -19,9 +19,8 @@
         	font-size: 2.5em;
         }
         h3 {
-        	font-size: 1em;
+        	font-size: 1.5em;
         	float: left;
-        	display: inline-block;
         }
 
         .center {
@@ -30,11 +29,14 @@
             padding: 1em 1em 1em 1em;
         }
 
-        .hint {
+        .hint1 {
             color: red;
-            font-size: 0.5em;
+            font-size: 0.8em;
         }
 
+        .hint2 {
+            color: red;
+        }
         .num1 {
             margin: 10px 10px 5px 10px;
         }
@@ -51,7 +53,7 @@
         .name {
             background-color: #F5FAFC;
             font-size: 1.5em;
-            padding: 
+            padding:0;
         }
 
         .queryButton input {
@@ -74,23 +76,17 @@
             border-left: 1px solid #97c1d1;
             border-top: 1px solid #97c1d1;
             height: 3em;
-            font-size: 1em;
+            font-size: 1.5em;
             padding: 0em 0.1em;
-        }
-
-        .table_student table td {
-            text-align: center;
-        }
-
-        .table_object table td {
-
         }
 
         .intro {
             border: 1px solid #97c1d1;
-            padding: 0em 0.5em;
+            padding: 0em 0.1em;
             background-color: white;
-            width: 100%
+            font-size: 1.5em;
+            height: auto;
+            clear: both;
         }
 
     </style>
@@ -101,7 +97,7 @@
     <h1>2016年江苏省硕士研究生统一考试</h1>
     <h2>连云港考区座位查询</h2>
     <div>
-        <div class="hint">
+        <div class="hint1">
             <p> 提示：请考生到研究生报名网站打印准考证再进行查询</p>
         </div>
         <div class="num1">
@@ -114,6 +110,7 @@
         </div>
         <div>
             <div class="queryButton"><input type="submit" value="查询"/></div>
+            <div class="hint2"><p>该用户不存在，请重新输入</p></div>
             <p>(查询条件为考生输入报名号，考生编号)</p>
         </div>
     </div>
@@ -187,7 +184,7 @@
         <div>
             <h3>招生院校对业务课考试的相关说明：</h3>
             <div class="intro">
-                <span>文本</span>
+                <p>文本</p>
             </div>
         </div>
     </div>
