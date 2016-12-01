@@ -6,106 +6,134 @@
     <title>座位查询</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0，user-scalable=no">
     <style type="text/css">
-    body {
-        font-size: 10px;
-    }
-    
-    .center {
-        text-align: center;
-    }
-    
-    .hint {
-        color: red;
-    }
-    
-    .queryButton a {
-        display: inline-block;
-        width: 100px;
-        height: 40px;
-        border: 1px solid #CCC;
-        background: #eaeaea;
-        text-decoration: none;
-        line-height: 40px;
-    }
-    
-    .in {}
-    
-    table {
-        border-right: 1px solid #97c1d1;
-        border-bottom: 1px solid #97c1d1;
-    }
-    
-    table td {
-        border-left: 1px solid #97c1d1;
-        border-top: 1px solid #97c1d1;
-        height: 3em;
-    }
-    
-    .tabel_student table td {
-        font-size: 0.5em;
-    }
-    
-    .tabel_object table td {
-        font-size: 0.5em;
-    }
-    
-    .tabel_intro {
-        font-size: 0.5em;
-        border: 1px solid #97c1d1;
-    }
-    
-    .out {}
+        body {
+            font-size: 10px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            padding: 0;
+        }
+
+        .center {
+            text-align: center;
+            background-color: #ECF5F8;
+            padding: 1em 1em 1em 1em;
+        }
+
+        .hint {
+            color: red;
+            font-size: 0.84em;
+        }
+
+        .num1 {
+            margin: 10px 10px 5px 10px;
+        }
+
+        .num1name {
+            display: inline;
+            margin-right: 1em;
+        }
+
+        .num2 {
+            margin: 5px 10px 10px 10px;
+        }
+
+        .name {
+            background-color: #F5FAFC;
+        }
+
+        .queryButton input {
+            display: inline-block;
+            width: 100px;
+            height: 40px;
+            border: 1px solid #CCC;
+            background: #eaeaea;
+            line-height: 40px;
+            color: black;
+        }
+
+        table {
+            border-right: 1px solid #97c1d1;
+            border-bottom: 1px solid #97c1d1;
+            background-color: white;
+        }
+
+        table td {
+            border-left: 1px solid #97c1d1;
+            border-top: 1px solid #97c1d1;
+            height: 3em;
+            font-size: 1em;
+            padding: 0em 0.5em;
+        }
+
+        .table_student table td {
+            text-align: center;
+        }
+
+        .table_object table td {
+        }
+
+        .intro {
+            border: 1px solid #97c1d1;
+            padding: 0em 0.5em;
+            background-color: white;
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="center" class="center">
-        <h1>2016年江苏省硕士研究生统一考试连云港考区座位查询</h1>
+<div id="center" class="center">
+    <h1>2016年江苏省硕士研究生统一考试</h1>
+    <h2>连云港考区座位查询</h2>
+    <br>
+    <div>
+        <div class="hint">
+            <p> 提示：请考生到研究生报名网站打印准考证再进行查询</p>
+        </div>
+        <div class="num1">
+            <div class="num1name"><span>报名号：</span></div>
+            <input type="text "/>
+        </div>
+        <div class="num2">
+            <span>考生编号：</span>
+            <input type="text "/>
+        </div>
+        <br>
         <div>
-            <div class="hint">
-                <p> 提示：请考生先到研究生报名网站打印准考证以后再进行查询</p>
-            </div>
-            <br>
-            <br>
-            <br>
-            <div style="margin:10px 10px 5px 10px;">
-                <span>报名号：</span>
-                <input type="text " />
-            </div>
-            <div style="margin:5px 10px 10px 10px;">
-                <span>考生编号：</span>
-                <input type="text " />
-            </div>
-            <br>
-            <br>
-            <br>
-            <div>
-                <div class="queryButton"><a href="#form" onclick="">查询</a></div>
-                <p>(查询条件为考生输入报名号，考生编号)</p>
-            </div>
+            <div class="queryButton"><input type="submit" value="查询"/></div>
+            <p>(查询条件为考生输入报名号，考生编号)</p>
         </div>
     </div>
-    <form>
+    <br><br><br>
+    <div>
         <div>
-            <h2 id="form">考生信息：</h2>
+            <h2>考生信息：</h2>
             <div class="table_student">
                 <table width="100%" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td width="15%">姓名</td>
-                        <td width="35%"></td>
-                        <td width="15%">考点</td>
-                        <td width="35%"></td>
+                        <td width="20%" class="name">姓名</td>
+                        <td width="80%"></td>
                     </tr>
                     <tr>
-                        <td>考场号</td>
-                        <td></td>
-                        <td>地址</td>
+                        <td class="name">考场号</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>座位号</td>
+                        <td class="name">座位号</td>
                         <td></td>
-                        <td>报考单位</td>
+                    </tr>
+                    <tr>
+                        <td class="name">地址</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="name">考点</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="name">报考单位</td>
                         <td></td>
                     </tr>
                 </table>
@@ -116,31 +144,31 @@
             <div class="table_object">
                 <table width="100%" cellspacing="0" cellpadding="0">
                     <tr>
-                        <td>12月26日上午8：30-11：30</td>
+                        <td class="name">12月26日上午8：30-11：30</td>
                     </tr>
                     <tr>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>12月26日下午14：00-17：00</td>
+                        <td class="name">12月26日下午14：00-17：00</td>
                     </tr>
                     <tr>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>12月27日上午8：30-11：30</td>
+                        <td class="name">12月27日上午8：30-11：30</td>
                     </tr>
                     <tr>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>12月27日下午14：00-17：00</td>
+                        <td class="name">12月27日下午14：00-17：00</td>
                     </tr>
                     <tr>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>12月28日(考试科目超过3小时的考生请于上午8：20前到达江苏省新海高级中学参加考试--具体地点见考点通知)</td>
+                        <td class="name">12月28日(考试科目超过3小时的考生请于上午8：20前到达江苏省新海高级中学参加考试--具体地点见考点通知)</td>
                     </tr>
                     <tr>
                         <td></td>
@@ -150,29 +178,12 @@
         </div>
         <div>
             <h2>招生院校对业务课考试的相关说明：</h2>
-            <div class="tabel_intro">
+            <div class="intro">
                 <p>文本</p>
             </div>
         </div>
-    </form>
-    <script type="text/javascript">
-    // var height = window.screen.height;
-    // var node = document.getElementById("center");
-    // (function(){
-    // 	node.setAttribute("height", window.screen.height);
-    // 	alert(node.getAttribute("height"));
-    // })();
-    document.onload = function() {
-        var height = window.screen.height;
-        setInterval(function() {
-            window.screen.height === height ?
-                (function() {
-                    return height
-                })() :
-                document.getElementById("center").setAttribute("height", window.screen.height);
-        }, 1000)
-    }
-    </script>
+    </div>
+</div>
 </body>
 
 </html>
