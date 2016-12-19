@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>成绩单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/gradelist.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+   <script>
+       $(function () {
+      $(".leftl .title_click_hide").eq(0).css({display:"block"})
+
+       })
+   </script>
+    <script>
+        $(window).load(function(){
+            $("footer nav a img").eq(1).attr("src","images/nav2h.png");
+            $("footer nav a").eq(1).addClass("font_color");
+            $("header div a").html("我的成绩单")
+        });
+    </script>
+</head>
+<body>
+<!-- 头部-->
+<script type="text/javascript" src="js/header.js"></script>
+<div id="content">
+    <div class="leftl">
+         <div class="list_title">
+              <div class="title_click" onclick="listOpen(0)">
+                    <span>
+                        <b>2016年</b>
+                        <h2>01月</h2>
+                    </span>
+                      <span>06日</span>
+                      <h2>2016年第一学期期末考试</h2>
+                       <a></a>
+              </div>
+             <div class="title_click_hide">
+                  <ul class="ulhide">
+                      <li><a href="#"><span>数学</span><span><img src="images/9.png"><img src="images/5.png"></span></a></li>
+                      <li><a href="#"><span>语文</span><span><img src="images/8.png"><img src="images/0.png"></span></a></li>
+                      <li><a href="#"><span>英语</span><span><img src="images/7.png"><img src="images/5.png"></span></a></li>
+                      <li><a href="#"><span>政治</span><span><img src="images/7.png"><img src="images/0.png"></span></a></li>
+                      <li><a href="#"><span>化学</span><span><img src="images/9.png"><img src="images/0.png"></span></a></li>
+
+                  </ul>
+                 <div class="py"><span>评语：本次考试第十七名，比上次进步五名！有进步哦~~
+
+                      </span>
+                     <img src="images/yinzhang1.png" class="good">
+                 </div>
+             </div>
+
+         </div>
+        <div class="list_title">
+            <div class="title_click" onclick="listOpen(1)">
+                <span>
+                    <b>2015年</b>
+                    <h2>12月</h2>
+                </span>
+                <span>10日</span>
+                <h2>2015年第一学期第三次月考考试</h2>
+                <a></a>
+            </div>
+            <div class="title_click_hide">
+                <ul class="ulhide">
+                    <li><span>数学</span><span><img src="images/9.png"><img src="images/0.png"></span></li>
+                    <li><span>语文</span><span><img src="images/7.png"><img src="images/8.png"></span></li>
+                    <li><span>英语</span><span><img src="images/6.png"><img src="images/8.png"></span></li>
+                    <li><span>政治</span><span><img src="images/7.png"><img src="images/0.png"></span></li>
+                    <li><span>化学</span><span><img src="images/8.png"><img src="images/7.png"></span></li>
+
+                </ul>
+                <div class="py"><span>评语：不要骄傲,还要继续努力哦~~</span>
+                    <img src="images/yinzhang2.png" class="good">
+                </div>
+            </div>
+
+        </div>
+        <div class="list_title">
+            <div class="title_click" onclick="listOpen(2)">
+                <span>
+                    <b>2015年</b>
+                    <h2>11月</h2>
+                </span>
+                <span>15日</span>
+                <h2>2015年第一学期第二次月考考试</h2>
+                <a></a>
+            </div>
+            <div class="title_click_hide">
+                <ul class="ulhide">
+                    <li><span>数学</span><span><img src="images/9.png"><img src="images/0.png"></span></li>
+                    <li><span>语文</span><span><img src="images/8.png"><img src="images/8.png"></span></li>
+                    <li><span>英语</span><span><img src="images/9.png"><img src="images/8.png"></span></li>
+                    <li><span>政治</span><span><img src="images/7.png"><img src="images/0.png"></span></li>
+                    <li><span>化学</span><span><img src="images/8.png"><img src="images/7.png"></span></li>
+
+                </ul>
+                <div class="py"><span>评语：这次成绩很棒比上次有进步很多~~</span>
+                    <img src="images/yinzhang1.png" class="good">
+                </div>
+            </div>
+        </div>
+        <div class="list_title">
+            <div class="title_click" onclick="listOpen(3)">
+                <span>
+                    <b>2015年</b>
+                    <h2>10月</h2>
+                </span>
+                <span>09日</span>
+                <h2>2015年第一学期期中考试</h2>
+                <a></a>
+            </div>
+            <div class="title_click_hide">
+                <ul class="ulhide">
+                    <li><span>数学</span><span><img src="images/7.png"><img src="images/2.png"></span></li>
+                    <li><span>语文</span><span><img src="images/8.png"><img src="images/8.png"></span></li>
+                    <li><span>英语</span><span><img src="images/8.png"><img src="images/0.png"></span></li>
+                    <li><span>政治</span><span><img src="images/6.png"><img src="images/0.png"></span></li>
+                    <li><span>化学</span><span><img src="images/6.png"><img src="images/7.png"></span></li>
+
+                </ul>
+                <div class="py"><span>评语：这次考试成绩很不理想,继续努力
+
+                      </span>
+                    <img src="images/yinzhang3.png" class="good">
+                </div>
+            </div>
+        </div>
+        <div class="list_title">
+            <div class="title_click" onclick="listOpen(4)">
+                <span>
+                    <b>2015年</b>
+                    <h2>09月</h2>
+                </span>
+                <span>06日</span>
+                <h2>2015年第一学期第一次月考考试</h2>
+                <a></a>
+            </div>
+            <div class="title_click_hide">
+                    <ul class="ulhide">
+                        <li><span>数学</span><span><img src="images/9.png"><img src="images/5.png"></span></li>
+                        <li><span>语文</span><span><img src="images/8.png"><img src="images/0.png"></span></li>
+                        <li><span>英语</span><span><img src="images/7.png"><img src="images/5.png"></span></li>
+                        <li><span>政治</span><span><img src="images/7.png"><img src="images/0.png"></span></li>
+                        <li><span>化学</span><span><img src="images/9.png"><img src="images/0.png"></span></li>
+
+                    </ul>
+                    <div class="py"><span>评语：本次考试第十九名，比上次进步三名！有进步哦~~
+
+                          </span>
+                        <img src="images/yinzhang1.png" class="good">
+                    </div>
+            </div>
+        </div>
+     
+    </div>
+
+</div>
+
+</body>
+</html>

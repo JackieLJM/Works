@@ -1,0 +1,32 @@
+#content{background-color: #F9F9F9}
+
+.grade1{width: 96%;margin-left: 2%;overflow: hidden;background-color: white!important;margin-top: 10px;margin-bottom: 10px;
+    box-shadow: 1px 1px 2px 2px rgba(216, 216, 216, 1);
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.grade_menu{background-color: white;}
+.grade1 table td{text-align: center}
+.grade_menu div{float: left;width: 49%;font-size: 16px;color: #586669;text-align: center;border-bottom: 1px solid #F2F4F6; height: 50px;}
+.grade_menu div:first-child{border-right: 1px solid #EAEEF1}
+.grade_menu div b{color: #78C8E6;margin-left: 5px;display: inline;clear: both}
+.grade_top{}
+.grade_top span{display: block;}
+.grade_top span:nth-child(1){color: #31A1D6;float: left;font-size: 16px}
+.grade_top span:nth-child(2){color: #31A1D6;float: left;margin-left: 10px;}
+.grade_top span:nth-child(2) img,.grade_top span:nth-child(2) img b{float: left;font-size: 10px;margin-left: 2px;}
+
+.grade_top span:nth-child(3){float: right}
+.grade_content{width: 100%;padding-bottom: 10px;margin-top: 10px;}
+.grade_content img{width: 100%;height: 100%}
+.transcript{border-color: #F2F2F2;margin: 5px auto; color: #666;}
+.transcript th{height: 40px; background-color: #f8f8f8;}
+.transcript td{height: 30px;line-height: 30px;}
+  .grade_menu{height: 50px;}
+    .grade_menu div{line-height: 50px;}
+    .grade_top span{height: 30px;line-height: 30px;}
+    .grade_top span:nth-child(2) img{margin-top: 10px}
+    .grade_top span:nth-child(3) input{margin-top: 10px;}
+
+
+

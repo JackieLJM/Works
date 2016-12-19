@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的错题本</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/errorbook.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/xiaobiao.js"></script>
+    <script>
+        $(window).load(function(){
+            
+            $("header div a").html("我的错题本")
+        });
+    </script>
+
+</head>
+<body>
+<!-- 头部/尾部-->
+<script type="text/javascript" src="js/header.js"></script>
+<!--成绩分析-->
+<div id="content">
+    <!-- 第一个成绩表-->
+    <div class="menu_fixed">
+        <div class="error_menu cl">
+            <div onclick="menuShow(0)">选择考试<b>▼</b></div><div onclick="menuShow(1)">选择科目<b>▼</b></div><div onclick="menuShow(2)">选择知识点<b>▼</b></div>
+        </div>
+        <p>共14道题</p>
+    </div>
+
+    <!-- 题-->
+    <div class="menu_content">
+        <div class="error_book">
+        <div class="error_top">
+            <h2>1</h2>
+            <div><b>—He must be busy doing his homework right now.
+                　 —I imagine____.</b>
+                <span>A. that &nbsp;B. to   &nbsp;  C. so  &nbsp;   D. it</span>
+            </div>
+        </div>
+
+        <div class="error_ok">
+            <div class="error_oktop">
+                <span class="open" onclick="openClick(0)"><b>∨</b><a>展开解析</a></span>
+                <span class="redd"><b>★</b>加入I习题</span>
+            </div>
+            <div class="error_topbottom">
+                <div>
+                    <span><b>我的答案</b></span>
+                    <span class="red">A</span>
+                </div>
+                <div>
+                    <span><b>标准答案</b></span>
+                    <span class="green">C</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>2</h2>
+                <div><b>Mary had promised to give me a ticket for tomorrow. She failed, ____.</b>
+                    <span>　A. either  &nbsp;  B. though  &nbsp;  C. but  &nbsp;  D. too</span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(1)"><b>∨</b><a>展开解析</a></span>
+                    <span class="redd"><b>★</b>加入I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">D</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">B</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>3</h2>
+                <div><b>When I got to the cinema, the film _____ for five minutes.</b>
+                    <span>  A. had begun    &nbsp;   B. has been on   <br>
+                            C. has begun   &nbsp;    D. had been on</span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(2)"><b>∨</b><a>展开解析</a></span>
+                    <span class="redd"><b>★</b>加入I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">C</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">D</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>4</h2>
+                <div><b>-I wonder why Mr Green hasn’t showed up at the meeting yet.<br>
+                    -I’m not sure, but he _______ in a traffic jam driving here.</b>
+                    <span>  A. could be stuck    &nbsp;    B. might stuck<br>
+                            C. might have been stuck  &nbsp; D. must have stuck</span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(3)"><b>∨</b><a>展开解析</a></span>
+                    <span class="redd"><b>★</b>加入I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">B</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">C</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>5</h2>
+                <div><b>改错题</b> <span>Nowadays，people in many big cities are complaining the heavy traffic. It has serious    influenced people daily life and economic development. To solve the problem，some pieces     of advice is put forward. Some people suggest that more streets and roads are built. By this     way，the traffic density can be reduced, thus speeding up the flow of buses and cars.      Some people advise limiting the number of bikes and cars. This can decrease the traffic    flow. But on the other hand, this will effect the consumption and makes buses more crowded.     In my opinion，the number of private cars should be put under the control. And at the same time，   buses should have their own special routes cannot be used by other vehicles.
+                    </span></div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(4)"><b>∨</b><a>展开解析</a></span>
+                    <span class="redd"><b>★</b>加入I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red1">Nowadays，people in many big cities are complaining the heavy traffic. It has serious    influenced people daily life and economic development. To solve the problem，some pieces     of advice is put forward. Some people suggest that more streets and roads are built. By this     way，the traffic density can be reduced, thus speeding up the flow of buses and cars.      Some people advise limiting the number of bikes and cars. This can decrease the traffic    flow. But on the other hand, this will effect the consumption and makes buses more crowded.     In my opinion，the number of private cars should be put under the control. And at the same time，   buses should have their own special routes cannot be used by other vehicles.
+                   </span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green2">Nowadays，people in many big cities are complaining about the heavy traffic. It has seriously influenced people’s daily life and economic development. To solve the problem，some pieces of advice are put forward. Some people suggest that more streets and roads should be built. In this way，the traffic density can be reduced, thus speeding up the flow of buses and cars.    Some people advise limiting the number of bikes and cars. This can decrease the traffic flow. But on the other hand，this will affect the consumption and make buses more crowded.  In my opinion，the number of private cars should be put under control. And at the same time，buses should have their own special routes which/that cannot be used by other vehicles. </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+</div>
+<!--隐藏菜单-->
+<div id="warp_hide">
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择考试</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="#">第一学期期末考试</a></li>
+            <li><a href="#">第一学期第三次月考考试</a></li>
+            <li><a href="#">第一学期第二次月考考试</a></li>
+            <li><a href="#">第一学期期中考试</a></li>
+            <li><a href="#">第一学期第一次月考考试</a></li>
+
+        </ul>
+    </div>
+
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择科目</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="errormath.html">数学</a></li>
+            <li><a href="errorChinese.html">语文</a></li>
+            <li><a href="errorbook.html">英语</a></li>
+            <li><a href="#">政治</a></li>
+            <li><a href="#">化学</a></li>
+        </ul>
+    </div>
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择知识点</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="#">数学知识点</a></li>
+            <li><a href="#">语文知识点</a></li>
+            <li><a href="#">英语知识点</a></li>
+            <li><a href="#">政治知识点</a></li>
+            <li><a href="#">化学知识点</a></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

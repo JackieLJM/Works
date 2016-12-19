@@ -1,0 +1,6 @@
+.newslist{background-color: white;width: 96%;margin: 5px auto;color: #A0A0A0;overflow: hidden}
+
+.newslist li{height: 50px;line-height:50px;border-bottom: 1px solid #F1F3F6;overflow: hidden}
+.newslist li img{float: left;width: 30px;height: 30px;margin-top: 5px;}
+.newslist li span{float: left;margin-left: 10px;color: #A0A0A0!important;}
+.newslist li b{font-weight: 100;float: right; color: #A0A0A0; }

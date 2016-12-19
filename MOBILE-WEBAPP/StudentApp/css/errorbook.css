@@ -1,0 +1,37 @@
+#content p{color: #B8B8B8;text-align: center;margin-top: 10px;}
+.error_menu{border-bottom: 1px solid #F3F5F7;color: #5E6B6F;background-color: white;}
+.error_menu div{float: left;width: 33%;text-align: center}
+.error_menu div b{color: #78C8E6;margin-left: 5px;}
+.error_menu div:nth-child(2){border-right: 1px solid #F3F5F7;border-left:1px solid #F3F5F7 }
+.error_book{width: 96%;  box-shadow: 0 0 2px 2px rgba(216, 216, 216, 1);border-radius: 5px; margin: 10px auto 0 auto; overflow:hidden;}
+#content .error_book:last-child{margin-bottom: 70px;}
+.error_top{background-color: white;overflow: hidden;padding-bottom: 10px;}
+.error_top b{margin-top: 10px;margin-left: 30px;display: block;width: 90%;}
+.error_top span{display: block;width: 90%;margin-left: 30px;margin-top: 10px;color: #5E6B6F}
+.error_top h2{float: left;margin-left:5px;margin-top: 2px;color: #647175}
+.error_top img{width: 90%;border: 1px solid #C5C5C5;margin-top: 10px;margin-left:5%;}
+.error_ok{overflow: hidden; }
+.error_oktop{overflow: hidden;margin-top: 10px;}
+.error_oktop span{display: block;height: 40px;line-height: 40px;}
+.error_oktop span:nth-child(1) b{display:block;float:left;width:20px;height:20px;line-height:20px;border-radius:20px;text-align:center;background-color:#78C8E6;color:white;margin:10px;font-size:10px!important}
+.error_oktop span:nth-child(1){float: left;color: #798487;margin-left: 5px;}
+.error_oktop span:nth-child(2){float: right;margin-right: 10px;color: #798487;}
+.error_oktop span:nth-child(2) b{color: #FD8A23;margin: 10px}
+/**/
+.error_topbottom{display: none;}
+.red{color: red;font-size: 20px;}
+.red1{}
+.green{color: green;font-size: 20px;}
+.error_topbottom div{margin-left: 10px;margin-top: 5px;position: relative}
+.error_topbottom div b{border-bottom: 1px solid #78C8E6;padding: 5px;}
+.error_topbottom div span{display: block;margin-top: 5px;padding-bottom: 5px;}
+.error_topbottom div span:nth-child(1){color: #8CD0E9;border-bottom: 1px solid #C5C5C5}
+.error_topbottom div span:nth-child(2){margin-left: 10px;margin-bottom: 10px;}
+.error_topbottom div:nth-child(1) span:nth-child(2),.error_topbottom div:nth-child(2) span:nth-child(2){min-height: 20px;min-width: 20px}
+.jx{display: block;margin-top: 10px;color:#5E6B6F }
+
+
+    .error_menu{height: 50px;}
+    .error_menu div{line-height: 50px;}
+
+

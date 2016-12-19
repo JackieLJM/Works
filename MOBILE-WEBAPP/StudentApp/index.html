@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/amazeui.js"></script>
+
+    <script type="text/javascript" src="js/common.js"></script>
+    <script>
+        $(function(){
+//----------------------------轮播图  样式---------------------------------5
+            var Imenu_div= $("#Imenu div").width()*0.765957;
+            $("#Imenu div").css({height:Imenu_div+"px"});
+            var img_height=("#Iimg").width()*0.58181818;
+            $(".am-slides img").css({height:img_height+"px"});
+            $("#Iimg").css({height:img_height+"px"});
+            var body_height=$(window).height();
+            alert(body_height)
+            var header_height=$("header").height();
+            var footer_height=$("footer").height();
+            $("#Imenu").css({height:(body_height-header_height-footer_height-img_height-1)+"px"})
+
+        });
+    </script>
+    <script>
+        $(window).load(function(){
+          $("header img").remove()
+
+           $("footer nav a img").eq(0).attr("src","images/nav1h.png")
+            $("footer nav a").eq(0).addClass("font_color")
+
+            $("header div a").html("首页")
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <!-- 头部-->
+    <script type="text/javascript" src="js/header.js"></script>
+    <div id="content">
+        <!-- 图片轮播-->
+
+        <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{"directionNav":false}' id="Iimg">
+            <ul class="am-slides">
+                <li><img src="images/lbt/img1.png"></li>
+                <li><img src="images/lbt/img2.jpg"></li>
+                <li><img src="images/lbt/img3.jpg"></li>
+                <li><img src="images/lbt/img1.png"></li>
+            </ul>
+        </div>
+
+
+        <div id="Imenu">
+
+            <div><a href="grade.html"><img src="images/menu1.png"><span>成绩分析</span></a></div>
+            <div><a href="hisgrade.html"><img src="images/menu2.png"><span>历次分析</span></a></div>
+            <div><a href="errorbook.html"><img src="images/menu3.png"><span>错题本</span></a></div>
+            <div><a href="Ieg.html"><img src="images/menu4.png"><span>I习题</span></a></div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/modifuser.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/mobiscroll_002.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/mobiscroll.js"></script>
+    <script type="text/javascript" src="js/modiduser.js"></script>
+    <script>
+        $(window).load(function(){
+            $("footer nav a img").eq(3).attr("src","images/nav4h.png")
+            $("footer nav a").eq(3).addClass("font_color")
+            $("header div a").html("修改资料")
+            $("header div b").html("")
+            for(var i=1;i<22;i++){
+                $("#classnum").append("<option>"+i+"班</option>")
+            }
+          for(var j=0;j<20;j++){
+              $(".newslist2").append(" <li onclick='bj("+j+")'><a href='#hidden1'><span>"+(j+1)+"班</span><b></b></a></li>")
+
+
+          }
+            
+        });
+    </script>
+
+</head>
+<body>
+<!-- 头部-->
+<script type="text/javascript" src="js/header.js"></script>
+<!--内容-->
+<div id="content">
+    <div id="hidden1">
+      <div class="modify1">
+         <ul class="demos">
+             <li class="username"><span>姓名</span><span>卢小川</span></li>
+             <li onclick="sexClick()"><span >性别</span><span  id="uSex">男</span><b>></b></li>
+             <li><span for="appDate">生日</span><input value="1999-12-20" class="" readonly="readonly" name="appDate" id="appDate" type="text"><b>></b></li>
+             <li><span>简介</span><input  type="text" value="" id="jianj"/></li>
+
+
+         </ul>
+
+          <ul class="demos">
+              <li class="school" onclick=" $('#hidden2').css({display:'block'})"><a href="#hidden2"><span>学校</span><span class="scl">实验中学</span><b>></b></a></li>
+              <li onclick="uclass()"><span >年级</span><span  id="studentclass">高一</span><b>></b></li>
+              <li class="school" onclick=" $('#hidden3').css({display:'block'})"><a href="#hidden3"><span>班级</span><span class="bj">1班</span><b>></b></a></li>
+
+          </ul>
+          <div class="button1"><a href="user.html" id="uok">确定</a><a href="#" id="uno" onclick=" location.reload() ">取消</a></div>
+      </div>
+
+       <div class="user_sex" >
+        <ul>
+            <li onclick="selectsex(0)">男</li>
+            <li onclick="selectsex(1)">女</li>
+        </ul>
+       </div>
+        <div class="studentclass" >
+            <ul>
+                <li onclick="studentclass(0)">高一</li>
+                <li onclick="studentclass(1)">高二</li>
+                <li onclick="studentclass(2)">高三</li>
+            </ul>
+        </div>
+    </div>
+    <div id="hidden2">
+
+        <ul class="newslist">
+            <li onclick="userClass(0)"><a href="#hidden1"><span>人大附中</span><b></b></a></li>
+            <li onclick="userClass(1)"><a href="#hidden1"><span>北京四中</span><b></b></a></li>
+            <li onclick="userClass(2)"><a href="#hidden1"><span>实验中学</span><b></b></a></li>
+            <li onclick="userClass(3)"><a href="#hidden1"><span>北大附中</span><b></b></a></li>
+            <li onclick="userClass(4)"><a href="#hidden1"><span>师大二附</span><b></b></a></li>
+            <li onclick="userClass(5)"><a href="#hidden1"><span>北京八中</span><b></b></a></li>
+            <li onclick="userClass(6)"><a href="#hidden1"><span>清华附中</span><b></b></a></li>
+            <li onclick="userClass(7)"><a href="#hidden1"><span>首师大附中</span><b></b></a></li>
+            <li onclick="userClass(8)"><a href="#hidden1"><span>101中学</span><b></b></a></li>
+            <li onclick="userClass(9)"><a href="#hidden1"><span>十一学校</span><b></b></a></li>
+        </ul>
+    </div>
+    <div id="hidden3">
+
+        <ul class="newslist2">
+            <!-- 动态生成-->
+            
+        </ul>
+    </div>
+</div>
+
+
+</body>
+</html>

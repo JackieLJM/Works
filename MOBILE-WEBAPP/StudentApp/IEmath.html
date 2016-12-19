@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>I习题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/errorbook.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/xiaobiao.js"></script>
+    <script>
+        $(window).load(function(){
+
+            $("header div a").html("错题本")
+        });
+    </script>
+    <style>
+        .error_oktop span:nth-child(2) img{float: left;margin-top: 10px;}
+        .error_topbottom ul{margin-top: 10px;}
+        .error_topbottom ul li{height: 30px;width:30%;float: left;line-height: 30px;border-radius: 3px;margin-left: 2.5%;margin-bottom: 10px;}
+        .error_topbottom ul li img{float: left;width: 30px;height: 30px}
+        .error_topbottom ul li a{color: white;}
+        .error_topbottom ul li:nth-child(1){background-color: #EF8D06}
+        .error_topbottom ul li:nth-child(2){background-color: #01A185}
+        .error_topbottom ul li:nth-child(3){background-color: #22AAE4}
+    </style>
+</head>
+<body>
+<!-- 头部-->
+<script type="text/javascript" src="js/header.js"></script>
+<!--成绩分析-->
+<div id="content">
+    <!-- 第一个成绩表-->
+    <div class="menu_fixed">
+        <div class="error_menu cl ">
+            <div onclick="menuShow(0)">选择考试<b>▼</b></div><div onclick="menuShow(1)">选择科目<b>▼</b></div><div onclick="menuShow(2)">选择知识点<b>▼</b></div>
+        </div>
+        <p>共14道题</p>
+    </div>
+    <!-- 题-->
+    <div class="menu_content">
+        <div class="error_book">
+            <div class="error_top">
+                <h2>1</h2>
+                <div><b>已知抛物线y²=4x的焦点为F，准线为l，点p为抛物线上一点，且在第一象限，PA⊥l，垂足为A，/PF/=4，则直线AF的倾斜角等于</b>
+                    <span>A. 17&#960;/12; &nbsp; B.2&#960;/3   &nbsp;  C. 3&#960;/4  &nbsp;   D. 	5&#960;/6</span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(0)"><b>∨</b><a>展开解析</a></span>
+                    <span class="del"><img src="images/dele.png">删除I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">A</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">B</span>
+                    </div>
+                    <div>
+                        <span><b>解析</b></span>
+                            <span class="jx">
+
+                            </span>
+                    </div>
+                    <ul>
+                        <li><img src="images/ieg_img1.png"> <a href="#">观看微课</a></li>
+                        <li><img src="images/ieg_img2.png"> <a href="#">题库推荐</a></li>
+                        <li><img src="images/ieg_img3.png"> <a href="#">在线测试</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>2</h2>
+                <div><b>下列函数中，在其定义域内既是奇函数又是减函数的是 </b>
+                    <span>A.y=-x³,x∈R &nbsp; B.y=-x-1,x∈R <br> C.y=x,x∈R &nbsp; D.y=(1/2)x,x∈R</span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(1)"><b>∨</b><a>展开解析</a></span>
+                    <span class="del"><img src="images/dele.png">删除I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">D</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">A</span>
+                    </div>
+                    <div>
+                        <span><b>解析</b></span>
+                            <span class="jx">
+
+                            </span>
+                    </div>
+                    <ul>
+                        <li><img src="images/ieg_img1.png"> <a href="#">观看微课</a></li>
+                        <li><img src="images/ieg_img2.png"> <a href="#">题库推荐</a></li>
+                        <li><img src="images/ieg_img3.png"> <a href="#">在线测试</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>3</h2>
+                <div><b>已知m、n为两条不同的直线，α、β为两个不同的平面，则下列命题中正确的是</b>
+                    <span> A．若l⊥m,l⊥n,且m,n∈α,则 l⊥α <br>
+                           B.若平面内有不共线的三点到平面β的距离相等，则α∥β<br>
+                           C.若m⊥α,m⊥n，则n∥α<br>
+                           D.若m∥n，n⊥α,则m⊥α
+                    </span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(2)"><b>∨</b><a>展开解析</a></span>
+                    <span class="del"><img src="images/dele.png">删除I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">C</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">D</span>
+                    </div>
+                    <div>
+                        <span><b>解析</b></span>
+                            <span class="jx">
+
+                            </span>
+                    </div>
+                    <ul>
+                        <li><img src="images/ieg_img1.png"> <a href="#">观看微课</a></li>
+                        <li><img src="images/ieg_img2.png"> <a href="#">题库推荐</a></li>
+                        <li><img src="images/ieg_img3.png"> <a href="#">在线测试</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+<!--隐藏菜单-->
+
+<div id="warp_hide">
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择考试</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="#">第一学期期末考试</a></li>
+            <li><a href="#">第一学期第三次月考考试</a></li>
+            <li><a href="#">第一学期第二次月考考试</a></li>
+            <li><a href="#">第一学期期中考试</a></li>
+            <li><a href="#">第一学期第一次月考考试</a></li>
+
+        </ul>
+    </div>
+
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择科目</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="IEmath.html">数学</a></li>
+            <li><a href="IEchinese.html">语文</a></li>
+            <li><a href="Ieg.html">英语</a></li>
+            <li><a href="#">政治</a></li>
+            <li><a href="#">化学</a></li>
+        </ul>
+    </div>
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择知识点</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="#">数学知识点</a></li>
+            <li><a href="#">语文知识点</a></li>
+            <li><a href="#">英语知识点</a></li>
+            <li><a href="#">政治知识点</a></li>
+            <li><a href="#">化学知识点</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+</body>
+</html>

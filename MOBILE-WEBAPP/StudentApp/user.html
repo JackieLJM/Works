@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/user.css" rel="stylesheet">
+    <link href="css/modifuser.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script>
+        $(window).load(function(){
+            $("footer nav a img").eq(3).attr("src","images/nav4h.png")
+            $("footer nav a").eq(3).addClass("font_color")
+            $("header div a").html("个人中心")
+        });
+    </script>
+</head>
+<body>
+<!-- 头部-->
+<script type="text/javascript" src="js/header.js"></script>
+<!--内容-->
+<div id="content">
+    <div id="userTop">
+        <div class="userimg">
+            <img src="images/thumb6.jpg">
+        </div>
+        
+    </div>
+    <div id="usernr">
+        <div class="username">
+            <h2>卢小川</h2>
+            <span>实验中学 | 高一1班</span>
+        </div>
+
+        <ul class="newslist"">
+            <li><span><a href="modifyuser.html">修改个人信息</a></span><b>></b></li>
+            <li><span><a href="modifypassword.html">修改密码</a></span><b>></b></li>
+            <li><span><a href="index.html">退出</a></span></li>
+        </ul>
+
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>I习题</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/errorbook.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/xiaobiao.js"></script>
+    <script>
+        $(window).load(function(){
+
+            $("header div a").html("I习题")
+        });
+    </script>
+    <style>
+        .error_oktop span:nth-child(2) img{float: left;margin-top: 10px;}
+        .error_topbottom ul{margin-top: 10px;}
+        .error_topbottom ul li{height: 30px;width:30%;float: left;line-height: 30px;border-radius: 3px;margin-left: 2.5%;margin-bottom: 10px;}
+        .error_topbottom ul li img{float: left;width: 30px;height: 30px}
+        .error_topbottom ul li a{color: white;}
+        .error_topbottom ul li:nth-child(1){background-color: #EF8D06}
+        .error_topbottom ul li:nth-child(2){background-color: #01A185}
+        .error_topbottom ul li:nth-child(3){background-color: #22AAE4}
+    </style>
+</head>
+<body>
+<!-- 头部-->
+<script type="text/javascript" src="js/header.js"></script>
+<!--成绩分析-->
+<div id="content">
+    <!-- 第一个成绩表-->
+    <div class="menu_fixed">
+        <div class="error_menu cl ">
+            <div onclick="menuShow(0)">选择考试<b>▼</b></div><div onclick="menuShow(1)">选择科目<b>▼</b></div><div onclick="menuShow(2)">选择知识点<b>▼</b></div>
+        </div>
+        <p>共14道题</p>
+    </div>
+    <!-- 题-->
+    <div class="menu_content">
+        <div class="error_book">
+            <div class="error_top">
+                <h2>1</h2>
+                <div><b>下列词语中加点的字的读音完全相同的一组是()</b>
+                    <span>A．艰涩 瑟缩 瓶塞  色厉内荏  不稼不穑<br>
+                    B．马厩 灵柩 臼齿 一蹴而就  引咎自责<br>
+                    C．滞留  投掷   对峙  栉风沐雨   赤手可热<br>
+                    D．休憩  收讫  起身  修葺房屋  亟来问讯
+                    </span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(0)"><b>∨</b><a>展开解析</a></span>
+                    <span class="del"><img src="images/dele.png">删除I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">B</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">C</span>
+                    </div>
+                    <div>
+                        <span><b>解析</b></span>
+                            <span class="jx">
+
+                            </span>
+                    </div>
+                    <ul>
+                        <li><img src="images/ieg_img1.png"> <a href="#">观看微课</a></li>
+                        <li><img src="images/ieg_img2.png"> <a href="#">题库推荐</a></li>
+                        <li><img src="images/ieg_img3.png"> <a href="#">在线测试</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>2</h2>
+                <div><b>下列不是介词结构后置的一项是:</b>
+                    <span>A.斧斤以时入山林 <br>
+                            B.五亩之宅,树之以桑 <br>
+                            C.则无望民之多于邻国也<br>
+                            D.颁白者不负戴于道路矣
+                    </span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(1)"><b>∨</b><a>展开解析</a></span>
+                    <span class="del"><img src="images/dele.png">删除I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">B</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">A</span>
+                    </div>
+                    <div>
+                        <span><b>解析</b></span>
+                            <span class="jx">
+                               A项中 以时 为按时的意思不是介词结构
+                            </span>
+                    </div>
+                    <ul>
+                        <li><img src="images/ieg_img1.png"> <a href="#">观看微课</a></li>
+                        <li><img src="images/ieg_img2.png"> <a href="#">题库推荐</a></li>
+                        <li><img src="images/ieg_img3.png"> <a href="#">在线测试</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="error_book">
+            <div class="error_top">
+                <h2>3</h2>
+                <div><b>下列各句没有语病的一句是（）</b>
+                    <span>A．浙江省教育厅、财政厅把完善和建立扶困助学制度作为践行“三个代表”、为教育办实事的重要举措。<br><br>
+                            B．刚发行的这一期《青年文学》，以大约一半的篇幅，对年轻人关注的话题进行了重点采访和报道。<br><br>
+                            C．这些无可辩驳的事实证明了侵华日军遗弃毒气弹对中国公民的伤害，日方对此负有不可推卸的责任。<br><br>
+                            D．美国电信业主在报告中将电信行业崩溃的原因归结为高层领导人经验不足，这是自欺欺人的托词。<br>
+                            </span>
+                </div>
+            </div>
+
+            <div class="error_ok">
+                <div class="error_oktop">
+                    <span class="open" onclick="openClick(2)"><b>∨</b><a>展开解析</a></span>
+                    <span class="del"><img src="images/dele.png">删除I习题</span>
+                </div>
+                <div class="error_topbottom">
+                    <div>
+                        <span><b>我的答案</b></span>
+                        <span class="red">C</span>
+                    </div>
+                    <div>
+                        <span><b>标准答案</b></span>
+                        <span class="green">D</span>
+                    </div>
+                    <div>
+                        <span><b>解析</b></span>
+                            <span class="jx">
+                               A项：语序不当，应为“建立与完善”；B项：主宾搭配不当；C项：成分残缺，应在伤害前加“造成”。
+                            </span>
+                    </div>
+                    <ul>
+                        <li><img src="images/ieg_img1.png"> <a href="#">观看微课</a></li>
+                        <li><img src="images/ieg_img2.png"> <a href="#">题库推荐</a></li>
+                        <li><img src="images/ieg_img3.png"> <a href="#">在线测试</a></li>
+                    </ul>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+<!--隐藏菜单-->
+
+<div id="warp_hide">
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择考试</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="#">第一学期期末考试</a></li>
+            <li><a href="#">第一学期第三次月考考试</a></li>
+            <li><a href="#">第一学期第二次月考考试</a></li>
+            <li><a href="#">第一学期期中考试</a></li>
+            <li><a href="#">第一学期第一次月考考试</a></li>
+
+        </ul>
+    </div>
+
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择科目</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="IEmath.html">数学</a></li>
+            <li><a href="IEchinese.html">语文</a></li>
+            <li><a href="Ieg.html">英语</a></li>
+            <li><a href="#">政治</a></li>
+            <li><a href="#">化学</a></li>
+        </ul>
+    </div>
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择知识点</h3> <span>关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li><a href="#">数学知识点</a></li>
+            <li><a href="#">语文知识点</a></li>
+            <li><a href="#">英语知识点</a></li>
+            <li><a href="#">政治知识点</a></li>
+            <li><a href="#">化学知识点</a></li>
+        </ul>
+    </div>
+
+</div>
+
+
+</body>
+</html>

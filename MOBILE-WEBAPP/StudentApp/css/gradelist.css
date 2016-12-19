@@ -1,0 +1,22 @@
+#content{background-color: #F9F9F9}
+.leftl{border-left: 2px solid #CBDAD8;margin-left: 25px;margin-bottom: 100px;}
+.list_title{position: relative;top: 20px;}
+.title_click{height: 70px;overflow: hidden;margin-top: 20px;}/**/
+.title_click span{display: block;float: left; padding-left: 10px;}
+.title_click span b{display: block;color: #CACACA;font-weight: 100;}
+
+.title_click span h2{color: #A0A0A0;}
+.title_click span:nth-child(1){margin-left:10px}
+.title_click span:nth-child(2){color:#CACACA;margin-left:0px;margin-right: 15px;}
+.title_click >h2{color: #A0A0A0;line-height: 40px;font-weight: 100;font-size: 18px;}/**/
+.title_click a{width: 20px;height: 20px;border-radius: 20px;background-color:#CBDAD8;position: absolute ; top: 10px;left: -10px;}
+.title_click_hide{display: none;overflow: hidden}
+.ulhide{margin-top: 5px;overflow: hidden}
+.ulhide li{; overflow:hidden; height: 40px; line-height: 40px;}/**/
+.ulhide li span{display: block;}
+.ulhide li span:nth-child(1){float: left;margin-left: 20px;color: #C5C5C5}
+.ulhide li span:nth-child(2){float: right;margin-right: 50px;}
+.ulhide li span:nth-child(2) img{float: left}
+.py{background-color:#F9F9F9 ;border: 0;position: relative;width: 90%;left: 5%;min-height: 150px;}
+.py span{color: #6D797D;font-size: 16px;width: 90%;}
+.good{position:absolute;top: 5px;left: 5px;display: inline}

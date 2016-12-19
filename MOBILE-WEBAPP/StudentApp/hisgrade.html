@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>成绩分析</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/grade.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/echarts/build/dist/echarts.js"></script>
+    <script type="text/javascript" src="js/echarts/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="js/echarts/client/statement.js"></script>
+    <!--<script type="text/javascript" src="js/echartjs/build/dist/echarts.js"></script>-->
+
+    <script>
+        $(window).load(function(){
+
+            $("header div a").html("成绩分析")
+        });
+    </script></head>
+<body>
+<!-- 头部-->
+<script type="text/javascript" src="js/header.js"></script>
+<!--成绩分析-->
+<div id="content">
+    <!-- 第一个成绩表-->
+    <div class="menu_fixed2">
+        <div class="grade_menu "><div onclick="menuShow(0)">选择考试<b>▼</b></div><div onclick="menuShow(1)">选择科目<b>▼</b></div></div>
+    </div>
+    <div class="menu_content2">
+        <!--列表-->
+        <div class="grade1" id="tu1" style="height:400px;">
+            <script>
+                //路径配置
+                require.config({
+                    paths : {
+                        echarts : 'js/echarts/build/dist'
+                    }
+                });
+                //使用
+                require(
+                        [
+                            'echarts',
+                            'echarts/chart/bar' 	//使用柱状图
+                        ],
+                        function (ec) {
+                            //基于准备好的dom，初始化echarts图表
+                            var myChart = ec.init(document.getElementById('tu1'));
+                            var option = {
+                                tooltip : {	 //提示框，鼠标悬浮交互时的信息提示
+                                    trigger: 'axis',
+                                    formatter : function (params) {
+                                        var tar = params[0].name + "<br/>"+params[0].seriesName + ' : ' + params[0].value;
+                                        return tar;
+                                    }
+                                },
+                                calculable : false,
+                                grid : {
+                                    borderWidth : 0
+                                },
+                                xAxis : [	//横坐标
+                                    {
+                                        type : 'category',
+                                        splitLine : {show:false},
+                                        data : ['期末','第三次','第二次','期中','第一次']
+                                    }
+                                ],
+                                yAxis : [	//纵坐标
+                                    {
+                                        type : 'value',
+                                        name : '分数',
+                                        min : 0,
+                                        max : 500,
+                                        splitLine : {show:false},
+                                        axisLabel : {
+                                            formatter: '{value}'
+                                        }
+                                    }
+                                ],
+                                //驱动图表生成的数据内容数组
+                                series : [
+                                    {
+                                        "name" : '考试总得分',
+                                        "data" : [410,393,433,367,410],
+                                        "type" : "bar",
+                                        itemStyle : {
+                                            normal : {
+                                                color: function(params) {
+                                                    var colorList = [
+                                                        '#F39943','#2DCDAB','#7A9DBD','#FA8562','#18B5F2',
+                                                        '#009933','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                                        '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                                    ];
+                                                    return colorList[params.dataIndex]
+                                                }
+                                            }
+                                        },
+                                    }
+                                ]
+                            };
+                            //为echarts对象加载数据
+                            myChart.setOption(option);
+                        }
+                );
+            </script>
+        </div>
+
+        <div class="grade1">
+            <table class="transcript" border="1" cellspacing="0" cellpadding="0" width=90% >
+                <tr>
+                    <th>考试</th><th>分数</th><th>名次</th>
+                </tr>
+                <tr>
+                    <td>期末考试</td><td>410</td><td>5</td>
+                </tr>
+                <tr>
+                    <td>第三次月考</td><td>393</td><td>23</td>
+                </tr>
+                <tr>
+                    <td>第二次月考</td><td>433</td><td>11</td>
+                </tr>
+                <tr>
+                    <td>期中考试</td><td>367</td><td>6</td>
+                </tr>
+                <tr>
+                    <td>第一次月考</td><td>410</td><td>17</td>
+                </tr>
+            </table>
+
+        </div>
+        <div class="grade1" id="grade3" style="height:360px;">
+            <script>
+                require.config({
+                    paths: {
+                        echarts: 'js/echarts/build/dist'
+                    }
+                });
+                require(
+                        [
+                            'echarts',
+                            'echarts/chart/pie'
+                        ],
+                        function (ec) {
+                            var myChart_class = ec.init(document.getElementById('grade3'));
+                            var option = {
+                                tooltip : {
+                                    trigger: 'item',
+                                    formatter: "{b} : {c}分 ({d}%)"
+                                },
+                                legend: {
+                                    orient : 'horizontal',
+                                    x : 'center',
+                                    data:['数学','语文','英语','政治','化学']
+                                },
+                                series : [
+                                    {
+                                        type:'pie',
+                                        radius:'55%',
+                                        data:[
+                                            {value:95, name:'数学'},
+                                            {value:80, name:'语文'},
+                                            {value:75, name:'英语'},
+                                            {value:70, name:'政治'},
+                                            {value:90, name:'化学'}
+                                        ]
+                                    }
+                                ]
+                            };
+                            option.series[0].itemStyle = {
+                                normal : {
+                                    color : function(params) {
+                                        var colorList = [
+                                            '#F39943','#2DCDAB','#7A9DBD','#FA8562','#18B5F2',
+                                            '#009933','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                            '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                        ];
+                                        return colorList[params.dataIndex];
+                                    }
+                                }
+                            };
+                            // Load data into the ECharts instance
+                            myChart_class.setOption(option);
+                        }
+                );
+            </script>
+        </div>
+        <div class="grade1" id="s_1002" style="height:360px;width: 96%">
+            <script type="text/javascript">
+                $(document).ready(function() {
+                    $("#s_1002img").remove();
+                    //全班人数
+                    var classnum = 60;
+                    //
+                    var projectname = "第一学期历次考试情况";
+                    //
+                    var papernames = ["期末","第三次","第二次","期中","第一次"];
+                    //
+                    var rankclass = [5,23,11,6,17];
+                    //排名数据颠倒（排名越靠前柱子越高）
+                    var rankclassArr = new Array();
+                    for(var i in rankclass) {
+                        rankclassArr.push(classnum - rankclass[i]);
+                    }
+
+                    require.config({
+                        paths : {
+                            echarts : 'js/echarts/build/dist'
+                        }
+                    });
+                    require(
+                            [
+                                'echarts',
+                                'echarts/chart/line'
+                            ],
+                            function (ec) {
+                                var myChart = ec.init(document.getElementById('s_1002'));
+                                var option = {
+                                    title : {
+                                        text : "",
+                                        x : 'left'
+                                    },
+                                    tooltip : {
+                                        trigger : 'axis',
+                                        formatter : function (params) {
+                                            var res = "";
+                                            for (var i = 0, l = params.length; i < l; i++) {
+                                                var aa = '';
+                                                //如果没有该科目
+                                                if("-" == params[i].value) {
+                                                    aa = '-';
+                                                } else {
+                                                    aa = classnum - params[i].value;
+                                                }
+                                                res += 'No.' +aa + '<br/>';
+                                            }
+                                            return res;
+                                        }
+                                    },
+                                    toolbox : {
+                                        show : true,
+                                        feature : {
+                                            restore : {show : true},
+                                            saveAsImage : {show : true}
+                                        }
+                                    },
+                                    calculable : false,
+                                    legend : {
+                                        data : [projectname],
+                                        padding : 0,
+                                        itemGap : 6,
+                                        x : 'center',
+                                        y : 'top'
+                                    },
+                                    xAxis : [
+                                        {
+                                            type : 'category',
+                                            data : papernames
+                                        }
+                                    ],
+                                    yAxis : [
+                                        {
+                                            type : 'value',
+                                            name : '名次'
+                                        }
+                                    ],
+                                    series : [
+                                        {
+                                            name : projectname,
+                                            data : rankclassArr,
+                                            type : "line"
+                                        }
+                                    ]
+                                };
+                                option.yAxis[0].axisLabel = {
+                                    formatter : function (value) {
+                                        if(classnum <= value) {
+                                            return "";
+                                        }
+                                        return "第"+(classnum-value)+"名";
+                                    }
+                                };
+                                option.series[0].itemStyle = {
+                                    normal : {
+                                        color : function(params) {
+                                            var colorList = [
+                                                '#F39943','#2DCDAB','#7A9DBD','#FA8562','#18B5F2',
+                                                '#009933','#9BCA63','#FAD860','#F3A43B','#60C0DD',
+                                                '#D7504B','#C6E579','#F4E001','#F0805A','#26C0C0'
+                                            ];
+                                            return colorList[params.dataIndex];
+                                        },
+                                        label : {
+                                            show : true,
+                                            position : 'top',
+                                            formatter : function (a, b, c) {
+                                                for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {
+                                                    if (option.xAxis[0].data[i] == b) {
+                                                        return classnum - c;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                };
+                                myChart.setOption(option);
+                            }
+                    );
+                });
+            </script>
+        </div>
+
+
+    </div>
+    <!-- 隐藏菜单-->
+
+</div>
+<div id="warp_hide">
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择考试</h3> <span >关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li>2015第一学期期中考试</li>
+            <li>2015第一学期期末考试</li>
+            <li>2014第二学期期中考试</li>
+            <li>2014第二学期期末考试</li>
+            <li>2014第一学期期中考试</li>
+            <li>2014第一学期期末考试</li>
+        </ul>
+    </div>
+
+    <div class="dhide" onclick="menuHide()">
+        <div class="dhide_top">
+            <h3>选择题目</h3> <span >关闭</span>
+        </div>
+
+        <ul class="ulhide1">
+            <li>数学</li>
+            <li>语文</li>
+            <li>英语</li>
+            <li>政治</li>
+            <li>化学</li>
+        </ul>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
