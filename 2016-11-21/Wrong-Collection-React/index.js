@@ -7,14 +7,13 @@ import Student from './modules/Student'
 import Statement from './modules/Statement'
 import MistakeList from './modules/MistakeList'
 import routeLink from './routeLink'
-
 class App extends Component {
     render() {
         return (
             <div>
                 <div className="wrap">
                     <div className="logo">
-                        <div className="logoimg"><img src="../images/logo.png"/></div>
+                        <div className="logoimg"><img src="./images/logo.png"/></div>
                     </div>
                     {/*这上面是公司LOGO*/}
                     <div className="wNav">
@@ -27,17 +26,6 @@ class App extends Component {
                                 </Route>
                             </Router>
                             {/*这上面是导航切换*/}
-                            <div className="navRight">
-                                <img src="../images/user_img2.png"/>
-                                <span>个人中心 </span>
-                                <img src="../images/down.png"/>
-                                <ul className="unav">
-                                    <li><a href="#">个人资料</a></li>
-                                    <li><a href="#">修改密码</a></li>
-                                    <li><a href="#">安全退出</a></li>
-                                </ul>
-                            </div>
-                            {/*这上面是登陆状态域*/}
                         </div>
                     </div>
                 </div>

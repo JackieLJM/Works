@@ -8,7 +8,7 @@ class StudentBanner extends Component {
                     <ul>
                         <li style={{background:'white'}}>
                             <div className="m-width">
-                                <a href="javascript:void(0);"><img src="../images/images2/student1.jpg"/></a>
+                                <a href="javascript:void(0);"><img src="./images/images2/student1.jpg"/></a>
                             </div>
                         </li>
                     </ul>
@@ -25,7 +25,7 @@ class StudentInfor extends Component {
         return (
             <div className="user">
                 <div className="userTop">
-                    <div><img src="../images/user_img.png"/></div>
+                    <div><img src="./images/user_img.png"/></div>
                     <div><b>name</b><p><span>雨欣学校</span><span>高三</span><span>一班</span></p></div>
                 </div>
                 <div className="userMiddle">
@@ -35,8 +35,8 @@ class StudentInfor extends Component {
                     </p>
                 </div>
                 <div className="userBottom">
-                    <div><span><img src="../images/grade.png"/></span><a href="#">查看我的成绩</a></div>
-                    <div><span><img src="../images/error.png"/></span><a href="mistakeList.html">查看我的错题本</a></div>
+                    <div><span><img src="./images/grade.png"/></span><a href="#">查看我的成绩</a></div>
+                    <div><span><img src="./images/error.png"/></span><a href="mistakeList.html">查看我的错题本</a></div>
                 </div>
             </div>
         )
@@ -47,7 +47,7 @@ class StudentGrade extends Component {
     render() {
         return (
             <div className="classTab">
-                <img className="yinzhang" src="../images/yinzhang1.png"/>
+                <img className="yinzhang" src="./images/yinzhang1.png"/>
                 <table className="transcript" cellSpacing="0">
                     <caption>
                         成绩单
@@ -64,18 +64,18 @@ class StudentGrade extends Component {
                     <tbody>
                     <tr>
                         <td>
-                            <img className="number" src="../images/8.png"/>
-                            <img className="number" src="../images/2.png"/>
-                            <img className="number" src="../images/dian.png"/>
-                            <img className="number" src="../images/5.png"/>
+                            <img className="number" src="./images/8.png"/>
+                            <img className="number" src="./images/2.png"/>
+                            <img className="number" src="./images/dian.png"/>
+                            <img className="number" src="./images/5.png"/>
                         </td>
-                        <td><img className="number" src="../images/5.png"/><img className="number" src="../images/9.png"/>
+                        <td><img className="number" src="./images/5.png"/><img className="number" src="./images/9.png"/>
                         </td>
-                        <td><img className="number" src="../images/7.png"/><img className="number" src="../images/2.png"/>
+                        <td><img className="number" src="./images/7.png"/><img className="number" src="./images/2.png"/>
                         </td>
-                        <td><img className="number" src="../images/8.png"/><img className="number" src="../images/4.png"/>
+                        <td><img className="number" src="./images/8.png"/><img className="number" src="./images/4.png"/>
                         </td>
-                        <td><img className="number" src="../images/9.png"/><img className="number" src="../images/0.png"/>
+                        <td><img className="number" src="./images/9.png"/><img className="number" src="./images/0.png"/>
                         </td>
                     </tr>
 

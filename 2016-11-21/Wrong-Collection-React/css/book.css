@@ -1,204 +1,707 @@
 /*------------------------图片轮播-------------------------------------------*/
-.banner-box{width:100%;height:200px;position:relative;overflow:hidden;}
-.banner-box .bd{min-width: 1200px !important;}
-.banner-box .bd li .m-width {width:1200px;margin:0 auto;overflow:hidden;}
-.banner-box .bd li .m-width img{width: 1200px;position: absolute;bottom: 0}
-.banner-box .bd li{width:100% !important;height:200px;}
-.banner-box .bd li a{display:block;background-size:auto;}
+.banner-box {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
 
-.banner-btn{width:1210px;position:absolute;top:120px;left:50%;margin-left:-605px;}
-.banner-btn a{display:block;width:49px;height:104px;position:absolute;top:0;filter:alpha(opacity=40);-moz-opacity:0.4;-khtml-opacity:0.4;opacity:0.4;}
-.banner-btn a.prev{left:20px;background:url(../images/images2/foot.png) no-repeat 0 0;}
-.banner-btn a.next{right:20px;background:url(../images/images2/foot.png) no-repeat -49px 0;}
+.banner-box .bd {
+    min-width: 1200px !important;
+}
 
-.banner-box .hd {position:absolute;top:210px;left:537px;}
-.banner-box .hd ul li{width:12px;height:12px;border-radius :50%;text-indent:-9999px;margin-right:20px;background:#ccc;float:left;cursor:pointer;}
-.banner-box .hd ul li.on{background:#DA324D;}
+.banner-box .bd li .m-width {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.banner-box .bd li .m-width img {
+    width: 1200px;
+    position: absolute;
+    bottom: 0
+}
+
+.banner-box .bd li {
+    width: 100% !important;
+    height: 200px;
+}
+
+.banner-box .bd li a {
+    display: block;
+    background-size: auto;
+}
+
+.banner-btn {
+    width: 1210px;
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -605px;
+}
+
+.banner-btn a {
+    display: block;
+    width: 49px;
+    height: 104px;
+    position: absolute;
+    top: 0;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.4;
+    -khtml-opacity: 0.4;
+    opacity: 0.4;
+}
+
+.banner-btn a.prev {
+    left: 20px;
+    background: url(../images/images2/foot.png) no-repeat 0 0;
+}
+
+.banner-btn a.next {
+    right: 20px;
+    background: url(../images/images2/foot.png) no-repeat -49px 0;
+}
+
+.banner-box .hd {
+    position: absolute;
+    top: 210px;
+    left: 537px;
+}
+
+.banner-box .hd ul li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    text-indent: -9999px;
+    margin-right: 20px;
+    background: #ccc;
+    float: left;
+    cursor: pointer;
+}
+
+.banner-box .hd ul li.on {
+    background: #DA324D;
+}
+
 /*------------------错题本首页-------------------------------------*/
-.content  .user{width: 38%;float: left;border: 1px solid #DFDFDF;height: 350px;margin-top: 15px}
-.user .userTop{height:130px;width:100%;background-image: url("../images/user_back.png");background-repeat: repeat-x;}
-.userTop div{float: left;margin-left:7%;margin-top: 2%}
-.userTop div b{display: block;height: 50px;font-size: 20px;line-height: 50px;margin-left:7px}
-.userTop div p span{margin-left:7px}
+.content .user {
+    width: 38%;
+    float: left;
+    border: 1px solid #DFDFDF;
+    height: 350px;
+    margin-top: 15px
+}
 
-.userMiddle{height: 100px;border-bottom: 1px solid #DFDFDF;width: 90%;margin:0 auto}
-.userTip{
+.user .userTop {
+    height: 130px;
+    width: 100%;
+    background-image: url("../images/user_back.png");
+    background-repeat: repeat-x;
+}
+
+.userTop div {
+    float: left;
+    margin-left: 7%;
+    margin-top: 2%
+}
+
+.userTop div b {
+    display: block;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    margin-left: 7px
+}
+
+.userTop div p span {
+    margin-left: 7px
+}
+
+.userMiddle {
+    height: 100px;
+    border-bottom: 1px solid #DFDFDF;
+    width: 90%;
+    margin: 0 auto
+}
+
+.userTip {
     line-height: 26px;
     padding: 0 10px;
     margin: 10px auto 0 auto;
 }
-.userMiddle div{float: left;width: 30%;text-align: center;height: 70%;line-height:140%;border-left: 1px solid #E8E8E8;margin-top: 5%}
-.userMiddle div:first-child{border-left: 0}
-.userMiddle div b{color: #B73B1F;font-size: 20px;}
-.userMiddle div p{margin-top: 10px}
-.userBottom{width: 90%;margin:auto}
-.userBottom div{background-color:#FE8A23;width: 40%;height: 40px;float: left;line-height: 40px;margin-left:5% ;margin-top: 5%;text-align: center;border-radius: 3px}
-.userBottom div span{display: block;float: left;width: 30px;height: 30px;background-color: #FFA847;margin: 5px}
-.userBottom div img{height: 30px;width: 30px}
-.userBottom a{color: #ffffff}
-.content  .classTab{width: 60%;float: right;border: 1px solid #DFDFDF;height: 350px;margin-top: 15px;
-    position: relative;}
-/*.content  .classTab img{width: 100%;height: 100%}*/
-/*-----------------------------统计报表------------------------------------------*/
-#count_class,#count_textpaper,#count_text{
+
+.userMiddle div {
+    float: left;
+    width: 30%;
+    text-align: center;
+    height: 70%;
+    line-height: 140%;
+    border-left: 1px solid #E8E8E8;
+    margin-top: 5%
+}
+
+.userMiddle div:first-child {
+    border-left: 0
+}
+
+.userMiddle div b {
+    color: #B73B1F;
+    font-size: 20px;
+}
+
+.userMiddle div p {
+    margin-top: 10px
+}
+
+.userBottom {
+    width: 90%;
+    margin: auto
+}
+
+.userBottom div {
+    background-color: #FE8A23;
+    width: 40%;
+    height: 40px;
+    float: left;
+    line-height: 40px;
+    margin-left: 5%;
+    margin-top: 5%;
+    text-align: center;
+    border-radius: 3px
+}
+
+.userBottom div span {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+    background-color: #FFA847;
+    margin: 5px
+}
+
+.userBottom div img {
+    height: 30px;
+    width: 30px
+}
+
+.userBottom a {
+    color: #ffffff
+}
+
+.content .classTab {
+    width: 60%;
+    float: right;
+    border: 1px solid #DFDFDF;
+    height: 350px;
+    margin-top: 15px;
     position: relative;
 }
-.chead{height: 40px;border-bottom: 1px solid #E6E6E6;position: relative;}
-.nav_top{width: 10%;border-bottom:3px solid #2F95D7;position: absolute;height: 40px}
-.nav_top img{width: 20px;height: 20px}
-.chead span{float: left;font-weight: 700;font-size: 16px; display:block;height:40px;color: #111111;line-height: 50px;}
-.class_nav{margin-top: 5px;
+
+/*.content  .classTab img{width: 100%;height: 100%}*/
+/*-----------------------------统计报表------------------------------------------*/
+#count_class, #count_textpaper, #count_text {
+    position: relative;
+}
+
+.chead {
+    height: 40px;
+    border-bottom: 1px solid #E6E6E6;
+    position: relative;
+}
+
+.nav_top {
+    width: 10%;
+    border-bottom: 3px solid #2F95D7;
+    position: absolute;
+    height: 40px
+}
+
+.nav_top img {
+    width: 20px;
+    height: 20px
+}
+
+.chead span {
+    float: left;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    height: 40px;
+    color: #111111;
+    line-height: 50px;
+}
+
+.class_nav {
+    margin-top: 5px;
     position: relative;
     height: 40px;
-  }
-.hover_back {background-color: #19a97b !important;color: #ffffff}
-.hover_a{color: inherit !important}
-.class_nav li a{color: #626262;display: block;height: 30px;float: left;line-height: 30px; padding:0 10px;font-size: 15px;margin-left: 20px}
+}
 
-.class_nav li img{margin-top: 5px; margin-right: 10px;}
-.class_nav li{background-color: #D6D6D6;height: 30px; float: left;margin-left: 5px; margin-top: 5px;}
-#topnav img,.chead img{float: left;margin-top: 15px;}
-.counttab img{width: 100%}
+.hover_back {
+    background-color: #19a97b !important;
+    color: #ffffff
+}
 
-.more{
+.hover_a {
+    color: inherit !important
+}
+
+.class_nav li a {
+    color: #626262;
+    display: block;
+    height: 30px;
+    float: left;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 15px;
+    margin-left: 20px
+}
+
+.class_nav li img {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.class_nav li {
+    background-color: #D6D6D6;
+    height: 30px;
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#topnav img, .chead img {
+    float: left;
+    margin-top: 15px;
+}
+
+.counttab img {
+    width: 100%
+}
+
+.more {
     position: absolute;
-    right: 0;z-index: 2;
+    right: 0;
+    z-index: 2;
     background-color: #D6D6D6;
     height: 200px;
-    width:100px;
+    width: 100px;
     top: 33px;
     display: none;
     border-radius: 2px;
 
 }
-.more dt{
+
+.more dt {
     text-indent: 10px;
     line-height: 24px;
     color: #626262;
 }
-.more dd a{
+
+.more dd a {
     text-indent: 20px;
     line-height: 24px;
     font-size: 12px;
     clear: both;
     margin: 0;
     color: #626262;
- }
+}
 
-.more hr{
+.more hr {
     width: 90%;
     margin-left: 5%;
     height: 1px;
-    border:none;
-    border-top: 1px solid #107d54 ;
-   }
+    border: none;
+    border-top: 1px solid #107d54;
+}
 
-
-.tab{
+.tab {
     position: relative;
-    -webkit-column-count:2 ;-moz-column-count:2 ;column-count:2 ;-khtml-column-count:2;-ms-column-count:2;
-    -webkit-column-gap:2em;-moz-column-gap:2em;-ms-column-gap:2em;column-gap:2em;-khtml-column-gap:2em;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -khtml-column-count: 2;
+    -ms-column-count: 2;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    -ms-column-gap: 2em;
+    column-gap: 2em;
+    -khtml-column-gap: 2em;
     /*-webkit-column-width: auto;-moz-column-width:30%;-ms-column-width: 30%;column-width: 30%;-khtml-column-width:30%;*/
 }
-.tab .uk{margin-top: 5%;text-align: center;width:99%;display: inline-block;border-radius:5px;
-}
-.uk-top{height: 30px}
-.uk-top-left{float: left}
-.uk-top-right{float: right}
-.uk-top-left span{color: #ffffff;font-size: 12px;float: left;display: block;height: 30px;line-height: 30px}
-.uk img {float: left}
 
+.tab .uk {
+    margin-top: 5%;
+    text-align: center;
+    width: 99%;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.uk-top {
+    height: 30px
+}
+
+.uk-top-left {
+    float: left
+}
+
+.uk-top-right {
+    float: right
+}
+
+.uk-top-left span {
+    color: #ffffff;
+    font-size: 12px;
+    float: left;
+    display: block;
+    height: 30px;
+    line-height: 30px
+}
+
+.uk img {
+    float: left
+}
 
 /*-----------------------------我的错题本------------------------------------------*/
-.mTop{height: 50px;width: 100%;background-color: #E8E8E8}
-.mTopic{width: 100%;position: relative;margin-top: 5px}
-.subject1{border: 1px solid #F1F1F1;overflow:hidden;border-radius: 5px;}
-.subject1_top{background-color: #ffffff;height: auto;width: 100%;overflow: hidden}
-.subject1_top span{float: left;font-size: 25px;display: block;height: 50%;line-height: 45px;width: 40px;text-align: center}
-.subject1_top div{float: left;width: 95%; margin: 10px auto;}
-.subject1_top div img{height:auto;max-width: 100%}
-.mTop .topLeft{float: left}
+.mTop {
+    height: 50px;
+    width: 100%;
+    background-color: #E8E8E8
+}
 
-.topLeft select,.topLeft div{float: left;height: 30px;margin-top: 10px;margin-left: 20px;}
-.topLeft select{width: 100px}
-.topLeft div{width:28px; height:28px;background-color: #FE8722; border-radius: 3px;}
-.topLeft div img{
-    margin: 3px auto;}
+.mTopic {
+    width: 100%;
+    position: relative;
+    margin-top: 5px
+}
 
-.mTop .topRight{float: right;height: 50px;line-height: 50px;margin-right: 20px}
+.subject1 {
+    border: 1px solid #F1F1F1;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.subject1_top {
+    background-color: #ffffff;
+    height: auto;
+    width: 100%;
+    overflow: hidden
+}
+
+.subject1_top span {
+    float: left;
+    font-size: 25px;
+    display: block;
+    height: 50%;
+    line-height: 45px;
+    width: 40px;
+    text-align: center
+}
+
+.subject1_top div {
+    float: left;
+    width: 95%;
+    margin: 10px auto;
+}
+
+.subject1_top div img {
+    height: auto;
+    max-width: 100%
+}
+
+.mTop .topLeft {
+    float: left
+}
+
+.topLeft select, .topLeft div {
+    float: left;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.topLeft select {
+    width: 100px
+}
+
+.topLeft div {
+    width: 28px;
+    height: 28px;
+    background-color: #FE8722;
+    border-radius: 3px;
+}
+
+.topLeft div img {
+    margin: 3px auto;
+}
+
+.mTop .topRight {
+    float: right;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 20px
+}
 
 /*错题解析*/
-.subject1_content,.subject1_cTop{background-color:#F4F4F4}
-.subject1_cTop{height: 40px;overflow: hidden;  }
-.cTop1{height: 40px;float: left;margin-left: 10px; cursor: pointer;}
-.cTop1 span{float: left;color: #2A8C67;margin-left: 10px;display: block;height: 40px;line-height: 40px}
-.cTop1 img{width:20px;height:20px;margin-top: 10px;}
-.cTop2{float: right;margin-right: 10px;}
-.cTop2 span{float: left}
-.cTop2 span img{float: left;width: 20px;height: 20px;margin-top: 10px}
-.cTop2 span a{display: block;width: 100px;height: 40px;line-height: 40px;color: #8D8D8D;font-size: 12px}
+.subject1_content, .subject1_cTop {
+    background-color: #F4F4F4
+}
+
+.subject1_cTop {
+    height: 40px;
+    overflow: hidden;
+}
+
+.cTop1 {
+    height: 40px;
+    float: left;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.cTop1 span {
+    float: left;
+    color: #2A8C67;
+    margin-left: 10px;
+    display: block;
+    height: 40px;
+    line-height: 40px
+}
+
+.cTop1 img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.cTop2 {
+    float: right;
+    margin-right: 10px;
+}
+
+.cTop2 span {
+    float: left
+}
+
+.cTop2 span img {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px
+}
+
+.cTop2 span a {
+    display: block;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    color: #8D8D8D;
+    font-size: 12px
+}
 
 /*解析隐藏部位*/
-.subject1_content{overflow: hidden;display: none;
-    border-top: 1px solid #e6e6e6;}
-.cLeft{width:850px;float: left;overflow: hidden}
-.cLeft >div{clear: both;height: 60px;margin-left: 20px}
-.cLeft div p{width: 100px;height: 30px;color: #ffffff;line-height: 30px;float: left;clear: both; margin-top: 15px;text-align: center;
-    background-image: url("../images/mbackground.png");background-repeat: no-repeat;
+.subject1_content {
+    overflow: hidden;
+    display: none;
+    border-top: 1px solid #e6e6e6;
 }
-.cLeft div p span{display: block;height: 30px;line-height: 30px;width: 90%;}
-.cLeft div span img{width: 100%}
-.cLeft div b{float: left;display: block;height: 60px;width: 30px}
-.cLeft div b img{width:30px;height: 30px;margin-top: 15px; }
-.fales_an { margin: 15px 0 0 10px;
-    color: red;}
-.right_an { margin: 15px 0 0 10px;
-    color: green;}
-.cLeft div .img1{float:left;margin-top: 10px;width: 85%;}
-.cLeft div img{max-width:100%;max-height: 100% }
 
-.cRight{width: 320px;float: right;overflow: hidden}
-.cRight div:first-child img{ margin: 0 auto}
-.cRight p{margin: 10px;}
-.cRight ol{margin-left: 40px;}
-.cRight >span{margin-left: 10px;margin-top: 20px}
-.cRight ol li{height: 30px;line-height: 30px}
+.cLeft {
+    width: 850px;
+    float: left;
+    overflow: hidden;
+}
 
+.cLeft > div {
+    clear: both;
+    height: 60px;
+    margin-left: 20px
+}
+
+.cLeft div p {
+    width: 100px;
+    height: 30px;
+    color: #ffffff;
+    line-height: 30px;
+    float: left;
+    clear: both;
+    margin-top: 15px;
+    text-align: center;
+    background-image: url("../images/mbackground.png");
+    background-repeat: no-repeat;
+}
+
+.cLeft div p span {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    width: 90%;
+}
+
+.cLeft div span img {
+    width: 100%
+}
+
+.cLeft div b {
+    float: left;
+    display: block;
+    height: 60px;
+    width: 30px
+}
+
+.cLeft div b img {
+    width: 30px;
+    height: 30px;
+    margin-top: 15px;
+}
+
+.fales_an {
+    margin: 15px 0 0 10px;
+    color: red;
+}
+
+.right_an {
+    margin: 15px 0 0 10px;
+    color: green;
+}
+
+.cLeft div .img1 {
+    float: left;
+    margin-top: 10px;
+    width: 85%;
+}
+
+.cLeft div img {
+    max-width: 100%;
+    max-height: 100%
+}
+
+.cRight {
+    width: 320px;
+    float: right;
+    overflow: hidden;
+}
+
+.cRight div:first-child img {
+    margin: 0 auto
+}
+
+.cRight p {
+    margin: 10px;
+}
+
+.cRight ol {
+    margin-left: 40px;
+}
+
+.cRight > span {
+    margin-left: 10px;
+    margin-top: 20px
+}
+
+.cRight ol li {
+    height: 30px;
+    line-height: 30px
+}
 
 /*弹出框*/
-#tdisplay{ width: 100%;height: 800px;
+#tdisplay {
+    width: 100%;
+    height: 800px;
     background-color: #000000;
 
-
-    filter:alpha(opacity=30);
-    background-color: rgba(0,0,0,.4);
-    position: fixed;height: 800px;top: 0;
+    filter: alpha(opacity=30);
+    background-color: rgba(0, 0, 0, .4);
+    position: fixed;
+    height: 800px;
+    top: 0;
     z-index: 10;
     display: none;
 }
-.close img{position: absolute;right: 2%;top: 20px}
-.mtitle{background-color: #1AA97B;height: 45px;width: 1200px;margin:0 auto;margin-top: 80px;border-radius: 5px 5px 0 0}
-.mtitle img{float: left;margin-top: 5px}
-.mtitle span{float: left;height: 40px;line-height: 40px;color: #ffffff}
-#sucai{width: 1200px;margin: 0 auto;border-radius: 0px 0px 5px 5px ;overflow:auto;height: 600px;overflow: hidden}
-#sucai img{width: 100%;height: 1000px}
+
+.close img {
+    position: absolute;
+    right: 2%;
+    top: 20px
+}
+
+.mtitle {
+    background-color: #1AA97B;
+    height: 45px;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    border-radius: 5px 5px 0 0;
+}
+
+.mtitle img {
+    float: left;
+    margin-top: 5px
+}
+
+.mtitle span {
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff
+}
+
+#sucai {
+    width: 1200px;
+    margin: 0 auto;
+    border-radius: 0px 0px 5px 5px;
+    overflow: auto;
+    height: 600px;
+    overflow: hidden;
+}
+
+#sucai img {
+    width: 100%;
+    height: 1000px
+}
 
 /*成绩单*/
-.transcript{width:90%;
-    table-layout:fixed;
-    border-collapse:collapse;
+.transcript {
+    width: 90%;
+    table-layout: fixed;
+    border-collapse: collapse;
     margin: 0 auto;
-    border:solid #e1e1e1; border-width:1px 0px 0px 1px;}
-.transcript caption{ text-align: center;
+    border: solid #e1e1e1;
+    border-width: 1px 0px 0px 1px;
+}
+
+.transcript caption {
+    text-align: center;
     line-height: 50px;
-    height: 50px;}
-.transcript td{
-    height: 50px; line-height: 50px; text-align: center;border:solid #e1e1e1; border-width:0px 1px 1px 0px;}
-.number{ display: inline; margin-top: 7px;}
-.numberTip{ width: 90%;
-    margin: 10px auto; line-height: 26px;}
-.numberTip span{ color: green;}
-.yinzhang{
+    height: 50px;
+}
+
+.transcript td {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: solid #e1e1e1;
+    border-width: 0px 1px 1px 0px;
+}
+
+.number {
+    display: inline;
+    margin-top: 7px;
+}
+
+.numberTip {
+    width: 90%;
+    margin: 10px auto;
+    line-height: 26px;
+}
+
+.numberTip span {
+    color: green;
+}
+
+.yinzhang {
     position: absolute;
     top: 165px;
-    left: 200px;}
+    left: 200px;
+}

@@ -18,34 +18,33 @@ import {
 
 class StatementCondition extends Component {
     render() {
-        const data = this.props.data;
         return (
             <div id="count_class">
                 <div className="chead">
                     <div className="nav_top">
-                        <img src="../images/class_img1.png"/><span>班级</span>
+                        <img src="./images/class_img1.png"/><span>班级</span>
                     </div>
                 </div>
                 <ul className="class_nav">
                     <li className="hover_back">
                         <a href="#" className="hover_a">语文</a>
-                        <img src="../images/sign_img6.png"/>
+                        <img src="./images/sign_img6.png"/>
                     </li>
                     <li>
                         <a href="#">数学数学</a>
-                        <img src="../images/sign_img6.png"/>
+                        <img src="./images/sign_img6.png"/>
                     </li>
                     <li>
                         <a href="#">语文</a>
-                        <img src="../images/sign_img6.png"/>
+                        <img src="./images/sign_img6.png"/>
                     </li>
                     <li>
                         <a href="#">数学</a>
-                        <img src="../images/sign_img6.png"/>
+                        <img src="./images/sign_img6.png"/>
                     </li>
                     <li>
                         <a href="#" id="clickmore">更多</a>
-                        <img src="../images/down.png"/>
+                        <img src="./images/down.png"/>
                         <dl className="more">
                             <dt>高一</dt>
                             <dd><a href="#">高一考试1</a></dd>
@@ -67,8 +66,11 @@ class StatementCondition extends Component {
     }
 }
 class StatementContentArea extends Component {
+    // constructor(props){
+    //     super(props);
+    // }
     render() {
-        const data = this.props.data;
+        // const data = this.props.data;
         return (
             <AreaChart width={730} height={250} data={data}
                        margin={{top: 10, right: 30, left: 0, bottom: 0}}>
@@ -94,8 +96,11 @@ class StatementContentArea extends Component {
 }
 
 class StatementContentLine extends Component {
+    // constructor(props){
+    //     super(props);
+    // }
     render() {
-        const data = this.props.data;
+        // const data = this.props.data;
         return (
             <LineChart width={730} height={250} data={data}
                        margin={{top: 5, right: 30, left: 20, bottom: 5}}>
@@ -111,8 +116,11 @@ class StatementContentLine extends Component {
 }
 
 class StatementContentBar extends Component {
+    // constructor(props){
+    //     super(props);
+    // }
     render() {
-        const data = this.props.data;
+        // const data = this.props.data;
         return (
             <BarChart width={300} height={200} data={data}>
                 <XAxis dataKey="name"/>
@@ -126,18 +134,21 @@ class StatementContentBar extends Component {
         )
     }
 }
-
+const data=[
+    {name: 'PageA', uv: 4000, pv: 3000},
+    {name: 'PageB', uv: 4000, pv: 3000},
+    {name: 'PageC', uv: 4000, pv: 3000},
+]
 class Statement extends Component {
-    static defaultProps() {
-        return {
-            data: [
-                {name: 'PageA', uv: '4000', pv: '3000'},
-                {name: 'PageB', uv: '4000', pv: '3000'},
-                {name: 'PageC', uv: '4000', pv: '3000'},
-            ]
-        }
-    }
-
+    // static defaultProps() {
+    //     return {
+    //         data: [
+    //             {name: 'PageA', uv: 4000, pv: 3000},
+    //             {name: 'PageB', uv: 4000, pv: 3000},
+    //             {name: 'PageC', uv: 4000, pv: 3000},
+    //         ]
+    //     }
+    // }
     render() {
         return (
             <div className="content">
