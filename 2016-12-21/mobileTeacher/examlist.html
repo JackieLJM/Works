@@ -4,92 +4,127 @@
 <head>
     <meta charset="UTF-8">
     <title>考试列表</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="css/t.css"> </head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/t.css" />
+    <script>
+        function edit() {
+            document.getElementById("pop").style.display = "block";
+        }
+    </script>
+</head>
 
 <body>
+    <div class="return">
+        <a href="exam.html"><img src="./img/return.png"></a>
+    </div>
+    <div class="tittle">
+        <span>考试列表</span>
+    </div>
+    <div id="edit" class="edit">
+        <input type="image" src="./img/edit.png" onclick="edit()">
+    </div>
+    <div id="pop" class="pop">
+        <img src="./img/popup.png" />
+        <div style="margin:-45px 0 0 0;text-align:center;font-size:1em;line-height:1em;">
+            <a href="index.html"><img src="./img/POWER.png" />&nbsp;&nbsp;退出账号</a>
+        </div>
+        <div style="margin:-70px 0 0 0;text-align:center;font-size:1em;line-height:1em;">
+            <a href="password.html"><img src="./img/lock.png" />&nbsp;&nbsp;修改密码</a>
+        </div>
+    </div>
 
-    <span>考试列表</span>
-    <table cellspacing="0" cellpadding="0">
-        <tr>
-            <td>科目名称</td>
-            <td>考试成绩</td>
-            <td>平均成绩</td>
-            <td>综合成绩</td>
-        </tr>
-        <tr>
-            <td>语文</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>数学</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>英语</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>物理</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>化学</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>生物</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>语文</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>数学</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>英语</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>物理</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>化学</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>生物</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+
+    <div class="content">
+        <div class="student">
+            <p><span>院系：土木工程系</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>姓名：王小明</span></p>
+        </div>
+        <div class="infor">
+            <table cellspacing="0" cellpadding="0">
+                <tr>
+                    <th>科目名称</th>
+                    <th>考试成绩</th>
+                    <th>平均成绩</th>
+                    <th>综合成绩</th>
+                </tr>
+                <tr>
+                    <td>语文</td>
+                    <td>103</td>
+                    <td>103</td>
+                    <td>103</td>
+                </tr>
+                <tr>
+                    <td>数学</td>
+                    <td>106</td>
+                    <td>106</td>
+                    <td>106</td>
+                </tr>
+                <tr>
+                    <td>英语</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>物理</td>
+                    <td>96</td>
+                    <td>96</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>化学</td>
+                    <td>88</td>
+                    <td>88</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>生物</td>
+                    <td>73</td>
+                    <td>73</td>
+                    <td>73</td>
+                </tr>
+                <tr>
+                    <td>语文</td>
+                    <td>103</td>
+                    <td>103</td>
+                    <td>103</td>
+                </tr>
+                <tr>
+                    <td>数学</td>
+                    <td>106</td>
+                    <td>106</td>
+                    <td>106</td>
+                </tr>
+                <tr>
+                    <td>英语</td>
+                    <td>98</td>
+                    <td>98</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>物理</td>
+                    <td>96</td>
+                    <td>96</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>化学</td>
+                    <td>88</td>
+                    <td>88</td>
+                    <td>88</td>
+                </tr>
+                <tr>
+                    <td>生物</td>
+                    <td>73</td>
+                    <td>73</td>
+                    <td>73</td>
+                </tr>
+            </table>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
 </body>
 
 </html>
