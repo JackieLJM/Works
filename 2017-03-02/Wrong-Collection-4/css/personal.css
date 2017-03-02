@@ -1,0 +1,167 @@
+.userbutton{width: 100px;height: 30px;margin: 20px auto;display: block}
+.uh3{margin:0 10px;border-bottom: 1px solid #1AA97B;line-height: 50px;clear: both ;overflow: hidden}
+.wrap{  background: url("../images/personal/backgroung.png");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat:no-repeat;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#6CF5DD, endColorstr=#FEE1A8);/*IE<9>*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#6CF5DD, endColorstr=#FEE1A8)";/*IE8+*/
+}
+
+.user-content{width: 960px;margin: 10px auto;border-radius: 5px;overflow: hidden;clear: both;background-color: #1AA97B;}
+.user-content-left{width: 170px;border-radius: 5px 0 0 0;background-color: #1AA97B;float: left;height: 100%;}
+.left-Title{background-color: #11986D;height: 50px;color: white;text-align: center;line-height: 50px;border-radius: 5px 0 0 0}
+.left-nav{width: 100%;color: white;margin-top: 20px;height: 100%}
+.left-nav li{height: 40px;line-height: 40px;width: 79%;margin-left: 27px}
+.left-nav i{width: 20px;height: 20px;display: inline-block;;margin-top: 10px;float: left}
+.left-nav a{color: white;display: inline-block;margin-left: 10px}
+.user-icon1{  background:url(../images/personal/usernav.png) 0 -3px no-repeat;}
+.user-icon2{  background:url(../images/personal/usernav.png) 0 -44px no-repeat;}
+.user-icon3{  background:url(../images/personal/usernav.png) 0 -25px no-repeat;}
+.user-icon4{  background:url(../images/personal/usernav.png) 0 -67px no-repeat;}
+.user-icon5{  background:url(../images/personal/usernav.png) 0 -91px no-repeat;}
+.user-icon6{  background:url(../images/personal/usernav.png) 0 -116px no-repeat;}
+.user-icon7{  background:url(../images/personal/usernav2.png) 0 3px no-repeat;}
+.user-icon8{  background:url(../images/personal/usernav2.png) 0 -22px no-repeat;}
+.user-content-right{width: 790px;float: right;border-radius: 0 5px 5px 0;background-color: #ffffff;min-height: 400px;padding-bottom: 10px}
+.right-top{background: #EEF1F5;width: 90%;margin: 20px auto;height: 80px;border: 1px solid #E6E9EE}
+.right-top div{float: left;margin-left: 10px}
+.right-top div span{display: block;line-height: 40px}
+.right-top div b{font-size: 24px}
+.right-top button{width: 110px;height: 36px;border-radius: 5px;margin-left: 40px;margin-top: 23px;font-size: 16px;font-weight: 700}
+
+.details{width: 90%;;margin: 20px auto}
+.tab-select{margin-top: 20px}
+.tab-select button{width: 60px;border-radius: 5px; height: 30px;margin-left: 10px}
+.tab-select span{margin-left: 10px;}
+.tab-select input{margin-left: 10px;outline: 0;border: 1px solid #C0CBD2;height: 30px;padding-left: 10px;width: 150px;line-height: 30px}
+
+.tab-cont{width: 100%;margin-top: 20px;padding-bottom: 30px}
+.tab-cont th{height: 40px}
+.tab-cont td{text-align: center;padding: 10px 0}
+.tdback{  background-color: #EFF0F2;  }
+.trbor td{  border-top: 1px solid #D4D9DD;  border-bottom: 1px solid #D4D9DD;  }
+
+/*个人中心首页*/
+.user{width: 90%;margin: 0 auto;border-bottom: 1px solid #D4D9DD;height: 220px;}
+.user-img{width: 150px;height: 150px;border-radius: 100%;border: 1px solid #EEE16E;float: left;margin-top: 30px;overflow: hidden}
+.user-img{width: 150px;}
+.user-details{color: #666666;margin-top: 25px;margin-left: 50px;float: left}
+.user-details li{height: 28px;line-height: 28px}
+.user-details button{width: 51px;height: 22px;border-radius: 10px;margin-left: 20px;line-height: 22px}
+.video-cont{width: 90%;margin: 10px auto;}
+.video-cont-top a{color: #686868;display: inline-block;margin-left: 10px}
+.video-cont-top i{width: 30px;height: 30px;display: inline-block;float: left}
+.video-cont-top li{float: left;height: 30px;line-height: 30px;margin:0 15px ;}
+.video-cont-top span{margin-left: 10px}
+/*个人资料*/
+.user-inform{width: 60%;float: left;margin-top: 10px}
+.user-inform table{width: 96%;margin: 0 auto}
+.user-head{float: right;width: 39%;}
+.user-head button{margin-top: 10px}
+.user-head-img{width: 200px;height: 200px;background-color: #F5F5F5;margin-top: 10px}
+.user-head-img span{display:block;line-height: 200px;text-align: center}
+/*账号安全*/
+.user-security div{margin-top: 10px}
+.user-password{}
+.user-security-title{background-color: #F9F9F9;height: 30px;line-height: 30px;padding-left: 10px}
+.user-security-tab{width:305px;margin: 10px auto;}
+.user-security-tab tr td:first-child{text-align: right;width: 100px}
+.user-security-tab input{width: 200px;height: 30px;line-height: 30px;border: 1px solid #dedede;}
+.user-security-tab tr{height: 50px;line-height: 50px}
+/*已购视频*/
+
+.my-video{float: left;width: 236px;margin-left: 19px;margin-top:10px;border: 1px solid #dedede; position: relative }
+.my-video:hover{
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#d1d1d1',Direction=135, Strength=3);/*for ie6,7,8*/
+    background-color: #ffffff;
+    -moz-box-shadow:1px 2px 3px #d1d1d1;/*firefox*/
+    -webkit-box-shadow:1px 1px 3px #d1d1d1;/*webkit*/
+    box-shadow:1px 1px 3px #d1d1d1;/*opera或ie9*/}
+.video-delete{;height: 30px;line-height: 30px}
+.video-delete span{float: right;margin-right: 10px;cursor: pointer}
+.video-delete i{width: 20px;height: 20px;}
+.my-video-div{}
+.study-video{width: 250px;height: 205px;float: left;margin-top: 10px;margin-left: 10px;
+    filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696',Direction=135, Strength=5);/*for ie6,7,8*/
+    background-color: #ffffff;
+    -moz-box-shadow:1px 3px 5px #969696;/*firefox*/
+    -webkit-box-shadow:1px 3px 5px #969696;/*webkit*/
+    box-shadow:1px 3px 5px #969696;/*opera或ie9*/
+    position: relative;
+}
+.study-video-buttom{height: 40px;overflow: hidden;text-overflow: ellipsis;width: 98%;font-size: 12px;color: black;padding: 5px 0 5px 5px ;}
+.video-mask{width: 250px;height: 160px;background-color: rgba(0,0,0,.5);position: absolute;top: 0;filter:alpha(opacity=50);background-color: black\0;display: none}
+.video-mask a{position: absolute;top: 50%;left: 50%;margin-top: -15px;margin-left: -50px}
+.study-video:hover .video-mask{display: block}
+/*删除按钮*/
+.delete-button{position: absolute;width: 20px;height: 20px;right: 0;top: 0;background: red;border: 1px solid red;
+   border-radius: 100%;color: white;line-height: 20px;text-align: center;display: none;cursor: pointer;
+}
+
+.admin{  display: block;
+    -webkit-animation: animations 1s infinite;
+    -moz-animation:animations 1s infinite;
+    -o-animation: animations 1s infinite;
+    -ms-animation: animations 1s infinite;
+    animation: animations 1s infinite;}
+
+@-webkit-keyframes animations{
+    0%{-webkit-transform:rotate(45deg)}
+    50%{-webkit-transform:rotate(-45deg)}
+    70%{-webkit-transform:rotate(45deg)}
+    100%{-webkit-transform:rotate(-45deg)}
+}
+@-moz-keyframes animations{
+    0%{-webkit-transform:rotate(45deg)}
+    50%{-webkit-transform:rotate(-45deg)}
+    70%{-webkit-transform:rotate(45deg)}
+    100%{-webkit-transform:rotate(-45deg)}
+}
+@-o-keyframes animations{
+    0%{-webkit-transform:rotate(45deg)}
+    50%{-webkit-transform:rotate(-45deg)}
+    70%{-webkit-transform:rotate(45deg)}
+    100%{-webkit-transform:rotate(-45deg)}
+}
+@-ms-keyframes animations{
+    0%{-webkit-transform:rotate(45deg)}
+    50%{-webkit-transform:rotate(-45deg)}
+    70%{-webkit-transform:rotate(45deg)}
+    100%{-webkit-transform:rotate(-45deg)}
+}
+@keyframes animations{
+    0%{-webkit-transform:rotate(45deg)}
+    50%{-webkit-transform:rotate(-45deg)}
+    70%{-webkit-transform:rotate(45deg)}
+    100%{-webkit-transform:rotate(-45deg)}
+}
+/*充值页面*/
+sub{font-weight: 100;margin-left: 10px;display: inline-block;line-height: 50px}
+.personal-money{width: 92%;margin: 0 auto;overflow: hidden;margin-top: 15px}
+.personal-money-ul{width: 45%;overflow: hidden;font-size: 16px}
+.personal-money-ul li{height: 40px;line-height: 40px;border: 1px solid #E4E8EA;width: 90%;margin-top: 10px;position: relative;cursor: pointer}
+.personal-money-ul li div:first-child{  margin-left: 20px;}
+.personal-money-ul li div:nth-child(2){margin-right: 30px;direction:ltr;width: 105px}
+.personal-money-ul li span{margin: 0 5px 0 5px}
+.personal-money-ul input{width: 40px;height: 26px;line-height: 26px;margin:0 5px 0 5px}
+.personal-money-ul li:last-child{font-size: 14px}
+.hidden-money{display: none}
+
+.selected-div{background: url("../images/personal/click.png")0 0 repeat;position: absolute;top: 0;right: 0;display: block;width: 30px;height: 30px;display: none}
+
+.attention{border: 2px solid #FCD9C3;width: 42%;padding: 15px;background-color: #FFF9F3}
+.attention span{font-weight: 900;color: #F16614}
+.attention p{margin: 8px 0;font-size: 12px}
+.payWay{width: 96%;margin: 0 auto;padding-bottom: 10px}
+.payWay h3{font-weight: 100;margin-top: 20px}
+.payWay button{width: 110px;height: 36px;line-height: 36px;margin-top: 20px;margin-left: 10px}
+.payWay button a{border: 1px solid red}
+.waylist{width: 100%;overflow: hidden;margin-top: 10px}
+.waylist li{width: 133px;height: 50px;float: left;margin-left: 10px;position: relative;cursor: pointer;border:1px solid #E4E8EA}
+
+
+.bank-icon1{background: url("../images/personal/bank.png") -10px 0 repeat;}
+.bank-icon2{background: url("../images/personal/bank.png") -147px 0 repeat;}
+.bank-icon3{background: url("../images/personal/bank.png")-280px 0 repeat;}
+

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>云五岳--一站式教育平台</title>
+    <link type="text/css" rel="stylesheet" href="css/bookcommon.css">
+    <link type="text/css" rel="stylesheet" href="css/personal.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <!--<script type="text/javascript" src="js/bookcommon.js"></script>-->
+    <script>
+      $(function () {
+          $(".personal-money-ul li").eq(0).css({border:"1px solid #FAB991"});
+          $(".personal-money-ul li").eq(0).children(".selected-div").css({display:"block"});
+          $(".waylist li").eq(0).css({border:"1px solid #FAB991"});
+          $(".waylist li").eq(0).children(".selected-div").css({display:"block"});
+          //点击添加边框和对号
+          function payClick(t){
+              $(t).css({border:"1px solid #FAB991"});
+              $(t).children(".selected-div").css({display:"block"});
+              $(t).siblings().css({border:"1px solid #E4E8EA"});
+              $(t).siblings().children(".selected-div").css({display:"none"});
+
+          }
+          $(".personal-money-ul li").click(function () {
+              payClick(this);
+          })
+
+          $(".waylist li").click(function () {
+              payClick(this);
+          })
+          $("#moneyNum").keyup(function () {
+                  $(".hidden-money span").html($("#moneyNum").val()*100);
+                  $(".hidden-money").css({display:"block"});
+
+          })
+      });
+
+
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <!-- 导航-->
+    <div class="wNav">
+        <div class="topBlock">
+            <div class="logoimg"><img src="images/logo.png"></div>
+            <ul class="nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="statement.html">成绩分析</a></li>
+                <li><a href="#">历次分析</a></li>
+                <li><a href="mistakeform.html">我的错题本</a></li>
+                <li><a href="#">Ie习题</a></li>
+            </ul>
+            <div class="navRight">
+                <span><a href="personal-center.html">name</a></span><span class="line"></span><span style="cursor: pointer">退出</span>
+            </div>
+        </div>
+    </div>
+    <!-- 导航结束-->
+    <!-- 个人中心-充值页面-->
+    <div class="content">
+        <div class="user-content">
+            <!-- 左侧-->
+            <div class="user-content-left" id="userLeft">
+                <div class="left-Title">个人中心</div>
+                <ul class="left-nav">
+                    <li><i class="user-icon1"></i><a href="personal-center.html">个人主页</a></li>
+                    <li><i class="user-icon2"></i><a href="personal-center-money.html">交易明细</a></li>
+                    <li><i class="user-icon3"></i><a href="personal-buy-video.html">以购买视频</a></li>
+                    <li><i class="user-icon4"></i><a href="personal-look-video.html">已观看视频</a></li>
+                    <li><i class="user-icon5"></i><a href="personal-security.html">账号安全</a></li>
+                    <li><i class="user-icon6"></i><a href="personal-inform.html">个人资料</a></li>
+                </ul>
+            </div>
+            <!-- 右侧-->
+            <div class="user-content-right" id="userRight">
+                <h3 class="uh3"><span class="float-left">充值</span><sub class="float-left">部分充值的余额不能体现</sub></h3>
+                <!-- 充值-->
+                    <div class="personal-money">
+                       <ul class="personal-money-ul float-left">
+                           <li>
+                               <div class="float-left">充值<span class="fcred">10</span>元</div>
+                               <div class="float-right"><span class="fcred">1000</span>学力</div>
+                              <sup class="selected-div"></sup>
+                           </li>
+                           <li>
+                               <div class="float-left">充值<span class="fcred">20</span>元</div>
+                               <div class="float-right"><span class="fcred">2000</span>学力</div>
+                               <sup class="selected-div"></sup>
+                           </li>
+                           <li>
+                               <div class="float-left">充值<span class="fcred">30</span>元</div>
+                               <div class="float-right"><span class="fcred">3000</span>学力</div>
+                               <sup class="selected-div"></sup>
+                           </li>
+                           <li>
+                               <div class="float-left">充值<span class="fcred">50</span>元</div>
+                               <div class="float-right"><span class="fcred">5000</span>学力</div>
+                               <sup class="selected-div"></sup>
+                           </li>
+                           <li>
+                               <div class="float-left">充值<span class="fcred">100</span>元</div>
+                               <div class="float-right"><span class="fcred">10000</span>学力</div>
+                               <sup class="selected-div"></sup>
+                           </li>
+                           <li>
+                               <div class="float-left">其他金额<input type="text" value="" id="moneyNum" maxlength="5">元</div>
+                               <div class="float-right  hidden-money"><span class="fcred"></span>学力</div>
+                               <sup class="selected-div"></sup>
+                           </li>
+                       </ul>
+                        <div class="attention float-right">
+                            <span>关于账户充值后生效问题</span>
+                            <p><b>网银在线、支付宝、微信支付：</b>程序自动处理，立刻生效的 。</p>
+                            <p><b>其他的支付方式：</b>请在付款后联系我们。我们确认后，管理员手动给你处理,几分钟后即可生效。</p>
+                            <p><b>联系电话：</b>010-62976668 在线时间8:30-17:30</p>
+                            <b class="fcred">1元 = 100积分 </b>
+                        </div>
+
+                    </div>
+                <div class="payWay">
+                    <h3>选择支付方式</h3>
+                    <ul class="waylist">
+                        <li class="bank-icon1"><sup class="selected-div"></sup></li>
+                        <li class="bank-icon2"><sup class="selected-div"></sup></li>
+                        <li class="bank-icon3 "><sup class="selected-div"></sup></li>
+                    </ul>
+                    <button class="buttonGColor" onClick="window.location.href='click-pay.html'">
+                        确认支付
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--end-->
+    <!--尾部-->
+    <div class="footer">版权所有© 2000-2015 北京五岳鑫信息技术股份有限公司 京ICP备05043388号</div>
+</div>
+
+</body>
+</html>

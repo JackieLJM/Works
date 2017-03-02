@@ -1,0 +1,177 @@
+/*------------------------图片轮播------------------------*/
+.banner-box{width:100%;height:360px;position:relative;overflow:hidden;}
+.banner-box .bd{min-width: 1200px !important;}
+.banner-box .bd li .m-width {width:1200px;margin:0 auto;overflow:hidden;}
+.banner-box .bd li .m-width img{width: 1200px;height:360px;}
+.banner-box .bd li{width:100% !important;height:360px;}
+.banner-box .bd li a{display:block;background-size:auto;}
+
+.banner-btn{width:1210px;position:absolute;top:120px;left:50%;margin-left:-605px;}
+.banner-btn a{display:block;width:49px;height:104px;position:absolute;top:0;filter:alpha(opacity=40);-moz-opacity:0.4;-khtml-opacity:0.4;opacity:0.4;}
+.banner-btn a.prev{left:20px;background:url("../images/index/foot.png") no-repeat 0 0;}
+.banner-btn a.next{right:20px;background:url("../images/index/foot.png") no-repeat -49px 0;}
+
+.banner-box .hd {position:absolute;top:210px;left:537px;}
+.banner-box .hd ul li{width:12px;height:12px;border-radius :50%;text-indent:-9999px;margin-right:20px;background:#ccc;float:left;cursor:pointer;}
+.banner-box .hd ul li.on{background:#DA324D;}
+
+/*------------------------错题本首页------------------------*/
+ .user{width: 38%;float: left;border: 1px solid #DFDFDF;height: 350px;margin-top: 15px;background-color: #ffffff}
+.user .userTop{height:38%;width:100%;background-image: url("../images/index/user_back.png");background-repeat: round}
+.userTop div{float: left;margin-left:7%;margin-top: 2%}
+.userTop div b{display: block;height: 50px;font-size: 20px;line-height: 50px;margin-left:7px}
+.userTop div p span{margin-left:7px}
+.userMiddle{height: 28%;border-bottom: 1px solid #DFDFDF;width: 90%;margin:0 auto}
+.userMiddle div{float: left;width: 48%;text-align: center;height: 70%;line-height:140%;border-left: 1px solid #E8E8E8;margin-top: 5%}
+.userMiddle div:first-child{border-left: 0}
+.userMiddle div b{color: #B73B1F;font-size: 20px;}
+.userMiddle div p{margin-top: 10px}
+.userBottom{width: 90%;margin:auto}
+.userBottom div{background-color:#FE8A23;width: 40%;height: 40px;float: left;line-height: 40px;margin-left:5% ;margin-top: 5%;text-align: center;border-radius: 3px}
+.userBottom div span{display: block;float: left;width: 30px;height: 30px;background-color: #FFA847;margin: 5px}
+.userBottom div img{height: 30px;width: 30px}
+.userBottom a{color: #ffffff}
+.content  .classTab{width: 60%;float: right;border: 1px solid #DFDFDF;height: 350px;margin-top: 15px; position:relative;background-color: #ffffff}
+
+/*-----------------------统计报表------------------------*/
+.mislist{width: 100%;background-color: #ffffff;overflow: hidden}
+.chead{border-bottom: 1px dashed #E6E6E6;overflow: hidden}
+.chead span{font-weight: 400;font-size: 14px; display:inline-block;height:30px;color: #111111;line-height: 30px;margin: 5px 5px 0 15px;float: left;}
+.class_nav{margin-top: 3px;float: left;width: 92% ;margin-bottom: 3px;}
+.hover_back {background-color: #19A97B  !important;color: #ffffff}
+.hover_a{color: inherit !important}
+.class_nav li a{color: #626262;display: block;height: 24px;float: left;line-height: 24px; text-align: center;font-size: 14px;padding: 0 10px}
+.class_nav li{height: 24px; float: left; margin: 5px 0 5px 5px;}
+.class_nav li:hover{background-color: #19A97B;color: white;}
+.class_nav li:hover a{color: white;}
+#topnav img,.chead img{float: left;margin-top: 15px;}
+.counttab img{width: 100%}
+.tab{  background-color: #ffffff;  width: 100%;overflow: hidden;padding-bottom: 20px }
+.tab .uk{;text-align: center;width:90%;display: block;border-radius:5px;margin: 15px auto ;overflow: hidden }
+.uk-top{height: 30px}
+.uk-top-left{float: left}
+.uk-top-right{float: right}
+.uk-top-left span{color: #ffffff;font-size: 12px;float: left;display: block;height: 30px;line-height: 30px}
+.uk img {float: left;}
+
+/*--------------------------题列表-------------------------------------*/
+.time-div{display: inline-block;margin-top: 5px;color: #8A8A8A;font-size: 12px;height:50px;overflow: hidden;}
+.time-div  >span{display: block;height:20px;color: #160F16;font-size: 14px;margin-left: 5px;line-height: 20px}
+.div-hide{width: 100%;height: 150px;background-color: rgba(0,0,0,.4);position: absolute;top: 0;filter:alpha(opacity=40);background-color: black\0;display: none;color: white;opacity: .4\0}
+/*.div-hide span{display: inline-block;width: 100%;text-align: center;margin: 10px 0}*/
+.div-hide div{width: 90%;padding: 10px;text-align: center}
+.video-block-one:hover .div-hide{display: block}
+/*-----------------------------我的错题本------------------------------------------*/
+.mTop{height: 50px;width: 100%;background-color: #E8E8E8}
+.mTopic{width: 100%;position: relative;margin-top: 5px;}
+.subject1{overflow:hidden;border-radius: 5px;background-color: #ffffff;padding-bottom: 20px}
+.subject1_top{background-color: #ffffff;height: auto;width: 100%;overflow: hidden;border-bottom: 1px solid #dedede}
+.subject1_top span{float: left;font-size: 25px;display: block;height: 50%;line-height: 45px;width: 40px;text-align: center}
+.subject1_top div{float: left;margin-left: 5px;width: 95%}
+.subject1_top div img{height:auto;max-width: 100%}
+.mTop .topLeft{float: left;}
+
+.topLeft select,.topLeft div{float: left;height: 30px;margin-top: 10px;margin-left: 10px;}
+.topLeft select{min-width: 150px;border-radius: 5px;outline: none}
+.topLeft div{width: 30px;background-color: #FE8722;border-radius: 5px;}
+.topLeft div img{width: 90%;border-radius: 5px}
+.topLeft  b{display: block;float: left;height: 50px;line-height: 50px;margin-left: 20px;}
+.topLeft b img{display: inline-block;margin-top: 10px;margin-right: 2px;}
+.mTop .topRight{float: right;height: 50px;line-height: 50px;margin-right: 20px}
+.mbutton{width: 380px;margin: 20px auto}
+.mbutton button{height: 30px;width: 110px;margin-left: 15px}
+
+/*-----------------------错题解析------------------------*/
+.subject1_content,.subject1_cTop{}
+.subject1_cTop{height: 40px;overflow: hidden}
+.cTop2{float: right;margin-right: 10px;}
+.cTop2 span{float: left}
+.cTop2 span img{float: left;width: 20px;height: 20px;margin-top: 10px}
+.cTop2 span a{display: block;width: 100px;height: 40px;line-height: 40px;color: #8D8D8D;font-size: 12px}
+.subject1_content{overflow: hidden;}
+.cLeft{width: 69%;float: left;overflow: hidden}
+.cLeft >div{;clear: both;height: 60px;margin-left: 20px}
+.cLeft div p{width: 100px;height: 30px;color: #ffffff;line-height: 30px;float: left;clear: both; margin-top: 15px;text-align: center;
+    background-image: url("../images/mbackground.png");background-repeat: round;
+}
+.cLeft div p span{display: block;height: 30px;line-height: 30px;width: 90%;}
+.cLeft div span img{width: 100%}
+.cLeft div b{float: left;display: block;height: 60px;width: 30px}
+.cLeft div b img{width:30px;height: 30px;margin-top: 15px; }
+.cLeft div .img1{float:left;margin-top: 10px;width: 85%;}
+.cLeft div img{max-width:100%;max-height: 100% }
+
+.cRight{width: 20%;float: right;overflow: hidden}
+.cRight div:first-child img{width:95%;margin: 0 auto}
+.cRight p{margin: 10px;}
+.cRight ol{margin-left: 40px;}
+.cRight >span{margin-left: 10px;margin-top: 20px}
+.cRight ol li{height: 30px;line-height: 30px}
+
+/*-----------------------视频推荐------------------------*/
+
+.misknow{padding-bottom: 15px;overflow: hidden;}
+.misknow h3{margin-left: 20px;margin-top: 20px;float: left;}
+.moreviode{float: right;margin-right: 5px;margin-top: 20px;}
+
+/*----------------------更多---------------------------*/
+
+.videomore-title{}
+.videomore-title span{margin:0 5px}
+
+/*-----------------------分页部位------------------------*/
+.pagnation {text-align: center; margin-top: 32px;}
+.pagnation a {display: inline-block; width: 34px; height: 34px; line-height: 34px; overflow: hidden; background: url(../../images/client/sprite.png) no-repeat 0 -29px; margin-left: 9px; font-size: 16px; vertical-align: top; -webkit-transition: all .4s ease-in-out; -moz-transition: all .4s ease-in-out; -ms-transition: all .4s ease-in-out; -o-transition: all .4s ease-in-out; transition: all .4s ease-in-out;}
+.pagnation a:hover {color: #fff; text-decoration: none; background-position: 0 -64px;}
+.pagnation a:link, .pagnation a:visited {color: #444; text-decoration: none; -webkit-transition: color .4s ease-in-out; -moz-transition: color .4s ease-in-out; -ms-transition: color .4s ease-in-out; -o-transition: color .4s ease-in-out; transition: color .4s ease-in-out;}
+.pagnation .page-prev, .pagnation .page-next {line-height: 555px;}
+.pagnation .page-prev {background-position: -35px -29px;}
+.pagnation .page-prev:hover {background-position: -35px -64px;}
+.pagnation .page-next {background-position: -70px -29px;}
+.pagnation .page-next:hover {background-position: -70px -64px;}
+.pagnation .current {background-position: 0 -64px; color: #fff;}
+
+/*-----------------------学生首页------------------------*/
+.transcript{width:90%; table-layout:fixed;  border-collapse:collapse;  margin: 0 auto;  border:solid #e1e1e1; border-width:1px 0 0 1px;}
+.transcript caption{ text-align: center;  line-height: 50px;  height: 50px;}
+.transcript td{height: 50px; line-height: 50px; text-align: center;border:solid #e1e1e1; border-width:0 1px 1px 0;}
+.number{ display: inline; margin-top: 7px;}
+.numberTip{ width: 90%; margin: 10px auto; line-height: 26px;}
+.numberTip span{ color: green;}
+.yinzhang{  position: absolute;  top: 165px;  left: 200px;}
+    
+/*/!*-----------------------考试 更多下拉菜单 样式------------------------*!/*/
+/*.more{*/
+    /*position: absolute;*/
+    /*right: 0;z-index: 200;*/
+    /*background-color: #D6D6D6;*/
+    /*height: 200px;*/
+    /*width: 100px;*/
+    /*top: 33px;*/
+    /*display:none;*/
+    /*border-radius: 2px;*/
+
+/*}*/
+/*.more dt{*/
+    /*text-indent: 10px;*/
+    /*line-height: 24px;*/
+    /*color: #626262;*/
+/*}*/
+/*.more dd a{*/
+    /*line-height: 24px;*/
+    /*width:100%;*/
+    /*float:left;*/
+    /*font-size: 12px;*/
+    /*color: #fff;*/
+    /*clear: both;*/
+    /*margin: 0;*/
+    /*color: #626262;*/
+	/*padding:0;*/
+ /*}*/
+/*.more hr{*/
+    /*width: 90%;*/
+    /*margin-left: 5%;*/
+    /*height: 1px;*/
+    /*border:none;*/
+    /*border-top: 1px solid #107d54 ;*/
+   /*}*/

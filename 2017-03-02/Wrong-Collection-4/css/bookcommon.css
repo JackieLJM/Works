@@ -1,0 +1,128 @@
+*{margin: 0;padding: 0;}
+.wrap{overflow: hidden;position: relative;min-height: 100%;}
+img{border:0 none;vertical-align: top; display:block;}
+ul li{ list-style:none;}
+a{text-decoration: none; cursor:pointer; display:block; outline:none;}
+/*body{border: 1px solid red}*/
+body,html{  font-family:"微软雅黑","Times New Roman", Times, serif; font-size:14px; color:#666;background-color: #F5F5F5;height: 100%}
+button{outline: 0;border: 0;cursor: pointer; }
+input{padding-left: 5px}
+/*公共样式*/
+.buttonGColor{color: white;
+ border-radius: 5px;
+ filter: progid:DXImageTransform.Microsoft.gradient(GradientType=1, startColorstr=#FDBB4F, endColorstr=#FD8B24);/*IE<9>*/
+ -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=1, startColorstr=#FDBB4F, endColorstr=#FD8B24)";/*IE8+*/
+ background: -webkit-linear-gradient(#FDBB4F, #FD8B24); /* Safari 5.1 - 6.0 */
+ background: -o-linear-gradient(#FDBB4F, #FD8B24); /* Opera 11.1 - 12.0 */
+ background: -moz-linear-gradient(#FDBB4F, #FD8B24); /* Firefox 3.6 - 15 */
+ background: linear-gradient(#FDBB4F, #FD8B24); /* 标准的语法 */ }
+.buttonGColor a{color: white;}/*new*/
+.fontpink{color: #DD157C;}
+.fcgreen{color: #008862}
+.fcgray{color: #9F9F9F;font-size: 12px}
+.fcred{color: #FF0000}
+.fontwhite{color: white}/*new*/
+.fontWeight{font-weight:900 }
+.fcwhite{color: white}
+.float-left{float: left;}
+.float-right{float: right;}
+.grayB{background-color: #F2F2F2;width: 80px;height: 30px;border: 1px solid #D1D1D1;line-height: 30px}
+.backGreen{background-color: #19A97B;color: white;width: 100px;height: 30px;line-height: 30px;text-align: center;}
+/*--------------logo--------------------------*/
+/*.logo{height: 70px;margin:auto;border: 1px solid red}*/
+ .logoimg{float: left;}
+
+/*-----------------导航-------------------------------*/
+
+.wNav {width: 100%;height: 70px;background-color: #fff;clear:both;border-bottom: 1px solid #dedede}
+.topBlock{width: 1000px;margin: 0 auto;height: 70px;}
+.nav{margin: 10px 30px;height: 50px;float: left}
+.nav li{float: left;color: black;line-height: 50px;height: 50px;padding: 0 20px}
+.nav li a{color: black}
+.nav li a:hover{color: #107D54;font-weight: 900}
+
+.navRight{float: right;margin-top: 25px;margin-right: 3px}
+.line{display: inline-block;height: 10px;border-right: 2px solid #dedede;margin-top: 5px}
+.navRight span{float: left;margin-left: 7px}
+.navRight a{color:#107D54 }/*new*/
+/*------------------内容-----------------------------*/
+#middle{overflow: auto;}
+.content{width: 1000px;margin: 10px auto;overflow: hidden;padding-bottom: 40px; letter-spacing: 1px;position: relative; }
+
+/*-------------------------尾部-----------------------------------*/
+.footer{text-align: center;height: 40px;background-color: #ffffff;border-top: 1px solid #dedede;width: 100%;line-height: 40px;position: absolute;bottom: 0;}
+/**/
+hr{border-color: #1AA97B}
+
+/*-------------------------校内动态----------------------------*/
+.ulast span{ margin-right:10px}
+.ulast li{height:30px;}
+.ulast_a{color:#444; line-height:20px;}
+.ulast_a:hover{color:#1AA97B;}
+.ulast{padding-left:35px; list-style: none;}
+.ulast_p{font-weight: bold; color:#222; font-size:16px; padding:7px 0px 7px 5px; display:inline-block;}
+
+/*----------------------------二维码---------------------------------*/
+.num{position: fixed;width: 54px;height: 54px;bottom: 95px;right: 20px;background-color: rgba(0,0,0,.2)}
+.num >img{width: 54px;height: 54px;}
+.mimg{display: none;background-color: white;border: 1px solid #DFDFDF}
+.mimg img{width: 150px;height: 150px;}
+.mimg span{height: 20px;line-height: 20px;display: block;text-align: center}
+.mimg{position: absolute;left: -153px;top: -100px;}
+
+/*----------------------------遮罩层---------------------------------*/
+.xwrap{  background-color: rgba(0,0,0,.1);  height: 800px;   position: fixed;  width: 100%;  top: 0;  left: 0;  display: none;  }
+.midd{  position: absolute;  width: 90px;height: 90px;  top: 50%;  left: 50%;  margin-top: -45px;  margin-left: -45px;  }
+.midd img{width: 90px;height: 90px;}
+.close{position: absolute;right: 60px;top: 30px;text-align: center;line-height: 20px;}
+
+/*--------------分页-----------------------*/
+.page-number{width: 1000px;position: absolute;bottom: 40px;left: 50%;margin-left: -500px;height: 45px}
+.page{height: 25px;line-height: 25px;float: right;}
+.page li{float: left;border: 1px solid #dedede;width: 40px;height: 40px;line-height: 40px;text-align: center;margin-left: 10px;background-color: #ffffff}
+.page li:hover{background-color:#1AA97B;color: white }
+
+
+/*--------------------------------视频--------------------------------------*/
+
+.video-block{width: 100%;overflow: hidden;margin-top: 5px;padding-bottom: 40px;}
+.video-block-one{float: left;width: 236px;margin-left: 10px;margin-top:10px;background-color: #ffffff  }
+.video-block-one a{}
+.video-div{width: 100%;height: 150px;position: relative}
+.video-div img{width: 100%;height: 150px}
+.video-title{display: inline-block;margin-top: 10px;color: #8A8A8A;font-size: 12px;height: 75px;overflow: hidden;}
+.video-title >span{display: block;height:30px;color: #160F16;font-size: 14px;margin-left: 5px}
+.video-detail{text-overflow: ellipsis;width:220px;white-space:nowrap;overflow: hidden;margin-left: 5px}
+.video-name{height: 26px;width: 100%;background-color: rgba(0,0,0,.8);position: absolute;bottom: 0;line-height: 26px;color: white}
+.video-name >span:first-child{float: left;margin-left: 5px;}
+.video-name >span:last-child{float: right;margin-right: 5px}.video-block-one:hover{
+                                                             filter: progid:DXImageTransform.Microsoft.Shadow(color='#d1d1d1',Direction=135, Strength=3);/*for ie6,7,8*/
+                                                             background-color: #ffffff;
+                                                             -moz-box-shadow:1px 2px 3px #d1d1d1;/*firefox*/
+                                                             -webkit-box-shadow:1px 1px 3px #d1d1d1;/*webkit*/
+                                                             box-shadow:1px 1px 3px #d1d1d1;/*opera或ie9*/
+                                                            }
+.video-money{margin-top: 5px}
+.video-money span{font-size: 14px;margin-left: 5px}
+.star{width: 100%;height: 150px;background-color: rgba(0,0,0,.4);position: absolute;top: 0;filter:alpha(opacity=40);background-color: black\0;opacity: .4\0}
+.star span{display: block;border: 1px solid #fff;border-radius: 100%;width: 40px;height: 40px;color: white;  text-align: center;  line-height: 40px;  font-size: 20px;  position: absolute;  top: 50%;  left: 50%;  margin:-20px 0 0 -20px ;  }
+/*.video-detail{font-size: 12px;line-height: 20px;color: #93999F;padding:0  10px}*/
+/*----------------------支付页面-------------------------*/
+.pay-money{width: 960px;margin: 10px auto;overflow: hidden;clear: both;border-radius: 5px}
+.pay-money-title{height: 50px;;width: 100%;line-height: 50px;background-color: #EEF1F6;border: 1px solid #DFE1E6;font-size: 16px;border-radius: 5px 5px 0 0;}
+.pay-money-title span{margin-left: 10px}
+.pay-money-w{width: 100%;background-color: #ffffff;overflow: hidden;padding-bottom: 50px}
+.pay-money-w div{float: left;}
+.pay-left{width: 225px;height: 460px;background: url("../images/personal/phoneW.png") 0 0 repeat;margin: 50px 0 0 107px}
+.pay-line{height: 420px;border-left: 1px solid #EAEFF3;margin: 70px 0 0 100px}
+.pay-code{width: 310px;height: 450px;margin: 55px 0 0 100px;}
+.pay-code div:first-child{}
+.pay-code div:first-child i{width: 40px;height: 40px;display: inline-block;float: left}
+.pay-code div:first-child span{float: left;font-size: 16px;margin-top: 12px;margin-left: 5px}
+.pay-code div:nth-child(2){width: 300px;height: 300px;border: 1px solid #E6E6E6;margin-top: 20px }
+.pay-code div:nth-child(2) img{width: 176px;height: 176px;margin:62px auto;}
+.pay-code div:last-child{width: 300px;height: 60px;background-color: #5E707E;margin-top: 20px}
+.pay-code div:last-child img{float: left;width: 40px;height: 40px;margin-top: 8px;margin-left: 60px}
+.pay-iconW{background: url("../images/personal/payiocn.png") -5px -3px repeat}
+.pay-iconZ{background: url("../images/personal/payiocn.png") 49px -3px repeat}
+.pay-font{font-size: 12px;width: 117px;margin-left: 20px;margin-top: 10px}
