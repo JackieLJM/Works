@@ -42,7 +42,7 @@
 .tdback{  background-color: #EFF0F2;  }
 .trbor td{  border-top: 1px solid #D4D9DD;  border-bottom: 1px solid #D4D9DD;  }
 
-/*¸öÈËÖĞĞÄÊ×Ò³*/
+/*ä¸ªäººä¸­å¿ƒé¦–é¡µ*/
 .user{width: 90%;margin: 0 auto;border-bottom: 1px solid #D4D9DD;height: 220px;}
 .user-img{width: 150px;height: 150px;border-radius: 100%;border: 1px solid #EEE16E;float: left;margin-top: 30px;overflow: hidden}
 .user-img{width: 150px;}
@@ -54,14 +54,14 @@
 .video-cont-top i{width: 30px;height: 30px;display: inline-block;float: left}
 .video-cont-top li{float: left;height: 30px;line-height: 30px;margin:0 15px ;}
 .video-cont-top span{margin-left: 10px}
-/*¸öÈË×ÊÁÏ*/
+/*ä¸ªäººèµ„æ–™*/
 .user-inform{width: 60%;float: left;margin-top: 10px}
 .user-inform table{width: 96%;margin: 0 auto}
 .user-head{float: right;width: 39%;}
 .user-head button{margin-top: 10px}
 .user-head-img{width: 200px;height: 200px;background-color: #F5F5F5;margin-top: 10px}
 .user-head-img span{display:block;line-height: 200px;text-align: center}
-/*ÕËºÅ°²È«*/
+/*è´¦å·å®‰å…¨*/
 .user-security div{margin-top: 10px}
 .user-password{}
 .user-security-title{background-color: #F9F9F9;height: 30px;line-height: 30px;padding-left: 10px}
@@ -69,7 +69,7 @@
 .user-security-tab tr td:first-child{text-align: right;width: 100px}
 .user-security-tab input{width: 200px;height: 30px;line-height: 30px;border: 1px solid #dedede;}
 .user-security-tab tr{height: 50px;line-height: 50px}
-/*ÒÑ¹ºÊÓÆµ*/
+/*å·²è´­è§†é¢‘*/
 
 .my-video{float: left;width: 236px;margin-left: 19px;margin-top:10px;border: 1px solid #dedede; position: relative }
 .my-video:hover{
@@ -77,7 +77,7 @@
     background-color: #ffffff;
     -moz-box-shadow:1px 2px 3px #d1d1d1;/*firefox*/
     -webkit-box-shadow:1px 1px 3px #d1d1d1;/*webkit*/
-    box-shadow:1px 1px 3px #d1d1d1;/*opera»òie9*/}
+    box-shadow:1px 1px 3px #d1d1d1;/*operaÂ»Ã²ie9*/}
 .video-delete{;height: 30px;line-height: 30px}
 .video-delete span{float: right;margin-right: 10px;cursor: pointer}
 .video-delete i{width: 20px;height: 20px;}
@@ -87,14 +87,14 @@
     background-color: #ffffff;
     -moz-box-shadow:1px 3px 5px #969696;/*firefox*/
     -webkit-box-shadow:1px 3px 5px #969696;/*webkit*/
-    box-shadow:1px 3px 5px #969696;/*opera»òie9*/
+    box-shadow:1px 3px 5px #969696;/*operaÂ»Ã²ie9*/
     position: relative;
 }
 .study-video-buttom{height: 40px;overflow: hidden;text-overflow: ellipsis;width: 98%;font-size: 12px;color: black;padding: 5px 0 5px 5px ;}
 .video-mask{width: 250px;height: 160px;background-color: rgba(0,0,0,.5);position: absolute;top: 0;filter:alpha(opacity=50);background-color: black\0;display: none}
 .video-mask a{position: absolute;top: 50%;left: 50%;margin-top: -15px;margin-left: -50px}
 .study-video:hover .video-mask{display: block}
-/*É¾³ı°´Å¥*/
+/*åˆ é™¤æŒ‰é’®*/
 .delete-button{position: absolute;width: 20px;height: 20px;right: 0;top: 0;background: red;border: 1px solid red;
    border-radius: 100%;color: white;line-height: 20px;text-align: center;display: none;cursor: pointer;
 }
@@ -136,7 +136,7 @@
     70%{-webkit-transform:rotate(45deg)}
     100%{-webkit-transform:rotate(-45deg)}
 }
-/*³äÖµÒ³Ãæ*/
+/*å……å€¼é¡µé¢*/
 sub{font-weight: 100;margin-left: 10px;display: inline-block;line-height: 50px}
 .personal-money{width: 92%;margin: 0 auto;overflow: hidden;margin-top: 15px}
 .personal-money-ul{width: 45%;overflow: hidden;font-size: 16px}

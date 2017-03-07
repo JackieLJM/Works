@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /*共有*/
 
 body {
@@ -261,7 +260,7 @@ table tr td:nth-child(1) {
     border: 0px;
     font-size: 1em;
     line-height: 1em;
-=======
+}
 body {
     background-color: #2785ff;
 }
@@ -298,5 +297,4 @@ body {
     width: 480px;
     height: 71px;
     z-index: 8;
->>>>>>> windows
 }

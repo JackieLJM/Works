@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>查看考生</title>
+    <link type="text/css" rel="stylesheet" href="css/bookcommon.css">
+    <link type="text/css" rel="stylesheet" href="css/book.css">
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <!--[if lte IE 9]>
+    <script>
+        object.style.backgroundRepeat="repeat-y"
+    </script>
+    <![endif]-->
+    <script async defer>
+        //        function position() {
+        //            var conback = document.getElementById("conback");
+        //            var conbackstyle = conback.childNodes[0].style;
+        //            var width = conback.width;
+        //            var top = conback.top;
+        //            var left = conback.left;
+        //            var height = conback.height;
+        //
+        //            conbackstyle.width = width;
+        //            conbackstyle.height = height;
+        //            conbackstyle.top = top;
+        //            conbackstyle.left = left;
+        //            alert(conbackstyle.height);
+        //        }
+        $(document).ready(function () {
+            $("#exam").hide();
+            $("#select").hide();
+            $(".hide").hide();
+
+            $("#newExam").click(function () {
+                $("#exam").show();
+            });
+            $(".canExam").click(function () {
+                $("#exam").hide();
+            });
+
+            $(".newSelect").click(function () {
+                $("#select").show();
+            });
+            $(".canSelect").click(function () {
+                $("#select").hide();
+            });
+            $(".show").click(function () {
+                $(".hide").show();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!--头部-->
+        <div class="wNav">
+            <div class="topBlock">
+                <div class="logoimg"><img src="images/logo.png"></div>
+                <ul class="nav">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="statement.html">成绩分析</a></li>
+                    <li><a href="#">历次分析</a></li>
+                    <li><a href="mistakeform.html">我的错题本</a></li>
+                    <li><a href="#">I习题</a></li>
+                    <li><a href="registerStudent.html">登分</a></li>
+                </ul>
+                <div class="navRight">
+                    <span><a href="personal-center.html" class="fcgreen">name</a></span><span class="line"></span><span><a href="#" style="color: black">退出</a></span>
+                </div>
+            </div>
+        </div>
+        <!--中间-->
+        <div id="conback" class="content">
+            <div style="position:absolute;"></div>
+            <div>
+                <div>
+                    <span>开始名称：</span>
+                    <input type="text">
+                    <span>时间：</span>
+                    <input type="text" placeholder="开始时间">
+                    <input type="text" placeholder="结束时间">
+                    <input type="submit" value="搜索">
+                </div>
+                <div>
+                    <button id="newExam">+新建考试</button>
+                </div>
+            </div>
+            <div>
+                <table cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th>考试名称</th>
+                        <th>考试日期</th>
+                        <th>考试状态</th>
+                        <th>操作</th>
+                    </tr>
+                    <tr>
+                        <td>高一年级2月小测3</td>
+                        <td>2017-02-20</td>
+                        <td>新考试</td>
+                        <td>
+                            <a href="registerStudent.html">查看考生</a>
+                            <button>删除</button>
+                            <div class="newSelect">
+                                <input type="submit" value="选择答题卡">
+                            </div>
+                            <button>划分题目</button>
+                            <button>纠错</button>
+                            <input type="submit" value="发布">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>高一年级2月小测2</td>
+                        <td>2017-02-03</td>
+                        <td>正在扫描，已扫52人</td>
+                        <td>
+                            <a href="registerStudent.html">查看考生</a>
+                            <button>删除</button>
+                            <div class="newSelect">
+                                <input type="submit" value="选择答题卡">
+                            </div>
+                            <button>划分题目</button>
+                            <button>纠错</button>
+                            <input type="submit" value="发布">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>高一年级第一学期期末考试</td>
+                        <td>2017-01-10</td>
+                        <td>已发布</td>
+                        <td>
+                            <a href="registerStudent.html">查看考生</a>
+                            <button>删除</button>
+                            <div class="newSelect">
+                                <input type="submit" value="选择答题卡">
+                            </div>
+                            <button>划分题目</button>
+                            <button>纠错</button>
+                            <input type="submit" value="发布">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>高一年级1月小测1</td>
+                        <td>2017-01-01</td>
+                        <td>正在扫描，已扫52人</td>
+                        <td>
+                            <a href="registerStudent.html">查看考生</a>
+                            <button>删除</button>
+                            <div class="newSelect">
+                                <input type="submit" value="选择答题卡">
+                            </div>
+                            <button>划分题目</button>
+                            <button>纠错</button>
+                            <input type="submit" value="发布">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="exam">
+            <div>
+                <span>新建考试</span>
+                <div class="canExam"><img src="" alt=""></div>
+            </div>
+            <span>年级</span>
+            <select name="" id="">
+                <option value="">选择年级</option>
+                <option value=""></option>
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <span>考试名称</span>
+            <input type="text">
+            <span>科目</span>
+            <input type="checkbox">语文
+            <input type="checkbox">数学
+            <select name="" id="">
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <input type="checkbox">英语
+            <input type="checkbox">物理
+            <select name="" id="">
+                <option value=""></option>
+                <option value=""></option>
+            </select>
+            <div class="canExam">
+                <input type="submit" value="取消">
+            </div>
+            <input type="submit" value="确定">
+        </div>
+
+        <div id="select">
+            <div>
+                <span>选择答题卡</span>
+                <div class="canSelect"><img src="" alt=""></div>
+            </div>
+            <div class="show">
+                <div>语文</div>
+                <div>选择<img src="" alt=""></div>
+            </div>
+            <div class="hide">
+                <div>
+                    <input type="checkbox">
+                </div>
+                <div>高一年级第一次初中考试答题卡</div>
+                <div>2017-03-06</div>
+            </div>
+            <div class="show">
+                <div>数学</div>
+                <div>选择<img src="" alt=""></div>
+            </div>
+            <div class="hide">
+                <div>
+                    <input type="checkbox">
+                </div>
+                <div>高一年级第一次初中考试答题卡</div>
+                <div>2017-03-06</div>
+            </div>
+            <div class="show">
+                <div>英语</div>
+                <div>选择<img src="" alt=""></div>
+            </div>
+            <div class="hide">
+                <div>
+                    <input type="checkbox">
+                </div>
+                <div>高一年级第一次初中考试答题卡</div>
+                <div>2017-03-06</div>
+            </div>
+            <div class="show">
+                <div>物理</div>
+                <div>选择<img src="" alt=""></div>
+            </div>
+            <div class="hide">
+                <div>
+                    <input type="checkbox">
+                </div>
+                <div>高一年级第一次初中考试答题卡</div>
+                <div>2017-03-06</div>
+            </div>
+            <div class="canSelect">
+                <input type="submit" value="取消">
+            </div>
+            <input type="submit" value="确定">
+        </div>
+
+        <input type="button" value="测试" onclick="position();">
+        <!--尾部-->
+        <div class="footer">版权所有© 2000-2015 北京五岳鑫信息技术股份有限公司 京ICP备05043388号</div>
+    </div>
+</body>
+
+</html>
