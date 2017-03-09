@@ -852,4 +852,347 @@
 
 /*------------------------登分首页----------------------------*/
 
-.tableT
+.mask {
+    position: absolute;
+    top: 70px;
+    background-color: rgba(0, 0, 0, 0.25)
+}
+
+.alert {
+    text-align: center;
+    margin: 70px auto;
+    padding-bottom: 5px;
+    width: 600px;
+    background-color: white;
+}
+
+.title {
+    background-color: #eef1f5;
+    height: 50px;
+    border-bottom: 1px #dcdfe4 solid;
+}
+
+.ny {
+    margin: 20px 0px 10px 0px;
+}
+
+.cancel {
+    border: none;
+    border-radius: 2px;
+    background-color: rgb( 210, 210, 210);
+    width: 122px;
+    height: 41px;
+}
+
+.sure {
+    border: none;
+    border-radius: 2px;
+    background-color: rgb( 253, 138, 35);
+    width: 122px;
+    height: 41px;
+    color: white;
+}
+
+.po {
+    display: inline;
+}
+
+.poo {
+    display: inline-block;
+}
+
+.nyExam {
+    margin: 70px 0px 40px 0px;
+}
+
+.opr {
+    color: #19a97b;
+    border: none;
+    background-color: transparent;
+}
+
+.del {
+    color: #ff0000;
+    border: none;
+    background-color: transparent;
+}
+
+.conback {
+    text-align: center;
+    padding: 10px 5px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+
+/*创建考试表格导航*/
+
+.search {
+    margin: 0px 135px 0px 0px;
+}
+
+.searchH {
+    margin: 0px -50px 0px -50px;
+}
+
+.seaB {
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-image: -moz-linear-gradient( 90deg, rgb(253, 138, 35) 0%, rgb(255, 167, 71) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(253, 138, 35) 0%, rgb(255, 167, 71) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(253, 138, 35) 0%, rgb(255, 167, 71) 100%);
+    width: 59px;
+    height: 33px;
+    line-height: 33px;
+}
+
+.newExamB {
+    border-radius: 2px;
+    background-color: rgb( 25, 169, 123);
+    width: 91px;
+    height: 31px;
+    color: white;
+}
+
+.newExam {
+    margin: 0px 0px 0px 160px;
+}
+
+.textT {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb( 192, 203, 210);
+    width: 103px;
+    height: 31px;
+}
+
+.textTT {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb( 192, 203, 210);
+    width: 165px;
+    height: 31px;
+}
+
+
+/*创建考试表格*/
+
+.gray {
+    background-color: #eff0f2;
+}
+
+.exam tr td {
+    height: 59px;
+    border-bottom: 1px #d4d9dd solid;
+}
+
+.exam tr th {
+    height: 59px;
+}
+
+.exam {
+    margin: 20px 0px 200px 0px;
+    width: 100%;
+}
+
+
+/*创建考试弹出框*/
+
+.canExamL {
+    float: left;
+    font-size: 15px;
+    line-height: 50px;
+    margin-left: 15px;
+}
+
+.canExamR {
+    float: right;
+    line-height: 50px;
+    margin: 18px 18px;
+}
+
+.grade {
+    margin: 40px 0px 20px 0px;
+}
+
+.gradeName {
+    margin: 0px -20px 0px 28px;
+}
+
+.selectO {
+    margin: 0px 0px 0px 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb( 192, 203, 210);
+    width: 210px;
+    height: 35px;
+}
+
+.name {
+    margin: 20px 0;
+}
+
+.text {
+    margin: 0px 0px 0px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb( 192, 203, 210);
+    width: 204px;
+    height: 31px;
+}
+
+.object {
+    margin: 20px 0;
+}
+
+.objectL {
+    margin: 0px 108px 0px -140px;
+}
+
+
+/*创建考试弹出框选项-下面这个是带下拉菜单的*/
+
+.objectRR {
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+
+/*创建考试弹出框选项-下面这个是不带下拉菜单的*/
+
+.objectRRR {
+    margin-top: 10px;
+    margin-left: -82px;
+}
+
+
+/*选择答题卡弹出框*/
+
+.show {
+    margin: 20px 20px 0 20px;
+    border-bottom: 1px #dcdfe4 solid;
+    clear: both;
+}
+
+.showL {
+    margin: 0px 200px 20px 0px;
+    display: inline-block;
+}
+
+.showR {
+    margin: 0px 0px 20px 250px;
+    display: inline-block;
+}
+
+.showRR {
+    margin-top: 5px 0px;
+    display: inline-block;
+}
+
+.hide {
+    margin: 0px 20px 20px 20px;
+    padding: 10px 0px;
+    border-bottom: 1px #dcdfe4 solid;
+    border-top: 1px #dcdfe4 solid;
+    clear: both;
+    background-color: #eff0f2;
+    height: 150px;
+    overflow-y: auto;
+}
+
+.hideline {
+    border-bottom: 1px #dcdfe4 solid;
+    margin-top: 10px;
+    height: 30px;
+}
+
+.hideL {
+    margin: 0px 105px 0px 0px;
+}
+
+.hideC {
+    text-align: center;
+}
+
+.hideR {
+    margin: 0px 0px 0px 110px;
+}
+
+.canSelectL {
+    float: left;
+    font-size: 15px;
+    line-height: 50px;
+    margin-left: 15px;
+}
+
+.canSelectR {
+    float: right;
+    line-height: 50px;
+    margin: 18px 18px;
+}
+
+
+/*----------------------------查看考生--------------------------------*/
+
+
+/*查看考生表格导航*/
+
+.navV {
+    margin: 0px -50px 0px -50px
+}
+
+.selects select {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb( 192, 203, 210);
+    width: 204px;
+    height: 31px;
+}
+
+.greens {
+    margin: 0px 0px 0px 470px;
+}
+
+.greenB {
+    border-radius: 2px;
+    background-color: rgb( 25, 169, 123);
+    width: 9px;
+    height: 31px;
+    padding: 5px
+}
+
+.greenB img {
+    margin: 8px 0px 0px 3px;
+    line-height: 100px;
+}
+
+.greenBB {
+    border: none;
+    background-color: transparent;
+    color: white;
+}
+
+.gray {
+    background-color: #eff0f2;
+}
+
+.student tr td {
+    height: 59px;
+    border-bottom: 1px #d4d9dd solid;
+}
+
+.student tr th {
+    height: 59px;
+}
+
+.student {
+    margin: 20px 0px 200px 0px;
+    width: 100%;
+}
+
+.readI {
+    border: none;
+    color: #19a97b;
+    background-color: transparent;
+}
