@@ -1,0 +1,20 @@
+canvas {
+    border: 1px solid black;
+}
+
+body{
+	margin: 0px;
+	overflow: auto;
+}
+
+.scoreBoard{
+	display: flex;
+	width:25%;
+	height: 25%;
+	flex-wrap: wrap;
+}
+
+.scoreBoard li {
+	flex:20%;
+
+}
