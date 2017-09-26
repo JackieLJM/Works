@@ -1,8 +1,8 @@
-var canvas = document.createElement('canvas');
-var ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-document.body.insertBefore(canvas, document.body.firstChild);
+// var canvas = document.createElement('canvas');
+// var ctx = canvas.getContext('2d');
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+// document.body.insertBefore(canvas, document.body.firstChild);
 
 // var div=document.createElement('div');
 // div.id='scoreBoard';
@@ -22,3 +22,36 @@ document.body.insertBefore(canvas, document.body.firstChild);
 //     }
 // }
 // createScoreBoard(3, 3);
+var i = 0,
+    arr = [],
+    sum = 0;
+var sumIn = document.getElementById('sum');
+var infoTitle = document.getElementById('infoTitle');
+var menu = document.getElementById('menu');
+
+document.getElementById('scoreBoard').onclick = function(event) {
+    arr[i] = event.target.textContent;
+
+
+    if (arr[i] === '全零') {
+        sum = 0;
+        arr[i] = 0;
+        sum = sum + arr[i];
+    } else if (typeof Number(arr[i]) !== NaN) {
+        arr[i] = parseFloat(arr[i]);
+        sum = sum + arr[i];
+    } else if (arr[i] === '·') {
+        sum = sum + '.';
+        return sum;
+    }
+    i++;
+    sumIn.value = sum;
+}
+
+document.getElementById('information').onclick = function() {
+    infoTitle.style.display === 'none' ? infoTitle.style.display = 'inline-block' : infoTitle.style.display = 'none';
+}
+
+document.getElementById('more').onclick = function() {
+    menu.style.display === 'none' ? menu.style.display = 'inline-block' : menu.style.display = 'none';
+}

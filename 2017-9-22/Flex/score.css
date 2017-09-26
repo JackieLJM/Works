@@ -1,0 +1,68 @@
+canvas {
+    border: 1px solid black;
+}
+
+body {
+    margin: 0px;
+    overflow: auto;
+}
+
+ul,li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+
+
+#ui	{
+	
+}
+
+#front {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#front ul {
+    flex: 1;
+}
+
+.scoreBoard .enter {
+    align-self: flex-end;
+}
+
+.info {display: flex;
+align-content: flex-end;
+flex-direction: column;
+}
+
+.info li{
+	flex:1;
+	background-color: blue;
+	height: 2rem;
+	width:5rem;
+	text-align: center;
+	line-height: 2rem;
+}
+
+
+
+.scoreBoard {
+    display: flex;
+    width: 25%;
+    height: 25%;
+    flex-wrap: wrap;
+}
+
+.scoreBoard li {
+    flex: 10%;
+    background-color: #1fbba6;
+    text-align: center;
+    line-height: 3rem;
+    border-radius: 2px;
+    margin: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+}

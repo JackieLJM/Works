@@ -2,19 +2,123 @@ canvas {
     border: 1px solid black;
 }
 
-body{
-	margin: 0px;
-	overflow: auto;
+body {
+    margin: 0px;
+    overflow: auto;
 }
 
-.scoreBoard{
-	display: flex;
-	width:25%;
-	height: 25%;
-	flex-wrap: wrap;
+ul,
+li {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
 }
 
-.scoreBoard li {
-	flex:20%;
 
+
+
+/*-----------前面板-----------*/
+
+#front {}
+
+
+/*以下为前面板信息部分*/
+
+
+.info{
+	/*position: absolute;*/
+	margin: 1rem;
+	float: right;
+}
+
+.info li {
+    background-color: black;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 2px;
+    margin: 1rem;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.info li:nth-child(1) {
+    background-color: #f27935;
+}
+
+.info li:nth-child(2) {
+    background-color: #14b9d6;
+}
+
+
+/*以下为前面板打分板部分*/
+
+.scoreBoard {
+    /*position: absolute;*/
+}
+.scoreBoard li{
+	display: inline-block;
+	background-color: #1fbba6;
+	height: 2rem;
+	width: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	border-radius: 2px;
+	font-size:1rem;
+	color: white;
+	border: 1px solid #aaaaaa;
+}
+
+
+/*以下为前面板输入按钮部分*/
+
+.enter {
+    /*position: absolute;*/
+}
+.enter li{
+	margin:1rem;
+}
+.enter li input[type='text'] {
+    background-color: #f6f6f6;
+    height: 3rem;
+	width: 6rem;
+	line-height: 3rem;
+	text-align: center;
+	border-radius: 2px;
+	font-size:1.5rem;
+	color: red;
+	border: 1px solid #aaaaaa;
+}
+
+.enter li input[type='button']{
+	background-color: #f27935;
+	height: 3rem;
+	width: 6rem;
+	line-height: 3rem;
+	text-align: center;
+	border-radius: 2px;
+	font-size:1.5rem;
+	color: white;
+}
+
+
+
+/**/
+
+
+/*-----------个人信息栏-----------*/
+
+#infoTitle {
+	background-color: #4c4c4c;
+    /*position: absolute;*/
+    display: none;
+}
+
+
+/*-----------菜单栏-----------*/
+
+#menu {
+    /*position: absolute;*/
+    display: none;
 }
