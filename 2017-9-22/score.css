@@ -1,5 +1,6 @@
 canvas {
     border: 1px solid black;
+    position: absolute;
 }
 
 body {
@@ -17,30 +18,54 @@ li {
 
 
 
+
 /*-----------前面板-----------*/
 
-#front {}
+#front {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-content: space-between;
+}
+
+#front ul {
+    flex: 1;
+    background-color: blue;
+}
+
+.info {
+    order: 2;
+    flex: 0.2;
+}
+
+.scoreBoard {
+    align-self: flex-end;
+}
+
+.enter {
+    align-self: flex-end;
+}
 
 
 /*以下为前面板信息部分*/
 
-
-.info{
-	/*position: absolute;*/
-	margin: 1rem;
-	float: right;
+.info {
+    /*position: absolute;*/
+    margin: 1rem;
+    /*float: right;*/
 }
 
 .info li {
     background-color: black;
     height: 3rem;
     width: 3rem;
-    border-radius: 2px;
     margin: 1rem;
     line-height: 3rem;
     text-align: center;
-    color: white;
+    border-radius: 2px;
     font-size: 2rem;
+    color: white;
 }
 
 .info li:nth-child(1) {
@@ -52,23 +77,26 @@ li {
 }
 
 
+
 /*以下为前面板打分板部分*/
 
 .scoreBoard {
     /*position: absolute;*/
 }
-.scoreBoard li{
-	display: inline-block;
-	background-color: #1fbba6;
-	height: 2rem;
-	width: 2rem;
-	line-height: 2rem;
-	text-align: center;
-	border-radius: 2px;
-	font-size:1rem;
-	color: white;
-	border: 1px solid #aaaaaa;
+
+.scoreBoard li {
+    display: inline-block;
+    background-color: #1fbba6;
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 1rem;
+    color: white;
+    border: 1px solid #aaaaaa;
 }
+
 
 
 /*以下为前面板输入按钮部分*/
@@ -76,31 +104,36 @@ li {
 .enter {
     /*position: absolute;*/
 }
-.enter li{
-	margin:1rem;
+
+.enter li {
+    margin: 1rem;
 }
+
 .enter li input[type='text'] {
     background-color: #f6f6f6;
     height: 3rem;
-	width: 6rem;
-	line-height: 3rem;
-	text-align: center;
-	border-radius: 2px;
-	font-size:1.5rem;
-	color: red;
-	border: 1px solid #aaaaaa;
+    width: 6rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: red;
+    border: 1px solid #aaaaaa;
 }
 
-.enter li input[type='button']{
-	background-color: #f27935;
-	height: 3rem;
-	width: 6rem;
-	line-height: 3rem;
-	text-align: center;
-	border-radius: 2px;
-	font-size:1.5rem;
-	color: white;
+.enter li input[type='button'] {
+    -webkit-appearance: none;
+    background-color: #f27935;
+    height: 3rem;
+    width: 6rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    color: white;
+    outline: none;
 }
+
 
 
 
@@ -110,15 +143,109 @@ li {
 /*-----------个人信息栏-----------*/
 
 #infoTitle {
-	background-color: #4c4c4c;
-    /*position: absolute;*/
-    display: none;
+    background-color: #4c4c4c;
+    opacity: 0.75;
+    position: absolute;
+    height: 2rem;
+    width: 100%;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: white;
 }
+
 
 
 /*-----------菜单栏-----------*/
 
 #menu {
-    /*position: absolute;*/
-    display: none;
+    background-color: #4c4c4c;
+    opacity: 0.75;
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
+
+#menu li {
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    border-bottom: 0.05px solid white;
+    color: white;
+}
+
+#menu li input[type=checkbox]{
+	
+}
+
+.mui-switch {
+    width: 3rem;
+    height: 1.7rem;
+    position: relative;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 1rem;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none;
+}
+
+.mui-switch:before {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.mui-switch:checked {
+    border-color: #4dd963;
+    box-shadow: #4dd963 0 0 0 0.8rem inset;
+    background-color: #4dd963;
+}
+
+.mui-switch:checked:before {
+    left: 21px;
+}
+
+/*.mui-switch.mui-switch-animbg {
+    transition: background-color ease 0.4s;
+}
+
+.mui-switch.mui-switch-animbg:before {
+    transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-animbg:checked {
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-color: #64bd63;
+    transition: border-color 0.4s, background-color ease 0.4s;
+}
+
+.mui-switch.mui-switch-animbg:checked:before {
+    transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+}
+
+.mui-switch.mui-switch-anim:before {
+    transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-anim:checked {
+    box-shadow: #64bd63 0 0 0 16px inset;
+    background-color: #64bd63;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+}
+
+.mui-switch.mui-switch-anim:checked:before {
+    transition: left 0.3s;
+}*/

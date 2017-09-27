@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>canvas with-buttons</title>
+    <title>score</title>
     <link rel="stylesheet" href="score.css">
 </head>
 
@@ -13,18 +13,9 @@
         <div id="front">
             <ul class="info">
                 <li id='information'>
-                    <!-- <svg width="100" height="100">
-                		<circle cx='20' cy='20' r='5' fill='white'/>
-                		<circle cx='35' cy='20' r='5' fill='white'/>
-                		<circle cx='50' cy='20' r='5' fill='white'/>
-                	</svg> -->
                     i
                 </li>
                 <li id='more'>
-                    <!-- <svg width="100" height="100">
-                		<circle cx='20' cy='20' r='5' fill='white'/>
-                		<line x1="20" y1="30" x2="20" y2="70" stroke="white" stroke-width="10"/>
-                	</svg> -->
                     ···
                 </li>
             </ul>
@@ -62,13 +53,14 @@
                 <li>全卷</li>
                 <li>异常卷</li>
                 <li>切换角色</li>
-                <li>启用大按钮</li>
-                <li>显示全零</li>
-                <li>自动提交</li>
+                <li>启用大按钮<input class="mui-switch" type="checkbox"></li>
+                <li>显示全零<input  class="mui-switch" type="checkbox"></li>
+                <li>自动提交<input class="mui-switch" type="checkbox"></li>
                 <li>切换账号</li>
             </ul>
         </div>
     </div>
+    <!-- <script src="fastclick.js"></script> -->
     <script src="score.js"></script>
 </body>
 
