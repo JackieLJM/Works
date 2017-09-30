@@ -1,15 +1,17 @@
-var canvas = document.createElement('canvas');
-var ctx = canvas.getContext('2d');
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-document.body.insertBefore(canvas, document.body.firstChild);
+// 为canvas设置初始宽高和样式
+// var canvas = document.createElement('canvas');
+// var ctx = canvas.getContext('2d');
+// canvas.width = window.innerWidth;
+// canvas.height = window.innerHeight;
+// canvas.id = 'canvas';
+// document.body.insertBefore(canvas, document.body.firstChild);
 
+// 输入行列数创建等同行列数打分板
 // var div=document.createElement('div');
 // div.id='scoreBoard';
 // div.width=window.innerWidth;
 // div.height=window.innerHeight;
 // document.body.insertBefore(div, document.body.lastChild);
-
 // function createScoreBoard(col, row) {
 //     var ul = document.createElement('ul')
 //     var li = document.createElement('li');
@@ -22,43 +24,116 @@ document.body.insertBefore(canvas, document.body.firstChild);
 //     }
 // }
 // createScoreBoard(3, 3);
+
+
+// 用js初始化样式属性
 var i = 0,
-    arr = [],
-    sum = 0;
-var sumIn = document.getElementById('sum');
-var infoTitle = document.getElementById('infoTitle');
-var menu = document.getElementById('menu');
+    arr = [];
+var sumText = document.getElementById('sum'),
+    infoTitle = document.getElementById('infoTitle'),
+    menu = document.getElementById('menu'),
+    scoreBoard = document.getElementById('scoreBoard'),
+    scoreli = document.getElementById('scoreBoard').children,
+    information = document.getElementById('information'),
+    more = document.getElementById('more'),
+    bigButton = document.getElementById('bigButton'),
+    ui = document.getElementById('ui'),
+    background = document.getElementById('background'),
+    enter = document.getElementById('enter');
+infoTitle.style.display = 'none';
+menu.style.display = 'none';
+ui.style.display = 'none';
+for (var j = 0; j < scoreli.length; j++) {
+    scoreli[j].setAttribute('class', 'small');
+}
 
-infoTitle.style.display='none';
-menu.style.display='none';
-document.getElementById('scoreBoard').onclick = function(event) {
+// 监听窗口变化改变字体大小
+(function(doc, win, back) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function() {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+            if (clientWidth > 414) {
+                docEl.style.fontSize = 20 + 'px';
+            } else {
+                docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+            }
+            console.log(event);
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+    win.addEventListener(resizeEvt, function() {
+        back.width = docEl.clientWidth;
+        back.height = docEl.clientHeight;
+    }, false);
+    doc.addEventListener('DOMContentLoaded', function() {
+        back.width = docEl.clientWidth;
+        back.height = docEl.clientHeight;
+    }, false);
+})(document, window,background);
+
+// 屏幕空白区域被点中决定是否显示前面板
+background.onclick = function() {
+    ui.style.display === 'none' ? ui.style.display = 'block' : ui.style.display = 'none';
+}
+ui.onclick = function() {
+    ui.style.display = 'none';
+    infoTitle.style.display = 'none';
+    menu.style.display = 'none';
+    sumText.value = 0;
+}
+
+// 为各个元素添加事件监听，停止冒泡
+enter.onclick = function(event) {
+    event.stopPropagation();
+}
+infoTitle.onclick = function(event) {
+    event.stopPropagation();
+}
+menu.onclick = function(event) {
+    event.stopPropagation();
+}
+scoreBoard.onclick = function(event) {
+    event.stopPropagation();
     arr[i] = event.target.textContent;
-
-
     if (arr[i] === '全零') {
-        sum = 0;
         arr[i] = 0;
-        // sumIn.value=arr[i];
-        // sum = sum + arr[i];
+    } else if (arr[i] === '·') {
+        arr[i] = 0;
     } else if (typeof Number(arr[i]) !== NaN) {
         arr[i] = parseFloat(arr[i]);
-        // sumIn.value=arr[i];
-        // sum = sum + arr[i];
-    } else if (arr[i] === '·') {
-        arr[i]=0;
     }
-    sumIn.value = arr[i];
+    // switch(arr[i]){
+    // 	case;
+    // 	case;
+    // 	case:
+    // }
+    sumText.value = arr[i];
     i++;
 }
-
-document.getElementById('information').onclick = function(event) {
-	event.preventDefault();
+information.onclick = function(event) {
+    event.stopPropagation();
     infoTitle.style.display === 'none' ? infoTitle.style.display = 'inline-block' : infoTitle.style.display = 'none';
-    menu.style.display='none';
+    menu.style.display = 'none';
 }
-
-document.getElementById('more').onclick = function(event) {
-	event.preventDefault();
+more.onclick = function(event) {
+    event.stopPropagation();
     menu.style.display === 'none' ? menu.style.display = 'inline-block' : menu.style.display = 'none';
-    infoTitle.style.display='none';
+    infoTitle.style.display = 'none';
+}
+bigButton.onclick = function(event) {
+    event.stopPropagation();
+    bigButton.checked ? changBigButton() : cancelBigButton();
+}
+var changBigButton = function() {
+    for (var k = 0; k < scoreli.length; k++) {
+        scoreli[k].setAttribute('class', 'big');
+    }
+}
+var cancelBigButton = function() {
+    for (var k = 0; k < scoreli.length; k++) {
+        scoreli[k].setAttribute('class', 'small');
+    }
 }

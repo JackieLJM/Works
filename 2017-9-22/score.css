@@ -16,9 +16,6 @@ li {
 }
 
 
-
-
-
 /*-----------前面板-----------*/
 
 #front {
@@ -27,6 +24,8 @@ li {
     position: absolute;
     display: flex;
     align-content: space-between;
+    align-items: flex-start;
+
 }
 
 #front ul {
@@ -36,26 +35,22 @@ li {
 
 .info {
     order: 2;
-    flex: 0.2;
+    flex: 1;
+	margin: 1rem;
 }
 
 .scoreBoard {
     align-self: flex-end;
+    margin: 1rem;
 }
 
 .enter {
     align-self: flex-end;
+    margin:1rem;
+
 }
 
-
-/*以下为前面板信息部分*/
-
-.info {
-    /*position: absolute;*/
-    margin: 1rem;
-    /*float: right;*/
-}
-
+/*前面板信息组件*/
 .info li {
     background-color: black;
     height: 3rem;
@@ -76,15 +71,8 @@ li {
     background-color: #14b9d6;
 }
 
-
-
-/*以下为前面板打分板部分*/
-
-.scoreBoard {
-    /*position: absolute;*/
-}
-
-.scoreBoard li {
+/*前面板打分板组件*/
+.scoreBoard .small{
     display: inline-block;
     background-color: #1fbba6;
     height: 2rem;
@@ -97,14 +85,20 @@ li {
     border: 1px solid #aaaaaa;
 }
 
-
-
-/*以下为前面板输入按钮部分*/
-
-.enter {
-    /*position: absolute;*/
+.scoreBoard .big {
+    display: inline-block;
+    background-color: #1fbba6;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid #aaaaaa;
 }
 
+/*前面板输入按钮组件*/
 .enter li {
     margin: 1rem;
 }
@@ -123,7 +117,6 @@ li {
 
 .enter li input[type='button'] {
     -webkit-appearance: none;
-    background-color: #f27935;
     height: 3rem;
     width: 6rem;
     line-height: 3rem;
@@ -134,13 +127,15 @@ li {
     outline: none;
 }
 
+.enter li:nth-child(3) input{
+	background-color: #f27935;
+}
 
+.enter li:nth-child(2) input{
+	background-color: #ed5565;
+}
 
-
-/**/
-
-
-/*-----------个人信息栏-----------*/
+/*-----------个人信息顶栏-----------*/
 
 #infoTitle {
     background-color: #4c4c4c;
@@ -154,8 +149,7 @@ li {
 }
 
 
-
-/*-----------菜单栏-----------*/
+/*-----------菜单面板-----------*/
 
 #menu {
     background-color: #4c4c4c;
@@ -165,21 +159,32 @@ li {
     width: 100%;
 }
 
-#menu li {
-    height: 3rem;
-    line-height: 3rem;
-    font-size: 1rem;
+#menu ul{
+	display: flex;
+	height: 100%;
+    width: 100%;
+	flex-direction: column;
+	align-content: space-between;
+}
+
+#menu ul li {
+	flex: 1;
+    height: 100%;
+    line-height: 100%;
+    font-size: 100%;
     border-bottom: 0.05px solid white;
     color: white;
 }
 
-#menu li input[type=checkbox]{
-	
+
+#menu ul li input{
+	margin-top: 0.7rem;
+	float: right;
 }
 
 .mui-switch {
     width: 3rem;
-    height: 1.7rem;
+    height: 1.6rem;
     position: relative;
     border: 1px solid #dfdfdf;
     background-color: #fdfdfd;
@@ -211,41 +216,5 @@ li {
 }
 
 .mui-switch:checked:before {
-    left: 21px;
+    left: 1.5rem;
 }
-
-/*.mui-switch.mui-switch-animbg {
-    transition: background-color ease 0.4s;
-}
-
-.mui-switch.mui-switch-animbg:before {
-    transition: left 0.3s;
-}
-
-.mui-switch.mui-switch-animbg:checked {
-    box-shadow: #dfdfdf 0 0 0 0 inset;
-    background-color: #64bd63;
-    transition: border-color 0.4s, background-color ease 0.4s;
-}
-
-.mui-switch.mui-switch-animbg:checked:before {
-    transition: left 0.3s;
-}
-
-.mui-switch.mui-switch-anim {
-    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
-}
-
-.mui-switch.mui-switch-anim:before {
-    transition: left 0.3s;
-}
-
-.mui-switch.mui-switch-anim:checked {
-    box-shadow: #64bd63 0 0 0 16px inset;
-    background-color: #64bd63;
-    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
-}
-
-.mui-switch.mui-switch-anim:checked:before {
-    transition: left 0.3s;
-}*/
