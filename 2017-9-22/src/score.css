@@ -16,6 +16,8 @@ li {
 }
 
 
+
+
 /*-----------前面板-----------*/
 
 #front {
@@ -23,42 +25,53 @@ li {
     height: 100%;
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-content: space-between;
-    align-items: flex-start;
-
-}
-
-#front ul {
-    flex: 1;
-    background-color: blue;
 }
 
 .info {
-    order: 2;
+    flex: 0.2;
+    align-self: flex-end;
+}
+
+.bottom {
     flex: 1;
-	margin: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.blank {
+    flex: 0.5;
 }
 
 .scoreBoard {
-    align-self: flex-end;
-    margin: 1rem;
+    flex: 1;
+    margin: auto auto 1rem 1rem;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 10rem;
 }
 
 .enter {
-    align-self: flex-end;
-    margin:1rem;
-
+    flex: 0.2;
+    margin: auto 0 0 auto;
 }
 
+
+
 /*前面板信息组件*/
+
 .info li {
     background-color: black;
     height: 3rem;
     width: 3rem;
     margin: 1rem;
+    padding: auto;
     line-height: 3rem;
     text-align: center;
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: 2rem;
     color: white;
 }
@@ -71,34 +84,48 @@ li {
     background-color: #14b9d6;
 }
 
+
+
 /*前面板打分板组件*/
-.scoreBoard .small{
+
+.scoreBoard li {
+
+    padding: 0;
+    margin: 0.1rem;
+}
+
+/*在iphone6,iphone6s浏览器分辨率的情况下，小排按钮一排可以放9个按钮，其他分辨率有差异，比如可能一排，三排*/
+.scoreBoard .small {
     display: inline-block;
     background-color: #1fbba6;
     height: 2rem;
-    width: 2rem;
+    width: 2.5rem;
     line-height: 2rem;
     text-align: center;
     border-radius: 2px;
+    font-size: 0.75rem;
+    color: white;
+    border: 1px solid #aaaaaa;
+}
+
+/*在iphone6,iphone6s浏览器分辨率的情况下，大排按钮一排可以放6个按钮,其他分辨率有差异，比如可能一排，三排*/
+.scoreBoard .big {
+    display: inline-block;
+    background-color: #1fbba6;
+    height: 3rem;
+    width: 3.75rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 3px;
     font-size: 1rem;
     color: white;
     border: 1px solid #aaaaaa;
 }
 
-.scoreBoard .big {
-    display: inline-block;
-    background-color: #1fbba6;
-    height: 4rem;
-    width: 4rem;
-    line-height: 4rem;
-    text-align: center;
-    border-radius: 4px;
-    font-size: 2rem;
-    color: white;
-    border: 1px solid #aaaaaa;
-}
+
 
 /*前面板输入按钮组件*/
+
 .enter li {
     margin: 1rem;
 }
@@ -113,6 +140,7 @@ li {
     font-size: 1.5rem;
     color: red;
     border: 1px solid #aaaaaa;
+    outline: none;
 }
 
 .enter li input[type='button'] {
@@ -122,24 +150,26 @@ li {
     line-height: 3rem;
     text-align: center;
     border-radius: 2px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
     outline: none;
+    border: none;
 }
 
-.enter li:nth-child(3) input{
-	background-color: #f27935;
+.enter li:nth-child(3) input {
+    background-color: #f27935;
 }
 
-.enter li:nth-child(2) input{
-	background-color: #ed5565;
+.enter li:nth-child(2) input {
+    background: url(../img/Del-min.png) #ed5565 no-repeat 1.5rem;
 }
+
+
 
 /*-----------个人信息顶栏-----------*/
 
 #infoTitle {
-    background-color: #4c4c4c;
-    opacity: 0.75;
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     height: 2rem;
     width: 100%;
@@ -149,38 +179,51 @@ li {
 }
 
 
+
+
 /*-----------菜单面板-----------*/
 
 #menu {
-    background-color: #4c4c4c;
-    opacity: 0.75;
+    background-color: rgba(0, 0, 0, 0.7);
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
-#menu ul{
-	display: flex;
-	height: 100%;
+#menu ul {
+    display: flex;
+    height: 100%;
     width: 100%;
-	flex-direction: column;
-	align-content: space-between;
+    flex-direction: column;
+    align-content: space-between;
 }
 
 #menu ul li {
-	flex: 1;
+    flex: 1;
     height: 100%;
-    line-height: 100%;
-    font-size: 100%;
     border-bottom: 0.05px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#menu ul li div {
+    flex: 1;
+    margin: 0 1rem 0 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#menu ul li div span {
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 1rem;
     color: white;
+    margin: auto auto auto 1rem;
 }
 
 
-#menu ul li input{
-	margin-top: 0.7rem;
-	float: right;
-}
+/*开关按钮*/
 
 .mui-switch {
     width: 3rem;

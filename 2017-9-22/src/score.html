@@ -12,6 +12,7 @@
     <p style="margin: 0;padding: 0;border:0;position: absolute;">This is a canvas.</p>
     <div id="ui">
         <div id="front">
+
             <ul id='info' class="info">
                 <li id='information'>
                     i
@@ -20,7 +21,9 @@
                     ···
                 </li>
             </ul>
+            <div class="bottom">
             <ul id='scoreBoard' class="scoreBoard">
+            	<li>0</li>
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
@@ -33,6 +36,7 @@
                 <li>全零</li>
                 <li>·</li>
             </ul>
+            <div class="blank"></div>
             <ul id='enter' class="enter">
                 <li>
                     <input id='sum' type="text" value="0" />
@@ -44,20 +48,21 @@
                     <input type="button" value="确定" />
                 </li>
             </ul>
+            </div>
         </div>
         <div id='infoTitle'>
             密号: 科目组长 已评: 未评:
         </div>
         <div id='menu'>
             <ul>
-                <li>回评</li>
-                <li>全卷</li>
-                <li>异常卷</li>
-                <li>切换角色</li>
-                <li>启用大按钮<input id="bigButton" class="mui-switch" type="checkbox"></li>
-                <li>显示全零<input  class="mui-switch" type="checkbox"></li>
-                <li>自动提交<input class="mui-switch" type="checkbox"></li>
-                <li>切换账号</li>
+                <li><div><img src="../img/Review-min.png"><span>回评</span></div></li>
+                <li><div><img src="../img/WholePage-min.png" alt=""><span>全卷</span></div></li>
+                <li><div><img src="../img/Abnormal-min.png"><span>异常卷</span></div></li>
+                <li><div><img src="../img/SwitchRoles-min.png"><span>切换角色</span></div></li>
+                <li><div><img src="../img/BigButtons-min.png"><span>启用大按钮</span><input id="bigButton" class="mui-switch" type="checkbox"></div></li>
+                <li><div><img src="../img/ZeroExamples-min.png"><span>显示全零</span><input class="mui-switch" type="checkbox"></div></li>
+                <li><div><img src="../img/AutoCommit-min.png"><span>自动提交</span><input class="mui-switch" type="checkbox"></div></li>
+                <li><div><img src="../img/SwitchAccounts-min.png"><span>切换账号</span></div></li>
             </ul>
         </div>
     </div>

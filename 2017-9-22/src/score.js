@@ -47,19 +47,22 @@ for (var j = 0; j < scoreli.length; j++) {
     scoreli[j].setAttribute('class', 'small');
 }
 
-// 监听窗口变化改变字体大小
+// 监听窗口变化改变字体大小，从而响应式改变组件大小
 (function(doc, win, back) {
     var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function() {
             var clientWidth = docEl.clientWidth;
             if (!clientWidth) return;
+            // 规则一窗口宽度大于414
             if (clientWidth > 414) {
                 docEl.style.fontSize = 20 + 'px';
-            } else {
+            } 
+            // 规则二窗口小于414
+            else{
                 docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
             }
-            console.log(event);
+            // 规则...
         };
     if (!doc.addEventListener) return;
     win.addEventListener(resizeEvt, recalc, false);
@@ -85,7 +88,7 @@ ui.onclick = function() {
     sumText.value = 0;
 }
 
-// 为各个元素添加事件监听，停止冒泡
+// 为各个元素添加事件监听和停止冒泡
 enter.onclick = function(event) {
     event.stopPropagation();
 }
@@ -94,6 +97,16 @@ infoTitle.onclick = function(event) {
 }
 menu.onclick = function(event) {
     event.stopPropagation();
+}
+
+
+
+
+//———— 此部分打分板处理逻辑未处理完善 ———— //
+sumText.onchange=function(event){
+	if(typeof event.target.value==='string'){
+		sumText.value='X'
+	}
 }
 scoreBoard.onclick = function(event) {
     event.stopPropagation();
@@ -105,14 +118,14 @@ scoreBoard.onclick = function(event) {
     } else if (typeof Number(arr[i]) !== NaN) {
         arr[i] = parseFloat(arr[i]);
     }
-    // switch(arr[i]){
-    // 	case;
-    // 	case;
-    // 	case:
-    // }
     sumText.value = arr[i];
     i++;
 }
+// ————此部分打分板处理逻辑未处理完善———— //
+
+
+
+
 information.onclick = function(event) {
     event.stopPropagation();
     infoTitle.style.display === 'none' ? infoTitle.style.display = 'inline-block' : infoTitle.style.display = 'none';
