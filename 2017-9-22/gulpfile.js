@@ -4,11 +4,11 @@ let gulp=require('gulp'),
 	uglify=require('gulp-uglify'),
 	minimage=require('gulp-imagemin'),
 	rename=require('gulp-rename'),
-	spritesmith=require('gulp-spritesmith'),
+	spritesmith=require('gulp.spritesmith'),
 	buffer=require('vinyl-buffer');
 
 gulp.task('css',function(){
-	return gulp.src('src/score.css').pipe(minicss()).pipe(gulp.dest('./build'));
+	return gulp.src('src/score.css').pipe(minicss()).pipe(gulp。.dest('./build'));
 });
 
 gulp.task('html',function(){
