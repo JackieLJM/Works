@@ -47,46 +47,71 @@ for (var j = 0; j < scoreli.length; j++) {
     scoreli[j].setAttribute('class', 'small');
 }
 
-// 监听窗口变化改变字体大小，从而响应式改变组件大小
+// id值为background的对象为背景层，保持背景层与窗口大小一致，监听窗口变化改变字体大小，从而响应式改变组件大小
 (function(doc, win, back) {
     var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function() {
-            var clientWidth = docEl.clientWidth;
+            var clientWidth = docEl.clientWidth,
+                clientHeight = docEl.clientHeight;
             if (!clientWidth) return;
-            // 规则一窗口宽度大于414
+            // 规则一窗口宽度大于414，高度小于444
             if (clientWidth > 414) {
                 docEl.style.fontSize = 20 + 'px';
-            } 
-            // 规则二窗口小于414
-            else{
-                docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                document.querySelector('input[name=img]').style.backgroundSize = '60px';
+                if (clientHeight <= 444) {
+                    docEl.style.fontSize = 20 * (clientHeight / 500) + 'px';
+                    document.querySelector('input[name=img]').style.backgroundSize = 60 * (clientHeight / 375) + 'px';
+                }
             }
-            // 规则...
+            // 规则二窗口小于414，高度小于444
+            else if (clientWidth <= 414) {
+                docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+                document.querySelector('input[name=img]').style.backgroundSize = 60 * (clientWidth / 375) + 'px';
+                if (clientHeight <= 444) {
+                    docEl.style.fontSize = 20 * (clientHeight / 500) + 'px';
+                    document.querySelector('input[name=img]').style.backgroundSize = 60 * (clientHeight / 375) + 'px';
+                }
+            }
+
+            // 屏幕空白区域被点中决定是否显示前面板,该功能于屏幕宽度小于414启用,屏幕宽度小于414首次加载自动隐藏前面板
+            if (clientWidth < 414) {
+                var listener=function() {
+                    ui.style.display === 'none' ? ui.style.display = 'block' : ui.style.display = 'none';
+                }
+                back.addEventListener('click', listener, false); 
+                var listenerUI=function(){
+                    ui.style.display = 'none';
+                    infoTitle.style.display = 'none';
+                    menu.style.display = 'none';
+                    sumText.value = 0;
+                }
+                ui.addEventListener('click',listenerUI,false);
+            } else if(clientWidth>=414){
+                back.removeEventListener('click',listener,false);
+                ui.style.display = "block";
+                // var listenerUI=function(){
+                //     ui.style.display = 'none';
+                //     infoTitle.style.display = 'none';
+                //     menu.style.display = 'none';
+                //     sumText.value = 0;
+                // }
+                // ui.addEventListener('click',listenerUI,false);
+            }
         };
-    if (!doc.addEventListener) return;
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
+    // 监听窗口事件动态改变背景图层大小，因为边框设置为1px，所以在这里减2
     win.addEventListener(resizeEvt, function() {
-        back.width = docEl.clientWidth;
-        back.height = docEl.clientHeight;
+        back.width = docEl.clientWidth - 2;
+        back.height = docEl.clientHeight - 2;
     }, false);
     doc.addEventListener('DOMContentLoaded', function() {
-        back.width = docEl.clientWidth;
-        back.height = docEl.clientHeight;
+        back.width = docEl.clientWidth - 2;
+        back.height = docEl.clientHeight - 2;
     }, false);
-})(document, window,background);
+})(document, window, background);
 
-// 屏幕空白区域被点中决定是否显示前面板
-background.onclick = function() {
-    ui.style.display === 'none' ? ui.style.display = 'block' : ui.style.display = 'none';
-}
-ui.onclick = function() {
-    ui.style.display = 'none';
-    infoTitle.style.display = 'none';
-    menu.style.display = 'none';
-    sumText.value = 0;
-}
 
 // 为各个元素添加事件监听和停止冒泡
 enter.onclick = function(event) {
@@ -103,10 +128,10 @@ menu.onclick = function(event) {
 
 
 //———— 此部分打分板处理逻辑未处理完善 ———— //
-sumText.onchange=function(event){
-	if(typeof event.target.value==='string'){
-		sumText.value='X'
-	}
+sumText.onchange = function(event) {
+    if (typeof event.target.value === 'string') {
+        sumText.value = 'X'
+    }
 }
 scoreBoard.onclick = function(event) {
     event.stopPropagation();

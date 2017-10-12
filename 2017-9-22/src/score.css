@@ -1,6 +1,8 @@
+/*如果宽和高小于264和270，界面元素开始失真，即组件开始溢出窗口*/
 canvas {
     border: 1px solid black;
     position: absolute;
+    margin:0px;
 }
 
 body {
@@ -94,7 +96,6 @@ li {
     margin: 0.1rem;
 }
 
-/*在iphone6,iphone6s浏览器分辨率的情况下，小排按钮一排可以放9个按钮，其他分辨率有差异，比如可能一排，三排*/
 .scoreBoard .small {
     display: inline-block;
     background-color: #1fbba6;
@@ -108,13 +109,12 @@ li {
     border: 1px solid #aaaaaa;
 }
 
-/*在iphone6,iphone6s浏览器分辨率的情况下，大排按钮一排可以放6个按钮,其他分辨率有差异，比如可能一排，三排*/
 .scoreBoard .big {
     display: inline-block;
     background-color: #1fbba6;
     height: 3rem;
-    width: 3.75rem;
-    line-height: 3rem;
+    width: 3.125rem;
+    line-height: 3.5rem;
     text-align: center;
     border-radius: 3px;
     font-size: 1rem;
@@ -161,7 +161,8 @@ li {
 }
 
 .enter li:nth-child(2) input {
-    background: url(../img/Del-min.png) #ed5565 no-repeat 1.5rem;
+    background: url(../img/Del-min.png) #ed5565 no-repeat 50%;
+
 }
 
 
@@ -260,4 +261,63 @@ li {
 
 .mui-switch:checked:before {
     left: 1.5rem;
+}
+
+/*按钮的图像*/
+
+.icon-Abnormal-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-size: 100% 100%;*/
+  /*background-clip: content-box;*/
+  /*background-position: 0px -32px;*/
+  width: 2rem;
+  height: 2rem;
+}
+.icon-AutoCommit-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: -56px 0px;*/
+  width: 2rem;
+  height: 2rem;
+}
+.icon-BigButtons-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: -96px 0px;*/
+  width: 2rem;
+  height: 2rem;
+}
+.icon-Del-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: 0px 0px;*/
+  width: 2.8rem;
+  height: 1.6rem;
+}
+.icon-Review-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: 0px -72px;*/
+  width: 2rem;
+  height: 2rem;
+}
+.icon-SwitchAccounts-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: -40px -72px;*/
+  width: 2rem;
+  height: 2rem;
+}
+.icon-SwitchRoles-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: -80px -72px;*/
+  width: 2rem;
+  height: 2rem;
+}
+.icon-WholePage-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: -136px 0px;*/
+  width: 2rem;
+  height: 2rem;
+}
+.icon-ZeroExamples-min {
+  /*background-image: url(../img/logo.png);*/
+  /*background-position: -136px -40px;*/
+  width: 2rem;
+  height: 2rem;
 }

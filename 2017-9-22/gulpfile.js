@@ -25,7 +25,7 @@ gulp.task('img',function(){
 });
 
 gulp.task('sprite',function(){
-	return gulp.src('./img/*.png').pipe(spritesmith({imgName:'logo.png',cssName:'logo.css'})).pipe(buffer()).pipe(gulp.dest('./build'));
+	return gulp.src('./img/*.png').pipe(spritesmith({imgName:'logo.png',cssName:'logo.css'})).pipe(buffer()).pipe(gulp.dest('./src'));
 })
 
 gulp.task('default',['css','html','js'],function(){});
