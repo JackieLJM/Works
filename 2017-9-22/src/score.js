@@ -42,7 +42,6 @@ var sumText = document.getElementById('sum'),
     enter = document.getElementById('enter');
 infoTitle.style.display = 'none';
 menu.style.display = 'none';
-ui.style.display = 'none';
 for (var j = 0; j < scoreli.length; j++) {
     scoreli[j].setAttribute('class', 'small');
 }
@@ -74,10 +73,14 @@ for (var j = 0; j < scoreli.length; j++) {
                 }
             }
 
-            // 屏幕空白区域被点中决定是否显示前面板,该功能于屏幕宽度小于414启用,屏幕宽度小于414首次加载自动隐藏前面板
-            if (clientWidth < 414) {
+            // 屏幕空白区域被点中决定是否显示前面板,该功能于屏幕宽度小于414启用,屏幕宽度小于414加载自动隐藏前面板
+            var i=0;
+            if (clientWidth <= 414) {
+                ui.style.display = 'none';
                 var listener=function() {
-                    ui.style.display === 'none' ? ui.style.display = 'block' : ui.style.display = 'none';
+                    ui.style.display === 'none' ? ui.style.display = 'block' : ui.style.display = 'none';                    
+                    i++;
+                    // console.log(i);
                 }
                 back.addEventListener('click', listener, false); 
                 var listenerUI=function(){
@@ -85,18 +88,24 @@ for (var j = 0; j < scoreli.length; j++) {
                     infoTitle.style.display = 'none';
                     menu.style.display = 'none';
                     sumText.value = 0;
+                    i++;
+                    // console.log(i);
                 }
                 ui.addEventListener('click',listenerUI,false);
-            } else if(clientWidth>=414){
-                back.removeEventListener('click',listener,false);
+
+            } else if(clientWidth>414){
                 ui.style.display = "block";
+                
+                // back.removeEventListener('click',listener,false);
+                // ui.removeEventListener('click', listenerUI,false);
                 // var listenerUI=function(){
-                //     ui.style.display = 'none';
-                //     infoTitle.style.display = 'none';
-                //     menu.style.display = 'none';
-                //     sumText.value = 0;
+                    // ui.style.display = 'none';
+                    // infoTitle.style.display = 'none';
+                    // menu.style.display = 'none';
+                    // sumText.value = 0;
                 // }
                 // ui.addEventListener('click',listenerUI,false);
+                // console.log("obj");
             }
         };
     win.addEventListener(resizeEvt, recalc, false);
