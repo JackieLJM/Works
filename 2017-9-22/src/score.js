@@ -73,6 +73,7 @@ for (var j = 0; j < scoreli.length; j++) {
                 }
             }
 
+
             // 屏幕空白区域被点中决定是否显示前面板,该功能于屏幕宽度小于414启用,屏幕宽度小于414加载自动隐藏前面板
             var i=0;
             if (clientWidth <= 414) {
@@ -107,6 +108,7 @@ for (var j = 0; j < scoreli.length; j++) {
                 // ui.addEventListener('click',listenerUI,false);
                 // console.log("obj");
             }
+            console.log(screen.orientation.type,'screen.orientation.angle');
         };
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
