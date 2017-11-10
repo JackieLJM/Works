@@ -1,0 +1,97 @@
+/*默认标签元素设置*/
+body {
+    margin: 0px;
+    background-color: #eeeeee;
+    font-family: 'Microsoft YaHei';
+}
+
+ul {
+    list-style: none;
+    padding: 0px
+}
+
+li {
+    background-color: white;
+    margin: 1rem 0rem;
+    padding: 1rem 2rem 0.2rem 2rem;
+    text-align: center;
+    margin-left:0px;
+}
+ul li div {
+	margin:0.5rem 0px 0.7rem 0px;
+}
+h2 {
+    color: #1dc19f;
+}
+
+a {
+    color: #1dc19f;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+div {
+    margin: 1rem;
+}
+
+/*添加样式*/
+.page{
+	margin-left: 2rem;
+}
+
+.content {
+    display: flex;
+    margin-left: 0px;
+    align-items: stretch;
+}
+
+.left {
+    flex: 1;
+    margin-left:0px;
+}
+
+.right {
+    flex: 6;
+}
+
+/*在这里设置右边空白区域高度,宽度自适应屏幕大小*/
+.right div {
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0px 2px 10px #888888;
+    height: 430px;
+}
+
+li:hover {
+    box-shadow: 0px 2px 10px #888888;
+}
+
+.chosed{
+	box-shadow: 0px 2px 10px #888888;
+}
+
+.data{
+	display: none;
+}
+
+.exam{
+	display: none;
+}
+
+.grade{
+	display: none;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="background-manager.css">
+    <script src="lib/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="page">
+        <h2>欢迎使用云平台后台管理系统</h2>
+        <p>使用本系统，您可以完成制卡、扫描评卷、统计分析、发布成绩等工作。在这些工作进行过程中，有些数据需要您提前准备(打包下载模板)： </p>
+        <div class="content">
+            <div class="left">
+                <ul>
+                    <li id='data'><img src="src/data.png">
+                        <div>数据准备</div>
+                    </li>
+                    <li id='exam'><img src="src/exam.png">
+                        <div>组织考试</div>
+                    </li>
+                    <li id='grade'><img src="src/grade.png">
+                        <div>成绩发布</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <div class="blank">
+                    未选中左边功能时为此显示，即首次加载为此显示
+                </div>
+                <div class="data">
+                    <p>1.考生基础信息 <a href=""><img name="download" src="src/download.png">下载模板</a></p>
+                    <p>2.答题卡和准考证号条码 （答题卡可通过在线制卡功能制作, 条码请使用条码打印机打印制作）</p>
+                    <p>3.格式文件（每科目一份，最晚在扫描前设置） </p>
+                    <p>3.客观题标答（每科目一份，最晚在统计前设置）</p>
+                    <p>4.阅卷题目设置（每科目一份，最晚在扫描结束前设置）<a href=""><img src="src/download.png">下载模板</a></p>
+                    <p>5.评卷老师账号及任务分配表(每科目一份，在阅卷题目设置结束后设置)<a href=""><img src="src/download.png">下载模板</a></p>
+                </div>
+                <div class="exam">考试</div>
+                <div class="grade">成绩</div>
+            </div>
+        </div>
+    </div>
+    <script src="background-manager.js"></script>
+</body>
+
+</html>
