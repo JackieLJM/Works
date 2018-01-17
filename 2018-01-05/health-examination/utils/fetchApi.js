@@ -1,16 +1,15 @@
 var fetch = require("isomorphic-fetch");
 var FormData = require('form-data');
 // var MD5=require('md5');
-var 
-header = {
-		"Access-Control-Allow-Origin":"*",
+var header = {
+        "Access-Control-Allow-Origin": "*",
         "Accept": "application/json",
         "Content-Type": "application/json;charset=UTF-8",
     },
     method = 'post',
 
     url1 = "http://10.1.1.194:8080/maystar_tj/services/servicesEnter.html",
-    url2 = "http://123.56.232.141:8082/maystar_tj/services/servicesEnter.html";
+    url2 = "http://123.56.232.141:8082/maystar_tj/services/servicesEnter.jsp";
 
 var data1 = {
     "method": "login",
@@ -50,11 +49,12 @@ var data2 = {
 fetch(url2, {
         header,
         method,
-        mode:'cors',
+        mode: 'cors',
+        credentials:'include',
         body: JSON.stringify(data2)
     })
-	// .then(response => console.log(response.headers))
-	.then(response=>console.log(response))
+    // .then(response => console.log(response.headers))
+    .then(response => console.log(response))
     // .then(response=>console.log(response.json()))
     // .then(json=>console.log(json))
     .catch(error => { console.log(error) });
