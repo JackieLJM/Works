@@ -1,0 +1,39 @@
+本机weblogic账户密码：
+weblogic
+12345678
+
+
+本机oracle账户密码：
+system
+admin
+
+
+PS：许多账号的密码都是star1022
+
+
+ISR系列软件：
+登录ISRDPS前先要输入SQL server 2008数据库的用户密码
+ISRDPS默认用户密码 admin maystar
+本机ISRDPS用户密码 admin maystar1022
+	
+  		
+SQL：
+本机SQL server 2008数据库引擎用户密码 sa maystar 
+ISR_reader 密码 maystar
+登录使用的window域名为LIUJIAMING-PC,如果更改此域名即更改更换此账户，可能会出现无法登录SQL的情况
+
+
+高考版软件启动顺序：
+先用debug_tool扫描，然后isr_reader用于制作逻辑文件，isr_fmt用于制作格式文件，之后先登录sql2008数据库，再启动isrDPS
+
+
+共享服务器：
+\\192.168.0.210
+
+
+鑫e评制卷授权码：
+maystar2010
+
+
+鑫e评18088端口数据库账号密码即数据库管理工具：
+root star1022
