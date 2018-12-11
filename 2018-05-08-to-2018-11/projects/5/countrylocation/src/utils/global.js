@@ -1,0 +1,1 @@
+export const baseUrl=window.location.origin==="http://localhost:3003"?"http://localhost:8080":window.location.origin+"/dba";

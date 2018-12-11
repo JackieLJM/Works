@@ -1,0 +1,7 @@
+
+<svg xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#1890ff">
+        <path fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" stroke-linejoin="miter" d="M20 9c0 4.9-8 13-8 13S4 13.9 4 9c0-5.1 4.1-8 8-8S20 3.9 20 9z" />
+        <circle fill="none" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" stroke-linejoin="miter" cx="12" cy="9" r="3" />
+    </g>
+</svg>

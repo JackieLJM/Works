@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color:#1890ff;
+}
+.App-logo {
+  animation: App-logo-spin infinite 30s linear;
+  height: 40vmin;
+}
+.App-topbar-logo {
+  animation: App-logo-spin infinite 2s linear;
+  height: 2rem;
+  filter:grayscale(100%);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/*header css*/
+.App-header {
+  background-color: #282c34;
+  /*background-color: white;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  /*text-align: center;*/
+}
+.App-topbar {
+  background-color: #282c34;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  margin: auto;
+  font-size: 1rem;
+  font-height:1rem;
+}
+.MainSearch{
+  font-size: calc(10px + 2vmin);
+  width:18rem;
+  /*opacity: 100%;*/
+  /*position: absolute;*/
+}
+
+/*body css*/
+.App-body{
+  background-color: rgba(255,255,255,0.4);
+
+  /*opacity: 0.5;*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  /*font-size: calc(10px+2vmin);*/
+  font-size: 2rem;
+  font-height: 2rem; 
+  /*font-size:1px;*/
+  color: black; 
+/*  border-bottom:1px solid black;*/
+}
+/*body单位一渐变动画*/
+.App-body-1{
+  flex: 1.5;
+  display: flex;
+  /*background-color: #1890ff;*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.App-body-1-strech{
+  animation: App-body-strech 2s linear;
+}
+.App-body-2-shrink{
+  animation: App-body-shrink 2s linear;
+}
+
+/*body单位二渐变动画*/
+.App-body-2{
+  flex: 2.5;
+  display: flex;
+  /*background-color: #1890ff;*/
+  align-items: center;
+  justify-content: center;
+  /*border-left: 1px solid black;*/
+}
+.App-body-1-strech{
+  animation: App-body-strech 2s linear;
+}
+.App-body-2-shrink{
+  animation: App-body-shrink 2s linear;
+}
+.App-link {
+  color: #61dafb;
+}
+@keyframes App-body-strech{
+  from {
+    flex: 0;
+  }
+  to {
+    flex: 1;
+  }
+}
+@keyframes App-body-shrink{
+  from {
+    flex: 1;
+  }
+  to {
+    flex: 0;
+  }
+}
+/*footer css*/
+.App-footer{
+  z-index: -1;
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  color: black; 
+}
+
+.editable-row {
+  font-height: 0.5rem;
+}
+
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-value-wrap {
+  padding: 5px 12px;
+  cursor: pointer;
+}
+
+.editable-row:hover .editable-cell-value-wrap {
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 4px 11px;
+}
+
+.column-country {
+  /*width: 4rem;*/
+  font-size: 1rem;
+  /*font-height:1rem;*/
+  width: 10rem;
+  /*height:1rem;*/
+}
+.column-geo {
+  font-size:0.01rem;
+  font-height:0.01rem;
+  height: 0.01rem;
+}
+
+/*.ant-table td { white-space: nowrap; }*/
