@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+.ui-dialog-panel {
+	z-index: 10000;
+	position: absolute;
+	left: 50%;
+	top: 50%; /*padding:4px;*/
+	border-radius: 5px;
+}
+
+.ui-dialog {
+	padding-top: 40px; /*border:1px solid #BBBBBB;*/
+	border-radius: 1px;
+	background: #fff;
+}
+
+.ui-dialog-hd {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 41px;
+	color: #FFFFFF;
+	font-size: 16px;
+	background: url(../images/dialog/top_center.png);
+}
+
+.ui-dialog-hd .ui-dialog-close {
+	position: absolute;
+	top: 10px;
+	right: 0;
+	color: #fff;
+	font-size: 16px;
+}
+
+.ui-dialog-hd .ui-dialog-close i {
+	float: left;
+	width: 20px;
+	height: 20px;
+	background: url(../images/dialog/close.png);
+}
+
+.ui-dialog-hd .ui-dialog-close:hover i {
+	background: url(../images/dialog/close_color.png);
+}
+
+.ui-dialog-hd h6 {
+	height: 40px;
+	left: 0;
+	right: 35px;
+	text-indent: 18px;
+	line-height: 40px;
+	*line-height: 40px;
+	color: #fff;
+	font-size: 14px;
+}
+
+.ui-dialog-ft {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	right: 5px;
+	height: 39px;
+	text-align: right;
+	border-top: 1px solid #F0F0F0;
+	background: #F9F9F9;
+}
+
+.ui-dialog-ft button {
+	margin: 6px 15px 0 -10px;
+}
+
+.ui-dialog-icon {
+	float: left;
+	width: 78px;
+	height: 78px;
+	margin: 25px 20px 25px 38px;
+	background-image: url(../images/dialog/dialog_tip.png);
+}
+
+.ui-dialog-text {
+	float: left;
+	display: table-cell;
+	vertical-align: middle;
+	width: 250px;
+	height: 100px;
+}
+
+.ui-dialog-text .dialog-text, .ui-dialog-text .patch {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 16px;
+	color: #4d4d4d;
+	font-weight: bold;
+}
+
+.ui-dialog-text .dialog-content {
+	margin: 40px 0 10px 0;
+	font-size: 18px;
+}
+
+.ui-dialog-text .tips {
+	color: #8f8f8f;
+	font-size: 13px;
+}
+
+.ui-dialog-text .patch {
+	width: 0;
+	height: 100%;
+}
+
+.ui-dialog-panel .formDialog {
+	display: none;
+	padding: 20px 15px;
+}
+
+.ui-dialog-panel .formDialog input[type=text] {
+	width: 220px;
+}
+
+.dialog-hd-lc {
+	position: absolute;
+	width: 15px;
+	height: 41px;
+	background: url(../images/menu/left_top.png);
+	left: -15px;
+	top: 0;
+}
+
+.dialog-hd-rc {
+	position: absolute;
+	width: 15px;
+	height: 41px;
+	background: url(../images/dialog/right_top.png);
+	right: -15px;
+	top: 0;
+}
+
+.ui-dialog-leftYY {
+	position: absolute;
+	width: 15px;
+	top: 41px;
+	bottom: 15px;
+	left: -15px;
+	background: url(../images/dialog/center_left.png);
+}
+
+.ui-dialog-rightYY {
+	position: absolute;
+	width: 15px;
+	top: 41px;
+	bottom: 15px;
+	right: -15px;
+	background: url(../images/dialog/center_right.png);
+}
+
+.ui-dialog-bottomCenter {
+	position: absolute;
+	height: 19px;
+	bottom: -13px;
+	left: -11px;
+	right: -11px;
+	background: url(../images/dialog/down_center.png);
+}
+
+.ui-dialog-bottomLeft {
+	position: absolute;
+	width: 15px;
+	height: 19px;
+	bottom: -4px;
+	left: -15px;
+	background: url(../images/dialog/center_left.png);
+}
+
+.ui-dialog-bottomRight {
+	position: absolute;
+	width: 15px;
+	height: 19px;
+	bottom: -4px;
+	right: -15px;
+	background: url(../images/dialog/center_right.png);
+}
+
+.dialog-content .buttons {
+	margin-top: 30px;
+}

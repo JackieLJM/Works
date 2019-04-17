@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.hardware li {
+	float: left;
+	width: 190px;
+	height: 90px;
+	margin-left: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.pic {
+	float: left;
+}
+
+.con {
+	width: 178px;
+	margin: 0 auto;
+	padding: 15px 0;
+	border: 1px dashed #c4bebe;
+	padding: 15px 0;
+}
+
+.con:after {
+	clear: both;
+	display: block;
+	width: 0;
+	height: 0;
+	content: ""
+}
+
+.cent {
+	float: right;
+	width: 130px;
+}
+
+.font {
+	font-size: 20px;
+	text-align: center;
+	color: #000000;
+}
+
+.mark {
+	font-size: 11px;
+	text-align: center;
+	color: #9b9b9b;
+}
+
+.core-description {
+	padding: 15px;
+}
+
+.graphics-description {
+	padding: 15px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: justify;
+	margin: 0 auto;
+	padding: 3px;
+}

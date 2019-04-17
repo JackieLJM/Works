@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <base href="<#if Application.domain?exists>${Application.domain}</#if>" />
+    <meta charset="utf-8" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="Cache" content="no-cache" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/tab.css" />
+    <link rel="stylesheet" href="css/monitor.css" />
+    <link rel="stylesheet" href="css/device.css" />
+    <title>SSL VPN超算及协议解析中心</title>
+  </head>
+  <body>
+    <div class="tab half matter">
+      <div class="wrap-r">
+        <div class="title ue-clear">
+          <h2 class="title-list">
+            <ul class="ue-clear">
+              <li class="tab_current">
+                <a href="javascript:;">系统运行状态</a>
+              </li>
+            </ul>
+          </h2>
+          <a href="javascript:void(0);" class="more">&nbsp;</a>
+        </div>
+        <div class="content">
+          <div class="matter-content tab_current ue-clear">
+            <div class="ue-clear">
+              <ul class="hardware">
+                <li class="li-border">
+                  <div class="con">
+                    <div class="pic">
+                      <img src="images/monitor/fpga.png" alt="" />
+                    </div>
+                    <div class="cent">
+                      <p class="font">0</p>
+                      <p class="mark">数据采集系统</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="li-border">
+                  <div class="con">
+                    <div class="pic">
+                      <img src="images/monitor/fpga.png" alt="" />
+                    </div>
+                    <div class="cent">
+                      <p class="font">0</p>
+                      <p class="mark">大数生成系统</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="li-border">
+                  <div class="con">
+                    <div class="pic">
+                      <img src="images/monitor/fpga.png" alt="" />
+                    </div>
+                    <div class="cent">
+                      <p class="font">0</p>
+                      <p class="mark">大数碰撞系统</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="li-border">
+                  <div class="con">
+                    <div class="pic">
+                      <img src="images/monitor/fpga.png" alt="" />
+                    </div>
+                    <div class="cent">
+                      <p class="font">0</p>
+                      <p class="mark">SAGE超算系统</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="li-border">
+                  <div class="con">
+                    <div class="pic">
+                      <img src="images/monitor/fpga.png" alt="" />
+                    </div>
+                    <div class="cent">
+                      <p class="font">0</p>
+                      <p class="mark">NFS超算系统</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="li-border">
+                  <div class="con">
+                    <div class="pic">
+                      <img src="images/monitor/fpga.png" alt="" />
+                    </div>
+                    <div class="cent">
+                      <p class="font">0</p>
+                      <p class="mark">协议解析系统</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tab half matter">
+      <div class="wrap-r">
+        <div class="title ue-clear">
+          <h2 class="title-list">
+            <ul class="ue-clear">
+              <li class="tab_current">
+                <a href="javascript:;">设备运行状态</a>
+              </li>
+            </ul>
+          </h2>
+          <a href="javascript:void(0);" class="more">&nbsp;</a>
+        </div>
+        <div class="content">
+          <div class="matter-content tab_current ue-clear">
+            <div class="ue-clear">
+              <div class="graphics device-back">
+                <div class="device">
+                  <div id="device-1" class="device-item">
+                    <div class="device-item-title">
+                      设备一
+                    </div>
+
+                    <div class="device-item-content">
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/server.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          名称:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          主机
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div
+                          class="device-item-content-cell-icon"
+                          style="margin-right: 0.21rem;margin-left: -0.21rem"
+                        >
+                          <img src="icon/cpu.png" height="30rem" alt="" />
+                        </div>
+                        <div
+                          class="device-item-content-cell-name"
+                          style="margin-left: -0.001rem"
+                        >
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          i7
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          内存:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          Kinstom 4G 3000Mhz
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          disk
+                        </div>
+                      </div>
+
+                      <div
+                        class="device-item-content-cell"
+                        style="margin-top: 0.8rem"
+                      >
+                        <div class="device-item-content-cell-name">
+                          运行状态:
+                        </div>
+                        <!-- <div class="device-item-content-cell-content"> -->
+                        <div class="device-runtime-item">
+                          <img
+                            src="icon/red-dot.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                        </div>
+                        <!-- </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="device-2" class="device-item">
+                    <div class="device-item-title">
+                      设备二
+                    </div>
+                    <div class="device-item-content">
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/server.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          名称:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          主机
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div
+                          class="device-item-content-cell-icon"
+                          style="margin-right: 0.21rem;margin-left: -0.21rem"
+                        >
+                          <img src="icon/cpu.png" height="30rem" alt="" />
+                        </div>
+                        <div
+                          class="device-item-content-cell-name"
+                          style="margin-left: -0.001rem"
+                        >
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          i7
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          内存:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          Kinstom 4G 3000Mhz
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          disk
+                        </div>
+                      </div>
+                      <div
+                        class="device-item-content-cell"
+                        style="margin-top: 0.8rem"
+                      >
+                        <div class="device-item-content-cell-name">
+                          运行状态:
+                        </div>
+                        <!-- <div class="device-item-content-cell-content"> -->
+                        <div class="device-runtime-item">
+                          <img
+                            src="icon/red-dot.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                        </div>
+                        <!-- </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="device-3" class="device-item">
+                    <div class="device-item-title">
+                      设备三
+                    </div>
+                    <div class="device-item-content">
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/server.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          名称:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          主机
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div
+                          class="device-item-content-cell-icon"
+                          style="margin-right: 0.21rem;margin-left: -0.21rem"
+                        >
+                          <img src="icon/cpu.png" height="30rem" alt="" />
+                        </div>
+                        <div
+                          class="device-item-content-cell-name"
+                          style="margin-left: -0.001rem"
+                        >
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          i7
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          内存:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          Kinstom 4G 3000Mhz
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          disk
+                        </div>
+                      </div>
+
+                      <div
+                        class="device-item-content-cell"
+                        style="margin-top: 0.8rem"
+                      >
+                        <div class="device-item-content-cell-name">
+                          运行状态:
+                        </div>
+                        <!-- <div class="device-item-content-cell-content"> -->
+                        <div class="device-runtime-item">
+                          <img
+                            src="icon/red-dot.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                        </div>
+                        <!-- </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="device-4" class="device-item">
+                    <div class="device-item-title">
+                      设备四
+                    </div>
+                    <div class="device-item-content">
+                      <div class="device-item-content-cell">
+                        <div
+                          class="device-item-content-cell-icon"
+                        >
+                          <img src="icon/server.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          名称:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          主机
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon" style="margin-right: 0.21rem;margin-left: -0.21rem">
+                          <img src="icon/cpu.png" height="30rem" alt="" />
+                        </div>
+                        <div
+                          class="device-item-content-cell-name"
+                          style="margin-left: -0.001rem"
+                        >
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          i7
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          内存:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          Kinstom 4G 3000Mhz
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          disk
+                        </div>
+                      </div>
+                      <div
+                        class="device-item-content-cell"
+                        style="margin-top: 0.8rem"
+                      >
+                        <div class="device-item-content-cell-name">
+                          运行状态:
+                        </div>
+                        <!-- <div class="device-item-content-cell-content"> -->
+                        <div class="device-runtime-item">
+                          <img
+                            src="icon/red-dot.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                        </div>
+                        <!-- </div> -->
+                      </div>
+                    </div>
+                  </div>
+                  <div id="device-5" class="device-item">
+                    <div class="device-item-title">
+                      设备五
+                    </div>
+                    <div class="device-item-content">
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/server.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          名称:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          主机
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div
+                          class="device-item-content-cell-icon"
+                          style="margin-right: 0.21rem;margin-left: -0.21rem"
+                        >
+                          <img src="icon/cpu.png" height="30rem" alt="" />
+                        </div>
+                        <div
+                          class="device-item-content-cell-name"
+                          style="margin-left: -0.001rem"
+                        >
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          i7
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          内存:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          Kinstom 4G 3000Mhz
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div>
+
+                      <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="30rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          disk
+                        </div>
+                      </div>
+                      <div
+                        class="device-item-content-cell"
+                        style="margin-top: 0.8rem"
+                      >
+                        <div class="device-item-content-cell-name">
+                          运行状态:
+                        </div>
+                        <!-- <div class="device-item-content-cell-content"> -->
+                        <div class="device-runtime-item">
+                          <img
+                            src="icon/green-dot.png"
+                            width="20px"
+                            height="20px"
+                            alt=""
+                          />
+                        </div>
+                        <!-- </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="device-footer">
+                  <div class="device-runtime-footer">
+                    <img
+                      src="icon/green-dot.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                  <div style="margin-bottom: 1rem;display:inline-block">
+                    ：正在运行
+                  </div>
+                  <div class="device-runtime-footer">
+                    <img
+                      src="icon/red-dot.png"
+                      width="20px"
+                      height="20px"
+                      alt=""
+                    />
+                  </div>
+                  ：停止运行
+                </div>
+                <!-- <div style="float:left;width: 85%;">
+                  <div class="ue-clear">
+                    <div class="flex" style="padding: 15px;" id="gpu">
+                      数据加载中......
+                    </div>
+                  </div>
+                </div> -->
+                <!-- <div style="float:right;width: 15%;">
+                  <div class="graphics-description ue-clear">
+                    <div class="flex">设备状态</div>
+                    <div class="flex">
+                      <i
+                        class="fa fa-circle fa-2x"
+                        aria-hidden="true"
+                        style="color: red;"
+                      ></i
+                      >&nbsp;设备未识别
+                    </div>
+                    <div class="flex">
+                      <i
+                        class="fa fa-circle fa-2x"
+                        aria-hidden="true"
+                        style="color: green;"
+                      ></i
+                      >&nbsp;设备运行中
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/util.js"></script>
+  <script type="text/javascript">
+    // <#include "index.js" />
+  </script>
+</html>
