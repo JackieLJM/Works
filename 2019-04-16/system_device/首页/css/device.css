@@ -1,3 +1,97 @@
+.hardware {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  flex-wrap: wrap;
+
+  width: 95%;
+  /* background: #f5f5f5; */
+  /* box-shadow: 0px 0px 12px #f1f0f0 inset; */
+}
+.hardware-item {
+  /* background: #f5feff; */
+  background: #01c1de;
+  margin: 1rem;
+  /* margin-left: 3rem; */
+  margin-right: 3rem;
+  border: 1px lightgray solid;
+  border-radius: 1px;
+  /* border: 1px black dashed; */
+  flex-shrink: 0;
+  flex: 0 0 calc(25%);
+  -moz-box-shadow: 0px 0px 6px #f1f0f0;
+  -webkit-box-shadow: 0px 0px 6px #f1f0f0;
+  box-shadow: 0px 0px 6px #f1f0f0;
+  height: 8.6rem;
+  text-align: center;
+  color: #414343;
+}
+.hardware-item-logo {
+  background: white;
+  height: 4.5rem;
+}
+.hardware-item-img {
+  background: url("images/monitor/fpga.png");
+  position: relative;
+  left: 0px;
+  top: 15px;
+  z-index: 1;
+}
+.hardware-item-logo-collect {
+  height: 43px;
+  position: relative;
+  left: 0px;
+  top: 12px;
+}
+.hardware-item-logo-gernerate {
+  height: 40px;
+  position: relative;
+  left: 0px;
+  top: 11px;
+  margin-left: 3px;
+}
+.hardware-item-logo-collision {
+  height: 42px;
+  position: relative;
+  left: 0px;
+  top: 13.5px;
+  margin-left: -10px;
+  margin-right: -29px;
+}
+.hardware-item-logo-partition {
+  height: 53px;
+  position: relative;
+  left: -1px;
+  top: 18px;
+  margin-right: -6px;
+}
+.hardware-item-logo-decode {
+  height: 50px;
+  position: relative;
+  left: 0px;
+  top: 12.5px;
+  padding-top: 4px;
+  margin-right: -6px;
+}
+.hardware-item-name {
+  background: white;
+  padding-bottom: 0.3rem;
+  font-size: 1rem;
+  color: #01c1de;
+  font-weight: bold;
+}
+.hardware-item-time-back {
+  background: #f7f7f7;
+  border-top: 1px #efefef solid;
+  font-size: 0.4rem;
+}
+.hardware-item-time {
+  margin-top: 0.1rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.1rem;
+  z-index: 100;
+}
+
 .device {
   display: flex;
   flex-direction: row;
