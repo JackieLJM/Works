@@ -19,12 +19,14 @@
   /* margin-bottom: 1rem; */
 }
 .device-item-title {
-  font-family: Microsoft YaHei;
+  /* font-family: Microsoft YaHei; */
   font-size: 1rem;
   color: white;
+  /* display: inline-block; */
   text-align: center;
-  /* flex:1; */
-  padding: 0.5rem;
+  flex: 1;
+  padding: 1rem;
+  /* margin-top: -1rem; */
 }
 .device-item-content {
   background: white;
@@ -32,6 +34,7 @@
   /* flex:1; */
   flex-direction: column;
   margin-bottom: 0.2rem;
+  padding-left: 0.5rem;
   padding: 0.6rem;
 }
 .device-back {
@@ -39,7 +42,8 @@
 }
 .device-item-content-cell {
   flex: 1;
-  margin: 0.1rem 0 0 0.1rem;
+  padding: 0.1rem 0 0 0.1rem;
+  background-color: #dbdada;
 }
 .device-item-content-cell-icon {
   vertical-align: middle;
