@@ -1659,7 +1659,25 @@
               // document.getElementById("demo").innerHTML = "Hello World";
               console.log(e.target)
               // console.log(document.getElementById("device-1-cpu").style)
-
+              if (prev[num] === item&& document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display === "none") {
+                document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display = "inline"
+                document.getElementsByClassName("board-" + prev[num] + "-cpu")[num].style.paddingBottom = "1rem"
+                document.getElementsByClassName("device-" + prev[num] + "-mem")[num].style.display = "inline"
+                document.getElementsByClassName("board-" + prev[num] + "-mem")[num].style.paddingBottom = "1rem"
+                document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.display = "inline"
+                document.getElementsByClassName("board-" + prev[num] + "-disk")[num].style.paddingBottom = "1rem"
+                return
+              }
+              if (prev[num] === item) {
+                document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display = "none"
+                document.getElementsByClassName("board-" + prev[num] + "-cpu")[num].style.paddingBottom = "0"
+                document.getElementsByClassName("device-" + prev[num] + "-mem")[num].style.display = "none"
+                document.getElementsByClassName("board-" + prev[num] + "-mem")[num].style.paddingBottom = "0"
+                document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.display = "none"
+                document.getElementsByClassName("board-" + prev[num] + "-disk")[num].style.paddingBottom = "0"
+                return
+              }
+              // 将先前点击隐藏
               if(prev[num]!==undefined){
                 document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display = "none"
                 document.getElementsByClassName("board-" + prev[num] + "-cpu")[num].style.paddingBottom = "0"
@@ -1668,6 +1686,7 @@
                 document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.display = "none"
                 document.getElementsByClassName("board-" + prev[num] + "-disk")[num].style.paddingBottom = "0"  
               }
+              // 将此次点击显示
               document.getElementsByClassName("device-"+item+"-cpu")[num].style.display="inline"
               document.getElementsByClassName("board-" + item +"-cpu")[num].style.paddingBottom = "1rem"
               document.getElementsByClassName("device-" + item +"-mem")[num].style.display = "inline"
