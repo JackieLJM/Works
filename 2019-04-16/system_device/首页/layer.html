@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <a id="modal">点击弹出</a>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="layer/layer.js"></script>
+    <script>
+      var select = `
+        <div style="text-align:center;margin-top:3rem;padding-bottom:-3rem;">
+            <select
+                id="select"
+                style="padding:0.5rem 1rem 0.6rem 1rem;font-size: 1.2rem;width:15rem;"
+            >
+                <option style="padding:1rem" value="">第一</option>
+                <option style="padding:1rem" value="">第二</option>
+                <option style="padding:1rem" value="">第三</option>
+                <option style="padding:1rem" value="">第四</option>
+                <option style="padding:1rem" value="">第五</option>
+            </select>
+        </div>
+        `;
+      document.getElementById("modal").addEventListener("click", function() {
+        layer.open({
+          type: 1,
+          skin: "layui-layer-rim", //加上边框
+          area: ["420px", "240px"], //宽高
+          title: "请选择",
+          content: select,
+          btn: ["确认", "取消"],
+          btnAlign: "c",
+          yes: function(index, layero) {
+            //do something
+            var select = document.getElementById("select");
+            var index = select.selectedIndex;
+            var text = select.options[index].text;
+            console.log(text);
+            // console.log(layero);
+            // layer.close(index); //如果设定了yes回调，需进行手工关闭
+          },
+          btn2: function(index, layero) {
+            //按钮【按钮二】的回调
+            //return false 开启该代码可禁止点击该按钮关闭
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

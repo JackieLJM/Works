@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      jQuery和CSS3带弹性效果的创意下拉框特效|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库
+    </title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/default.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="htmleaf-container">
+      <header class="htmleaf-header">
+        <h1>
+          jQuery和CSS3带弹性效果的创意下拉框特效
+          <span>A Elastic select effect with jquery & CSS3</span>
+        </h1>
+        <div class="htmleaf-links">
+          <a
+            class="htmleaf-icon icon-htmleaf-home-outline"
+            href="http://www.htmleaf.com/"
+            title="jQuery之家"
+            target="_blank"
+            ><span> jQuery之家</span></a
+          >
+          <a
+            class="htmleaf-icon icon-htmleaf-arrow-forward-outline"
+            href="http://www.htmleaf.com/jQuery/Form/201506122021.html"
+            title="返回下载页"
+            target="_blank"
+            ><span> 返回下载页</span></a
+          >
+        </div>
+      </header>
+      <div class="drop">
+        <div class="option active placeholder" data-value="placeholder">
+          Choose wisely
+        </div>
+        <div class="option" data-value="wow">
+          第一
+        </div>
+        <div class="option" data-value="drop">
+          第二
+        </div>
+        <div class="option" data-value="select">
+          第三
+        </div>
+        <div class="option" data-value="custom">
+          第四
+        </div>
+        <div class="option" data-value="animation">
+          第五
+        </div>
+      </div>
+      <div class="related">
+        <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
+        <a href="http://www.htmleaf.com/jQuery/Form/201502091350.html">
+          <img
+            src="related/1.jpg"
+            width="300"
+            alt="jQuery扁平化风格下拉框美化插件"
+          />
+          <h3>jQuery扁平化风格下拉框美化插件</h3>
+        </a>
+        <a href="http://www.htmleaf.com/jQuery/Buttons-Icons/201505121818.html">
+          <img
+            src="related/2.jpg"
+            width="300"
+            alt="select下拉框转苹果IOS样式分段按钮jQuery插件"
+          />
+          <h3>select下拉框转苹果IOS样式分段按钮jQuery插件</h3>
+        </a>
+      </div>
+    </div>
+
+    <!-- <script src='js/stopExecutionOnTimeout.js?t=1'></script> -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".drop .option").click(function() {
+          var val = $(this).attr("data-value"),
+            $drop = $(".drop"),
+            prevActive = $(".drop .option.active").attr("data-value"),
+            options = $(".drop .option").length;
+          $drop.find(".option.active").addClass("mini-hack");
+          $drop.toggleClass("visible");
+          $drop.removeClass("withBG");
+          $(this).css("top");
+          $drop.toggleClass("opacity");
+          $(".mini-hack").removeClass("mini-hack");
+          if ($drop.hasClass("visible")) {
+            setTimeout(function() {
+              $drop.addClass("withBG");
+            }, 400 + options * 100);
+          }
+          triggerAnimation();
+          if (val !== "placeholder" || prevActive === "placeholder") {
+            $(".drop .option").removeClass("active");
+            $(this).addClass("active");
+          }
+        });
+        function triggerAnimation() {
+          var finalWidth = $(".drop").hasClass("visible") ? 22 : 20;
+          $(".drop").css("width", "24em");
+          setTimeout(function() {
+            $(".drop").css("width", finalWidth + "em");
+          }, 400);
+        }
+      });
+    </script>
+  </body>
+</html>

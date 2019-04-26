@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      一组时尚的侧边栏菜单和下拉列表UI设计|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库
+    </title>
+    <!-- <link rel="stylesheet" type="text/css" href="css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/default.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <article class="htmleaf-container">
+      <header class="htmleaf-header">
+        <h1>一组时尚的侧边栏菜单和下拉列表UI设计</h1>
+        <div class="htmleaf-links">
+          <a
+            class="htmleaf-icon icon-htmleaf-home-outline"
+            href="http://www.htmleaf.com/"
+            title="jQuery之家"
+            target="_blank"
+            ><span> jQuery之家</span></a
+          >
+          <a
+            class="htmleaf-icon icon-htmleaf-arrow-forward-outline"
+            href="http://www.htmleaf.com/css3/ui-design/201509092549.html"
+            title="返回下载页"
+            target="_blank"
+            ><span> 返回下载页</span></a
+          >
+        </div>
+      </header>
+      <div id="wrapper">
+        <div id="sidebar-menu">
+          <div id="toggleMenu">
+            <div class="list"></div>
+            <div class="thumbs"></div>
+          </div>
+          <ul>
+            <li class="DASHBOARD"><span>DASHBOARD</span></li>
+            <li class="USERS"><span>USERS</span></li>
+            <li class="PRIORITY"><span>PRIORITY</span></li>
+            <li class="COLLECTIONS"><span>COLLECTIONS</span></li>
+            <li class="ARCHIVED"><span>ARCHIVED</span></li>
+            <li class="DELETED"><span>DELETED</span></li>
+            <li class="TRENDS"><span>TRENDS</span></li>
+            <li class="TASKS"><span>TASKS</span></li>
+            <li class="FILTERS"><span>FILTERS</span></li>
+            <li class="STATS"><span>STATS</span></li>
+            <li class="SETTINGS"><span>SETTINGS</span></li>
+          </ul>
+        </div>
+
+        <div id="dropdown">
+          <div id="drop-select">Select a branch</div>
+          <div id="dropdown-list">
+            <div class="header">Group header</div>
+            <ul>
+              <li>Filmore District</li>
+              <li>Mission District</li>
+              <li>Northshare Beach</li>
+              <li>Some other branch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sortable-accordion">
+          <h3 class="s">GROUP 1</h3>
+          <div class="inner">
+            <ul>
+              <li>Item 1</li>
+              <!-- <li>Item 2</li> -->
+              <!-- <li>Item 3</li> -->
+              <!-- <li>Item 4</li> -->
+            </ul>
+            <!-- <div>123</div> -->
+          </div>
+          <!-- <h3>GROUP 2</h3>
+          <div class="inner">
+            <ul class="sortable">
+              <li class="ui-state-default">Item 1</li>
+              <li class="ui-state-default">Item 2</li>
+            </ul>
+          </div>
+          <h3>GROUP 3</h3>
+          <div class="inner">
+            <ul class="sortable">
+              <li class="ui-state-default">Item 1</li>
+              <li class="ui-state-default">Item 2</li>
+              <li class="ui-state-default">Item 3</li>
+              <li class="ui-state-default">Item 4</li>
+            </ul>
+          </div> -->
+        </div>
+
+        <div id="submenu">
+          <a class="compare" href="#"></a>
+          <a class="revisions" href="#"></a>
+          <a class="edit" href="#"></a>
+          <span></span>
+        </div>
+      </div>
+    </article>
+
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="http://cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(function() {
+          $(".sortable-accordion .inner").hide();
+          //   $(".sortable-accordion div").slideToggle("slow");
+          $(".sortable-accordion .s").hover(function() {
+            $(this)
+              .next(".inner")
+              .slideToggle()
+              .siblings(".inner:visible")
+              .slideUp();
+            $(this).toggleClass("current");
+            $(this)
+              .siblings(".inner")
+              .removeClass("current");
+          });
+        });
+        // $(".sortable")
+        //   .sortable({ placeholder: "ui-sortable-placeholder" })
+        //   .find("li")
+        //   .append("<span class='options'></span>");
+        // $("#submenu a").click(function() {
+        //   return false;
+        // });
+        // $(".options").click(function() {
+        //   var childpos = $(this).offset();
+        //   var parentpos = $(this)
+        //     .parent()
+        //     .offset();
+        //   var posLeft = childpos.left - parentpos.left;
+        //   $("#submenu")
+        //     .css({
+        //       top: childpos.top - 10 + "px",
+        //       left: posLeft + 420 + "px"
+        //     })
+        //     .fadeIn(200);
+        //   $("#submenu").mouseleave(function() {
+        //     $(this).fadeOut(200);
+        //   });
+        // });
+        // $("#toggleMenu .list").click(function() {
+        //   $("#sidebar-menu li span").animate({
+        //     opacity: 1,
+        //     "margin-left": "0px"
+        //   });
+        //   $("#sidebar-menu").toggleClass("animate");
+        //   $("#toggleMenu .list").fadeOut();
+        //   $("#toggleMenu .thumbs").fadeIn();
+        // });
+        // $("#toggleMenu .thumbs").click(function() {
+        //   $("#sidebar-menu li span").css({
+        //     opacity: 0,
+        //     "margin-left": "10px"
+        //   });
+        //   $("#sidebar-menu").toggleClass("animate");
+        //   $("#toggleMenu .thumbs").fadeOut();
+        //   $("#toggleMenu .list").fadeIn();
+        // });
+        // $("#sidebar-menu li").click(function() {
+        //   $("#sidebar-menu li")
+        //     .not(this)
+        //     .removeClass("selected");
+        //   $(this).toggleClass("selected");
+        // });
+        // $("#drop-select").click(function() {
+        //   $("#dropdown-list").toggleClass("animate");
+        // });
+        // $("#dropdown-list li").click(function() {
+        //   $("#dropdown-list").removeClass("animate");
+        // });
+      });
+    </script>
+  </body>
+</html>
