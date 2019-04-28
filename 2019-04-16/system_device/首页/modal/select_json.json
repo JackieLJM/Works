@@ -1,0 +1,19 @@
+var selectList = [
+			{
+				"Name":".select05",
+				"data":{
+					"ico":"4",
+					"Title":"json文件中的下拉"
+
+				}
+			},
+			{
+				"Name":".select06",
+				"data":{
+					"ico":"4",
+					"Title":"json文件中的下拉02"
+					
+				}
+			},
+			
+			];

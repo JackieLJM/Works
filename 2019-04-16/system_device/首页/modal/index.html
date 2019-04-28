@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>下拉框</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./js/M_select/M_select.css">
+</head>
+<body>
+	<div style="display:inline-block;width: 150px;">
+		<select class="select01">
+			<option value="01">第一个下拉</option>
+			<option value="02">第二个下拉第二个下拉第二个下拉第二个下拉</option>
+			<option value="03">第三个下拉</option>
+		</select>
+	</div>
+	<div style="display:inline-block;width: 200px;">
+		<select class="select02">
+			<option value="01">第一个下拉</option>
+			<option value="02" disabled=true>第二个下拉</option>
+			<option value="03">第三个下拉</option>
+		</select>
+	</div>
+	<div style="display:inline-block;width: 250px;">
+		<select class="select03">
+			<option value="01">第一个下拉</option>
+			<option value="02">第二个下拉</option>
+			<option value="03">第三个下拉</option>
+		</select>
+	</div>
+	<div style="display:inline-block;width: 300px;">
+		<select class="select04">
+			<option value="01">第一个下拉</option>
+			<option value="02">第二个下拉</option>
+			<option value="03">第三个下拉</option>
+		</select>
+	</div>
+	<div style="display:inline-block;width: 300px;">
+		<select class="select05">
+			<option value="01">第一个下拉</option>
+			<option value="02">第二个下拉</option>
+			<option value="03">第三个下拉</option>
+		</select>
+	</div>
+	<div style="display:inline-block;width: 350px;">
+		<select class="select06">
+			<option value="01">第一个下拉</option>
+			<option value="02">第二个下拉</option>
+			<option value="03">第三个下拉</option>
+			<option value="04">第三个下拉</option>
+			<option value="05">第三个下拉</option>
+			<option value="06">第三个下拉</option>
+			<option value="07">第三个下拉</option>
+			<option value="08">第三个下拉</option>
+			<option value="09">第三个下拉</option>
+			<option value="10">第三个下拉</option>
+			<option value="11">第三个下拉</option>
+			<option value="12">第三个下拉</option>
+			<option value="13">第三个下拉</option>
+		</select>
+	</div>
+</body>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="./js/M_select/M_select.js"></script>
+<script src="./select_json.json"></script>
+<script type="text/javascript">
+	$(function(){
+		// 对所有下拉款进行初始化
+		M_select_init(selectList);
+		// 单独对一个下拉框进行初始化
+		$(".select01").M_select();
+
+		$(".select02").M_select({
+			"ico":"2",
+			"radius":"4px",
+			"Title":"--下拉款的标题--"
+		});
+		$(".select03").M_select({
+			"ico":"3",
+			"radius":"10px",
+			"Title":"--下拉款的标题02--",
+			"inputName":"selected_value"
+		});
+		$(".select04").M_select({
+			// 手动添加下拉款图片（以html页面为起始位置写路径）
+			"Img":"./js/M_select/up4.png",
+			"Img2":"./js/M_select/down1.png",
+			"radius":"10px",
+			"Title":"--下拉款的标题02--",
+			"inputName":"selected_value",
+			// 默认选中的值（参数值写需要选中的select的value值）
+			"selected":"03",
+			Succee:function(){
+				alert("选择下拉之后的弹窗");
+			}
+		});
+	});
+</script>
+</html>

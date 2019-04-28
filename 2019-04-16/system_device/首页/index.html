@@ -1,529 +1,419 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <base href="<#if Application.domain?exists>${Application.domain}</#if>" />
-    <meta charset="utf-8" />
-    <meta http-equiv="Expires" content="0" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Cache-control" content="no-cache" />
-    <meta http-equiv="Cache" content="no-cache" />
-    <link rel="shortcut icon" href="images/favicon.png" />
-    <link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/tab.css" />
-    <link rel="stylesheet" href="css/monitor.css" />
-    <link rel="stylesheet" href="css/device.css" />
-    <title>SSL VPN超算及协议解析中心</title>
-  </head>
-  <body>
-    <div class="tab half matter">
-      <div class="wrap-r">
-        <div class="title ue-clear">
-          <h2 class="title-list">
-            <ul class="ue-clear">
-              <li class="tab_current">
-                <a href="javascript:;">系统运行状态</a>
-              </li>
-            </ul>
-          </h2>
-          <a href="javascript:void(0);" class="more">&nbsp;</a>
-        </div>
-        <div class="content">
-          <div class="matter-content tab_current ue-clear">
-            <div class="ue-clear">
-              <div class="hardware">
-                <div class="hardware-item">
-                  <div class="hardware-item-logo">
-                    <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
-                    <div>
-                      <img
-                        class="hardware-item-img"
-                        src="images/monitor/fpga.png"
-                        alt=""
-                      />
-                      <span
-                        style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;"
-                        >···</span
-                      >
-                      <img
-                        class="hardware-item-logo-collect"
-                        src="icon/collect.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="hardware-item-name">
-                    数据采集系统
-                  </div>
-                  <div class="hardware-item-time-back">
-                    <div class="hardware-item-time">
-                      已运行10小时
-                      <div
-                        class="device-item-content-cell-name"
-                        style="margin-left:0.6rem"
-                      >
-                        运行状态:
-                      </div>
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div class="device-runtime-item" style="margin-top:3px">
-                        <img
-                          src="icon/green-dot.png"
-                          width="20px"
-                          height="20px"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="hardware-item">
-                  <div class="hardware-item-logo">
-                    <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
-                    <div>
-                      <img
-                        class="hardware-item-img"
-                        src="images/monitor/fpga.png"
-                        alt=""
-                      />
-                      <span
-                        style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;"
-                        >···</span
-                      >
-                      <img
-                        class="hardware-item-logo-gernerate"
-                        src="icon/gernerate.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="hardware-item-name">
-                    大数生成系统
-                  </div>
-                  <div class="hardware-item-time-back">
-                    <div class="hardware-item-time">
-                      已运行10小时
-                      <div
-                        class="device-item-content-cell-name"
-                        style="margin-left:0.6rem"
-                      >
-                        运行状态:
-                      </div>
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div class="device-runtime-item" style="margin-top:3px">
-                        <img
-                          src="icon/green-dot.png"
-                          width="20px"
-                          height="20px"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="hardware-item">
-                  <div class="hardware-item-logo">
-                    <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
-                    <div>
-                      <img
-                        class="hardware-item-img"
-                        src="images/monitor/fpga.png"
-                        alt=""
-                      />
-                      <span
-                        style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;"
-                        >···</span
-                      >
-                      <img
-                        class="hardware-item-logo-collision"
-                        src="icon/collision.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="hardware-item-name">
-                    大数碰撞系统
-                  </div>
-                  <div class="hardware-item-time-back">
-                    <div class="hardware-item-time">
-                      已运行10小时
-                      <div
-                        class="device-item-content-cell-name"
-                        style="margin-left:0.6rem"
-                      >
-                        运行状态:
-                      </div>
 
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div class="device-runtime-item" style="margin-top:3px">
-                        <img
-                          src="icon/green-dot.png"
-                          width="20px"
-                          height="20px"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+<head>
+  <base href="<#if Application.domain?exists>${Application.domain}</#if>" />
+  <meta charset="utf-8" />
+  <meta http-equiv="Expires" content="0" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-control" content="no-cache" />
+  <meta http-equiv="Cache" content="no-cache" />
+  <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="js/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/tab.css" />
+  <link rel="stylesheet" href="css/monitor.css" />
+  <link rel="stylesheet" href="css/device.css" />
+  <title>SSL VPN超算及协议解析中心</title>
+</head>
 
-                <div class="hardware-item">
-                  <div class="hardware-item-logo">
-                    <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
-                    <div>
-                      <img
-                        class="hardware-item-img"
-                        src="images/monitor/fpga.png"
-                        alt=""
-                      />
-                      <span
-                        style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;"
-                        >···</span
-                      >
-                      <img
-                        class="hardware-item-logo-partition"
-                        src="icon/partition.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="hardware-item-name">
-                    SAGE超算系统
-                  </div>
-                  <div class="hardware-item-time-back">
-                    <div class="hardware-item-time">
-                      已运行10小时
-                      <div
-                        class="device-item-content-cell-name"
-                        style="margin-left:0.6rem"
-                      >
-                        运行状态:
-                      </div>
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div class="device-runtime-item" style="margin-top:3px">
-                        <img
-                          src="icon/green-dot.png"
-                          width="20px"
-                          height="20px"
-                          alt=""
-                        />
-                      </div>
-                    </div>
+<body>
+  <div class="tab half matter">
+    <div class="wrap-r">
+      <div class="title ue-clear">
+        <h2 class="title-list">
+          <ul class="ue-clear">
+            <li class="tab_current">
+              <a href="javascript:;">系统运行状态</a>
+            </li>
+          </ul>
+        </h2>
+        <a href="javascript:void(0);" class="more">&nbsp;</a>
+      </div>
+      <div class="content">
+        <div class="matter-content tab_current ue-clear">
+          <div class="ue-clear">
+            <div class="hardware">
+              <div class="hardware-item">
+                <div class="hardware-item-logo">
+                  <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
+                  <div>
+                    <img class="hardware-item-img" src="images/monitor/fpga.png" alt="" />
+                    <span style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;">···</span>
+                    <img class="hardware-item-logo-collect" src="icon/collect.png" />
                   </div>
                 </div>
-                <div class="hardware-item">
-                  <div class="hardware-item-logo">
-                    <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
-                    <div>
-                      <img
-                        class="hardware-item-img"
-                        src="images/monitor/fpga.png"
-                        alt=""
-                      />
-                      <span
-                        style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;"
-                        >···</span
-                      >
-                      <img
-                        class="hardware-item-logo-partition"
-                        src="icon/partition.png"
-                      />
-                    </div>
-                  </div>
-                  <div class="hardware-item-name">
-                    NFS超算系统
-                  </div>
-                  <div class="hardware-item-time-back">
-                    <div class="hardware-item-time">
-                      已运行10小时
-                      <div
-                        class="device-item-content-cell-name"
-                        style="margin-left:0.6rem"
-                      >
-                        运行状态:
-                      </div>
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div class="device-runtime-item" style="margin-top:3px">
-                        <img
-                          src="icon/green-dot.png"
-                          width="20px"
-                          height="20px"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
+                <div class="hardware-item-name">
+                  数据采集系统
                 </div>
-                <div class="hardware-item">
-                  <div class="hardware-item-logo">
-                    <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
-                    <div>
-                      <img
-                        class="hardware-item-img"
-                        src="images/monitor/fpga.png"
-                        alt=""
-                      />
-                      <span
-                        style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;"
-                        >···</span
-                      >
-                      <img
-                        class="hardware-item-logo-decode"
-                        src="icon/decode.png"
-                      />
+                <div class="hardware-item-time-back">
+                  <div class="hardware-item-time">
+                    已运行10小时
+                    <div class="device-item-content-cell-name" style="margin-left:0.6rem">
+                      运行状态:
                     </div>
-                  </div>
-                  <div class="hardware-item-name">
-                    协议解析系统
-                  </div>
-                  <div class="hardware-item-time-back">
-                    <div class="hardware-item-time">
-                      已运行10小时
-                      <div
-                        class="device-item-content-cell-name"
-                        style="margin-left:0.6rem"
-                      >
-                        运行状态:
-                      </div>
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div class="device-runtime-item" style="margin-top:3px">
-                        <img
-                          src="icon/green-dot.png"
-                          width="20px"
-                          height="20px"
-                          alt=""
-                        />
-                      </div>
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="margin-top:3px">
+                      <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="device-footer">
-                <div class="device-runtime-footer">
-                  <img
-                    src="icon/green-dot.png"
-                    width="20px"
-                    height="20px"
-                    alt=""
-                  />
+              <div class="hardware-item">
+                <div class="hardware-item-logo">
+                  <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
+                  <div>
+                    <img class="hardware-item-img" src="images/monitor/fpga.png" alt="" />
+                    <span style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;">···</span>
+                    <img class="hardware-item-logo-gernerate" src="icon/gernerate.png" />
+                  </div>
                 </div>
-                <div style="margin-bottom: 1rem;display:inline-block">
-                  ：正在运行
+                <div class="hardware-item-name">
+                  大数生成系统
                 </div>
-                <div class="device-runtime-footer">
-                  <img
-                    src="icon/red-dot.png"
-                    width="20px"
-                    height="20px"
-                    alt=""
-                  />
+                <div class="hardware-item-time-back">
+                  <div class="hardware-item-time">
+                    已运行10小时
+                    <div class="device-item-content-cell-name" style="margin-left:0.6rem">
+                      运行状态:
+                    </div>
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="margin-top:3px">
+                      <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
+                    </div>
+                  </div>
                 </div>
-                ：停止运行
               </div>
+              <div class="hardware-item">
+                <div class="hardware-item-logo">
+                  <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
+                  <div>
+                    <img class="hardware-item-img" src="images/monitor/fpga.png" alt="" />
+                    <span style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;">···</span>
+                    <img class="hardware-item-logo-collision" src="icon/collision.png" />
+                  </div>
+                </div>
+                <div class="hardware-item-name">
+                  大数碰撞系统
+                </div>
+                <div class="hardware-item-time-back">
+                  <div class="hardware-item-time">
+                    已运行10小时
+                    <div class="device-item-content-cell-name" style="margin-left:0.6rem">
+                      运行状态:
+                    </div>
+
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="margin-top:3px">
+                      <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hardware-item">
+                <div class="hardware-item-logo">
+                  <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
+                  <div>
+                    <img class="hardware-item-img" src="images/monitor/fpga.png" alt="" />
+                    <span style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;">···</span>
+                    <img class="hardware-item-logo-partition" src="icon/partition.png" />
+                  </div>
+                </div>
+                <div class="hardware-item-name">
+                  SAGE超算系统
+                </div>
+                <div class="hardware-item-time-back">
+                  <div class="hardware-item-time">
+                    已运行10小时
+                    <div class="device-item-content-cell-name" style="margin-left:0.6rem">
+                      运行状态:
+                    </div>
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="margin-top:3px">
+                      <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hardware-item">
+                <div class="hardware-item-logo">
+                  <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
+                  <div>
+                    <img class="hardware-item-img" src="images/monitor/fpga.png" alt="" />
+                    <span style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;">···</span>
+                    <img class="hardware-item-logo-partition" src="icon/partition.png" />
+                  </div>
+                </div>
+                <div class="hardware-item-name">
+                  NFS超算系统
+                </div>
+                <div class="hardware-item-time-back">
+                  <div class="hardware-item-time">
+                    已运行10小时
+                    <div class="device-item-content-cell-name" style="margin-left:0.6rem">
+                      运行状态:
+                    </div>
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="margin-top:3px">
+                      <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="hardware-item">
+                <div class="hardware-item-logo">
+                  <!-- <p style="color:#01c1de;font-size:3rem;">1</p> -->
+                  <div>
+                    <img class="hardware-item-img" src="images/monitor/fpga.png" alt="" />
+                    <span style="color:#01c1de;font-size: 48px;display:inline-block;vertical-align: middle;">···</span>
+                    <img class="hardware-item-logo-decode" src="icon/decode.png" />
+                  </div>
+                </div>
+                <div class="hardware-item-name">
+                  协议解析系统
+                </div>
+                <div class="hardware-item-time-back">
+                  <div class="hardware-item-time">
+                    已运行10小时
+                    <div class="device-item-content-cell-name" style="margin-left:0.6rem">
+                      运行状态:
+                    </div>
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="margin-top:3px">
+                      <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="device-footer">
+              <div class="device-runtime-footer">
+                <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
+              </div>
+              <div style="margin-bottom: 1rem;display:inline-block">
+                ：正在运行
+              </div>
+              <div class="device-runtime-footer">
+                <img src="icon/red-dot.png" width="20px" height="20px" alt="" />
+              </div>
+              ：停止运行
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="tab half matter">
-      <div class="wrap-r">
-        <div class="title ue-clear">
-          <h2 class="title-list">
-            <ul class="ue-clear">
-              <li class="tab_current">
-                <a href="javascript:;">设备运行状态</a>
-              </li>
-            </ul>
-          </h2>
-          <a href="javascript:void(0);" class="more">&nbsp;</a>
+  </div>
+  <div class="tab half matter">
+    <div class="wrap-r">
+      <div class="title ue-clear">
+        <h2 class="title-list">
+          <ul class="ue-clear">
+            <li class="tab_current">
+              <a href="javascript:;">设备运行状态</a>
+            </li>
+          </ul>
+        </h2>
+        <a href="javascript:void(0);" class="more">&nbsp;</a>
+      </div>
+      <div class="content">
+        <div class="matter-content tab_current ue-clear">
+          <div class="ue-clear">
+            <div class="graphics">
+              <div class="device">
+                <div class="device-1 device-item">
+                  <div class="device-item-title" style="padding-top: 0.3rem;vertical-align: middle;flex:0.5;">
+                    设备一
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;flex:0.8;">
+                    <div>
+                      <div class="device-item-content-cell-icon">
+                        <img src="icon/server.png" height="25rem" alt="" />
+                      </div>
+                      <div class="device-item-content-cell-name">
+                        名称:
+                      </div>
+                      <div class="device-item-content-cell-content">
+                        主机
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;padding-top:0.63rem;flex:1;">
+                    <div class="device-item-content-cell-name" style="margin-left:-0.1rem">
+                      运行状态:
+                    </div>
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="padding-top:0.1rem">
+                      <img src="icon/red-dot.png" width="20px" height="20px" alt="" />
+                    </div>
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;flex:3;margin-left:-0.9rem">
+                    <div>
+                      <div class="device-item-content-cell-name">
+                        该设备主板数量：
+                      </div>
+                      <div class="device-item-content-cell-icon">
+                        <img src="icon/MotherBoard.png" height="25rem" alt="" />
+                        <img src="icon/MotherBoard.png" height="25rem" alt="" />
+                        <img src="icon/MotherBoard.png" height="25rem" alt="" />
+                        <img src="icon/MotherBoard.png" height="25rem" alt="" />
+                      </div>
+                      <div class="device-item-content-cell-name">
+                        （共四块主板）
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;flex:1.5;">
+                    <!-- <div>
+          <div class="device-item-content-cell-icon">
+            <img src="icon/ram.png" height="25rem" alt="" />
+          </div>
+          <div class="device-item-content-cell-name">
+            内存
+          </div>
+        </div> -->
+                  </div>
+                  <!-- 
+      <div
+        style="background-color: white;padding:0.5rem;padding-right: 0.6rem;border-left:1px black solid;flex:1;"
+      >
+        <div>
+          <div class="device-item-content-cell-icon">
+            <img src="icon/harddisk.png" height="25rem" alt="" />
+          </div>
+          <div class="device-item-content-cell-name">
+            硬盘
+          </div>
         </div>
-        <div class="content">
-          <div class="matter-content tab_current ue-clear">
-            <div class="ue-clear">
-              <div class="graphics">
-                <div class="device">
-                  <div id="device-1" class="device-item">
-                    <div
-                      class="device-item-title"
-                      style="padding-top: 0.3rem;vertical-align: middle;"
-                    >
-                      设备一
+      </div> -->
+                </div>
+                <div class="device-1-content"
+                  style="background: #01c1de;flex: 0 0 calc(100%);margin: 0.5rem;font-size: 0.5rem;border: 1px lightgray solid;margin-left: 1rem;display: none;flex:11;flex-direction: column;margin-top:-0.5rem">
+                  <!-------------------从这里开始------------------------>
+                  <div class="board-1" style="display: flex;flex:1">
+                    <div class="device-item-title"
+                      style="background:#F7F7F7;color:black;padding-top: 0.25rem;padding-bottom:0.25rem;margin-top: 0;flex:0.69;border-right:1px lightgray solid;">
+                      主板一
                     </div>
 
-                    <div
-                      style="background-color: white;padding:0.5rem;padding-right: 0.6rem;"
-                    >
-                      <div>
+                    <div class="device-item-content">
+                      <!-- <div class="tooltip"> -->
+
+                      <div class="board-1-cpu device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
                         <div class="device-item-content-cell-icon">
-                          <img src="icon/server.png" height="25rem" alt="" />
+                          <img src="icon/cpu.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content" style="margin-left: 1.7rem;margin-right:1.7rem">
+                          i7
+                        </div>
+
+                        <!--修改---------------------------------------------------->
+                        <!-- 核心数量：
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div> -->
+                        <!-- ------------------------------------------------------- -->
+                        <!--修改---------------------------------------------------->
+                        <div class="device-1-cpu" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              CPU主频：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 1.85rem;font-weight: bold">4GHz
+                              </span>
+                              核心数：&nbsp;
+                              <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
+                              </span>
+                            </div>
+
+                            <div style="margin-left:1rem;color:#373C38">
+                              最大睿频：&nbsp;
+                              <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
+                              </span>
+                              线程数：&nbsp;
+                              <span class="threads" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">8
+                              </span>
+                            </div>
+                          </div>
+                          <div class="cpucount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem;">
+                            此主板总共使用了：1个cpu
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="inner">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+
+                      <div class="board-1-mem device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="25rem" alt="" />
                         </div>
                         <div class="device-item-content-cell-name">
-                          名称:
+                          内存总大小:
                         </div>
                         <div class="device-item-content-cell-content">
-                          主机
+                          20G
                         </div>
-                      </div>
-                    </div>
-
-                    <div
-                      style="background-color: white;padding:0.5rem;padding-right: 0.6rem;padding-top:0.63rem;"
-                    >
-                      <div
-                        class="device-item-content-cell-name"
-                        style="margin-left:0.6rem"
-                      >
-                        运行状态:
-                      </div>
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div
-                        class="device-runtime-item"
-                        style="padding-top:0.1rem"
-                      >
-                        <img
-                          src="icon/red-dot.png"
-                          width="20px"
-                          height="20px"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                    
-                    <div style="display: flex;flex:11;flex-direction: column;">
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-1" style="display: flex;flex:1">
-                        <div
-                          class="device-item-title"
-                          style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4"
-                        >
-                          主板一
-                        </div>
-
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-
-                          <div
-                            class="board-1-cpu device-item-content-cell"
-                            style="background-color: #f7f7f7;"
-                          >
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
+                        <div class="device-1-mem" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
                             </div>
-                            <div
-                              class="device-item-content-cell-name"
-                              style="margin-left: -0.001rem;margin-right:0.1rem"
-                            >
-                              CPU:
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
                             </div>
-                            <div
-                              class="device-item-content-cell-content"
-                              style="margin-left: 1.7rem;margin-right:1.7rem"
-                            >
-                              i7
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽三：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
+                                1600（KVR16N11/4)</span>
                             </div>
-                            
-                            
-                            <!--修改---------------------------------------------------->
-                            核心数量：
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <!-- ------------------------------------------------------- -->
-                            <!--修改---------------------------------------------------->
-                            <div class="device-1-cpu" style="display:none">
-                              <div style="display:flex;flex-direction: column;background:white;box-shadow: 0 0 1px black;border-radius:6px 0 0 6px;margin-top:0.3rem;border-left:2px solid black;margin-left:0.8rem;padding-top: 0.5rem;padding-bottom: 0.5rem;">
-                                <div style="margin-left:1rem;color:#373C38">
-                                  CPU主频：&nbsp;
-                                  <span
-                                    class="cores"
-                                    style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold"
-                                    >4GHz
-                                  </span>
-                                  核心数：&nbsp;
-                                  <span
-                                    class="cores"
-                                    style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold"
-                                    >4
-                                  </span>
-                                </div>
-
-                                <div style="margin-left:1rem;color:#373C38">
-                                  最大睿频：&nbsp;
-                                  <span
-                                    class="cores"
-                                    style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold"
-                                    >5GHz
-                                  </span>
-                                  线程数：&nbsp;
-                                  <span
-                                    class="threads"
-                                    style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold"
-                                    >8
-                                  </span>
-                                </div>
-                                
-                              </div>
-                              <div class="cpucount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem;">
-                                  此主板总共使用了：1个cpu
-                                </div>
+                            <div style="margin-left:1rem;color:#373C38;">
+                              插槽四：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
                             </div>
                           </div>
-                          <!-- <div class="inner">
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
+                            此主板总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="inner device-item-content-cell">
                         <ul>
                           <li>Item 1</li>
                         </ul>
                       </div> -->
 
-                          <div
-                            class="board-1-mem device-item-content-cell"
-                            style="background-color: #f7f7f7;"
-                          >
-                          
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-1-mem" style="display:none;">
-                              <div style="vertical-align:middle;display:flex;flex-direction: column;background:white;box-shadow: 0 0 1px black;border-radius:6px 0 0 6px;margin-top:0.3rem;border-left:2px solid black;margin-left:0.8rem;padding-top: 0.5rem;padding-bottom: 0.5rem;">
-                                <div style="margin-left:1rem;color:#373C38">
-                                  插槽一：&nbsp;
-                                  <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                                </div>
-                                <div style="margin-left:1rem;color:#373C38">
-                                  插槽二：&nbsp;
-                                  <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                                </div>
-                                <div style="margin-left:1rem;color:#373C38">
-                                  插槽三：&nbsp;
-                                  <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3 1600（KVR16N11/4)
-                                </div>
-                                <div style="margin-left:1rem;color:#373C38;">
-                                  插槽四：&nbsp;
-                                  <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                                </div>
-                                
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                  此主板总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                                </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner device-item-content-cell">
-                        <ul>
-                          <li>Item 1</li>
-                        </ul>
-                      </div> -->
-
-                          <!-- <div class="device-item-content-cell">
+                      <!-- <div class="device-item-content-cell">
                         <div class="device-item-content-cell-icon">
                           <img src="icon/gdcard.png" height="25rem" alt="" />
                         </div>
@@ -535,1133 +425,746 @@
                         </div>
                       </div> -->
 
-                          <div
-                            class="board-1-disk device-item-content-cell"
-                            style="background-color: #f7f7f7;border-bottom: 0;"
-                          >
-                          
-                            <div class="device-item-content-cell-icon">
-                              <img
-                                src="icon/harddisk.png"
-                                height="25rem"
-                                alt=""
-                              />
+                      <div class="board-1-disk device-item-content-cell"
+                        style="background-color: #f7f7f7;border-bottom: 0;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘总大小:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          2750G
+                        </div>
+                        <div class="device-1-disk" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <!-- SATA -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
+                                SATA3 蓝盘（WD10EZEX）</span>
                             </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
                             </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
+                            <!-- m.2 -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
+                              <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星
+                                970 EVO NVMe M.2系列 存储容量:250GB</span>
                             </div>
-                              <div class="device-1-disk" style="display:none;padding-left:-3rem;">
-                                <div style="display:flex;flex-direction: column;background:white;box-shadow: 0 0 1px black;border-radius:6px 0 0 6px;margin-top:0.3rem;border-left:2px solid black;margin-left:0.8rem;padding-top: 0.5rem;padding-bottom: 0.5rem;">
-                                  <!-- SATA -->
-                                  <div style="margin-left:1rem;color:#373C38">
-                                    SATA插槽一：&nbsp;
-                                    <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB SATA3 蓝盘（WD10EZEX）
-                                  </div>
-                                  <div style="margin-left:1rem;color:#373C38">
-                                    SATA插槽二：&nbsp;
-                                    <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                                  </div>
-                                  <!-- m.2 -->
-                                  <div style="margin-left:1rem;color:#373C38">
-                                    M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                    <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe M.2系列 存储容量:250GB
-                                  </div>
-                                  <div style="margin-left:1rem;color:#373C38">
-                                    M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                    <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                                  </div>
-                                  <!-- pcie -->
-                                  <div style="margin-left:1rem;color:#373C38">
-                                    PCI-E插槽一：&nbsp;
-                                    <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                                  </div>
-                                  <div style="margin-left:1rem;color:#373C38">
-                                    PCI-E插槽二：&nbsp;
-                                    <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB） 存储容量:1.5TB
-                                  </div>
-                                  
-                                </div>
-                                <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.5rem;margin-left: 2rem;margin-bottom: 1rem;">
-                                  此主板总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                                </div>
-                              </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <!-- pcie -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB）
+                                存储容量:1.5TB</span>
+                            </div>
                           </div>
-                          <!-- ------------------------------------------------------- -->
-                          <!-- <div class="inner">
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.5rem;margin-left: 2rem;margin-bottom: 1rem;">
+                            此主板总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ------------------------------------------------------- -->
+                      <!-- <div class="inner">
                         <ul>
                           <li>Item 1</li>
                         </ul>
                       </div> -->
-                        </div>
-                      </div>
-                      <!-------------------到这里结束------------------------>
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-2" style="display: flex;flex:1;border-top:1px lightgray solid">
-                        <div class="device-item-title " style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4;">
-                          主板二
-                        </div>
-                      
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-                      
-                          <div class="board-2-cpu device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
-                              CPU:
-                            </div>
-                            <div class="device-item-content-cell-content" style="margin-left: 1.7rem">
-                              i7
-                            </div>
-                            <div class="device-2-cpu" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                CPU主频：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">4GHz
-                                </span>
-                                核心数:&nbsp;
-                                <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
-                                </span>
-                              </div>
-                      
-                              <div style="margin-left:2rem;color:#00525E">
-                                最大睿频：&nbsp;
-                                <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
-                                </span>
-                                线程数:&nbsp;<span class="threads" style="margin-left:1rem;margin-right: 0.1rem;font-weight: bold">8</span>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                      
-                          <div class="board-2-mem device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-2-mem" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽三：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
-                                  1600（KVR16N11/4)
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E;">
-                                插槽四：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner device-item-content-cell">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                      
-                          <!-- <div class="device-item-content-cell">
-                                              <div class="device-item-content-cell-icon">
-                                                <img src="icon/gdcard.png" height="25rem" alt="" />
-                                              </div>
-                                              <div class="device-item-content-cell-name">
-                                                显卡:
-                                              </div>
-                                              <div class="device-item-content-cell-content">
-                                                RTX 2080Ti
-                                              </div>
-                                            </div> -->
-                      
-                          <div class="board-2-disk device-item-content-cell" style="background-color: #f7f7f7;border-bottom: 0;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/harddisk.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
-                            </div>
-                            <div class="device-2-disk" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB SATA3
-                                  蓝盘（WD10EZEX）
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe M.2系列
-                                  存储容量:250GB
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                PCI-E插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB）
-                                  存储容量:1.5TB
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                        </div>
-                      </div>
-                      <!-------------------到这里结束--------------------->
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-3" style="display: flex;flex:1;border-top:1px lightgray solid">
-                        <div class="device-item-title " style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4;">
-                          主板三
-                        </div>
-                      
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-                      
-                          <div class="board-3-cpu device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
-                              CPU:
-                            </div>
-                            <div class="device-item-content-cell-content" style="margin-left: 1.7rem">
-                              i7
-                            </div>
-                            <div class="device-3-cpu" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                CPU主频：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">4GHz
-                                </span>
-                                核心数:&nbsp;
-                                <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
-                                </span>
-                              </div>
-                      
-                              <div style="margin-left:2rem;color:#00525E">
-                                最大睿频：&nbsp;
-                                <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
-                                </span>
-                                线程数:&nbsp;<span class="threads" style="margin-left:1rem;margin-right: 0.1rem;font-weight: bold">8</span>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                      
-                          <div class="board-3-mem device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-3-mem" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽三：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
-                                  1600（KVR16N11/4)
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E;">
-                                插槽四：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner device-item-content-cell">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                      
-                          <!-- <div class="device-item-content-cell">
-                                              <div class="device-item-content-cell-icon">
-                                                <img src="icon/gdcard.png" height="25rem" alt="" />
-                                              </div>
-                                              <div class="device-item-content-cell-name">
-                                                显卡:
-                                              </div>
-                                              <div class="device-item-content-cell-content">
-                                                RTX 2080Ti
-                                              </div>
-                                            </div> -->
-                      
-                          <div class="board-3-disk device-item-content-cell" style="background-color: #f7f7f7;border-bottom: 0;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/harddisk.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
-                            </div>
-                            <div class="device-3-disk" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB SATA3
-                                  蓝盘（WD10EZEX）
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe M.2系列
-                                  存储容量:250GB
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                PCI-E插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB）
-                                  存储容量:1.5TB
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                        </div>
-                      </div>
-                      <!-------------------到这里结束--------------------->
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-4" style="display: flex;flex:1;border-top:1px lightgray solid">
-                        <div class="device-item-title " style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4;">
-                          主板四
-                        </div>
-                      
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-                      
-                          <div class="board-4-cpu device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
-                              CPU:
-                            </div>
-                            <div class="device-item-content-cell-content" style="margin-left: 1.7rem">
-                              i7
-                            </div>
-                            <div class="device-4-cpu" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                CPU主频：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">4GHz
-                                </span>
-                                核心数:&nbsp;
-                                <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
-                                </span>
-                              </div>
-                      
-                              <div style="margin-left:2rem;color:#00525E">
-                                最大睿频：&nbsp;
-                                <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
-                                </span>
-                                线程数:&nbsp;<span class="threads" style="margin-left:1rem;margin-right: 0.1rem;font-weight: bold">8</span>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                      
-                          <div class="board-4-mem device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-4-mem" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4 2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽三：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
-                                  1600（KVR16N11/4)
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E;">
-                                插槽四：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner device-item-content-cell">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                      
-                          <!-- <div class="device-item-content-cell">
-                                              <div class="device-item-content-cell-icon">
-                                                <img src="icon/gdcard.png" height="25rem" alt="" />
-                                              </div>
-                                              <div class="device-item-content-cell-name">
-                                                显卡:
-                                              </div>
-                                              <div class="device-item-content-cell-content">
-                                                RTX 2080Ti
-                                              </div>
-                                            </div> -->
-                      
-                          <div class="board-4-disk device-item-content-cell" style="background-color: #f7f7f7;border-bottom: 0;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/harddisk.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
-                            </div>
-                            <div class="device-4-disk" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB SATA3
-                                  蓝盘（WD10EZEX）
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe M.2系列
-                                  存储容量:250GB
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                PCI-E插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB）
-                                  存储容量:1.5TB
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                              <ul>
-                                                <li>Item 1</li>
-                                              </ul>
-                                            </div> -->
-                        </div>
-                      </div>
-                      <!-------------------到这里结束--------------------->
-                    </div> 
-                  </div>
-                  <div id="device-2" class="device-item">
-                    <div class="device-item-title" style="padding-top: 0.3rem;vertical-align: middle;">
-                      设备二
                     </div>
-                  
-                    <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;">
-                      <div>
+                  </div>
+                  <!-------------------到这里结束------------------------>
+                  <!-------------------从这里开始------------------------>
+                  <div class="board-2" style="display: flex;flex:1;border-top:1px lightgray solid">
+                    <div class="device-item-title "
+                      style="background:#F7F7F7;color:black;padding-top: 0.25rem;padding-bottom:0.25rem;margin-top: 0;flex:0.69;border-right:1px lightgray solid;">
+                      主板二
+                    </div>
+
+                    <div class="device-item-content">
+                      <!-- <div class="tooltip"> -->
+
+                      <div class="board-2-cpu device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
                         <div class="device-item-content-cell-icon">
-                          <img src="icon/server.png" height="25rem" alt="" />
+                          <img src="icon/cpu.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content" style="margin-left: 1.7rem;margin-right:1.7rem">
+                          i7
+                        </div>
+
+                        <!--修改---------------------------------------------------->
+                        <!-- 核心数量：
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div> -->
+                        <!-- ------------------------------------------------------- -->
+                        <!--修改---------------------------------------------------->
+                        <div class="device-2-cpu" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              CPU主频：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 1.85rem;font-weight: bold">4GHz
+                              </span>
+                              核心数：&nbsp;
+                              <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
+                              </span>
+                            </div>
+
+                            <div style="margin-left:1rem;color:#373C38">
+                              最大睿频：&nbsp;
+                              <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
+                              </span>
+                              线程数：&nbsp;
+                              <span class="threads" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">8
+                              </span>
+                            </div>
+                          </div>
+                          <div class="cpucount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem;">
+                            此主板总共使用了：1个cpu
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="inner">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+
+                      <div class="board-2-mem device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="25rem" alt="" />
                         </div>
                         <div class="device-item-content-cell-name">
-                          名称:
+                          内存总大小:
                         </div>
                         <div class="device-item-content-cell-content">
-                          主机
+                          20G
+                        </div>
+                        <div class="device-2-mem" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽三：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
+                                1600（KVR16N11/4)</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38;">
+                              插槽四：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                          </div>
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
+                            此主板总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  
-                    <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;padding-top:0.63rem;">
-                      <div class="device-item-content-cell-name" style="margin-left:0.6rem">
-                        运行状态:
-                      </div>
-                      <!-- <div class="device-item-content-cell-content"> -->
-                      <div class="device-runtime-item" style="padding-top:0.1rem">
-                        <img src="icon/red-dot.png" width="20px" height="20px" alt="" />
-                      </div>
-                    </div>
-                  
-                    <div style="display: flex;flex:11;flex-direction: column;">
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-1" style="display: flex;flex:1">
-                        <div class="device-item-title" style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4">
-                          主板一
+                      <!-- <div class="inner device-item-content-cell">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+
+                      <!-- <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="25rem" alt="" />
                         </div>
-                  
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-                  
-                          <div class="board-1-cpu device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div> -->
+
+                      <div class="board-2-disk device-item-content-cell"
+                        style="background-color: #f7f7f7;border-bottom: 0;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘总大小:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          2750G
+                        </div>
+                        <div class="device-2-disk" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <!-- SATA -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
+                                SATA3 蓝盘（WD10EZEX）</span>
                             </div>
-                            <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
-                              CPU:
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
                             </div>
-                            <div class="device-item-content-cell-content" style="margin-left: 1.7rem">
-                              i7
+                            <!-- m.2 -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
+                              <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星
+                                970 EVO NVMe M.2系列 存储容量:250GB</span>
                             </div>
-                            <div class="device-1-cpu" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                CPU主频：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">4GHz
-                                </span>
-                                核心数:&nbsp;
-                                <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
-                                </span>
-                              </div>
-                  
-                              <div style="margin-left:2rem;color:#00525E">
-                                最大睿频：&nbsp;
-                                <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
-                                </span>
-                                线程数:&nbsp;<span class="threads" style="margin-left:1rem;margin-right: 0.1rem;font-weight: bold">8</span>
-                              </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
                             </div>
-                          </div>
-                          <!-- <div class="inner">
-                                          <ul>
-                                            <li>Item 1</li>
-                                          </ul>
-                                        </div> -->
-                  
-                          <div class="board-1-mem device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
+                            <!-- pcie -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
                             </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-1-mem" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽三：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
-                                  1600（KVR16N11/4)
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E;">
-                                插槽四：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                              </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB）
+                                存储容量:1.5TB</span>
                             </div>
                           </div>
-                          <!-- <div class="inner device-item-content-cell">
-                                          <ul>
-                                            <li>Item 1</li>
-                                          </ul>
-                                        </div> -->
-                  
-                          <!-- <div class="device-item-content-cell">
-                                          <div class="device-item-content-cell-icon">
-                                            <img src="icon/gdcard.png" height="25rem" alt="" />
-                                          </div>
-                                          <div class="device-item-content-cell-name">
-                                            显卡:
-                                          </div>
-                                          <div class="device-item-content-cell-content">
-                                            RTX 2080Ti
-                                          </div>
-                                        </div> -->
-                  
-                          <div class="board-1-disk device-item-content-cell" style="background-color: #f7f7f7;border-bottom: 0;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/harddisk.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
-                            </div>
-                            <div class="device-1-disk" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
-                                  SATA3 蓝盘（WD10EZEX）
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe
-                                  M.2系列 存储容量:250GB
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                PCI-E插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC
-                                  P4800X（1.5TB） 存储容量:1.5TB
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                              </div>
-                            </div>
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.5rem;margin-left: 2rem;margin-bottom: 1rem;">
+                            此主板总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
                           </div>
-                          <!-- <div class="inner">
-                                          <ul>
-                                            <li>Item 1</li>
-                                          </ul>
-                                        </div> -->
                         </div>
                       </div>
-                      <!-------------------到这里结束------------------------>
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-2" style="display: flex;flex:1;border-top:1px lightgray solid">
-                        <div class="device-item-title " style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4;">
-                          主板二
-                        </div>
-                  
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-                  
-                          <div class="board-2-cpu device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
-                              CPU:
-                            </div>
-                            <div class="device-item-content-cell-content" style="margin-left: 1.7rem">
-                              i7
-                            </div>
-                            <div class="device-2-cpu" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                CPU主频：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">4GHz
-                                </span>
-                                核心数:&nbsp;
-                                <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
-                                </span>
-                              </div>
-                  
-                              <div style="margin-left:2rem;color:#00525E">
-                                最大睿频：&nbsp;
-                                <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
-                                </span>
-                                线程数:&nbsp;<span class="threads" style="margin-left:1rem;margin-right: 0.1rem;font-weight: bold">8</span>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                  
-                          <div class="board-2-mem device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-2-mem" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽三：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
-                                  1600（KVR16N11/4)
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E;">
-                                插槽四：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner device-item-content-cell">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                  
-                          <!-- <div class="device-item-content-cell">
-                                                                <div class="device-item-content-cell-icon">
-                                                                  <img src="icon/gdcard.png" height="25rem" alt="" />
-                                                                </div>
-                                                                <div class="device-item-content-cell-name">
-                                                                  显卡:
-                                                                </div>
-                                                                <div class="device-item-content-cell-content">
-                                                                  RTX 2080Ti
-                                                                </div>
-                                                              </div> -->
-                  
-                          <div class="board-2-disk device-item-content-cell" style="background-color: #f7f7f7;border-bottom: 0;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/harddisk.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
-                            </div>
-                            <div class="device-2-disk" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
-                                  SATA3
-                                  蓝盘（WD10EZEX）
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe
-                                  M.2系列
-                                  存储容量:250GB
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                PCI-E插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC
-                                  P4800X（1.5TB）
-                                  存储容量:1.5TB
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                        </div>
-                      </div>
-                      <!-------------------到这里结束--------------------->
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-3" style="display: flex;flex:1;border-top:1px lightgray solid">
-                        <div class="device-item-title " style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4;">
-                          主板三
-                        </div>
-                  
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-                  
-                          <div class="board-3-cpu device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
-                              CPU:
-                            </div>
-                            <div class="device-item-content-cell-content" style="margin-left: 1.7rem">
-                              i7
-                            </div>
-                            <div class="device-3-cpu" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                CPU主频：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">4GHz
-                                </span>
-                                核心数:&nbsp;
-                                <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
-                                </span>
-                              </div>
-                  
-                              <div style="margin-left:2rem;color:#00525E">
-                                最大睿频：&nbsp;
-                                <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
-                                </span>
-                                线程数:&nbsp;<span class="threads" style="margin-left:1rem;margin-right: 0.1rem;font-weight: bold">8</span>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                  
-                          <div class="board-3-mem device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-3-mem" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽三：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
-                                  1600（KVR16N11/4)
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E;">
-                                插槽四：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner device-item-content-cell">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                  
-                          <!-- <div class="device-item-content-cell">
-                                                                <div class="device-item-content-cell-icon">
-                                                                  <img src="icon/gdcard.png" height="25rem" alt="" />
-                                                                </div>
-                                                                <div class="device-item-content-cell-name">
-                                                                  显卡:
-                                                                </div>
-                                                                <div class="device-item-content-cell-content">
-                                                                  RTX 2080Ti
-                                                                </div>
-                                                              </div> -->
-                  
-                          <div class="board-3-disk device-item-content-cell" style="background-color: #f7f7f7;border-bottom: 0;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/harddisk.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
-                            </div>
-                            <div class="device-3-disk" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
-                                  SATA3
-                                  蓝盘（WD10EZEX）
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe
-                                  M.2系列
-                                  存储容量:250GB
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                PCI-E插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC
-                                  P4800X（1.5TB）
-                                  存储容量:1.5TB
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                        </div>
-                      </div>
-                      <!-------------------到这里结束--------------------->
-                      <!-------------------从这里开始------------------------>
-                      <div class="board-4" style="display: flex;flex:1;border-top:1px lightgray solid">
-                        <div class="device-item-title " style="background:#0094AB;padding-top: 0.5rem;margin-top: 0;flex:0.4;">
-                          主板四
-                        </div>
-                  
-                        <div class="device-item-content sortable-accordion">
-                          <!-- <div class="tooltip"> -->
-                  
-                          <div class="board-4-cpu device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/cpu.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
-                              CPU:
-                            </div>
-                            <div class="device-item-content-cell-content" style="margin-left: 1.7rem">
-                              i7
-                            </div>
-                            <div class="device-4-cpu" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                CPU主频：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">4GHz
-                                </span>
-                                核心数:&nbsp;
-                                <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
-                                </span>
-                              </div>
-                  
-                              <div style="margin-left:2rem;color:#00525E">
-                                最大睿频：&nbsp;
-                                <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
-                                </span>
-                                线程数:&nbsp;<span class="threads" style="margin-left:1rem;margin-right: 0.1rem;font-weight: bold">8</span>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                  
-                          <div class="board-4-mem device-item-content-cell" style="background-color: #f7f7f7;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/ram.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              内存总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              20G
-                            </div>
-                            <div class="device-4-mem" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                                </span>
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
-                                  2400
-                                </span>
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                插槽三：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
-                                  1600（KVR16N11/4)
-                                </span>
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E;">
-                                插槽四：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner device-item-content-cell">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                  
-                          <!-- <div class="device-item-content-cell">
-                                                                <div class="device-item-content-cell-icon">
-                                                                  <img src="icon/gdcard.png" height="25rem" alt="" />
-                                                                </div>
-                                                                <div class="device-item-content-cell-name">
-                                                                  显卡:
-                                                                </div>
-                                                                <div class="device-item-content-cell-content">
-                                                                  RTX 2080Ti
-                                                                </div>
-                                                              </div> -->
-                  
-                          <div class="board-4-disk device-item-content-cell" style="background-color: #f7f7f7;border-bottom: 0;">
-                            <div class="device-item-content-cell-icon">
-                              <img src="icon/harddisk.png" height="25rem" alt="" />
-                            </div>
-                            <div class="device-item-content-cell-name">
-                              硬盘总大小:
-                            </div>
-                            <div class="device-item-content-cell-content">
-                              2750G
-                            </div>
-                            <div class="device-4-disk" style="display:none">
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽一：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
-                                  SATA3
-                                  蓝盘（WD10EZEX）
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                SATA插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星 970 EVO NVMe
-                                  M.2系列
-                                  存储容量:250GB
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无
-                              </div>
-                              <div style="margin-left:2rem;color:#00525E">
-                                PCI-E插槽二：&nbsp;
-                                <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC
-                                  P4800X（1.5TB）
-                                  存储容量:1.5TB
-                              </div>
-                              <div class="memcount" style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
-                                总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
-                              </div>
-                            </div>
-                          </div>
-                          <!-- <div class="inner">
-                                                                <ul>
-                                                                  <li>Item 1</li>
-                                                                </ul>
-                                                              </div> -->
-                        </div>
-                      </div>
-                      <!-------------------到这里结束--------------------->
+                      <!-- ------------------------------------------------------- -->
+                      <!-- <div class="inner">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
                     </div>
                   </div>
-                  
-                  <div class="device-footer">
+                  <!-------------------到这里结束--------------------->
+                  <!-------------------从这里开始------------------------>
+                  <div class="board-3" style="display: flex;flex:1;border-top:1px lightgray solid">
+                    <div class="device-item-title "
+                      style="background:#F7F7F7;color:black;padding-top: 0.25rem;padding-bottom:0.25rem;margin-top: 0;flex:0.69;border-right:1px lightgray solid;">
+                      主板三
+                    </div>
+
+                    <div class="device-item-content">
+                      <!-- <div class="tooltip"> -->
+
+                      <div class="board-3-cpu device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/cpu.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content" style="margin-left: 1.7rem;margin-right:1.7rem">
+                          i7
+                        </div>
+
+                        <!--修改---------------------------------------------------->
+                        <!-- 核心数量：
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div> -->
+                        <!-- ------------------------------------------------------- -->
+                        <!--修改---------------------------------------------------->
+                        <div class="device-3-cpu" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              CPU主频：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 1.85rem;font-weight: bold">4GHz
+                              </span>
+                              核心数：&nbsp;
+                              <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
+                              </span>
+                            </div>
+
+                            <div style="margin-left:1rem;color:#373C38">
+                              最大睿频：&nbsp;
+                              <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
+                              </span>
+                              线程数：&nbsp;
+                              <span class="threads" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">8
+                              </span>
+                            </div>
+                          </div>
+                          <div class="cpucount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem;">
+                            此主板总共使用了：1个cpu
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="inner">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+
+                      <div class="board-3-mem device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          内存总大小:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          20G
+                        </div>
+                        <div class="device-3-mem" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽三：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
+                                1600（KVR16N11/4)</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38;">
+                              插槽四：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                          </div>
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
+                            此主板总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="inner device-item-content-cell">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+
+                      <!-- <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div> -->
+
+                      <div class="board-3-disk device-item-content-cell"
+                        style="background-color: #f7f7f7;border-bottom: 0;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘总大小:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          2750G
+                        </div>
+                        <div class="device-3-disk" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <!-- SATA -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
+                                SATA3 蓝盘（WD10EZEX）</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <!-- m.2 -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
+                              <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星
+                                970 EVO NVMe M.2系列 存储容量:250GB</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <!-- pcie -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB）
+                                存储容量:1.5TB</span>
+                            </div>
+                          </div>
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.5rem;margin-left: 2rem;margin-bottom: 1rem;">
+                            此主板总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ------------------------------------------------------- -->
+                      <!-- <div class="inner">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+                    </div>
+                  </div>
+                  <!-------------------到这里结束--------------------->
+                  <!-------------------从这里开始------------------------>
+                  <div class="board-4" style="display: flex;flex:1;border-top:1px lightgray solid">
+                    <div class="device-item-title "
+                      style="background:#F7F7F7;color:black;padding-top: 0.25rem;padding-bottom:0.25rem;margin-top: 0;flex:0.69;border-right:1px lightgray solid;">
+                      主板四
+                    </div>
+
+                    <div class="device-item-content">
+                      <!-- <div class="tooltip"> -->
+
+                      <div class="board-4-cpu device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/cpu.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name" style="margin-left: -0.001rem;margin-right:0.1rem">
+                          CPU:
+                        </div>
+                        <div class="device-item-content-cell-content" style="margin-left: 1.7rem;margin-right:1.7rem">
+                          i7
+                        </div>
+
+                        <!--修改---------------------------------------------------->
+                        <!-- 核心数量：
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div>
+                            <div class="device-item-content-cell-icon">
+                              <img src="icon/cpu.png" height="25rem" alt="" />
+                            </div> -->
+                        <!-- ------------------------------------------------------- -->
+                        <!--修改---------------------------------------------------->
+                        <div class="device-4-cpu" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              CPU主频：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 1.85rem;font-weight: bold">4GHz
+                              </span>
+                              核心数：&nbsp;
+                              <span class="cores" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">4
+                              </span>
+                            </div>
+
+                            <div style="margin-left:1rem;color:#373C38">
+                              最大睿频：&nbsp;
+                              <span class="cores" style="margin-left:-0.5rem;margin-right: 2rem;font-weight: bold">5GHz
+                              </span>
+                              线程数：&nbsp;
+                              <span class="threads" style="margin-left:0.8rem;margin-right: 0.1rem;font-weight: bold">8
+                              </span>
+                            </div>
+                          </div>
+                          <div class="cpucount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem;">
+                            此主板总共使用了：1个cpu
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="inner">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+
+                      <div class="board-4-mem device-item-content-cell"
+                        style="background-color: #f7f7f7;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/ram.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          内存总大小:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          20G
+                        </div>
+                        <div class="device-4-mem" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">影驰GAMER 8GB DDR4
+                                2400</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              插槽三：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">金士顿4GB DDR3
+                                1600（KVR16N11/4)</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38;">
+                              插槽四：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                          </div>
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.4rem;margin-left: 2rem">
+                            此主板总共使用了：2块DDR4内存 &nbsp;&nbsp;1块DDR3内存
+                          </div>
+                        </div>
+                      </div>
+                      <!-- <div class="inner device-item-content-cell">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+
+                      <!-- <div class="device-item-content-cell">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/gdcard.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          显卡:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          RTX 2080Ti
+                        </div>
+                      </div> -->
+
+                      <div class="board-4-disk device-item-content-cell"
+                        style="background-color: #f7f7f7;border-bottom: 0;padding-top: 0.25rem;padding-bottom:0.25rem">
+                        <div class="device-item-content-cell-icon">
+                          <img src="icon/harddisk.png" height="25rem" alt="" />
+                        </div>
+                        <div class="device-item-content-cell-name">
+                          硬盘总大小:
+                        </div>
+                        <div class="device-item-content-cell-content">
+                          2750G
+                        </div>
+                        <div class="device-4-disk" style="display:none;font-size:14px;">
+                          <div class="board-device-content">
+                            <!-- SATA -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">西部数据1TB 7200转 64MB
+                                SATA3 蓝盘（WD10EZEX）</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              SATA插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <!-- m.2 -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left:0.1rem">插槽一：</span>&nbsp;
+                              <span class="cores" style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">三星
+                                970 EVO NVMe M.2系列 存储容量:250GB</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              M.2&nbsp;&nbsp;<span style="margin-left: 0.1rem">插槽二：</span>&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <!-- pcie -->
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽一：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">无</span>
+                            </div>
+                            <div style="margin-left:1rem;color:#373C38">
+                              PCI-E插槽二：&nbsp;
+                              <span class="cores"
+                                style="margin-left:-0.35rem;margin-right: 2rem;font-weight: bold">Intel DC P4800X（1.5TB）
+                                存储容量:1.5TB</span>
+                            </div>
+                          </div>
+                          <div class="memcount"
+                            style="color:black;font-size: 0.6rem;margin-top: 0.5rem;margin-left: 2rem;margin-bottom: 1rem;">
+                            此主板总共使用了：1块HDD硬盘 &nbsp;&nbsp;2块SSD硬盘
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ------------------------------------------------------- -->
+                      <!-- <div class="inner">
+                        <ul>
+                          <li>Item 1</li>
+                        </ul>
+                      </div> -->
+                    </div>
+                  </div>
+
+                  <!-------------------到这里结束--------------------->
+                </div>
+                <!-----------------------------------------以下是一块主板的设备----------------------------------------------->
+                <div class="device-2 device-item">
+                  <div class="device-item-title" style="padding-top: 0.3rem;vertical-align: middle;flex:0.52;">
+                    设备二
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;flex:0.8;">
+                    <div>
+                      <div class="device-item-content-cell-icon">
+                        <img src="icon/server.png" height="25rem" alt="" />
+                      </div>
+                      <div class="device-item-content-cell-name">
+                        名称:
+                      </div>
+                      <div class="device-item-content-cell-content">
+                        主机
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;padding-top:0.63rem;flex:1;">
+                    <div class="device-item-content-cell-name">
+                      运行状态:
+                    </div>
+                    <!-- <div class="device-item-content-cell-content"> -->
+                    <div class="device-runtime-item" style="padding-top:0.1rem">
+                      <img src="icon/red-dot.png" width="20px" height="20px" alt="" />
+                    </div>
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;flex:1.5;">
+                    <div>
+                      <div class="device-item-content-cell-name">
+                        该设备主板数量：
+                      </div>
+                      <div class="device-item-content-cell-icon">
+                        <img src="icon/MotherBoard.png" height="25rem" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;flex:1;">
+                    <div>
+                      <div class="device-item-content-cell-icon">
+                        <img src="icon/cpu.png" height="25rem" alt="" />
+                      </div>
+                      <div class="device-item-content-cell-name">
+                        CPU:
+                      </div>
+                      <div class="device-item-content-cell-content">i7</div>
+                    </div>
+                  </div>
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;flex:1;">
+                    <div>
+                      <div class="device-item-content-cell-icon">
+                        <img src="icon/ram.png" height="25rem" alt="" />
+                      </div>
+                      <div class="device-item-content-cell-name">
+                        内存大小:
+                      </div>
+                      <div class="device-item-content-cell-content">20G</div>
+                    </div>
+                  </div>
+
+                  <div style="background-color: white;padding:0.5rem;padding-right: 0.6rem;flex:1;">
+                    <div>
+                      <div class="device-item-content-cell-icon">
+                        <img src="icon/harddisk.png" height="25rem" alt="" />
+                      </div>
+                      <div class="device-item-content-cell-name">
+                        硬盘大小:
+                      </div>
+                      <div class="device-item-content-cell-content">1000G</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="device-footer" style="margin-left:1rem;margin-top:1rem;">
                   <div class="device-runtime-footer">
-                    <img
-                      src="icon/green-dot.png"
-                      width="20px"
-                      height="20px"
-                      alt=""
-                    />
+                    <img src="icon/green-dot.png" width="20px" height="20px" alt="" />
                   </div>
-                  <div style="margin-bottom: 1rem;display:inline-block">
+                  <div style="margin-bottom: 0.3rem;display:inline-block">
                     ：正在运行
                   </div>
                   <div class="device-runtime-footer">
-                    <img
-                      src="icon/red-dot.png"
-                      width="20px"
-                      height="20px"
-                      alt=""
-                    />
+                    <img src="icon/red-dot.png" width="20px" height="20px" alt="" />
                   </div>
                   ：停止运行
-                  </div>
                 </div>
               </div>
             </div>
@@ -1669,119 +1172,158 @@
         </div>
       </div>
     </div>
-  </body>
-  <script type="text/javascript" src="js/jquery.js"></script>
-  <script type="text/javascript" src="js/util.js"></script>
-  <script type="text/javascript">
+  </div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript">
     // <#include "index.js" />
-  </script>
-  <script>
-    // $(document).ready(function() {
-    //   $(function() {
-      //  let board_one= document.getElementById('board-1');
-      // document.onclick=inputChange;
-      // function inputChange(e){
-      //   console.log(e.target)
-      //   e.target
-      //   // document.getElementById('device-')
-      //   // document.getElementById('')
-      //   // document.getElementById('')
-      // }
-
-
-
-      // boardnums是每个设备主板的数量和编号,五个主板则添加为数组[1,2,3,4,5]
-      var boardnums=[1,2,3,4]
+</script>
+<script>
+   // boardnums是每个设备主板的数量和编号,五个主板则添加为数组[1,2,3,4,5]
+      var boardnums = [1, 2, 3, 4];
       //prev是前一个点击的id数字
-      var prev={};
+      var prev = {};
       // devicenums是每个设备的数量和编号,三个设备则添加为数组[0,1,2]
-      var devicenums=[0,1]
+      var devicenums = [0];
       // 这里将设备1和设备2遍历后添加事件
-      devicenums.map((num)=>{
-        boardnums.map((item)=>{
-            document.getElementsByClassName("board-"+item)[num].addEventListener("click", function (e) {
-              // document.getElementById("demo").innerHTML = "Hello World";
-              console.log(e.target)
-              // console.log(document.getElementById("device-1-cpu").style)
-              if (prev[num] === item&& document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display === "none") {
-                document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display = "inline"
-                // document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.padding = "1rem"
-                document.getElementsByClassName("board-" + prev[num] + "-cpu")[num].style.paddingBottom = "1rem"
-                // document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].children.style.backgroundColor = "black"
-                document.getElementsByClassName("device-" + prev[num] + "-mem")[num].style.display = "inline"
-                // document.getElementsByClassName("device-" + prev[num] + "-mem")[num].style.padding = "1rem"
-                document.getElementsByClassName("board-" + prev[num] + "-mem")[num].style.paddingBottom = "1rem"
-                document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.display = "inline"
-                // document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.padding = "1rem"
-                document.getElementsByClassName("board-" + prev[num] + "-disk")[num].style.paddingBottom = "1rem"
-                return
+      devicenums.map(item => {
+        document
+          .getElementsByClassName("device-" + (item + 1))[0]
+          .addEventListener("click", function(e) {
+            if (
+              document.getElementsByClassName(
+                "device-" + (item + 1) + "-content"
+              ) !== undefined
+            ) {
+              var display = document.getElementsByClassName(
+                "device-" + (item + 1) + "-content"
+              )[0].style.display;
+
+              if (display === "flex") {
+                document.getElementsByClassName(
+                  "device-" + (item + 1) + "-content"
+                )[0].style.display = "none";
+                // console.log(display);
+              } else if (display === "none") {
+                document.getElementsByClassName(
+                  "device-" + (item + 1) + "-content"
+                )[0].style.display = "flex";
+                // console.log(display);
               }
-              if (prev[num] === item) {
-                document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display = "none"
-                document.getElementsByClassName("board-" + prev[num] + "-cpu")[num].style.paddingBottom = "0"
-                document.getElementsByClassName("device-" + prev[num] + "-mem")[num].style.display = "none"
-                document.getElementsByClassName("board-" + prev[num] + "-mem")[num].style.paddingBottom = "0"
-                document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.display = "none"
-                document.getElementsByClassName("board-" + prev[num] + "-disk")[num].style.paddingBottom = "0"
-                return
-              }
-              // 将先前点击隐藏
-              if(prev[num]!==undefined){
-                document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.display = "none"
-                document.getElementsByClassName("board-" + prev[num] + "-cpu")[num].style.paddingBottom = "0"
-                document.getElementsByClassName("device-" + prev[num] + "-mem")[num].style.display = "none"
-                document.getElementsByClassName("board-" + prev[num] + "-mem")[num].style.paddingBottom = "0"
-                document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.display = "none"
-                document.getElementsByClassName("board-" + prev[num] + "-disk")[num].style.paddingBottom = "0"  
-              }
-              // 将此次点击显示
-              document.getElementsByClassName("device-"+item+"-cpu")[num].style.display="inline"
-              // document.getElementsByClassName("device-" + item + "-cpu")[num].style.padding = "1rem"
-              document.getElementsByClassName("board-" + item +"-cpu")[num].style.paddingBottom = "1rem"
-              // document.getElementsByClassName("device-" + item + "-cpu")[num].children.style.backgroundColor = "black"
-              document.getElementsByClassName("device-" + item +"-mem")[num].style.display = "inline"
-              // document.getElementsByClassName("device-" + item + "-mem")[num].style.padding = "1rem"
-              document.getElementsByClassName("board-" + item +"-mem")[num].style.paddingBottom = "1rem"
-              document.getElementsByClassName("device-" + item +"-disk")[num].style.display = "inline"
-              // document.getElementsByClassName("device-" + item + "-disk")[num].style.padding = "1rem"
-              document.getElementsByClassName("board-" + item +"-disk")[num].style.paddingBottom = "1rem"
-              prev[num]=item;
+            }
           });
-        })
-      })  
-    //     $(".sortable-accordion .inner").hide();
-    //     //   $(".sortable-accordion div").slideToggle("slow");
-    //     $(".sortable-accordion #device-1-cpu").hover(function() {
-    //       $(this)
-    //         .next(".inner")
-    //         .slideToggle()
-    //         .siblings(".inner:visible")
-    //         .slideUp();
-    //       // $(this).toggleClass("current");
-    //       $(this).siblings(".inner");
-    //       // .removeClass("current");
-    //     });
-    //     $(".sortable-accordion #device-1-mem").hover(function() {
-    //       $(this)
-    //         .next(".inner")
-    //         .slideToggle()
-    //         .siblings(".inner:visible")
-    //         .slideUp();
-    //       // $(this).toggleClass("current");
-    //       $(this).siblings(".inner");
-    //       // .removeClass("current");
-    //     });
-    //     $(".sortable-accordion #device-1-disk").hover(function() {
-    //       $(this)
-    //         .next(".inner")
-    //         .slideToggle()
-    //         .siblings(".inner:visible")
-    //         .slideUp();
-    //       // $(this).toggleClass("current");
-    //       $(this).siblings(".inner");
-    //       // .removeClass("current");
-    //     });
-    //   });
-    // });
-  </script>
+      });
+
+      devicenums.map(num => {
+        boardnums.map(item => {
+          if (document.getElementsByClassName("board-" + item) !== undefined) {
+            document
+              .getElementsByClassName("board-" + item)
+              [num].addEventListener("click", function(e) {
+                // document.getElementById("demo").innerHTML = "Hello World";
+                // console.log(e.target);
+                // console.log(document.getElementById("device-1-cpu").style)
+                if (
+                  prev[num] === item &&
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-cpu"
+                  )[num].style.display === "none"
+                ) {
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-cpu"
+                  )[num].style.display = "inline";
+                  // document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].style.padding = "1rem"
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-cpu"
+                  )[num].style.paddingBottom = "1rem";
+                  // document.getElementsByClassName("device-" + prev[num] + "-cpu")[num].children.style.backgroundColor = "black"
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-mem"
+                  )[num].style.display = "inline";
+                  // document.getElementsByClassName("device-" + prev[num] + "-mem")[num].style.padding = "1rem"
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-mem"
+                  )[num].style.paddingBottom = "1rem";
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-disk"
+                  )[num].style.display = "inline";
+                  // document.getElementsByClassName("device-" + prev[num] + "-disk")[num].style.padding = "1rem"
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-disk"
+                  )[num].style.paddingBottom = "1rem";
+                  return;
+                }
+                if (prev[num] === item) {
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-cpu"
+                  )[num].style.display = "none";
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-cpu"
+                  )[num].style.paddingBottom = "0";
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-mem"
+                  )[num].style.display = "none";
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-mem"
+                  )[num].style.paddingBottom = "0";
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-disk"
+                  )[num].style.display = "none";
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-disk"
+                  )[num].style.paddingBottom = "0";
+                  return;
+                }
+                // 将先前点击隐藏
+                if (prev[num] !== undefined) {
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-cpu"
+                  )[num].style.display = "none";
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-cpu"
+                  )[num].style.paddingBottom = "0";
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-mem"
+                  )[num].style.display = "none";
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-mem"
+                  )[num].style.paddingBottom = "0";
+                  document.getElementsByClassName(
+                    "device-" + prev[num] + "-disk"
+                  )[num].style.display = "none";
+                  document.getElementsByClassName(
+                    "board-" + prev[num] + "-disk"
+                  )[num].style.paddingBottom = "0";
+                }
+                // 将此次点击显示
+                document.getElementsByClassName("device-" + item + "-cpu")[
+                  num
+                ].style.display = "inline";
+                // document.getElementsByClassName("device-" + item + "-cpu")[num].style.padding = "1rem"
+                document.getElementsByClassName("board-" + item + "-cpu")[
+                  num
+                ].style.paddingBottom = "1rem";
+                // document.getElementsByClassName("device-" + item + "-cpu")[num].children.style.backgroundColor = "black"
+                document.getElementsByClassName("device-" + item + "-mem")[
+                  num
+                ].style.display = "inline";
+                // document.getElementsByClassName("device-" + item + "-mem")[num].style.padding = "1rem"
+                document.getElementsByClassName("board-" + item + "-mem")[
+                  num
+                ].style.paddingBottom = "1rem";
+                document.getElementsByClassName("device-" + item + "-disk")[
+                  num
+                ].style.display = "inline";
+                // document.getElementsByClassName("device-" + item + "-disk")[num].style.padding = "1rem"
+                document.getElementsByClassName("board-" + item + "-disk")[
+                  num
+                ].style.paddingBottom = "1rem";
+                prev[num] = item;
+              });
+          }
+        });
+      });
+</script>
+
 </html>
