@@ -6,6 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
   </head>
+  <style>
+    .layui-layer-lan[type=dialog]{min-width:280px}
+    .layui-layer-lan .layui-layer-title{background:#4476A7;color:#fff;border:none}
+    .layui-layer-lan .layui-layer-btn{padding:5px 10px 10px;text-align:right;border-top:1px solid #E9E7E7}
+    .layui-layer-lan .layui-layer-btn a{background:#fff;border-color:#E9E7E7;color:#333}
+    .layui-layer-lan .layui-layer-btn .layui-layer-btn1{background:#C9C5C5}
+  </style>
   <body>
     <a id="modal">点击弹出</a>
 
@@ -29,7 +36,7 @@
       document.getElementById("modal").addEventListener("click", function() {
         layer.open({
           type: 1,
-          skin: "layui-layer-rim", //加上边框
+          skin: "layui-layer-lan", //加上边框
           area: ["420px", "240px"], //宽高
           title: "请选择",
           content: select,
