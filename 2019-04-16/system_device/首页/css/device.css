@@ -109,7 +109,7 @@
   /* flex-direction: row; */
   /* border-radius: 2px; */
   /* padding: 1rem 0; */
-  font-size: 0.5rem;
+  /* font-size: 0.5rem; */
   /* color: #fff; */
   border: 1px lightgray solid;
   /* margin-right: 20rem; */
@@ -151,6 +151,7 @@
   /* border-bottom: 1px lightgray solid; */
   padding-right: -2rem;
   padding-left: 1rem;
+  font-size:0.8rem;
   /* margin-right: 1rem; */
   padding-top: 0.5rem;
   margin-left: 0rem;
@@ -163,11 +164,13 @@
 .device-item-content-cell-name {
   margin-left: 0.3rem;
   display: inline-block;
+  font-size:0.8rem;
 }
 .device-item-content-cell-content {
   margin-left: 0.2rem;
   display: inline-block;
   font-weight: bold;
+  font-size:0.8rem;
   /* width: 10rem; */
 }
 .device-runtime-footer {

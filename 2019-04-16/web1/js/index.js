@@ -5,6 +5,15 @@ $(".nav").on("click","li",function(){
 		$(this).toggleClass("hasChild");
 	}
 	$(this).addClass("current");
+	// 点击其他菜单项去掉颜色
+	if($(this)[0].classList[0]!=="nav-info"){
+		$(".nav>.nav-info>.nav-header").css({"background-color":"#F1F8FC"})
+		$(".nav>.nav-info>.nav-header>a>span").css({"color":"black"})
+	}
+	if($(this)[0].classList[0]==="nav-info"){
+		$(".nav>.nav-info>.nav-header").css({"background-color":"#6EC672"})
+		$(".nav>.nav-info>.nav-header>a>span").css({"color":"white"})
+	}
 });
 
 
@@ -24,7 +33,17 @@ $(".nav").on("click","li",function(e){
 	$(".nav>.current").prev().css({"borderColor":"#7ac47f"});
 	return false;
 });
-
+// 点击子菜单去掉父菜单颜色
+$(".subnav>li").on("click",function(e){
+	$(".nav>.current>.nav-header").css({"background-color":"#F1F8FC"});
+	$(".nav>.current>.nav-header>a>span").css({"color":"black"})
+	// $(".nav>.current>.nav-header>a").css({"borderColor":"black"})
+})
+// 点击导航信息管理添加绿色背景色
+$(".nav>.nav-info>.nav-header").on("click",function(e){
+	$(".nav>.nav-info.current.hasChild>.nav-header").css({"background-color":"#6EC672"})
+	$(".nav>.nav-info.current.hasChild>.nav-header>a>span").css({"color":"white"})
+});
 $('.exitDialog').Dialog({
 	title:'提示信息',
 	autoOpen: false,
