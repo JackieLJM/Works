@@ -132,6 +132,7 @@ class TaskNumberPieCard extends Component {
               style={{
                 flex: 0.5,
                 display: "flex",
+                marginTop: "2rem",
                 marginLeft: "0.3rem",
                 marginBottom: "-0.3rem"
               }}
@@ -144,8 +145,8 @@ class TaskNumberPieCard extends Component {
               style={{
                 flex: 1,
                 display: "flex",
-                marginLeft: "0.3rem"
-                // marginTop: "0.8rem"
+                marginLeft: "0.3rem",
+                marginTop: "0.5rem"
               }}
             >
               {/* <Button
@@ -164,10 +165,11 @@ class TaskNumberPieCard extends Component {
           </div>
           <div
             style={{
-              flex: 4,
+              flex: 3,
               fontSize: "1rem",
               marginBottom: "-4rem",
-              marginRight: "14rem",
+              marginLeft: window.innerWidth > 1400 ? "-40rem" : "-10rem",
+              marginRight: window.innerWidth > 1400 ? "12rem" : "8rem",
               textAlign: "center"
               // marginLeft: "-5rem"
             }}

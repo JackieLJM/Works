@@ -3,6 +3,7 @@ import QueueAnim from "rc-queue-anim";
 import HeaderComponent from "./components/HeaderComponent";
 import ContentComponent from "./components/ContentComponent";
 import FooterComponent from "./components/FooterComponent";
+import ContentSecComponent from "./components/ContentSecComponent";
 class App extends Component {
   render() {
     return (
@@ -17,8 +18,9 @@ class App extends Component {
           className="queue-simple"
         >
           <ContentComponent key="b" />
-          <FooterComponent key="c" />
         </QueueAnim>
+        <ContentSecComponent key="c" />
+        <FooterComponent key="d" />
       </div>
     );
   }

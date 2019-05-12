@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Table, Button, Icon } from "antd";
+import { Table, Button, Icon, Modal, Card } from "antd";
 import "./FuncTable.css";
 import { Resizable } from "react-resizable";
-
+import CountUp from "react-countup";
 const ResizeableTitle = props => {
   const { onResize, width, ...restProps } = props;
 
@@ -17,95 +17,453 @@ const ResizeableTitle = props => {
   );
 };
 class FuncTable extends Component {
-  state = {};
+  state = { detailUI: false };
 
   components = {
     header: {
       cell: ResizeableTitle
     }
   };
-
+  detailUI = () => {
+    Modal.info({
+      title: "节点",
+      content: (
+        <div>
+          <Card
+            title={<div style={{ marginTop: "-0.3rem" }}>使用详细情况</div>}
+            headStyle={{
+              paddingTop: "-1rem",
+              // fontSize: "1rem",
+              height: "1px",
+              borderRadius: "0.5rem 0.5rem 0 0",
+              color: "white",
+              background: "#2C84D0"
+            }}
+            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
+          >
+            some messages...some messages...
+          </Card>
+          <Card
+            title={<div style={{ marginTop: "-0.3rem" }}>温度详细情况</div>}
+            headStyle={{
+              paddingTop: "-1rem",
+              // fontSize: "1rem",
+              height: "1px",
+              borderRadius: "0.5rem 0.5rem 0 0",
+              color: "white",
+              background: "#2C84D0"
+            }}
+            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
+          >
+            some messages...some messages...
+          </Card>
+          <Card
+            title={<div style={{ marginTop: "-0.3rem" }}>风扇具体情况</div>}
+            headStyle={{
+              paddingTop: "-1rem",
+              // fontSize: "1rem",
+              height: "1px",
+              borderRadius: "0.5rem 0.5rem 0 0",
+              color: "white",
+              background: "#2C84D0"
+            }}
+            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
+          >
+            some messages...some messages...
+          </Card>
+          <Card
+            title={<div style={{ marginTop: "-0.3rem" }}>各个芯片情况</div>}
+            headStyle={{
+              paddingTop: "-1rem",
+              // fontSize: "1rem",
+              height: "1px",
+              borderRadius: "0.5rem 0.5rem 0 0",
+              color: "white",
+              background: "#2C84D0"
+            }}
+            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
+          >
+            some messages...some messages...
+          </Card>
+        </div>
+      ),
+      width: "80%",
+      onOk() {}
+    });
+    this.setState({ detailUI: true });
+  };
   data = [
     {
       key: 0,
-      deviceNo: "2018-02-11",
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
       status: (
         <div>
-          <Icon type="sync" spin />
-          &nbsp;启动中
+          <Icon
+            type="sync"
+            spin
+            style={{
+              fontSize: "1.3rem",
+              verticalAlign: "middle"
+            }}
+          />
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            启动中
+          </div>
         </div>
       ),
-      temp: "income",
-      cpu: "transfer"
+      temp: (
+        <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>
+          {50 >= 80 ? (
+            <div style={{ color: "red" }}>{`${80}℃(超烫)`}</div>
+          ) : 55 >= 50 ? (
+            <div style={{ color: "#F65121" }}>{`${55}℃(高)`}</div>
+          ) : (
+            `${55}℃`
+          )}
+        </div>
+      ),
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     },
     {
       key: 1,
-      deviceNo: "2018-03-11",
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
       status: (
         <div>
-          <Icon type="poweroff" style={{ color: "red" }} />
-          &nbsp;已关闭
+          <Icon
+            type="poweroff"
+            style={{
+              color: "red",
+              fontSize: "1.3rem",
+              verticalAlign: "middle"
+            }}
+          />
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            已关闭
+          </div>
         </div>
       ),
-      temp: "income",
-      cpu: "transfer"
+      temp: (
+        <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>
+          {80 >= 80 ? (
+            <div style={{ color: "red" }}>{`${80}℃(超烫)`}</div>
+          ) : 55 >= 50 ? (
+            <div style={{ color: "#F65121" }}>{`${55}℃(高)`}</div>
+          ) : (
+            `${55}℃`
+          )}
+        </div>
+      ),
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     },
     {
       key: 2,
-      deviceNo: "2018-04-11",
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
       status: (
-        <div>
-          <Icon type="bulb" style={{ color: "#FFD924", fontSize: "1.1rem" }} />
-          &nbsp;设备异常
+        <div style={{ marginLeft: "1.8rem" }}>
+          <Icon
+            type="bulb"
+            style={{
+              color: "#FFD924",
+              fontSize: "1.5rem",
+              verticalAlign: "top"
+            }}
+          />
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem",
+              marginLeft: "-0.1rem"
+            }}
+          >
+            故障或异常
+          </div>
         </div>
       ),
-      temp: "income",
-      cpu: "transfer"
+      temp: <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>{`44℃`}</div>,
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     },
     {
       key: 3,
-      deviceNo: "2018-04-11",
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
       status: (
         <div>
           <Icon
             type="check-circle"
-            style={{ fontSize: "0.9rem" }}
+            style={{ fontSize: "1.3rem", verticalAlign: "middle" }}
             theme="twoTone"
             twoToneColor="#52c41a"
           />
-          &nbsp;正在运行中{" "}
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            已启动
+          </div>
         </div>
       ),
-      temp: "income",
-      cpu: "transfer"
+      temp: <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>{`44℃`}</div>,
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     },
     {
       key: 4,
-      deviceNo: "2018-04-11",
-      status: 98,
-      temp: "income",
-      cpu: "transfer"
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
+      status: (
+        <div>
+          <Icon
+            type="check-circle"
+            style={{
+              fontSize: "1.3rem",
+              verticalAlign: "middle"
+            }}
+            theme="twoTone"
+            twoToneColor="#52c41a"
+          />
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            已启动
+          </div>
+        </div>
+      ),
+      temp: <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>{`44℃`}</div>,
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     },
     {
       key: 5,
-      deviceNo: "2018-04-11",
-      status: 98,
-      temp: "income",
-      cpu: "transfer"
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
+      status: (
+        <div>
+          <Icon
+            type="sync"
+            spin
+            style={{
+              fontSize: "1.3rem",
+              verticalAlign: "middle"
+            }}
+          />
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            启动中
+          </div>
+        </div>
+      ),
+      temp: <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>{`44℃`}</div>,
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     },
     {
       key: 6,
-      deviceNo: "2018-04-11",
-      status: 98,
-      temp: "income",
-      cpu: "transfer"
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
+      status: (
+        <div>
+          <Icon
+            type="sync"
+            spin
+            style={{
+              fontSize: "1.3rem",
+              verticalAlign: "middle"
+            }}
+          />
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            启动中
+          </div>
+        </div>
+      ),
+      temp: <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>{`44℃`}</div>,
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     },
     {
       key: 7,
-      deviceNo: "2018-04-11",
-      status: 98,
-      temp: "income",
-      cpu: "transfer"
+      deviceNo: (
+        <div style={{ fontSize: "1rem", margin: "0rem" }}>{"节点"}</div>
+      ),
+      status: (
+        <div>
+          <Icon
+            type="sync"
+            spin
+            style={{
+              fontSize: "1.3rem",
+              verticalAlign: "middle"
+            }}
+          />
+          &nbsp;{" "}
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            启动中
+          </div>
+        </div>
+      ),
+      temp: <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>{`44℃`}</div>,
+      cpu: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      memory: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      ),
+      disk: (
+        <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
+          <CountUp delay={0.2} start={0} end={12} duration={1.5} />%
+        </div>
+      )
     }
   ];
 
@@ -121,7 +479,7 @@ class FuncTable extends Component {
   };
 
   render() {
-    const columns = [
+    var columns = [
       {
         title: "FPGA节点",
         dataIndex: "deviceNo",
@@ -144,8 +502,35 @@ class FuncTable extends Component {
         width: 150
       }
     ];
+    if (this.props.name === "gpu") {
+      columns = [
+        {
+          title: "GPU节点",
+          dataIndex: "deviceNo",
+          className: "height",
+          align: "center",
+          width: 150
+        },
+        {
+          title: "芯片状态",
+          dataIndex: "status",
+          className: "height",
+          align: "center",
+          width: 150
+        },
+        {
+          title: "温度",
+          dataIndex: "temp",
+          align: "center",
+          className: "height",
+          width: 150
+        }
+      ];
+    }
 
     if (this.props.complexTable === true) {
+      columns.pop();
+      columns.pop();
       columns.push(
         {
           title: "CPU使用率",
@@ -173,11 +558,24 @@ class FuncTable extends Component {
         title: "操作",
         align: "center",
         className: "height",
+        width: 160,
         key: "action",
-        render: () => <Button size="small">查看具体情况</Button>
+        render: () => (
+          <a
+            style={{
+              fontSize: "1rem",
+              border: "1px solid black",
+              padding: "0 8px 3px 8px",
+              borderRadius: "4px"
+            }}
+            onClick={this.detailUI}
+          >
+            详情界面
+          </a>
+        )
       });
     }
-    const newColumns = columns.map((col, index) => ({
+    var newColumns = columns.map((col, index) => ({
       ...col,
       onHeaderCell: column => ({
         width: column.width,
@@ -186,6 +584,7 @@ class FuncTable extends Component {
     }));
 
     return (
+      // <div>
       <Table
         bordered
         components={this.components}
@@ -193,11 +592,9 @@ class FuncTable extends Component {
         dataSource={this.data}
         pagination={false}
         size={"middle"}
-        // onHeaderRow={column => {
-        //   var new=column.map(item=>{})
-
-        // }}
       />
+
+      // </div>
     );
   }
 }
