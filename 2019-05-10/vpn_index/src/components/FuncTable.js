@@ -3,6 +3,7 @@ import { Table, Button, Icon, Modal, Card } from "antd";
 import "./FuncTable.css";
 import { Resizable } from "react-resizable";
 import CountUp from "react-countup";
+import { DetailUI } from "./DetailUI";
 const ResizeableTitle = props => {
   const { onResize, width, ...restProps } = props;
 
@@ -25,72 +26,7 @@ class FuncTable extends Component {
     }
   };
   detailUI = () => {
-    Modal.info({
-      title: "节点",
-      content: (
-        <div>
-          <Card
-            title={<div style={{ marginTop: "-0.3rem" }}>使用详细情况</div>}
-            headStyle={{
-              paddingTop: "-1rem",
-              // fontSize: "1rem",
-              height: "1px",
-              borderRadius: "0.5rem 0.5rem 0 0",
-              color: "white",
-              background: "#2C84D0"
-            }}
-            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
-          >
-            some messages...some messages...
-          </Card>
-          <Card
-            title={<div style={{ marginTop: "-0.3rem" }}>温度详细情况</div>}
-            headStyle={{
-              paddingTop: "-1rem",
-              // fontSize: "1rem",
-              height: "1px",
-              borderRadius: "0.5rem 0.5rem 0 0",
-              color: "white",
-              background: "#2C84D0"
-            }}
-            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
-          >
-            some messages...some messages...
-          </Card>
-          <Card
-            title={<div style={{ marginTop: "-0.3rem" }}>风扇具体情况</div>}
-            headStyle={{
-              paddingTop: "-1rem",
-              // fontSize: "1rem",
-              height: "1px",
-              borderRadius: "0.5rem 0.5rem 0 0",
-              color: "white",
-              background: "#2C84D0"
-            }}
-            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
-          >
-            some messages...some messages...
-          </Card>
-          <Card
-            title={<div style={{ marginTop: "-0.3rem" }}>各个芯片情况</div>}
-            headStyle={{
-              paddingTop: "-1rem",
-              // fontSize: "1rem",
-              height: "1px",
-              borderRadius: "0.5rem 0.5rem 0 0",
-              color: "white",
-              background: "#2C84D0"
-            }}
-            style={{ marginTop: "1rem", borderRadius: "0.5rem" }}
-          >
-            some messages...some messages...
-          </Card>
-        </div>
-      ),
-      width: "80%",
-      onOk() {}
-    });
-    this.setState({ detailUI: true });
+    DetailUI();
   };
   data = [
     {
