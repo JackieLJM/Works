@@ -1,0 +1,13 @@
+.fan-logo {
+  animation: fan-logo-spin infinite 0.5s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+@keyframes fan-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

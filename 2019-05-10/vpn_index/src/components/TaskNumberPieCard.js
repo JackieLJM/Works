@@ -3,49 +3,55 @@ import PropTypes from "prop-types";
 import { Icon, Card, Divider, Button, Modal, Input } from "antd";
 import CountUp from "react-countup";
 import TaskPie from "./TaskPie";
+import { get } from "../api";
 // import { height } from "window-size";
 const Search = Input.Search;
 class TaskNumberPieCard extends Component {
   // createTask = () => {};
-  state = { searchVisible: false, delVisible: false };
-  searchTask = () => {
-    this.setState({
-      searchVisible: true
-    });
-  };
+  state = { searchVisible: false, delVisible: false, number: 0 };
+  // searchTask = () => {
+  //   this.setState({
+  //     searchVisible: true
+  //   });
+  // };
 
-  handleSearchOk = e => {
-    console.log(e);
-    this.setState({
-      searchVisible: false
-    });
-  };
+  // handleSearchOk = e => {
+  //   console.log(e);
+  //   this.setState({
+  //     searchVisible: false
+  //   });
+  // };
 
-  handleSearchCancel = e => {
-    console.log(e);
-    this.setState({
-      searchVisible: false
-    });
-  };
+  // handleSearchCancel = e => {
+  //   console.log(e);
+  //   this.setState({
+  //     searchVisible: false
+  //   });
+  // };
 
-  deleteTask = () => {
-    this.setState({
-      delVisible: true
-    });
-  };
-  handleDelOk = e => {
-    console.log(e);
-    this.setState({
-      delVisible: false
-    });
-  };
+  // deleteTask = () => {
+  //   this.setState({
+  //     delVisible: true
+  //   });
+  // };
+  // handleDelOk = e => {
+  //   console.log(e);
+  //   this.setState({
+  //     delVisible: false
+  //   });
+  // };
 
-  handleDelCancel = e => {
-    console.log(e);
-    this.setState({
-      delVisible: false
+  // handleDelCancel = e => {
+  //   console.log(e);
+  //   this.setState({
+  //     delVisible: false
+  //   });
+  // };
+  componentDidMount() {
+    get("/monitor/task/total").then(data => {
+      this.setState({ number: data });
     });
-  };
+  }
   render() {
     const { icon, color, title, number, countUp } = this.props;
     return (
@@ -55,7 +61,7 @@ class TaskNumberPieCard extends Component {
         style={{ margin: "1rem" }}
         hoverable={true}
       >
-        <Modal
+        {/* <Modal
           title="查询任务"
           visible={this.state.searchVisible}
           onOk={this.handleSearchOk}
@@ -81,7 +87,7 @@ class TaskNumberPieCard extends Component {
           onCancel={this.handleDelCancel}
           okText="确定"
           cancelText="取消"
-        />
+        /> */}
         <div
           style={{ display: "flex", margin: "0.5rem", flexDirection: "row" }}
         >
@@ -90,7 +96,6 @@ class TaskNumberPieCard extends Component {
             <div
               style={{
                 display: "flex",
-
                 flex: 1,
                 flexDirection: "row"
               }}
@@ -98,7 +103,7 @@ class TaskNumberPieCard extends Component {
               {/* 任务统计-图标 */}
               <div style={{ flex: 1 }}>
                 <Icon
-                  style={{ color, fontSize: "4.6rem", marginTop: "-0.2rem" }}
+                  style={{ color, fontSize: "6.2rem", marginTop: "-0.2rem" }}
                   type={icon}
                 />
               </div>
@@ -117,7 +122,7 @@ class TaskNumberPieCard extends Component {
                 <p style={{ fontSize: "2rem", margin: "0rem" }}>
                   <CountUp
                     start={0}
-                    end={number}
+                    end={Number(this.state.number)}
                     duration={2.75}
                     useEasing
                     useGrouping
@@ -132,16 +137,16 @@ class TaskNumberPieCard extends Component {
               style={{
                 flex: 0.5,
                 display: "flex",
-                marginTop: "2rem",
+                marginTop: "-3rem",
                 marginLeft: "0.3rem",
                 marginBottom: "-0.3rem"
               }}
             >
-              <Button type="primary" onClick={this.searchTask}>
-                查询任务
+              <Button type="primary">
+                <a herf="/task">查询任务</a>
               </Button>
             </div>
-            <div
+            {/* <div
               style={{
                 flex: 1,
                 display: "flex",
@@ -149,27 +154,20 @@ class TaskNumberPieCard extends Component {
                 marginTop: "0.5rem"
               }}
             >
-              {/* <Button
-                style={{ marginRight: "0.5rem" }}
-                onClick={this.createTask}
-              >
-                创建任务
-              </Button> */}
+              
               <Button onClick={this.deleteTask}>删除任务</Button>
-            </div>
+            </div> */}
           </div>
           {/* </div> */}
           <Divider type="vertical" style={{ flex: 0.02, height: "14rem" }} />
-          <div style={{ fontSize: "1rem", flex: 3, marginLeft: "0.7rem" }}>
-            任务完成百分比统计：
-          </div>
+
           <div
             style={{
-              flex: 3,
+              flex: 6,
               fontSize: "1rem",
               marginBottom: "-4rem",
-              marginLeft: window.innerWidth > 1400 ? "-40rem" : "-10rem",
-              marginRight: window.innerWidth > 1400 ? "12rem" : "8rem",
+              // marginLeft: window.innerWidth > 1400 ? "-20rem" : "-5rem",
+              // marginRight: window.innerWidth > 1400 ? "12rem" : "8rem",
               textAlign: "center"
               // marginLeft: "-5rem"
             }}

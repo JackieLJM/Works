@@ -18,14 +18,16 @@
     "react-dom": "^16.8.2",
     "react-minimal-pie-chart": "^4.0.0",
     "react-resizable": "^1.7.5",
+    "react-script": "^2.0.5",
     "react-scripts": "2.1.5",
+    "react-svg": "^10.0.1",
     "viser-react": "^2.4.6"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-app-rewired eject"
+    "eject": "react-script eject"
   },
   "eslintConfig": {
     "extends": "react-app"

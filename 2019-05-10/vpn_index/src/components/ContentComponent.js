@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import { Col, Card, Button, Tabs, Icon } from "antd";
 import FuncTable from "./FuncTable.js";
 import QueueAnim from "rc-queue-anim";
+import { get } from "../api";
 const TabPane = Tabs.TabPane;
 class ContentComponent extends Component {
   state = {
     isFPGASimple: true,
     isFPGAComplex: false,
     isGPUSimple: true,
-    isGPUComplex: false
+    isGPUComplex: false,
+    fpgadata: []
   };
   mouseover = e => {
     e.currentTarget.style = "margin:1rem;text-align:center;";
@@ -22,6 +24,7 @@ class ContentComponent extends Component {
   //   e.currentTarget.children[0].style =
   //     "background: white;color: black;border-bottom:1px solid #E8E8E8";
   // };
+
   changeFPGASimpleTable = e => {
     // console.log(e.currentTarget);
     this.setState({ isFPGASimple: true }, function() {
@@ -33,7 +36,23 @@ class ContentComponent extends Component {
       this.setState({ isFPGASimple: false });
     });
   };
-
+  componentDidMount() {
+    // 获取fpga
+    get("/monitor/node").then(data => {
+      this.setState({ fpgadata: data.data });
+    });
+    // 获取gpu
+    // get("/monitor/node").then(data => {
+    //   this.setState({ gpudata: data });
+    // });
+  }
+  showbody = e => {
+    if (document.getElementById("fpgabody").style.display !== "none") {
+      document.getElementById("fpgabody").style.display = "none";
+    } else if (document.getElementById("fpgabody").style.display === "none") {
+      document.getElementById("fpgabody").style.display = "inline-block";
+    }
+  };
   render() {
     return (
       <div>
@@ -56,9 +75,13 @@ class ContentComponent extends Component {
         <Card
           title={
             this.state.isFPGAComplex ? (
-              <div style={{ fontSize: "1.1rem" }}>FPGA使用情况</div>
+              <div style={{ fontSize: "1.1rem" }} onClick={this.showbody}>
+                FPGA使用情况
+              </div>
             ) : (
-              <div style={{ fontSize: "1.1rem" }}>FPGA实时状态</div>
+              <div style={{ fontSize: "1.1rem" }} onClick={this.showbody}>
+                FPGA实时状态
+              </div>
             )
           }
           hoverable={true}
@@ -87,18 +110,25 @@ class ContentComponent extends Component {
             </div>
           ]}
         >
-          {this.state.isFPGASimple ? (
-            <QueueAnim delay="0" duration="1200">
-              <FuncTable key="a" name="fgpa" />
-            </QueueAnim>
-          ) : null}
+          <div id="fpgabody">
+            {this.state.isFPGASimple ? (
+              <QueueAnim delay="0" duration="1200">
+                <FuncTable key="a" name="fgpa" fpgadata={this.state.fpgadata} />
+              </QueueAnim>
+            ) : null}
 
-          {this.state.isFPGAComplex ? (
-            <QueueAnim delay="0" duration="1200">
-              <FuncTable key="b" complexTable={true} name="fgpa" />
-            </QueueAnim>
-          ) : null}
-          <a name="gpu" />
+            {this.state.isFPGAComplex ? (
+              <QueueAnim delay="0" duration="1200">
+                <FuncTable
+                  key="b"
+                  complexTable={true}
+                  name="fgpa"
+                  fpgadata={this.state.fpgadata}
+                />
+              </QueueAnim>
+            ) : null}
+            <a name="gpu" />
+          </div>
         </Card>
       </div>
     );

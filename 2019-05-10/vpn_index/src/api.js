@@ -6,8 +6,13 @@ const checkStatus = response => {
   error.response = response;
   throw error;
 };
-export const api = (url, data) => {
+export const post = (url, data) => {
   return fetch(url, { method: "post", body: data })
+    .then(checkStatus)
+    .then(res => res.json());
+};
+export const get = url => {
+  return fetch(url)
     .then(checkStatus)
     .then(res => res.json());
 };

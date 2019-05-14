@@ -9,16 +9,9 @@ class App extends Component {
     return (
       <div>
         <HeaderComponent key="a" />
-        <QueueAnim
-          delay={300}
-          animConfig={[
-            { opacity: [1, 0], translateY: [0, 50] },
-            { opacity: [1, 0], translateY: [0, -50] }
-          ]}
-          className="queue-simple"
-        >
-          <ContentComponent key="b" />
-        </QueueAnim>
+
+        <ContentComponent key="b" />
+
         <ContentSecComponent key="c" />
         <FooterComponent key="d" />
       </div>
