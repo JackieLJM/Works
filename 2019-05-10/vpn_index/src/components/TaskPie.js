@@ -4,11 +4,13 @@ import { get } from "../api";
 const DataSet = require("@antv/data-set");
 
 export default class TaskPie extends React.Component {
-  state = { sdata: { wait: 11, run: 11, finish: 11, pause: 11 } };
+  state = { sdata: { wait: 0, run: 0, finish: 0, pause: 0 } };
   componentDidMount() {
-    get("/monitor/task/state").then(data => {
-      this.setState({ sdata: data });
-    });
+    get("/monitor/task/state")
+      .then(data => {
+        this.setState({ sdata: data });
+      })
+      .catch(err => console.log(err));
   }
   render() {
     var sourceData = [];

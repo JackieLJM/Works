@@ -12,16 +12,18 @@ export default class TempImg extends Component {
   }
   render() {
     var { temp } = this.state;
+    // console.log(temp);
+    // console.log(this.props.temp);
 
     if (temp === 100) {
       return (
         <img style={{ width: "2rem", verticalAlign: "bottom" }} src={Cfull} />
       );
-    } else if (temp >= 80) {
+    } else if (temp >= 70) {
       return (
         <img style={{ width: "2rem", verticalAlign: "bottom" }} src={Cthree} />
       );
-    } else if (temp >= 50) {
+    } else if (temp >= 30) {
       return (
         <img style={{ width: "2rem", verticalAlign: "bottom" }} src={Ctwo} />
       );

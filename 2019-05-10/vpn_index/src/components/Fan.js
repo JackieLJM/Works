@@ -5,17 +5,28 @@ import fan from "../svg/fan.svg";
 import { post, get } from "../api";
 export default class Fan extends Component {
   state = {
-    data: [{ fan: [1, 0, 1, 0], ip: "192.168.101.237", deviceNo: 1 }],
+    data: [{ fan: [0, 0, 0, 0], ip: "192.168.101.237", deviceNo: 1 }],
     success: true
   };
   componentDidMount() {
-    get(
-      `/monitor/fan/status?deviceNo=${this.props.deviceNo}&ip=${this.props.ip}`
-    )
-      .then(data => {
-        this.setState({ data: data.data });
-      })
-      .catch(err => console.log(err));
+    if (this.props.fanstatus === undefined) {
+      get(
+        `/monitor/fan/status?deviceNo=${this.props.deviceNo}&ip=${
+          this.props.ip
+        }`
+      )
+        .then(data => {
+          this.setState({ data: data.data });
+        })
+        .catch(err => console.log(err));
+    } else {
+      console.log(this.props.fanstatus);
+      if (this.props.fanstatus === "在线") {
+        this.setState({ data: [{ fan: [1, 1, 1, 1] }] });
+      } else if (this.props.fanstatus === "离线") {
+        this.setState({ data: [{ fan: [0, 0, 0, 0] }] });
+      }
+    }
   }
   render() {
     if (this.state.data[0] !== undefined) {

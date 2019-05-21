@@ -6,7 +6,8 @@ const TabPane = Tabs.TabPane;
 class ContentSecComponent extends Component {
   state = {
     isGPUSimple: true,
-    isGPUComplex: false
+    isGPUComplex: false,
+    gpu: true
   };
   mouseover = e => {
     e.currentTarget.style = "margin:1rem;text-align:center;margin-top:2rem";
@@ -14,9 +15,12 @@ class ContentSecComponent extends Component {
       "background: #6fd48c;color: white;border-bottom:1px solid #6fd48c";
 
     e.currentTarget.children[0].children[0].children[0].children[0].style =
-      "color:white";
+      "font-size:1.1rem;color:white";
 
     // console.log(e.currentTarget.getElementById("fpga"));
+  };
+  showbody = e => {
+    this.setState({ gpu: !this.state.gpu });
   };
   // mouseout = e => {
   //   // console.log(e.currentTarget);
@@ -38,56 +42,98 @@ class ContentSecComponent extends Component {
   render() {
     return (
       <div style={{ marginBottom: "20rem" }}>
-        <Card
-          title={
-            this.state.isGPUComplex ? (
-              <a style={{ fontSize: "1.1rem", color: "black" }} href="#gpu">
-                GPU使用情况
-              </a>
-            ) : (
-              <a style={{ fontSize: "1.1rem", color: "black" }} href="#gpu">
-                GPU实时状态
-              </a>
-            )
-          }
-          hoverable={true}
-          bordered={true}
-          style={{
-            margin: "1rem",
-            textAlign: "center",
-            marginTop: "2rem"
-          }}
-          onMouseOver={this.mouseover}
-          onMouseOut={this.mouseout}
-          actions={[
-            <div
-              style={{ marginRight: "-7rem" }}
-              onClick={this.changeGPUSimpleTable}
-            >
-              <Icon type="double-left" />
-              &nbsp;GPU使用情况
-            </div>,
-            <div
-              style={{ marginLeft: "-7rem" }}
-              onClick={this.changeGPUComplexTable}
-            >
-              <Icon type="double-right" />
-              &nbsp;GPU实时状态
-            </div>
-          ]}
-        >
-          {this.state.isGPUSimple ? (
-            <QueueAnim delay="0" duration="1200">
-              <FuncTable key="c" name={"gpu"} />
-            </QueueAnim>
-          ) : null}
+        {this.state.gpu ? (
+          <Card
+            title={
+              this.state.isGPUComplex ? (
+                <a
+                  style={{ fontSize: "1.1rem", color: "black" }}
+                  onClick={this.showbody}
+                  href="#gpu"
+                >
+                  GPU使用情况
+                </a>
+              ) : (
+                <a
+                  style={{ fontSize: "1.1rem", color: "black" }}
+                  onClick={this.showbody}
+                  href="#gpu"
+                >
+                  GPU实时状态
+                </a>
+              )
+            }
+            hoverable={true}
+            bordered={true}
+            style={{
+              margin: "1rem",
+              textAlign: "center",
+              marginTop: "2rem"
+            }}
+            onMouseOver={this.mouseover}
+            onMouseOut={this.mouseout}
+            // actions={[
+            //   <div
+            //     style={{ marginRight: "-7rem" }}
+            //     onClick={this.changeGPUSimpleTable}
+            //   >
+            //     <Icon type="double-left" />
+            //     &nbsp;GPU使用情况
+            //   </div>,
+            //   <div
+            //     style={{ marginLeft: "-7rem" }}
+            //     onClick={this.changeGPUComplexTable}
+            //   >
+            //     <Icon type="double-right" />
+            //     &nbsp;GPU实时状态
+            //   </div>
+            // ]}
+          >
+            {this.state.isGPUSimple ? (
+              <QueueAnim delay="0" duration="1200">
+                <FuncTable key="c" name={"gpu"} />
+              </QueueAnim>
+            ) : null}
 
-          {this.state.isGPUComplex ? (
-            <QueueAnim delay="0" duration="1200">
-              <FuncTable key="d" complexTable={true} name={"gpu"} />
-            </QueueAnim>
-          ) : null}
-        </Card>
+            {this.state.isGPUComplex ? (
+              <QueueAnim delay="0" duration="1200">
+                <FuncTable key="d" complexTable={true} name={"gpu"} />
+              </QueueAnim>
+            ) : null}
+          </Card>
+        ) : (
+          <Card
+            title={
+              this.state.isGPUComplex ? (
+                <a
+                  style={{ fontSize: "1.1rem", color: "black" }}
+                  onClick={this.showbody}
+                  href="#gpu"
+                >
+                  GPU使用情况
+                </a>
+              ) : (
+                <a
+                  style={{ fontSize: "1.1rem", color: "black" }}
+                  onClick={this.showbody}
+                  href="#gpu"
+                >
+                  GPU实时状态
+                </a>
+              )
+            }
+            hoverable={true}
+            bordered={true}
+            style={{
+              margin: "1rem",
+              textAlign: "center",
+              marginTop: "2rem"
+            }}
+            onMouseOver={this.mouseover}
+            onMouseOut={this.mouseout}
+            bodyStyle={{ display: "none" }}
+          />
+        )}
       </div>
     );
   }

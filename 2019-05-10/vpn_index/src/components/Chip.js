@@ -11,32 +11,30 @@ export default class Chip extends Component {
         ip: "192.168.101.237",
         deviceNo: 1,
         status: {
-          "core-1": 1,
-          "core-3": 2,
-          "core-2": 1,
-          "core-5": 1,
-          "core-4": 1,
-          "core-7": 1,
-          "core-12": 1,
-          "core-23": 1,
-          "core-6": 1,
-          "core-11": 1,
-          "core-22": 1,
-          "core-9": 1,
-          "core-10": 1,
-          "core-21": 1,
-          "core-8": 1,
-          "core-20": 1,
-          "core-19": 1,
-          "core-18": 1,
-          "core-17": 1,
-          "core-16": 1,
-          "core-15": 1,
-          "core-14": 1,
-          "core-13": 1,
-          "core-24": 1,
-          "core-25": 1,
-          "core-28": 1
+          "core-1": 0,
+          "core-3": 0,
+          "core-2": 0,
+          "core-5": 0,
+          "core-4": 0,
+          "core-7": 0,
+          "core-12": 0,
+          "core-23": 0,
+          "core-6": 0,
+          "core-11": 0,
+          "core-22": 0,
+          "core-9": 0,
+          "core-10": 0,
+          "core-21": 0,
+          "core-8": 0,
+          "core-20": 0,
+          "core-19": 0,
+          "core-18": 0,
+          "core-17": 0,
+          "core-16": 0,
+          "core-15": 0,
+          "core-14": 0,
+          "core-13": 0,
+          "core-24": 0
         }
       }
     ],
@@ -77,62 +75,63 @@ export default class Chip extends Component {
         a = a + 8;
         b = b + 8;
       }
-    } else {
-      var data = [
-        {
-          ip: "192.168.101.237",
-          deviceNo: 1,
-          status: {
-            "core-1": 1,
-            "core-3": 2,
-            "core-2": 3,
-            "core-5": 4,
-            "core-4": 5,
-            "core-7": 6,
-            "core-12": 0,
-            "core-23": 1,
-            "core-6": 1,
-            "core-11": 1,
-            "core-22": 1,
-            "core-9": 1,
-            "core-10": 1,
-            "core-21": 1,
-            "core-8": 1,
-            "core-20": 1,
-            "core-19": 1,
-            "core-18": 1,
-            "core-17": 1,
-            "core-16": 1,
-            "core-15": 1,
-            "core-14": 1,
-            "core-13": 1,
-            "core-24": 1
-          }
-        }
-      ];
-      var status = data[0].status;
-      var arr = [];
-      for (let i in status) {
-        let o = {};
-        o[i] = status[i];
-        arr.push(o);
-      }
-      arr.sort((a, b) => {
-        var aname = Object.keys(a)[0];
-        var bname = Object.keys(b)[0];
-        var anum = Number(aname.substring(5));
-        var bnum = Number(bname.substring(5));
-        return anum - bnum;
-      });
-      var a = 0;
-      var b = 8;
-      var arr2 = [];
-      for (var i = 0; i < arr.length / 8; i++) {
-        arr2.push(arr.slice(a, b));
-        a = a + 8;
-        b = b + 8;
-      }
     }
+    //  else {
+    //   var data = [
+    //     {
+    //       ip: "192.168.101.237",
+    //       deviceNo: 1,
+    //       status: {
+    //         "core-1": 1,
+    //         "core-3": 2,
+    //         "core-2": 3,
+    //         "core-5": 4,
+    //         "core-4": 5,
+    //         "core-7": 6,
+    //         "core-12": 0,
+    //         "core-23": 1,
+    //         "core-6": 1,
+    //         "core-11": 1,
+    //         "core-22": 1,
+    //         "core-9": 1,
+    //         "core-10": 1,
+    //         "core-21": 1,
+    //         "core-8": 1,
+    //         "core-20": 1,
+    //         "core-19": 1,
+    //         "core-18": 1,
+    //         "core-17": 1,
+    //         "core-16": 1,
+    //         "core-15": 1,
+    //         "core-14": 1,
+    //         "core-13": 1,
+    //         "core-24": 1
+    //       }
+    //     }
+    //   ];
+    //   var status = data[0].status;
+    //   var arr = [];
+    //   for (let i in status) {
+    //     let o = {};
+    //     o[i] = status[i];
+    //     arr.push(o);
+    //   }
+    //   arr.sort((a, b) => {
+    //     var aname = Object.keys(a)[0];
+    //     var bname = Object.keys(b)[0];
+    //     var anum = Number(aname.substring(5));
+    //     var bnum = Number(bname.substring(5));
+    //     return anum - bnum;
+    //   });
+    //   var a = 0;
+    //   var b = 8;
+    //   var arr2 = [];
+    //   for (var i = 0; i < arr.length / 8; i++) {
+    //     arr2.push(arr.slice(a, b));
+    //     a = a + 8;
+    //     b = b + 8;
+    //   }
+    // }
     return (
       <Card
         title={<div style={{ marginTop: "-0.3rem" }}>各个芯片情况</div>}

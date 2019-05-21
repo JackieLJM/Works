@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="select-wrap">
+      <select
+        class="select-title ue-clear"
+        id="type"
+        style="width: 150px;height: 30px;"
+        id="type"
+      >
+        <option value="" class="select-list">请选择查询条件</option>
+        <option value="taskName" class="select-list">任务名称</option>
+        <option value="protocolType" class="select-list">协议类型</option>
+        <option value="userName" class="select-list">VPN用户名</option>
+        <option value="vpnServerName" class="select-list">VPN服务器名称</option>
+        <option value="userIp" class="select-list">VPN用户IP</option>
+        <option value="vpnServerIp" class="select-list">VPN服务器IP</option>
+        <option value="encript" class="select-list">压缩加密</option>
+        <option value="priority" class="select-list">优先级</option>
+      </select>
+    </div>
+    <div class="input-box ue-clear">
+      <input type="text" style="width: 127px;" id="conditions" />
+
+      <select
+        class="select-title ue-clear conditiontype"
+        style="width: 150px;height: 30px;display: none"
+        id="conditiontype"
+      >
+        <option value="userIp" class="select-list">1</option>
+        <option value="vpnServerIp" class="select-list">2</option>
+        <option value="encript" class="select-list">3</option>
+        <option value="priority" class="select-list">4</option>
+      </select>
+    </div>
+  </body>
+
+  <script>
+    $(document).ready(
+      $("#type").change(function() {
+        var opt = $("#type").val();
+        $("#conditions").hide();
+        $(".conditiontype").show();
+      })
+    );
+  </script>
+</html>

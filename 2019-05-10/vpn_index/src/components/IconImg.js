@@ -6,7 +6,7 @@ class IconImg extends Component {
     if (status === true) {
       return (
         <div>
-          <Icon
+          {/* <Icon
             type="check-circle"
             style={{ fontSize: "1.3rem", verticalAlign: "middle" }}
             theme="twoTone"
@@ -21,6 +21,25 @@ class IconImg extends Component {
             }}
           >
             已启动
+          </div> */}
+          <Icon
+            type="sync"
+            spin
+            style={{
+              fontSize: "1.3rem",
+              verticalAlign: "middle",
+              color: "green"
+            }}
+          />
+          &nbsp;&nbsp;
+          <div
+            style={{
+              display: "inline-block",
+              verticalAlign: "middle",
+              fontSize: "1rem"
+            }}
+          >
+            运行中
           </div>
         </div>
       );

@@ -8,7 +8,12 @@ import { get } from "../api";
 const Search = Input.Search;
 class TaskNumberPieCard extends Component {
   // createTask = () => {};
-  state = { searchVisible: false, delVisible: false, number: 0 };
+  state = {
+    searchVisible: false,
+    delVisible: false,
+    number: 0,
+    total: { fpga: 0, gpu: 0, hash: 0 }
+  };
   // searchTask = () => {
   //   this.setState({
   //     searchVisible: true
@@ -48,12 +53,18 @@ class TaskNumberPieCard extends Component {
   //   });
   // };
   componentDidMount() {
+    // get("/monitor/task/state").then(data => {
+    //   this.setState({ number: data });
+    // });
     get("/monitor/task/total").then(data => {
-      this.setState({ number: data });
+      this.setState({ total: data });
     });
   }
   render() {
-    const { icon, color, title, number, countUp } = this.props;
+    var { icon, color, title, countUp } = this.props;
+    var { total } = this.state;
+    var number = Number(total.fpga) + Number(total.hash) + Number(total.gpu);
+
     return (
       <Card
         bordered={true}
@@ -122,7 +133,7 @@ class TaskNumberPieCard extends Component {
                 <p style={{ fontSize: "2rem", margin: "0rem" }}>
                   <CountUp
                     start={0}
-                    end={Number(this.state.number)}
+                    end={number}
                     duration={2.75}
                     useEasing
                     useGrouping
@@ -130,6 +141,15 @@ class TaskNumberPieCard extends Component {
                     {...countUp || {}}
                   />
                 </p>
+                <div style={{ fontSize: "1rem", marginLeft: "0.3rem" }}>
+                  {`GPU${" "}任务数：${total.gpu}`}
+                </div>
+                <div style={{ fontSize: "1rem", marginLeft: "0.2rem" }}>
+                  {`FPGA任务数：${total.fpga}`}
+                </div>
+                <div style={{ fontSize: "1rem" }}>
+                  {`HASH任务数：${total.hash}`}
+                </div>
               </div>
             </div>
             {/* 任务按钮 */}
@@ -142,9 +162,9 @@ class TaskNumberPieCard extends Component {
                 marginBottom: "-0.3rem"
               }}
             >
-              <Button type="primary">
-                <a herf="/task">查询任务</a>
-              </Button>
+              {/* <Button type="primary"> */}
+
+              {/* </Button> */}
             </div>
             {/* <div
               style={{
