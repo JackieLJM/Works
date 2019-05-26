@@ -57,6 +57,9 @@ class TaskNumberPieCard extends Component {
     //   this.setState({ number: data });
     // });
     get("/monitor/task/total").then(data => {
+      if (data.msg === "系统错误") {
+        return
+      }
       this.setState({ total: data });
     });
   }

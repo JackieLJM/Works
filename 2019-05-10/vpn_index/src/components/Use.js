@@ -19,13 +19,18 @@ export default class Use extends Component {
   componentDidMount() {
     get(
       `/monitor/system/resources?deviceNo=${this.props.deviceNo}&ip=${
-        this.props.ip
+      this.props.ip
       }`
     )
       .then(data => {
-        this.setState({ data: data.data });
+        if (data.data !== undefined) {
+          if (data.msg === "系统错误") {
+            return
+          }
+          this.setState({ data: data.data });
+        }
       })
-      .catch(err => console.log(err));
+      .catch(err => { });
   }
   render() {
     if (this.state.data[0] !== undefined) {
@@ -147,30 +152,30 @@ export default class Use extends Component {
               />
             </div>
           ) : (
-            <div style={{ flex: "1", textAlign: "center" }}>
-              <div style={{ marginBottom: "0.5rem", color: "#E38627" }}>
-                已使用
+              <div style={{ flex: "1", textAlign: "center" }}>
+                <div style={{ marginBottom: "0.5rem", color: "#E38627" }}>
+                  已使用
               </div>
-              <ReactMinimalPieChart
-                style={{ height: "6rem" }}
-                data={[
-                  {
-                    value: isNaN(cpu) ? 0 : cpu === 0 ? 0 : cpu,
-                    color: "#E38627"
-                  }
-                ]}
-                totalValue={100}
-                lineWidth={20}
-                label
-                animate={true}
-                labelStyle={{
-                  fontSize: "25px",
-                  fontFamily: "sans-serif"
-                }}
-                labelPosition={50}
-              />
-            </div>
-          )}
+                <ReactMinimalPieChart
+                  style={{ height: "6rem" }}
+                  data={[
+                    {
+                      value: isNaN(cpu) ? 0 : cpu === 0 ? 0 : cpu,
+                      color: "#E38627"
+                    }
+                  ]}
+                  totalValue={100}
+                  lineWidth={20}
+                  label
+                  animate={true}
+                  labelStyle={{
+                    fontSize: "25px",
+                    fontFamily: "sans-serif"
+                  }}
+                  labelPosition={50}
+                />
+              </div>
+            )}
           {diskpercent < 50 ? (
             <div style={{ flex: "1", textAlign: "center" }}>
               <div style={{ marginBottom: "0.5rem", color: "green" }}>剩余</div>
@@ -194,30 +199,30 @@ export default class Use extends Component {
               />
             </div>
           ) : (
-            <div style={{ flex: "1", textAlign: "center" }}>
-              <div style={{ marginBottom: "0.5rem", color: "#E38627" }}>
-                已使用
+              <div style={{ flex: "1", textAlign: "center" }}>
+                <div style={{ marginBottom: "0.5rem", color: "#E38627" }}>
+                  已使用
               </div>
-              <ReactMinimalPieChart
-                style={{ height: "6rem" }}
-                data={[
-                  {
-                    value: isNaN(diskpercent) ? 0 : diskpercent,
-                    color: "#E38627"
-                  }
-                ]}
-                totalValue={100}
-                lineWidth={20}
-                label
-                animate={true}
-                labelStyle={{
-                  fontSize: "25px",
-                  fontFamily: "sans-serif"
-                }}
-                labelPosition={0}
-              />
-            </div>
-          )}
+                <ReactMinimalPieChart
+                  style={{ height: "6rem" }}
+                  data={[
+                    {
+                      value: isNaN(diskpercent) ? 0 : diskpercent,
+                      color: "#E38627"
+                    }
+                  ]}
+                  totalValue={100}
+                  lineWidth={20}
+                  label
+                  animate={true}
+                  labelStyle={{
+                    fontSize: "25px",
+                    fontFamily: "sans-serif"
+                  }}
+                  labelPosition={0}
+                />
+              </div>
+            )}
           {mempercent < 50 ? (
             <div style={{ flex: "1", textAlign: "center" }}>
               <div style={{ marginBottom: "0.5rem", color: "green" }}>剩余</div>
@@ -241,30 +246,30 @@ export default class Use extends Component {
               />
             </div>
           ) : (
-            <div style={{ flex: "1", textAlign: "center" }}>
-              <div style={{ marginBottom: "0.5rem", color: "#E38627" }}>
-                已使用
+              <div style={{ flex: "1", textAlign: "center" }}>
+                <div style={{ marginBottom: "0.5rem", color: "#E38627" }}>
+                  已使用
               </div>
-              <ReactMinimalPieChart
-                style={{ height: "6rem" }}
-                data={[
-                  {
-                    value: isNaN(mempercent) ? 0 : mempercent,
-                    color: "#E38627"
-                  }
-                ]}
-                totalValue={100}
-                lineWidth={20}
-                label
-                animate={true}
-                labelStyle={{
-                  fontSize: "25px",
-                  fontFamily: "sans-serif"
-                }}
-                labelPosition={0}
-              />
-            </div>
-          )}
+                <ReactMinimalPieChart
+                  style={{ height: "6rem" }}
+                  data={[
+                    {
+                      value: isNaN(mempercent) ? 0 : mempercent,
+                      color: "#E38627"
+                    }
+                  ]}
+                  totalValue={100}
+                  lineWidth={20}
+                  label
+                  animate={true}
+                  labelStyle={{
+                    fontSize: "25px",
+                    fontFamily: "sans-serif"
+                  }}
+                  labelPosition={0}
+                />
+              </div>
+            )}
         </div>
         <div
           style={{ display: "flex", fontSize: "0.9rem", textAlign: "center" }}

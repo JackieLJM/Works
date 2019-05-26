@@ -82,7 +82,7 @@ class FuncTable extends Component {
     }
   };
   detailUI = (record, gpu) => {
-    console.log(record.key);
+    // console.log(record.key);
     DetailUI(
       record.deviceNo,
       record.ip,
@@ -99,16 +99,19 @@ class FuncTable extends Component {
         if (data.msg === "操作成功") {
           get("/monitor/node")
             .then(data => {
+              if (data.msg === "系统错误") {
+                return
+              }
               notification["success"]({ message: "操作成功" });
               that.setState({ data: data.data });
             })
             .catch(err => {
               notification["error"]({ message: "发生未知错误" });
-              console.log(err);
+              // console.log(err);
             });
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => { });
   };
   close = e => {
     var that = this;
@@ -117,16 +120,19 @@ class FuncTable extends Component {
         if (data.msg === "操作成功") {
           get("/monitor/node")
             .then(data => {
+              if (data.msg === "系统错误") {
+                return
+              }
               notification["success"]({ message: "操作成功" });
               that.setState({ data: data.data });
             })
             .catch(err => {
               notification["error"]({ message: "发生未知错误" });
-              console.log(err);
+              // console.log(err);
             });
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => { });
   };
   // UNSAFE_componentWillReceiveProps(nextProps) {
   //   // console.log(nextProps);
@@ -137,27 +143,53 @@ class FuncTable extends Component {
   componentDidMount() {
     // this.setState({ data: this.props.fpgadata });
     var that = this;
+    get("/monitor/gpu")
+      .then(data => {
+        if (data.msg === "系统错误") {
+          return
+        }
+        that.setState({ gpudata: data.data });
+      })
+      .catch(err => {
+        // console.log(err);
+      });
+    get("/monitor/node")
+      .then(data => {
+        if (data.msg === "系统错误") {
+          return
+        }
+        that.setState({ data: data.data });
+      })
+      .catch(err => {
+        // console.log(err);
+      });
     if (this.props.name === "gpu") {
-      setInterval(function() {
+      setInterval(function () {
         get("/monitor/gpu")
           .then(data => {
+            if (data.msg === "系统错误") {
+              return
+            }
             that.setState({ gpudata: data.data });
           })
           .catch(err => {
-            console.log(err);
+            // console.log(err);
           });
-      }, 3000);
+      }, 5000);
     }
     if (this.props.name === "fpga") {
-      setInterval(function() {
+      setInterval(function () {
         get("/monitor/node")
           .then(data => {
+            if (data.msg === "系统错误") {
+              return
+            }
             that.setState({ data: data.data });
           })
           .catch(err => {
-            console.log(err);
+            // console.log(err);
           });
-      }, 500);
+      }, 5000);
     }
     // console.log(this.state.gpudata, this.state.data);
   }
@@ -173,7 +205,7 @@ class FuncTable extends Component {
       return { columns: nextColumns };
     });
   };
-  componentWillUpdate() {}
+  componentWillUpdate() { }
   componentDidUpdate(prevProps, prevState) {
     // this.GpuStatusArr = [];
   }
@@ -228,8 +260,8 @@ class FuncTable extends Component {
                 ) : averageTemp >= 50 ? (
                   <div style={{ color: "#F65121" }}>{`${55}℃(高)`}</div>
                 ) : (
-                  `${averageTemp}℃`
-                )}
+                      `${averageTemp}℃`
+                    )}
               </div>
             ),
             cpu: (

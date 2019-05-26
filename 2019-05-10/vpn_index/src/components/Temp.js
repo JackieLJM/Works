@@ -16,13 +16,18 @@ export default class Temp extends Component {
   componentDidMount() {
     get(
       `/monitor/chip/temperature?deviceNo=${this.props.deviceNo}&ip=${
-        this.props.ip
+      this.props.ip
       }`
     )
       .then(data => {
-        this.setState({ data: data.data });
+        if (data.data !== undefined) {
+          if (data.msg === "系统错误") {
+            return
+          }
+          this.setState({ data: data.data });
+        }
       })
-      .catch(err => console.log(err));
+      .catch(err => { });
   }
   render() {
     if (this.state.data[0] !== undefined) {

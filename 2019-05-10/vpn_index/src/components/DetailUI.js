@@ -8,7 +8,7 @@ import gdcard from "../svg/gdcard.png";
 
 // import ReactSVG from "react-svg";
 export const DetailUI = (deviceNo, ip, gpu, GpuStatus, fanstatus, key) => {
-  console.log(deviceNo, ip, gpu, GpuStatus, fanstatus.props.children, key);
+  // console.log(deviceNo, ip, gpu, GpuStatus, fanstatus.props.children, key);
   return Modal.info({
     title: "节点",
     content:

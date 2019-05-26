@@ -8,9 +8,12 @@ export default class TaskPie extends React.Component {
   componentDidMount() {
     get("/monitor/task/state")
       .then(data => {
+        if (data.msg === "系统错误") {
+          return
+        }
         this.setState({ sdata: data });
       })
-      .catch(err => console.log(err));
+      .catch(err => { });
   }
   render() {
     var sourceData = [];
