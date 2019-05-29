@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Modal, Card, Statistic, Icon } from "antd";
 import "./Fan.css";
 import fan from "../svg/fan.svg";
-import { post, get } from "../api";
+import { get } from "../api";
 export default class Fan extends Component {
   state = {
     data: [{ fan: [0, 0, 0, 0], ip: "192.168.101.237", deviceNo: 1 }],

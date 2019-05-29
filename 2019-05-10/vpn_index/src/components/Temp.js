@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, Statistic } from "antd";
-import { post, get } from "../api";
+import { get } from "../api";
 import TempImg from "./TempImg";
 export default class Temp extends Component {
   state = {

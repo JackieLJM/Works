@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import { Modal, Card } from "antd";
 import Temp from "./Temp";
 import Use from "./Use";
@@ -45,10 +45,10 @@ export const DetailUI = (deviceNo, ip, gpu, GpuStatus, fanstatus, key) => {
                     {item.status === 0
                       ? "该显卡未识别"
                       : item.status === 1
-                      ? "等待加载"
-                      : item.status === 2
-                      ? "正在运行"
-                      : "任务结束"}
+                        ? "等待加载"
+                        : item.status === 2
+                          ? "正在运行"
+                          : "任务结束"}
                   </div>
                 </div>
               );
@@ -56,16 +56,16 @@ export const DetailUI = (deviceNo, ip, gpu, GpuStatus, fanstatus, key) => {
           </Card>
         </div>
       ) : (
-        <div>
-          <Use deviceNo={deviceNo} ip={ip} />
-          <Temp deviceNo={deviceNo} ip={ip} />
-          <Fan deviceNo={deviceNo} ip={ip} />
-          <Chip deviceNo={deviceNo} ip={ip} />
-        </div>
-      ),
+          <div>
+            <Use deviceNo={deviceNo} ip={ip} />
+            <Temp deviceNo={deviceNo} ip={ip} />
+            <Fan deviceNo={deviceNo} ip={ip} />
+            <Chip deviceNo={deviceNo} ip={ip} />
+          </div>
+        ),
     width: "80%",
     maskClosable: "true",
     okText: "收起",
-    onOk() {}
+    onOk() { }
   });
 };

@@ -1,13 +1,8 @@
 import React, { Component } from "react";
 import {
   Table,
-  Tag,
-  Button,
+  Popconfirm,
   Icon,
-  Modal,
-  Card,
-  message,
-  error,
   Empty,
   notification
 } from "antd";
@@ -15,7 +10,7 @@ import "./FuncTable.css";
 import { Resizable } from "react-resizable";
 import CountUp from "react-countup";
 import { DetailUI } from "./DetailUI";
-import { get, post } from "../api";
+import { get } from "../api";
 import IconImg from "./IconImg";
 const ResizeableTitle = props => {
   const { onResize, width, ...restProps } = props;
@@ -93,6 +88,7 @@ class FuncTable extends Component {
     );
   };
   open = e => {
+    // console.log(e)
     var that = this;
     get(`/monitor/core/power?flag=true&ip=${e.ip}`)
       .then(data => {
@@ -114,6 +110,7 @@ class FuncTable extends Component {
       .catch(err => { });
   };
   close = e => {
+    // console.log(e)
     var that = this;
     get(`/monitor/core/power?flag=false&ip=${e.ip}`)
       .then(data => {
@@ -342,49 +339,58 @@ class FuncTable extends Component {
             // var children = record.status.props.children;
             // console.log(record.status.props.status);
             var status = record.status.props.status;
+            // console.log(record.deviceNoName.props.children)
             if (status === false) {
               return (
-                <a
-                  // style={{
-                  //   fontSize: "1rem",
-                  //   border: "1px solid black",
-                  //   padding: "0 8px 3px 8px",
-                  //   borderRadius: "4px",
-                  //   color: "black"
-                  // }}
-                  className={"btn btn-sm green"}
-                  style={{
-                    // background: "white",
-                    border: "1px black solid",
-                    color: "black",
-                    padding: "0.3rem 0.8rem 0.5rem 0.8rem"
-                  }}
-                  onClick={e => this.open.call(e, record)}
+                <Popconfirm
+                  // style={{ color: 'black', background: 'black' }}
+                  overlayStyle={{ fontSize: "5rem", border: '5px solid orange', borderRadius: '4px', padding: '0px', marginRight: '2rem' }}
+                  icon={<Icon type="info-circle" style={{ fontSize: "3rem", color: 'orange' }} />}
+                  title={<div style={{ fontSize: "2rem", marginLeft: '3rem', marginTop: '3px', marginRight: '1rem' }}>{`确定打开 ${record.deviceNoName.props.children} 此设备吗?`}</div>}
+                  onConfirm={e => this.open.call(e, record)}
+                  onCancel={e => { }}
+                  placement="left"
+                  okText="确定"
+                  cancelText="取消打开"
                 >
-                  开
+                  <a
+                    className={"btn btn-sm green"}
+                    style={{
+                      border: "1px black solid",
+                      color: "black",
+                      padding: "0.3rem 0.8rem 0.5rem 0.8rem"
+                    }}
+                  // onClick={e => this.open.call(e, record)}
+                  >
+                    开
                 </a>
+                </Popconfirm>
               );
             } else if (status === true) {
               return (
-                <a
-                  className={"btn btn-sm red"}
-                  // style={{
-                  //   fontSize: "1rem",
-                  //   border: "1px solid black",
-                  //   padding: "0 8px 3px 8px",
-                  //   borderRadius: "4px",
-                  //   color: "black"
-                  // }}
-                  style={{
-                    // background: "white",
-                    border: "1px black solid",
-                    color: "black",
-                    padding: "0.3rem 0.8rem 0.5rem 0.8rem"
-                  }}
-                  onClick={e => this.close.call(e, record)}
+                <Popconfirm
+                  // style={{ color: 'black', background: 'black' }}
+                  overlayStyle={{ fontSize: "5rem", border: '5px solid orange', borderRadius: '4px', padding: '0px', marginRight: '2rem' }}
+                  icon={<Icon type="info-circle" style={{ fontSize: "3rem", color: 'orange' }} />}
+                  title={<div style={{ fontSize: "2rem", marginLeft: '3rem', marginTop: '3px', marginRight: '1rem' }}>{`确定关闭 ${record.deviceNoName.props.children} 此设备吗?`}</div>}
+                  onConfirm={e => this.close.call(e, record)}
+                  onCancel={e => { }}
+                  placement="left"
+                  okText="确定"
+                  cancelText="取消关闭"
                 >
-                  关
+                  <a
+                    className={"btn btn-sm red"}
+                    style={{
+                      border: "1px black solid",
+                      color: "black",
+                      padding: "0.3rem 0.8rem 0.5rem 0.8rem"
+                    }}
+                  // onClick={e => this.close.call(e, record)}
+                  >
+                    关
                 </a>
+                </Popconfirm>
               );
             }
           }
@@ -438,7 +444,6 @@ class FuncTable extends Component {
     }
     if (this.props.name === "fpga") {
       if (this.props.complexTable === true) {
-        columns.pop();
         columns.pop();
         columns.pop();
         columns.pop();
@@ -503,7 +508,8 @@ class FuncTable extends Component {
         if (this.GpuStatusArr.length === i) {
           this.GpuStatusArr.push(GpuStatus);
         }
-
+        var match = deviceNo.match(/([\S]+)-([\S]+)/);
+        var ip = match[2];
         return {
           key: i,
           deviceNoName: (
@@ -511,7 +517,7 @@ class FuncTable extends Component {
               {deviceNo.replace("device", "节点")}
             </div>
           ),
-          ip: deviceNo === "device-1" ? "192.168.101.220" : "192.168.101.221",
+          ip: ip,
           deviceNo: deviceNo,
           status: <div>{status === "offline" ? "离线" : "在线"}</div>
         };

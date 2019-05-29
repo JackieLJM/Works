@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Card } from "antd";
 import ReactMinimalPieChart from "react-minimal-pie-chart";
-import { post, get } from "../api";
-import { height } from "window-size";
+import { get } from "../api";
+// import { height } from "window-size";
 export default class Use extends Component {
   state = {
     data: [
@@ -37,22 +37,20 @@ export default class Use extends Component {
       var data = this.state.data;
       var { disk, memory, cpu } = data[0];
       cpu = Number(Number(cpu.slice(0, -1)).toFixed(2));
-      var memorytotal = (memory.total / 1024 / 1024 / 1024).toFixed(2);
-      var memoryuse = (
+      var memorytotal = Number(memory.total / 1024 / 1024 / 1024).toFixed(2);
+      var memoryuse = Number(
         (memory.total - memory.free) /
         1024 /
         1024 /
         1024
       ).toFixed(2);
-      var mempercent = (
+      var mempercent = Number(
         ((memory.total - memory.free) / memory.total) *
         100
       ).toFixed(2);
-      var disktotal = (disk.total / 1024 / 1024 / 1024).toFixed(2);
-      var diskuse = ((disk.total - disk.free) / 1024 / 1024 / 1024).toFixed(2);
-      var diskpercent = (((disk.total - disk.free) / disk.total) * 100).toFixed(
-        2
-      );
+      var disktotal = Number(disk.total / 1024 / 1024 / 1024).toFixed(2);
+      var diskuse = Number((disk.total - disk.free) / 1024 / 1024 / 1024).toFixed(2);
+      var diskpercent = Number(Number(((disk.total - disk.free) / disk.total)) * 100).toFixed(2);
     }
 
     // else {
@@ -172,7 +170,7 @@ export default class Use extends Component {
                     fontSize: "25px",
                     fontFamily: "sans-serif"
                   }}
-                  labelPosition={50}
+                  labelPosition={0}
                 />
               </div>
             )}

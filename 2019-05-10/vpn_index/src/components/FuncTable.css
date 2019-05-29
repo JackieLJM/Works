@@ -1,3 +1,27 @@
+/* .ant-popover-inner {
+  background: black;
+}
+div.ant-popover-arrow {
+  border: 1px solid black;
+  background-color: black;
+  color: black;
+  /* font-size: 3rem; */
+/* width: 3rem; */
+/* margin-left: 2rem;
+  padding-left: 2rem; */
+/* }  */
+.ant-popover-buttons > .ant-btn-sm {
+  font-size: 1.5rem;
+  height: 3rem;
+  font-height: 2rem;
+}
+.ant-popover-buttons > .ant-btn-primary {
+  background-color: orange;
+  border-color: orange;
+}
+.ant-popover-buttons {
+  margin-right: 1.1rem;
+}
 .react-resizable {
   position: relative;
 }
