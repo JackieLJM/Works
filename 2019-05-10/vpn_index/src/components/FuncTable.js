@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+// import { findDOMNode } from 'react-dom';
 import {
   Table,
   Popconfirm,
@@ -34,7 +35,7 @@ class FuncTable extends Component {
       //   temp: { chip_temp: [23, 23], cpu_temp: "26" },
       //   memory: { total: 8141062144, free: 145788928 },
       //   ip: "192.168.101.237",
-      //   cpu: "17.8953345687%",
+      //   cpu: "0.8953345687%",
       //   deviceNo: 1,
       //   power_state: true
       // },
@@ -131,6 +132,22 @@ class FuncTable extends Component {
       })
       .catch(err => { });
   };
+  over = deviceNo => {
+    // console.log(e.currentTarget)
+    console.log(deviceNo)
+    console.log(this.refs[deviceNo])
+    this.refs[deviceNo].style.display = "none"
+    // console.log(this.refs[`${deviceNo}-precise`])
+    this.refs[`${deviceNo}-precise`].style.display = "inline-block"
+    // console.log(findDOMNode('1'))
+  }
+  out = deviceNo => {
+    console.log(deviceNo)
+    console.log(this.refs[deviceNo])
+    this.refs[deviceNo].style.display = "inline-block"
+    this.refs[`${deviceNo}-precise`].style.display = "none"
+    // console.log(e.currentTarget)
+  }
   // UNSAFE_componentWillReceiveProps(nextProps) {
   //   // console.log(nextProps);
   //   if (nextProps.fpgadata.length !== 0) {
@@ -221,7 +238,6 @@ class FuncTable extends Component {
             memory,
             disk,
             ip,
-            cpu,
             deviceNo,
             power_state
           } = item;
@@ -263,35 +279,82 @@ class FuncTable extends Component {
             ),
             cpu: (
               <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
-                <CountUp
-                  delay={0.2}
-                  start={0}
-                  end={Number(cpu)}
-                  duration={1.5}
-                />
-                %
+                {(Number(cpu)) >= 1 ?
+                  <div style={{ display: 'inline-block' }} onMouseOver={e => this.over.call(e, `cpu-${deviceNo}`)} onMouseOut={e => this.out.call(e, `cpu-${deviceNo}`)}>
+                    <div ref={`cpu-${deviceNo}`} style={{ display: 'inline-block' }}>
+                      <CountUp
+                        delay={0.2}
+                        start={0}
+                        end={Number(cpu)}
+                        duration={1.5}
+                      />
+                    </div>
+                    <div ref={`cpu-${deviceNo}-precise`} style={{ display: 'none' }}>{Number(cpu)}</div>
+                    %
+                  </div>
+
+                  : <div style={{ display: 'inline-block' }} >
+                    0.<CountUp
+                      delay={0.2}
+                      start={0}
+                      end={Number(cpu.toString().substring(2, 4))}
+                      duration={1.5} />
+                    %
+                  </div>}
+
               </div>
             ),
             memory: (
               <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
-                <CountUp
-                  delay={0.2}
-                  start={0}
-                  end={Number(mempercent)}
-                  duration={1.5}
-                />
-                %
+                {Number(mempercent) >= 1 ?
+                  <div onMouseOver={e => this.over.call(e, `mem-${deviceNo}`)} onMouseOut={e => this.out.call(e, `mem-${deviceNo}`)} style={{ display: 'inline-block' }}>
+                    <div ref={`mem-${deviceNo}`} style={{ display: 'inline-block' }}>
+                      <CountUp
+                        delay={0.2}
+                        start={0}
+                        end={Number(mempercent)}
+                        duration={1.5}
+                      />
+                    </div>
+                    <div ref={`mem-${deviceNo}-precise`} style={{ display: 'none' }}>{Number(mempercent)}</div>
+                    %
+                  </div> : <div style={{ display: 'inline-block' }}>
+                    0.<CountUp
+                      delay={0.2}
+                      start={0}
+                      end={Number(mempercent.toString().substring(2, 4))}
+                      duration={1.5} />
+                    %
+                  </div>}
+
               </div>
             ),
             disk: (
               <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
-                <CountUp
-                  delay={0.2}
-                  start={0}
-                  end={Number(diskpercent)}
-                  duration={1.5}
-                />
-                %
+                {Number(diskpercent) >= 1 ?
+                  <div onMouseOver={e => this.over.call(e, `disk-${deviceNo}`)} onMouseOut={e => this.out.call(e, `disk-${deviceNo}`)} style={{ display: 'inline-block' }}>
+                    <div ref={`disk-${deviceNo}`} style={{ display: 'inline-block' }}>
+                      <CountUp
+                        delay={0.2}
+                        start={0}
+                        end={Number(diskpercent)}
+                        duration={1.5}
+                      />
+                    </div>
+                    <div ref={`disk-${deviceNo}-precise`} style={{ display: 'none' }}>{Number(diskpercent)}</div>
+                    %
+                  </div> :
+                  <div style={{ display: 'inline-block' }}>
+                    0.<CountUp
+                      delay={0.2}
+                      start={0}
+                      end={Number(diskpercent.toString().substring(2, 4))}
+                      duration={1.5}
+                    />
+                    %
+                  </div>
+                }
+
               </div>
             ),
             ip: ip,

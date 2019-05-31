@@ -62,6 +62,14 @@ class TaskNumberPieCard extends Component {
       }
       this.setState({ total: data });
     });
+    setInterval(function () {
+      get("/monitor/task/total").then(data => {
+        if (data.msg === "系统错误") {
+          return
+        }
+        this.setState({ total: data });
+      })
+    }, 5000)
   }
   render() {
     var { icon, color, title, countUp } = this.props;
@@ -144,14 +152,16 @@ class TaskNumberPieCard extends Component {
                     {...countUp || {}}
                   />
                 </p>
-                <div style={{ fontSize: "1rem", marginLeft: "0.3rem" }}>
-                  {`GPU${" "}任务数：${total.gpu}`}
-                </div>
-                <div style={{ fontSize: "1rem", marginLeft: "0.2rem" }}>
-                  {`FPGA任务数：${total.fpga}`}
-                </div>
-                <div style={{ fontSize: "1rem" }}>
-                  {`HASH任务数：${total.hash}`}
+                <div style={{ marginTop: '0.5rem' }}>
+                  <div style={{ fontSize: "1rem", marginLeft: "0.3rem" }}>
+                    {`GPU${" "}任务数：${total.gpu}`}
+                  </div>
+                  <div style={{ fontSize: "1rem", marginLeft: "0.2rem" }}>
+                    {`FPGA任务数：${total.fpga}`}
+                  </div>
+                  <div style={{ fontSize: "1rem" }}>
+                    {`HASH任务数：${total.hash}`}
+                  </div>
                 </div>
               </div>
             </div>

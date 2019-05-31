@@ -18,7 +18,7 @@ class HeaderComponent extends Component {
           <TaskNumberPieCard
             icon={"profile"}
             color={"#01C1DE"}
-            title={"任务数"}
+            title={"任务总数"}
             number={700}
           />
         </Col>
