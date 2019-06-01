@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 // import { findDOMNode } from 'react-dom';
-import {
-  Table,
-  Popconfirm,
-  Icon,
-  Empty,
-  notification
-} from "antd";
+import { Table, Popconfirm, Icon, Empty, notification } from "antd";
 import "./FuncTable.css";
 import { Resizable } from "react-resizable";
 import CountUp from "react-countup";
@@ -97,7 +91,7 @@ class FuncTable extends Component {
           get("/monitor/node")
             .then(data => {
               if (data.msg === "系统错误") {
-                return
+                return;
               }
               notification["success"]({ message: "操作成功" });
               that.setState({ data: data.data });
@@ -108,7 +102,7 @@ class FuncTable extends Component {
             });
         }
       })
-      .catch(err => { });
+      .catch(err => {});
   };
   close = e => {
     // console.log(e)
@@ -119,7 +113,7 @@ class FuncTable extends Component {
           get("/monitor/node")
             .then(data => {
               if (data.msg === "系统错误") {
-                return
+                return;
               }
               notification["success"]({ message: "操作成功" });
               that.setState({ data: data.data });
@@ -130,24 +124,24 @@ class FuncTable extends Component {
             });
         }
       })
-      .catch(err => { });
+      .catch(err => {});
   };
   over = deviceNo => {
     // console.log(e.currentTarget)
-    console.log(deviceNo)
-    console.log(this.refs[deviceNo])
-    this.refs[deviceNo].style.display = "none"
+    // console.log(deviceNo)
+    // console.log(this.refs[deviceNo])
+    this.refs[deviceNo].style.display = "none";
     // console.log(this.refs[`${deviceNo}-precise`])
-    this.refs[`${deviceNo}-precise`].style.display = "inline-block"
+    this.refs[`${deviceNo}-precise`].style.display = "inline-block";
     // console.log(findDOMNode('1'))
-  }
+  };
   out = deviceNo => {
-    console.log(deviceNo)
-    console.log(this.refs[deviceNo])
-    this.refs[deviceNo].style.display = "inline-block"
-    this.refs[`${deviceNo}-precise`].style.display = "none"
+    // console.log(deviceNo)
+    // console.log(this.refs[deviceNo])
+    this.refs[deviceNo].style.display = "inline-block";
+    this.refs[`${deviceNo}-precise`].style.display = "none";
     // console.log(e.currentTarget)
-  }
+  };
   // UNSAFE_componentWillReceiveProps(nextProps) {
   //   // console.log(nextProps);
   //   if (nextProps.fpgadata.length !== 0) {
@@ -160,7 +154,7 @@ class FuncTable extends Component {
     get("/monitor/gpu")
       .then(data => {
         if (data.msg === "系统错误") {
-          return
+          return;
         }
         that.setState({ gpudata: data.data });
       })
@@ -170,7 +164,7 @@ class FuncTable extends Component {
     get("/monitor/node")
       .then(data => {
         if (data.msg === "系统错误") {
-          return
+          return;
         }
         that.setState({ data: data.data });
       })
@@ -178,11 +172,11 @@ class FuncTable extends Component {
         // console.log(err);
       });
     if (this.props.name === "gpu") {
-      setInterval(function () {
+      setInterval(function() {
         get("/monitor/gpu")
           .then(data => {
             if (data.msg === "系统错误") {
-              return
+              return;
             }
             that.setState({ gpudata: data.data });
           })
@@ -192,11 +186,11 @@ class FuncTable extends Component {
       }, 5000);
     }
     if (this.props.name === "fpga") {
-      setInterval(function () {
+      setInterval(function() {
         get("/monitor/node")
           .then(data => {
             if (data.msg === "系统错误") {
-              return
+              return;
             }
             that.setState({ data: data.data });
           })
@@ -219,7 +213,7 @@ class FuncTable extends Component {
       return { columns: nextColumns };
     });
   };
-  componentWillUpdate() { }
+  componentWillUpdate() {}
   componentDidUpdate(prevProps, prevState) {
     // this.GpuStatusArr = [];
   }
@@ -232,15 +226,7 @@ class FuncTable extends Component {
       } else {
         // if (this.props.name !== "gpu") {
         data = data.map((item, i) => {
-          var {
-            temp,
-            cpu,
-            memory,
-            disk,
-            ip,
-            deviceNo,
-            power_state
-          } = item;
+          var { temp, cpu, memory, disk, ip, deviceNo, power_state } = item;
           var { chip_temp, cpu_temp } = temp;
           var [chip_temp_1, chip_temp_2] = chip_temp;
           cpu = Number(cpu.slice(0, -2)).toFixed(2);
@@ -269,19 +255,28 @@ class FuncTable extends Component {
             temp: (
               <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>
                 {averageTemp >= 80 ? (
-                  <div style={{ color: "red" }}>{`${80}℃(超烫)`}</div>
+                  <div style={{ color: "red" }}>{`${averageTemp}℃(超烫)`}</div>
                 ) : averageTemp >= 50 ? (
-                  <div style={{ color: "#F65121" }}>{`${55}℃(高)`}</div>
+                  <div
+                    style={{ color: "#F65121" }}
+                  >{`${averageTemp}℃(高)`}</div>
                 ) : (
-                      `${averageTemp}℃`
-                    )}
+                  `${averageTemp}℃`
+                )}
               </div>
             ),
             cpu: (
               <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
-                {(Number(cpu)) >= 1 ?
-                  <div style={{ display: 'inline-block' }} onMouseOver={e => this.over.call(e, `cpu-${deviceNo}`)} onMouseOut={e => this.out.call(e, `cpu-${deviceNo}`)}>
-                    <div ref={`cpu-${deviceNo}`} style={{ display: 'inline-block' }}>
+                {Number(cpu) >= 1 ? (
+                  <div
+                    style={{ display: "inline-block" }}
+                    onMouseOver={e => this.over.call(e, `cpu-${deviceNo}`)}
+                    onMouseOut={e => this.out.call(e, `cpu-${deviceNo}`)}
+                  >
+                    <div
+                      ref={`cpu-${deviceNo}`}
+                      style={{ display: "inline-block" }}
+                    >
                       <CountUp
                         delay={0.2}
                         start={0}
@@ -289,26 +284,40 @@ class FuncTable extends Component {
                         duration={1.5}
                       />
                     </div>
-                    <div ref={`cpu-${deviceNo}-precise`} style={{ display: 'none' }}>{Number(cpu)}</div>
+                    <div
+                      ref={`cpu-${deviceNo}-precise`}
+                      style={{ display: "none" }}
+                    >
+                      {Number(cpu)}
+                    </div>
                     %
                   </div>
-
-                  : <div style={{ display: 'inline-block' }} >
-                    0.<CountUp
+                ) : (
+                  <div style={{ display: "inline-block" }}>
+                    0.
+                    <CountUp
                       delay={0.2}
                       start={0}
                       end={Number(cpu.toString().substring(2, 4))}
-                      duration={1.5} />
+                      duration={1.5}
+                    />
                     %
-                  </div>}
-
+                  </div>
+                )}
               </div>
             ),
             memory: (
               <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
-                {Number(mempercent) >= 1 ?
-                  <div onMouseOver={e => this.over.call(e, `mem-${deviceNo}`)} onMouseOut={e => this.out.call(e, `mem-${deviceNo}`)} style={{ display: 'inline-block' }}>
-                    <div ref={`mem-${deviceNo}`} style={{ display: 'inline-block' }}>
+                {Number(mempercent) >= 1 ? (
+                  <div
+                    onMouseOver={e => this.over.call(e, `mem-${deviceNo}`)}
+                    onMouseOut={e => this.out.call(e, `mem-${deviceNo}`)}
+                    style={{ display: "inline-block" }}
+                  >
+                    <div
+                      ref={`mem-${deviceNo}`}
+                      style={{ display: "inline-block" }}
+                    >
                       <CountUp
                         delay={0.2}
                         start={0}
@@ -316,24 +325,40 @@ class FuncTable extends Component {
                         duration={1.5}
                       />
                     </div>
-                    <div ref={`mem-${deviceNo}-precise`} style={{ display: 'none' }}>{Number(mempercent)}</div>
+                    <div
+                      ref={`mem-${deviceNo}-precise`}
+                      style={{ display: "none" }}
+                    >
+                      {Number(mempercent)}
+                    </div>
                     %
-                  </div> : <div style={{ display: 'inline-block' }}>
-                    0.<CountUp
+                  </div>
+                ) : (
+                  <div style={{ display: "inline-block" }}>
+                    0.
+                    <CountUp
                       delay={0.2}
                       start={0}
                       end={Number(mempercent.toString().substring(2, 4))}
-                      duration={1.5} />
+                      duration={1.5}
+                    />
                     %
-                  </div>}
-
+                  </div>
+                )}
               </div>
             ),
             disk: (
               <div style={{ fontSize: "1.3rem", margin: "-1rem" }}>
-                {Number(diskpercent) >= 1 ?
-                  <div onMouseOver={e => this.over.call(e, `disk-${deviceNo}`)} onMouseOut={e => this.out.call(e, `disk-${deviceNo}`)} style={{ display: 'inline-block' }}>
-                    <div ref={`disk-${deviceNo}`} style={{ display: 'inline-block' }}>
+                {Number(diskpercent) >= 1 ? (
+                  <div
+                    onMouseOver={e => this.over.call(e, `disk-${deviceNo}`)}
+                    onMouseOut={e => this.out.call(e, `disk-${deviceNo}`)}
+                    style={{ display: "inline-block" }}
+                  >
+                    <div
+                      ref={`disk-${deviceNo}`}
+                      style={{ display: "inline-block" }}
+                    >
                       <CountUp
                         delay={0.2}
                         start={0}
@@ -341,11 +366,18 @@ class FuncTable extends Component {
                         duration={1.5}
                       />
                     </div>
-                    <div ref={`disk-${deviceNo}-precise`} style={{ display: 'none' }}>{Number(diskpercent)}</div>
+                    <div
+                      ref={`disk-${deviceNo}-precise`}
+                      style={{ display: "none" }}
+                    >
+                      {Number(diskpercent)}
+                    </div>
                     %
-                  </div> :
-                  <div style={{ display: 'inline-block' }}>
-                    0.<CountUp
+                  </div>
+                ) : (
+                  <div style={{ display: "inline-block" }}>
+                    0.
+                    <CountUp
                       delay={0.2}
                       start={0}
                       end={Number(diskpercent.toString().substring(2, 4))}
@@ -353,8 +385,7 @@ class FuncTable extends Component {
                     />
                     %
                   </div>
-                }
-
+                )}
               </div>
             ),
             ip: ip,
@@ -407,11 +438,33 @@ class FuncTable extends Component {
               return (
                 <Popconfirm
                   // style={{ color: 'black', background: 'black' }}
-                  overlayStyle={{ fontSize: "5rem", border: '5px solid orange', borderRadius: '4px', padding: '0px', marginRight: '2rem' }}
-                  icon={<Icon type="info-circle" style={{ fontSize: "3rem", color: 'orange' }} />}
-                  title={<div style={{ fontSize: "2rem", marginLeft: '3rem', marginTop: '3px', marginRight: '1rem' }}>{`确定打开 ${record.deviceNoName.props.children} 此设备吗?`}</div>}
+                  overlayStyle={{
+                    fontSize: "5rem",
+                    border: "5px solid orange",
+                    borderRadius: "4px",
+                    padding: "0px",
+                    marginRight: "2rem"
+                  }}
+                  icon={
+                    <Icon
+                      type="info-circle"
+                      style={{ fontSize: "3rem", color: "orange" }}
+                    />
+                  }
+                  title={
+                    <div
+                      style={{
+                        fontSize: "2rem",
+                        marginLeft: "3rem",
+                        marginTop: "3px",
+                        marginRight: "1rem"
+                      }}
+                    >{`确定打开 ${
+                      record.deviceNoName.props.children
+                    } 此设备吗?`}</div>
+                  }
                   onConfirm={e => this.open.call(e, record)}
-                  onCancel={e => { }}
+                  onCancel={e => {}}
                   placement="left"
                   okText="确定"
                   cancelText="取消打开"
@@ -423,21 +476,43 @@ class FuncTable extends Component {
                       color: "black",
                       padding: "0.3rem 0.8rem 0.5rem 0.8rem"
                     }}
-                  // onClick={e => this.open.call(e, record)}
+                    // onClick={e => this.open.call(e, record)}
                   >
                     开
-                </a>
+                  </a>
                 </Popconfirm>
               );
             } else if (status === true) {
               return (
                 <Popconfirm
                   // style={{ color: 'black', background: 'black' }}
-                  overlayStyle={{ fontSize: "5rem", border: '5px solid orange', borderRadius: '4px', padding: '0px', marginRight: '2rem' }}
-                  icon={<Icon type="info-circle" style={{ fontSize: "3rem", color: 'orange' }} />}
-                  title={<div style={{ fontSize: "2rem", marginLeft: '3rem', marginTop: '3px', marginRight: '1rem' }}>{`确定关闭 ${record.deviceNoName.props.children} 此设备吗?`}</div>}
+                  overlayStyle={{
+                    fontSize: "5rem",
+                    border: "5px solid orange",
+                    borderRadius: "4px",
+                    padding: "0px",
+                    marginRight: "2rem"
+                  }}
+                  icon={
+                    <Icon
+                      type="info-circle"
+                      style={{ fontSize: "3rem", color: "orange" }}
+                    />
+                  }
+                  title={
+                    <div
+                      style={{
+                        fontSize: "2rem",
+                        marginLeft: "3rem",
+                        marginTop: "3px",
+                        marginRight: "1rem"
+                      }}
+                    >{`确定关闭 ${
+                      record.deviceNoName.props.children
+                    } 此设备吗?`}</div>
+                  }
                   onConfirm={e => this.close.call(e, record)}
-                  onCancel={e => { }}
+                  onCancel={e => {}}
                   placement="left"
                   okText="确定"
                   cancelText="取消关闭"
@@ -449,10 +524,10 @@ class FuncTable extends Component {
                       color: "black",
                       padding: "0.3rem 0.8rem 0.5rem 0.8rem"
                     }}
-                  // onClick={e => this.close.call(e, record)}
+                    // onClick={e => this.close.call(e, record)}
                   >
                     关
-                </a>
+                  </a>
                 </Popconfirm>
               );
             }
