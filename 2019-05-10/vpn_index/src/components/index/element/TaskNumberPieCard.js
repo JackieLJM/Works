@@ -56,21 +56,25 @@ class TaskNumberPieCard extends Component {
     // get("/monitor/task/state").then(data => {
     //   this.setState({ number: data });
     // });
-    var that=this;
+
+    var that = this;
+
     get("/monitor/task/total").then(data => {
       if (data.msg === "系统错误") {
-        return
+        return;
       }
-      this.setState({ total: data });
+      that.setState({ total: data });
     });
     setInterval(function () {
       get("/monitor/task/total").then(data => {
         if (data.msg === "系统错误") {
-          return
+          return;
         }
         that.setState({ total: data });
+
       })
     }, 5000)
+
   }
   render() {
     var { icon, color, title, countUp } = this.props;
@@ -153,7 +157,7 @@ class TaskNumberPieCard extends Component {
                     {...countUp || {}}
                   />
                 </p>
-                <div style={{ marginTop: '0.5rem' }}>
+                <div style={{ marginTop: "0.5rem" }}>
                   <div style={{ fontSize: "1rem", marginLeft: "0.3rem" }}>
                     {`GPU${" "}任务数：${total.gpu}`}
                   </div>
