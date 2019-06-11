@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import { Modal, Card, Statistic, Icon } from "antd";
+import {Card} from "antd";
 import "./Fan.css";
-import fan from "../svg/fan.svg";
-import { get } from "../api";
+import fan from "../../../svg/fan.svg";
+import { get } from "../../../api";
 export default class Fan extends Component {
   state = {
     data: [{ fan: [0, 0, 0, 0], ip: "192.168.101.237", deviceNo: 1 }],
     success: true
   };
   componentDidMount() {
+    var that=this;
     if (this.props.fanstatus === undefined) {
       get(
         `/monitor/fan/status?deviceNo=${this.props.deviceNo}&ip=${
@@ -20,7 +21,7 @@ export default class Fan extends Component {
             if (data.msg === "系统错误") {
               return
             }
-            this.setState({ data: data.data });
+            that.setState({ data: data.data });
           }
         })
         .catch(err => { });
@@ -57,9 +58,9 @@ export default class Fan extends Component {
         <div style={{ display: "flex", margin: "0 3rem" }}>
           <div style={{ flex: "1", textAlign: "center" }}>
             {fanarr[0] === 1 ? (
-              <img src={fan} className="fan-logo" style={{ height: "4rem" }} />
+              <img src={fan} className="fan-logo" style={{ height: "4rem" }} alt=""/>
             ) : (
-                <img src={fan} style={{ height: "4rem" }} />
+                <img src={fan} style={{ height: "4rem" }} alt=""/>
               )}
             <div style={{ marginTop: "0.5rem", fontSize: "1.1rem" }}>
               风扇一
@@ -72,9 +73,9 @@ export default class Fan extends Component {
           </div>
           <div style={{ flex: "1", textAlign: "center" }}>
             {fanarr[1] === 1 ? (
-              <img src={fan} className="fan-logo" style={{ height: "4rem" }} />
+              <img src={fan} className="fan-logo" style={{ height: "4rem" }} alt=""/>
             ) : (
-                <img src={fan} style={{ height: "4rem" }} />
+                <img src={fan} style={{ height: "4rem" }} alt=""/>
               )}
             <div style={{ marginTop: "0.5rem", fontSize: "1.1rem" }}>
               风扇二
@@ -87,9 +88,9 @@ export default class Fan extends Component {
           </div>
           <div style={{ flex: "1", textAlign: "center" }}>
             {fanarr[2] === 1 ? (
-              <img src={fan} className="fan-logo" style={{ height: "4rem" }} />
+              <img src={fan} className="fan-logo" style={{ height: "4rem" }} alt=""/>
             ) : (
-                <img src={fan} style={{ height: "4rem" }} />
+                <img src={fan} style={{ height: "4rem" }} alt=""/>
               )}
             <div style={{ marginTop: "0.5rem", fontSize: "1.1rem" }}>
               风扇三
@@ -102,9 +103,9 @@ export default class Fan extends Component {
           </div>
           <div style={{ flex: "1", textAlign: "center" }}>
             {fanarr[3] === 1 ? (
-              <img src={fan} className="fan-logo" style={{ height: "4rem" }} />
+              <img src={fan} className="fan-logo" style={{ height: "4rem" }} alt=""/>
             ) : (
-                <img src={fan} style={{ height: "4rem" }} />
+                <img src={fan} style={{ height: "4rem" }} alt=""/>
               )}
             <div style={{ marginTop: "0.5rem", fontSize: "1.1rem" }}>
               风扇四

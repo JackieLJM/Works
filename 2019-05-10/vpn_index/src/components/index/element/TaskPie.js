@@ -1,12 +1,13 @@
-import { Chart, Axis, Legend, Coord, Guide, Pie } from "viser-react";
+import { Chart, Axis, Legend, Coord, Pie } from "viser-react";
 import * as React from "react";
-import { get } from "../api";
+import { get } from "../../../api";
 import { Tooltip } from 'antd';
 const DataSet = require("@antv/data-set");
 
 export default class TaskPie extends React.Component {
-  state = { sdata: { wait: 100000, run: 0, finish: 0, pause: 0 } };
+  state = { sdata: { wait: 0, run: 0, finish: 0, pause: 0 } };
   componentDidMount() {
+    var that=this;
     get("/monitor/task/state")
       .then(data => {
         if (data.msg === "系统错误") {
@@ -21,7 +22,7 @@ export default class TaskPie extends React.Component {
           if (data.msg === "系统错误") {
             return
           }
-          this.setState({ sdata: data });
+          that.setState({ sdata: data });
         })
         .catch(err => { })
     }, 5000)

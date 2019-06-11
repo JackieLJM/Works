@@ -10,8 +10,8 @@ import {
 import "./FuncTable.css";
 import { Resizable } from "react-resizable";
 import CountUp from "react-countup";
-import { DetailUI } from "./DetailUI";
-import { get } from "../api";
+import { DetailUI } from "../layout/DetailUI";
+import { get } from "../../../api";
 import IconImg from "./IconImg";
 const ResizeableTitle = props => {
   const { onResize, width, ...restProps } = props;
@@ -269,9 +269,9 @@ class FuncTable extends Component {
             temp: (
               <div style={{ fontSize: "1.2rem", margin: "-1rem" }}>
                 {averageTemp >= 80 ? (
-                  <div style={{ color: "red" }}>{`${80}℃(超烫)`}</div>
+                  <div style={{ color: "red" }}>{`${averageTemp}℃(超烫)`}</div>
                 ) : averageTemp >= 50 ? (
-                  <div style={{ color: "#F65121" }}>{`${55}℃(高)`}</div>
+                  <div style={{ color: "#F65121" }}>{`${averageTemp}℃(高)`}</div>
                 ) : (
                       `${averageTemp}℃`
                     )}
@@ -417,6 +417,7 @@ class FuncTable extends Component {
                   cancelText="取消打开"
                 >
                   <a
+                    href="#id"
                     className={"btn btn-sm green"}
                     style={{
                       border: "1px black solid",
@@ -443,6 +444,7 @@ class FuncTable extends Component {
                   cancelText="取消关闭"
                 >
                   <a
+                    href="#id"
                     className={"btn btn-sm red"}
                     style={{
                       border: "1px black solid",
@@ -491,6 +493,7 @@ class FuncTable extends Component {
           key: "action",
           render: record => (
             <a
+              href="#id"
               style={{
                 fontSize: "1rem",
                 border: "1px solid black",
@@ -541,6 +544,7 @@ class FuncTable extends Component {
           key: "action",
           render: record => (
             <a
+              href="#id"
               style={{
                 fontSize: "1rem",
                 border: "1px solid black",

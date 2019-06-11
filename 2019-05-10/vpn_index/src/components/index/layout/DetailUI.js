@@ -1,10 +1,10 @@
 import React from "react";
 import { Modal, Card } from "antd";
-import Temp from "./Temp";
-import Use from "./Use";
-import Fan from "./Fan";
-import Chip from "./Chip";
-import gdcard from "../svg/gdcard.png";
+import Temp from "../element/Temp";
+import Use from "../element/Use";
+import Fan from "../element/Fan";
+import Chip from "../element/Chip";
+import gdcard from "../../../svg/gdcard.png";
 
 // import ReactSVG from "react-svg";
 export const DetailUI = (deviceNo, ip, gpu, GpuStatus, fanstatus, key) => {
@@ -37,7 +37,7 @@ export const DetailUI = (deviceNo, ip, gpu, GpuStatus, fanstatus, key) => {
             {GpuStatus[key].map(item => {
               return (
                 <div style={{ flex: "1" }}>
-                  <img src={gdcard} />
+                  <img src={gdcard} alt=""/>
                   <div style={{ marginLeft: "2rem" }}>
                     {`显卡${item.graphics}`}
                   </div>

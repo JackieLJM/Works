@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Col, Card, Button, Tabs, Icon } from "antd";
-import FuncTable from "./FuncTable.js";
+import { Card } from "antd";
+import FuncTable from "../element/FuncTable.js";
 import QueueAnim from "rc-queue-anim";
-const TabPane = Tabs.TabPane;
+// const TabPane = Tabs.TabPane;
 class ContentSecComponent extends Component {
   state = {
     isGPUSimple: true,

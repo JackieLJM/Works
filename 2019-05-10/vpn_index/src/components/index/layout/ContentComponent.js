@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Col, Card, Button, Tabs, Icon } from "antd";
-import FuncTable from "./FuncTable.js";
+import { Card, Icon } from "antd";
+import FuncTable from "../element/FuncTable.js";
 import QueueAnim from "rc-queue-anim";
-import { get } from "../api";
-const TabPane = Tabs.TabPane;
+// import { get } from "../../../api";
+// const TabPane = Tabs.TabPane;
 class ContentComponent extends Component {
   state = {
     isFPGASimple: true,
@@ -146,7 +146,7 @@ class ContentComponent extends Component {
                 />
               </QueueAnim>
             ) : null}
-            <a name="gpu" />
+            <a name="gpu" href="#id"/>
             {/* </div> */}
           </Card>
         ) : (
@@ -171,7 +171,7 @@ class ContentComponent extends Component {
             }}
             bodyStyle={{ display: "none" }}
           >
-            <a name="gpu" />
+            <a name="gpu" href="#id"/>
             {/* </div> */}
           </Card>
         )}

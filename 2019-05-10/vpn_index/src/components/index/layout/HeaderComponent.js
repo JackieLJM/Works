@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Button, Card, Col } from "antd";
-import TaskNumberPieCard from "./TaskNumberPieCard";
+import { Col } from "antd";
+import TaskNumberPieCard from "../element/TaskNumberPieCard";
 class HeaderComponent extends Component {
   render() {
     return (

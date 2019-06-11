@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import chip from "../svg/chip.svg";
+import chip from "../../../svg/chip.svg";
 export default class ChipImg extends Component {
   state = { status: 0, name: "未启动" };
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -18,7 +18,7 @@ export default class ChipImg extends Component {
               margin: window.innerWidth > 1400 ? "0 1.8rem" : "0 1.2rem"
             }}
           >
-            <img src={chip} style={{ height: "3rem" }} />
+            <img src={chip} style={{ height: "3rem" }} alt=""/>
             <div style={{ marginTop: "0.5rem", fontSize: "0.8rem" }}>
               {name}
             </div>
@@ -34,7 +34,7 @@ export default class ChipImg extends Component {
               margin: window.innerWidth > 1400 ? "0 1.8rem" : "0 1.2rem"
             }}
           >
-            <img src={chip} style={{ height: "3rem" }} />
+            <img src={chip} style={{ height: "3rem" }} alt=""/>
             <div style={{ marginTop: "0.5rem", fontSize: "0.8rem" }}>
               {name}
             </div>
@@ -51,7 +51,7 @@ export default class ChipImg extends Component {
               margin: window.innerWidth > 1400 ? "0 1.8rem" : "0 1.2rem"
             }}
           >
-            <img src={chip} style={{ height: "3rem" }} />
+            <img src={chip} style={{ height: "3rem" }} alt=""/>
             <div style={{ marginTop: "0.5rem", fontSize: "0.8rem" }}>
               {name}
             </div>
@@ -67,7 +67,7 @@ export default class ChipImg extends Component {
               margin: window.innerWidth > 1400 ? "0 1.8rem" : "0 1.2rem"
             }}
           >
-            <img src={chip} style={{ height: "3rem" }} />
+            <img src={chip} style={{ height: "3rem" }} alt=""/>
             <div style={{ marginTop: "0.5rem", fontSize: "0.8rem" }}>
               {name}
             </div>
@@ -83,7 +83,7 @@ export default class ChipImg extends Component {
               margin: window.innerWidth > 1400 ? "0 1.8rem" : "0 1.2rem"
             }}
           >
-            <img src={chip} style={{ height: "3rem" }} />
+            <img src={chip} style={{ height: "3rem" }} alt=""/>
             <div style={{ marginTop: "0.5rem", fontSize: "0.8rem" }}>
               {name}
             </div>
@@ -99,7 +99,7 @@ export default class ChipImg extends Component {
               margin: window.innerWidth > 1400 ? "0 1.8rem" : "0 1.2rem"
             }}
           >
-            <img src={chip} style={{ height: "3rem" }} />
+            <img src={chip} style={{ height: "3rem" }} alt=""/>
             <div style={{ marginTop: "0.5rem", fontSize: "0.8rem" }}>
               {name}
             </div>
@@ -116,7 +116,7 @@ export default class ChipImg extends Component {
               margin: window.innerWidth > 1400 ? "0 1.8rem" : "0 1.2rem"
             }}
           >
-            <img src={chip} style={{ height: "3rem" }} />
+            <img src={chip} style={{ height: "3rem" }} alt=""/>
             <div style={{ marginTop: "0.5rem", fontSize: "0.8rem" }}>
               {name}
             </div>

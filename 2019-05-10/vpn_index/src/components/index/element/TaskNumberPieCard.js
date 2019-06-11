@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Icon, Card, Divider, Button, Modal, Input } from "antd";
+import { Icon, Card, Divider } from "antd";
 import CountUp from "react-countup";
 import TaskPie from "./TaskPie";
-import { get } from "../api";
+import { get } from "../../../api";
 // import { height } from "window-size";
-const Search = Input.Search;
+// const Search = Input.Search;
 class TaskNumberPieCard extends Component {
   // createTask = () => {};
   state = {
@@ -56,6 +56,7 @@ class TaskNumberPieCard extends Component {
     // get("/monitor/task/state").then(data => {
     //   this.setState({ number: data });
     // });
+    var that=this;
     get("/monitor/task/total").then(data => {
       if (data.msg === "系统错误") {
         return
@@ -67,7 +68,7 @@ class TaskNumberPieCard extends Component {
         if (data.msg === "系统错误") {
           return
         }
-        this.setState({ total: data });
+        that.setState({ total: data });
       })
     }, 5000)
   }

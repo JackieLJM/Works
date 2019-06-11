@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Card, Statistic } from "antd";
-import { get } from "../api";
+import { get } from "../../../api";
 import TempImg from "./TempImg";
 export default class Temp extends Component {
   state = {
@@ -14,6 +14,7 @@ export default class Temp extends Component {
     success: true
   };
   componentDidMount() {
+    var that=this;
     get(
       `/monitor/chip/temperature?deviceNo=${this.props.deviceNo}&ip=${
       this.props.ip
@@ -24,7 +25,7 @@ export default class Temp extends Component {
           if (data.msg === "系统错误") {
             return
           }
-          this.setState({ data: data.data });
+          that.setState({ data: data.data });
         }
       })
       .catch(err => { });

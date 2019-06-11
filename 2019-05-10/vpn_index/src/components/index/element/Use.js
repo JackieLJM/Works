@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card } from "antd";
 import ReactMinimalPieChart from "react-minimal-pie-chart";
-import { get } from "../api";
+import { get } from "../../../api";
 // import { height } from "window-size";
 export default class Use extends Component {
   state = {
@@ -17,6 +17,7 @@ export default class Use extends Component {
     success: true
   };
   componentDidMount() {
+    var that=this;
     get(
       `/monitor/system/resources?deviceNo=${this.props.deviceNo}&ip=${
       this.props.ip
@@ -27,7 +28,7 @@ export default class Use extends Component {
           if (data.msg === "系统错误") {
             return
           }
-          this.setState({ data: data.data });
+          that.setState({ data: data.data });
         }
       })
       .catch(err => { });

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Card } from "antd";
 
-import { get } from "../api";
+import { get } from "../../../api";
 import ChipImg from "./ChipImg";
 
 export default class Chip extends Component {
