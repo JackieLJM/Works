@@ -24,46 +24,46 @@ class FuncTable extends Component {
   state = {
     detailUI: false,
     data: [
-      // {
-      //   disk: { total: 241699667968, free: 234417324032 },
-      //   temp: { chip_temp: [23, 23], cpu_temp: "26" },
-      //   memory: { total: 8141062144, free: 145788928 },
-      //   ip: "192.168.101.237",
-      //   cpu: "0.8953345687%",
-      //   deviceNo: 1,
-      //   power_state: true
-      // },
-      // {
-      //   disk: { total: 241699667968, free: 236016472064 },
-      //   temp: { chip_temp: [30, 26], cpu_temp: "43" },
-      //   memory: { total: 8141062144, free: 133865472 },
-      //   ip: "192.168.101.231",
-      //   cpu: "1.01667283139%",
-      //   deviceNo: 2,
-      //   power_state: false
-      // }
+      {
+        disk: { total: 241699667968, free: 234417324032 },
+        temp: { chip_temp: [90, 90], cpu_temp: "90" },
+        memory: { total: 8141062144, free: 145788928 },
+        ip: "192.168.101.237",
+        cpu: "0.8953345687%",
+        deviceNo: 1,
+        power_state: true
+      },
+      {
+        disk: { total: 241699667968, free: 236016472064 },
+        temp: { chip_temp: [90, 26], cpu_temp: "43" },
+        memory: { total: 8141062144, free: 133865472 },
+        ip: "192.168.101.231",
+        cpu: "1.01667283139%",
+        deviceNo: 2,
+        power_state: false
+      }
     ],
     gpudata: [
-      // {
-      //   GpuStatus: [
-      //     { deviceNo: "device-1", graphics: 1, status: 0 },
-      //     { deviceNo: "device-1", graphics: 2, status: 1 },
-      //     { deviceNo: "device-1", graphics: 3, status: 2 },
-      //     { deviceNo: "device-1", graphics: 4, status: 3 }
-      //   ],
-      //   deviceNo: "device-1",
-      //   status: "offline"
-      // },
-      // {
-      //   GpuStatus: [
-      //     { deviceNo: "device-2", graphics: 1, status: 1 },
-      //     { deviceNo: "device-2", graphics: 2, status: 2 },
-      //     { deviceNo: "device-2", graphics: 3, status: 1 },
-      //     { deviceNo: "device-2", graphics: 4, status: 1 }
-      //   ],
-      //   deviceNo: "device-2",
-      //   status: "online"
-      // }
+      {
+        GpuStatus: [
+          { deviceNo: "device-1", graphics: 1, status: 0 },
+          { deviceNo: "device-1", graphics: 2, status: 1 },
+          { deviceNo: "device-1", graphics: 3, status: 2 },
+          { deviceNo: "device-1", graphics: 4, status: 3 }
+        ],
+        deviceNo: "device-1",
+        status: "offline"
+      },
+      {
+        GpuStatus: [
+          { deviceNo: "device-2", graphics: 1, status: 1 },
+          { deviceNo: "device-2", graphics: 2, status: 2 },
+          { deviceNo: "device-2", graphics: 3, status: 1 },
+          { deviceNo: "device-2", graphics: 4, status: 1 }
+        ],
+        deviceNo: "device-2",
+        status: "online"
+      }
     ]
   };
   components = {
